@@ -1,9 +1,5 @@
 <style>
- body {
-    background-image: linear-gradient(to right , #cb2d3e , #ef473a);
-}
-
-.searchBox {
+.customSearchBox {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,17 +11,17 @@
 
 }
 
-.searchBox:hover > .searchInput {
+.customSearchBox:hover > .customSearchInput {
     width: 240px;
     padding: 0 6px;
 }
 
-.searchBox:hover > .searchButton {
+.customSearchBox:hover > .customSearchButton {
   background: white;
   color : #2f3640;
 }
 
-.searchButton {
+.customSearchButton {
     color: white;
     float: right;
     width: 40px;
@@ -38,7 +34,7 @@
     transition: 0.4s;
 }
 
-.searchInput {
+.customSearchInput {
     border:none;
     background: none;
     outline:none;
@@ -54,13 +50,9 @@
 </style>
 
 <search-bar>
-       <div class="searchBox">
-
-            <input class="searchInput"type="text" name="" placeholder="Search">
-            <button class="searchButton" href="#">
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
-              </svg>
+       <div class="customSearchBox">
+            <input class="customSearchInput"type="text" name="" placeholder="Search">
+            <button class="customSearchButton" href="#">
             </button>
         </div>
 </search-bar>
