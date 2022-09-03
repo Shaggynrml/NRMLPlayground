@@ -1,9 +1,18 @@
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 {% style%}
-
+.nav_container{
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction:row;
+  justify-content: center;
+}
 .navbar {
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction:row;
+  justify-content: center;
   background: #D9D9D9;
-  padding: 10px 30px;
+  padding: 5px 20px;
   border-radius: 50px;
   transition: 0.3s;
 }
@@ -19,7 +28,7 @@
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 10px 20px;
   overflow: hidden;
   position: relative;
   transition: 0.2s ease-in-out;
@@ -69,40 +78,37 @@
 }
 
 {%endstyle%}
+<center>
+  <nav class="navbar">
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="home"></span>
+      </span>
+      <span class="navbar__label">Home</span>
+    </a>
 
-<nav class="navbar">
-  <a href="#" class="navbar__link">
-    <span class="navbar__icon">
-      <span data-feather="home"></span>
-    </span>
-    <span class="navbar__label">Home</span>
-  </a>
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="clipboard"></span>
+      </span>
+      <span class="navbar__label">Work</span>
+    </a>
 
-  <a href="#" class="navbar__link">
-    <span class="navbar__icon">
-      <span data-feather="clipboard"></span>
-    </span>
-    <span class="navbar__label">Work</span>
-  </a>
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="user"></span>
+      </span>
+      <span class="navbar__label">User</span>
+    </a>
 
-  <a href="#" class="navbar__link">
-    <span class="navbar__icon">
-      <span data-feather="user"></span>
-    </span>
-    <span class="navbar__label">User</span>
-  </a>
-
-  <a href="#" class="navbar__link">
-    <span class="navbar__icon">
-      <span data-feather="shopping-cart"></span>
-    </span>
-    <span class="navbar__label">Cart</span>
-  </a>
-    <span class="searchButton">
-      <span data-feather="search"></span>
-    </span>
-</nav>
-
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="shopping-cart"></span>
+      </span>
+      <span class="navbar__label">Cart</span>
+    </a>
+  </nav>
+</center>
 <script>
   feather.replace()
 </script>
