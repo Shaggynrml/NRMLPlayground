@@ -16,9 +16,6 @@
   border-radius: 50px;
   transition: 0.3s;
 }
-.searchButton{
-
-}
 .navbar:hover {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
@@ -76,6 +73,127 @@
   transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
   transition-delay: 0.2s;
 }
+.searchbar__link {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  z-index: 3;
+}
+/* Search */
+.search-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+}
+
+.input-group.search-group {
+    height: 50px;
+    min-width: 50px;
+    position: relative;
+}
+
+.input-group .form-control:hover, 
+.input-group .form-control:focus {
+    padding: 10px 20px;
+    width: 380px;
+    color: #000;
+    cursor: auto;
+    background-color: #fff;
+}
+
+.input-group .form-control::-moz-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control:hover::-moz-placeholder,
+.input-group .form-control:focus::-moz-placeholder { 
+    color: #ddd;
+}
+.input-group .form-control:hover::-webkit-input-placeholder,
+.input-group .form-control:focus::-webkit-input-placeholder { 
+    color: #ddd;
+}
+
+.input-group .form-control:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-color: #e6e6e6;
+}
+
+.form-control.search-control {
+  background: url(http://milansavov.com/img/zoom.svg) no-repeat right 11px center / 25px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: transparent;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  outline: 0 none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+
+  transition: width 0.25s;
+}
+{% comment %} .searchbar__link:hover .searchbar__icon {
+  color: #e022bb;
+  transform: translateY(0) scale(0.9);
+}
+.searchbar__link:hover .searchbar__icon::before {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.searchbar__link:hover .searchbar__label {
+  transform: translateY(0);
+} {% endcomment %}
+.searchbar__icon {
+  color: #333;
+  transform: translateY(15px);
+  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  position: relative;
+}
+.searchbar__icon::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background: rgba(224, 34, 187, 0.15);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.searchbar__label {
+  display: block;
+  margin-top: 10px;
+  font-family: "Roboto Mono", sans-serif;
+  color: #e022bb;
+  position: relative;
+  bottom: 0;
+  font-size: 0.9375rem;
+  transform: translateY(200%);
+  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  transition-delay: 0.2s;
+}
 
 {%endstyle%}
 <center>
@@ -106,6 +224,12 @@
         <span data-feather="shopping-cart"></span>
       </span>
       <span class="navbar__label">Cart</span>
+    </a>
+    <a href="#" class="searchbar__link">
+      <span class="searchbar__icon">
+        <span data-feather="search"></span>
+      </span>
+      <span class="searchbar__label">Search</span>
     </a>
   </nav>
 </center>
