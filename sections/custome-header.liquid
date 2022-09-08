@@ -80,19 +80,10 @@
   text-align: center;
   text-decoration: none;
   padding: 10px 20px;
-  overflow: hidden;
   position: relative;
-  transition: 0.2s ease-in-out;
-  z-index: 3;
+  z-index: 10;
 }
 /* Search */
-.search-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 3;
-}
 
 .input-group.search-group {
     height: 50px;
@@ -103,10 +94,12 @@
 .input-group .form-control:hover, 
 .input-group .form-control:focus {
     padding: 10px 20px;
-    width: 380px;
+    width: 500%;
     color: #000;
+    z-index: 10;
     cursor: auto;
     background-color: #fff;
+    border-radius: 100px;
 }
 
 .input-group .form-control::-moz-placeholder {
@@ -134,11 +127,11 @@
 .form-control.search-control {
   background: url(http://milansavov.com/img/zoom.svg) no-repeat right 11px center / 25px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 50%;
   color: transparent;
   font-size: 16px;
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 50%;
   margin: 0;
   padding: 0;
   outline: 0 none;
@@ -166,9 +159,12 @@
   color: #333;
   transform: translateY(15px);
   transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  justify: center;
+  align: center;
   position: relative;
+  z-index: 10;
 }
-.searchbar__icon::before {
+{% comment %} .searchbar__icon::before {
   content: "";
   width: 45px;
   height: 45px;
@@ -181,7 +177,7 @@
   transform: translate(-50%, 50%);
   opacity: 0;
   transition: 0.3s;
-}
+} {% endcomment %}
 .searchbar__label {
   display: block;
   margin-top: 10px;
@@ -226,10 +222,11 @@
       <span class="navbar__label">Cart</span>
     </a>
     <a href="#" class="searchbar__link">
-      <span class="searchbar__icon">
-        <span data-feather="search"></span>
-      </span>
-      <span class="searchbar__label">Search</span>
+      <form class="searchbar__icon">
+        <div class="input-group search-group">
+            <input type="text" class="form-control search-control" placeholder="Enter your search term...">
+        </div>
+    </form>
     </a>
   </nav>
 </center>
