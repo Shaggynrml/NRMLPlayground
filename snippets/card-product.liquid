@@ -61,7 +61,7 @@ product-card-body{
 }
 
 .product-card-container .card:after{
-  content: {{card_product.vendor}};
+  content: {{card_product.vendor }};
   position: absolute;
   top: 30%;
   left: -20%;
@@ -150,15 +150,17 @@ product-card-body{
 }
 
 .product-card-container .card .contentBx .size span{
-  width: 26px;
-  height: 26px;
+  width: 55px;
+  height: 25px;
   text-align: center;
   line-height: 26px;
   font-size: 12px;
   display: inline-block;
+  overflow:hidden;
+  padding:2px;
   color: #111;
   background: #fff;
-  margin: 0 5px;
+  margin:5px;
   transition: 0.5s;
   color: #111;
   border-radius: 4px;
@@ -170,11 +172,12 @@ product-card-body{
 }
 
 .product-card-container .card .contentBx .color span{
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 20px; 
   background: #ff0;
   border-radius: 50%;
-  margin: 0 5px;
+  padding: 5px; 
+  margin:5px;
   cursor: pointer;
 }
 
@@ -245,7 +248,6 @@ product-card-body{
     <div class="contentBx">
       <h2>{{card_product.title}}</h2>
       <div class="size">
-        <h3>Size:</h3>
         {%for size in card_product.options_by_name['Size'].values%}
         <span>{{size}}</span>
         {%endfor%}
