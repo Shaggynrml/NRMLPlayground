@@ -223,9 +223,9 @@
     </a>
     <a href="#" class="searchbar__link">
     <span class="searchbar__icon">
-      <form>
+      <form action="{{ routes.search_url }}">
         <div class="input-group search-group">
-            <input type="text" class="form-control search-control" placeholder="Enter your search term...">
+            <input type="text" 	name="q" value="{{ search.terms | escape }}" class="form-control search-control" placeholder="Enter your search term...">
         </div>
     </form>
     <span>

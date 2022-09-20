@@ -28,7 +28,7 @@ product-card-body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #131313;
+  background: #ffff;
 }
 
 .product-card-container{
@@ -39,7 +39,7 @@ product-card-body{
   position: relative;
   width: 320px;
   height: 450px;
-  background: #232323;
+  background:url("{{ 'marbleBackground.jpg' | asset_img_url: '1200x' }}");
   border-radius: 20px;
   overflow: hidden;
 }
@@ -51,7 +51,7 @@ product-card-body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffff;
+  background:url("{{ 'marbelBackground2.jpg' | asset_img_url: '600x' }}");
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
@@ -112,8 +112,9 @@ product-card-body{
 .product-card-container .card .contentBx h2{
   position: relative;
   font-weight: 600;
+  padding-bottom: 5px;
   letter-spacing: 1px;
-  color: #fff;
+  color: #000;
   margin: 0;
 }
 
@@ -149,37 +150,40 @@ product-card-body{
   margin-right: 10px;
 }
 
-.product-card-container .card .contentBx .size span{
-  width: 55px;
+.product-card-container .card:hover .contentBx .size-buttons{
+  opacity: 1;
+  visibility: visible;
+}
+.size-buttons{
+  width: 40px;
   height: 25px;
   text-align: center;
   line-height: 26px;
   font-size: 12px;
   display: inline-block;
   overflow:hidden;
-  padding:2px;
+  padding-top:2px;
   color: #111;
   background: #fff;
-  margin:5px;
+  margin:2px;
   transition: 0.5s;
   color: #111;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
 }
+
+.size-buttons:hover{
+ background:#778899;
+}
+
 
 .product-card-container .card .contentBx .size span:hover{
-  background: #9bdc28;
+  background: #778899;
 }
 
-.product-card-container .card .contentBx .color span{
-  width: 25px;
-  height: 20px; 
-  background: #ff0;
-  border-radius: 50%;
-  padding: 5px; 
-  margin:5px;
-  cursor: pointer;
-}
+
 
 .product-card-container .card .contentBx .color span:nth-child(2){
   background: #9bdc28;
@@ -240,19 +244,19 @@ product-card-body{
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-    <div class="product-card-container">
+<div class="product-card-container">
   <div class="card">
     <div class="imgBx">
       {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
     </div>
     <div class="contentBx">
       <h2>{{card_product.title}}</h2>
-      <div class="size">
+      <div>
         {%for size in card_product.options_by_name['Size'].values%}
-        <span>{{size}}</span>
+        <div class= "size-buttons">{{size}}</div>
         {%endfor%}
       </div>
-      <a href="#">Buy Now</a>
+      <a href="{{ card_product.url }}">View Product</a>
     </div>
   </div>
 </div>
