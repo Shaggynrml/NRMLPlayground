@@ -243,17 +243,22 @@ product-card-body{
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+<div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
 <div class="product-card-container">
   <div class="card">
-    <div class="imgBx">
+    <a  href="{{ card_product.url }}">
+    <div class="imgBx" >
       {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
     </div>
+    </a>
     <div class="contentBx">
       <h2>{{card_product.title}}</h2>
       <div>
-        {%for size in card_product.options_by_name['Size'].values%}
-        <div class= "size-buttons">{{size}}</div>
+      <script>console.log({{ card_product | json }});</script>
+        {%for size in card_product.variants%}
+        {% if size.available%}
+        <div class= "size-buttons">{{size.title}}</div>
+        {%endif%}
         {%endfor%}
       </div>
       <a href="{{ card_product.url }}">View Product</a>
