@@ -1,5 +1,10 @@
 {
   "sections": {
+    "166377574293a303f7": {
+      "type": "custome-header",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -210,6 +215,7 @@
     }
   },
   "order": [
+    "166377574293a303f7",
     "image_banner",
     "rich_text",
     "featured_collection",
