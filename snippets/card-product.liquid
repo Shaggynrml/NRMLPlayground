@@ -254,10 +254,10 @@ product-card-body{
     <div class="contentBx">
       <h2>{{card_product.title}}</h2>
       <div>
-      <script>console.log({{ card_product | json }});</script>
         {%for size in card_product.variants%}
         {% if size.available%}
-        <div class= "size-buttons">{{size.title}}</div>
+ 
+        <div class= "size-buttons">{{size.title}}</div> 
         {%endif%}
         {%endfor%}
       </div>
