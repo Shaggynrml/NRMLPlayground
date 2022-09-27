@@ -61,21 +61,21 @@ product-card-body{
 }
 
 .product-card-container .card:after{
-  content: {{card_product.vendor }};
+  content: "{{card_product.vendor }}";
   position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
+  top: 60%;
+  left: -5%;
+  font-size: 6em;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255,255,25,0.05)
+  color: rgba(0,0,0,0.25)
 }
 
 .product-card-container .card .imgBx{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10000;
+  z-index: 1;
   width: 100%;
   height: 220px;
   transition: 0.5s;
@@ -102,7 +102,7 @@ product-card-body{
   height: 100px;
   text-align: center;
   transition: 1s;
-  z-index: 10;
+  z-index: 2;
 }
 
 .product-card-container .card:hover .contentBx{
@@ -133,6 +133,7 @@ product-card-body{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
+ 
 }
 
 .product-card-container .card:hover .contentBx .color{
@@ -172,8 +173,12 @@ product-card-body{
   cursor: pointer;
   transition: 0.5s;opacity: 0;
   visibility: hidden;
+  border-color: #fff;
+  border-width: 0px;
 }
-
+.size{
+  padding: 5px;
+}
 .size-buttons:hover{
  background:#778899;
 }
@@ -182,7 +187,6 @@ product-card-body{
 .product-card-container .card .contentBx .size span:hover{
   background: #778899;
 }
-
 
 
 .product-card-container .card .contentBx .color span:nth-child(2){
@@ -234,7 +238,7 @@ product-card-body{
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper underline-links-hover">
+  {% comment %} <div class="card-wrapper underline-links-hover">
     <div class="card
       card--{{ settings.card_style }}
       {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
@@ -243,7 +247,7 @@ product-card-body{
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-<div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+<div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"> {% endcomment %}
 <div class="product-card-container">
   <div class="card">
     <a  href="{{ card_product.url }}">
@@ -252,22 +256,29 @@ product-card-body{
     </div>
     </a>
     <div class="contentBx">
+      {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
-      <div>
+      <div class="size">
         {%for size in card_product.variants%}
         {% if size.available%}
- 
-        <div class= "size-buttons">{{size.title}}</div> 
+        <form method="post" action="/cart/add">
+
+          <input  type="hidden" name="id" value="{{ size.id }}" />
+
+          <input class= "size-buttons" type="submit" value="{{size.title}}" />
+
+        </form>
+        {% comment %} <div class= "size-buttons">{{size.title}}</div>  {% endcomment %}
         {%endif%}
         {%endfor%}
       </div>
-      <a href="{{ card_product.url }}">View Product</a>
+      <a class= "view-all-btn" href="{{ card_product.url }}">View Product</a>
     </div>
   </div>
-</div>
+{% comment %} </div>
 
     </div>
-  </div>
+  </div> {% endcomment %}
 {%- else -%}
   <div class="card-wrapper underline-links-hover">
     <div class="card
