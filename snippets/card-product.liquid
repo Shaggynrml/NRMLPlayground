@@ -258,6 +258,7 @@ product-card-body{
     <div class="contentBx">
       {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
+      <h3>{{card_product.price | money}}<h3>
       <div class="size">
         {%for size in card_product.variants%}
         {% if size.available%}
