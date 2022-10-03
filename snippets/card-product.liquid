@@ -33,6 +33,9 @@ product-card-body{
 
 .product-card-container{
   position: relative;
+  width: 320px;
+  height: 450px;
+  padding:10px;
 }
 
 .product-card-container .card{
@@ -183,7 +186,20 @@ product-card-body{
 .size-buttons:hover{
  background:#778899;
 }
-
+.price-section{
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  align-item: center;
+}
+.pre-discount-price{
+  color:"555";
+  text-decoration:line-through;
+  padding: 5px;
+}
+.discounted-price{
+  padding: 5px;
+}
 .product-vendor-title{
   z-index:3;
 }
@@ -262,7 +278,16 @@ product-card-body{
     <div class="contentBx">
       {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
+      {%if card_product.price == card_product.compare_at_price%}
       <h3>{{card_product.price | money}}<h3>
+      {%else%}
+      <div class = "price-section">
+      <div class = "pre-discount-price">{{card_product.price | money}}</div>
+      <div class = "discounted-price">{{card_product.price | money}}</div>
+      <div>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</div>
+      </div>
+      {%endif%}
+
       <div class="size">
         {%for size in card_product.variants%}
         {% if size.available%}
