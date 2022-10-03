@@ -1,10 +1,5 @@
 {
   "sections": {
-    "166377574293a303f7": {
-      "type": "custome-header",
-      "settings": {
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -103,8 +98,8 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -215,7 +210,6 @@
     }
   },
   "order": [
-    "166377574293a303f7",
     "image_banner",
     "rich_text",
     "featured_collection",
