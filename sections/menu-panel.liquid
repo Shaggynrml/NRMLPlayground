@@ -56,7 +56,7 @@
     cursor: pointer;
     z-index:2000000;
     /* Spacing */
-    padding: 0.25rem;
+    padding: 1rem;
 
     /* Used to position the sub nested-dropdowns */
     position: relative;
@@ -89,18 +89,27 @@
 
 /* Change background color of list item when being hovered */
 .nested-dropdowns li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration:underline;
+    border-radius: 50px;
 }
 
 /* Show the direct sub nested-dropdowns when hovering the list item */
 .nested-dropdowns li:hover > ul {
     display: block;
 }
-
+.child-link{
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius:50px;
+}
+.grandchild-link{
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius:50px;
+}
 .menu-buttons{
     color:#000;
     text-decoration:none;
-    padding: 15px;
 }
 
 </style>
@@ -110,27 +119,27 @@
         <ul class="nested-dropdowns">
         {% for link in section.settings.menu.links %}
             <li>
-            <a class= "menu-buttons" href="{{ link.url }}">{{ link.title }}</a>
-            {% if link.links.size > 0 %}
-                <ul>
-                    {% for child_link in link.links %}
-                        <li>
-                            <div class="nested-dropdowns__item">
-                                <a class= "menu-buttons" href="{{ child_link.url }}">{{ child_link.title }}</a>
-                            </div>
-                            {% if child_link.links.size > 0 %}
-                                <ul>
-                                {% for grandchild_link in child_link.links %}
-                                    <li>
-                                            <a class= "menu-buttons" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                    </li>
-                                {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                    </ul>
-            {% endif %}
+                <a class= "menu-buttons " href="{{ link.url }}">{{ link.title }}</a>
+                {% if link.links.size > 0 %}
+                    <ul>
+                        {% for child_link in link.links %}
+                            <li>
+                                <div class="nested-dropdowns__item">
+                                    <a class= "menu-buttons child-link" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                </div>
+                                {% if child_link.links.size > 0 %}
+                                    <ul>
+                                    {% for grandchild_link in child_link.links %}
+                                        <li>
+                                                <a class= "menu-buttons grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                {% endif %}
             </li>
         {% endfor %}
         </ul>
