@@ -4,23 +4,35 @@
   display: inline-flex;
   align-items: stretch;
   flex-direction:row;
-  padding: 10px;
+  padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   justify-content: center;
 }
-.navbar {
-  display: inline-flex;
-  align-items: stretch;
+
+.navbar_container {
+  display: flex;
+  align-center: spread;
+  justify-content:space-between;
   flex-direction:row;
-  justify-content: center;
   background: #D9D9D9;
-  padding: 0px 20px;
   transition: 0.3s;
   width: 100%;
+  margin:0px;
   position: relative;
 }
-.navbar:hover {
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-}
+ @media screen and (min-width: 990px) {
+   .navbar_container {
+    display: flex;
+    align-center: spread;
+    justify-content:center;
+    flex-direction:row;
+    background: #D9D9D9;
+    transition: 0.3s;
+    width: 100%;
+    margin:0px;
+    position: relative;
+   }
+ }
 .navbar__link {
   display: inline-flex;
   align-items: center;
@@ -31,6 +43,7 @@
   overflow: hidden;
   position: relative;
   transition: 0.2s ease-in-out;
+  justify-self:spread;
 }
 .navbar__link:hover .navbar__icon {
   color: #e022bb;
@@ -145,17 +158,23 @@
 
   transition: width 0.25s;
 }
-{% comment %} .searchbar__link:hover .searchbar__icon {
-  color: #e022bb;
-  transform: translateY(0) scale(0.9);
-}
-.searchbar__link:hover .searchbar__icon::before {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-.searchbar__link:hover .searchbar__label {
-  transform: translateY(0);
-} {% endcomment %}
+  header-drawer {
+    justify-self: start;
+    padding:10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow: hidden;
+    position: relative;
+    align-self:center;
+  }
+  @media screen and (min-width: 990px) {
+    header-drawer {
+      display: none;
+    }
+  }
+
 .searchbar__icon {
   justify: center;
   align: center;
@@ -164,20 +183,6 @@
   position: relative;
   z-index: 5;
 }
-{% comment %} .searchbar__icon::before {
-  content: "";
-  width: 45px;
-  height: 45px;
-  background: rgba(224, 34, 187, 0.15);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: -1;
-  border-radius: 50%;
-  transform: translate(-50%, 50%);
-  opacity: 0;
-  transition: 0.3s;
-} {% endcomment %}
 .searchbar__label {
   display: block;
   margin-top: 10px;
@@ -193,21 +198,23 @@
 
 {%endstyle%}
 <center>
-  <nav class="navbar">
+  <nav data-breakpoint="tablet" class="navbar_container">
+    <header-drawer data-breakpoint="tablet">
+        <details id="Details-menu-drawer-container">
+          <summary class="header__icon header__icon--menu header__icon--summary link focus-inset">
+            <span>
+              {% render 'icon-hamburger' %}
+              {% render 'icon-close' %}
+            </span>
+          </summary>
+        </details>
+      </header-drawer>
     <a href="#" class="navbar__link">
       <span class="navbar__icon">
         <span data-feather="home"></span>
       </span>
       <span class="navbar__label">Home</span>
     </a>
-
-    <a href="#" class="navbar__link">
-      <span class="navbar__icon">
-        <span data-feather="clipboard"></span>
-      </span>
-      <span class="navbar__label">Work</span>
-    </a>
-
     <a href="#" class="navbar__link">
       <span class="navbar__icon">
         <span data-feather="user"></span>

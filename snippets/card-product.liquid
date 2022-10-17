@@ -65,10 +65,10 @@ product-card-body{
 }
 
 .product-card-container .card:after{
-  content: "{{card_product.vendor }}";
+  content: "NRML";
   position: absolute;
   top: 60%;
-  left: -5%;
+  left: 10%;
   font-size: 6em;
   font-weight: 800;
   font-style: italic;
@@ -126,6 +126,7 @@ product-card-body{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 8px 20px;
   transition: 0.5s;opacity: 0;
   visibility: hidden;
@@ -193,7 +194,7 @@ product-card-body{
   align-item: center;
 }
 .pre-discount-price{
-  color:"555";
+  color:"777";
   text-decoration:line-through;
   padding: 5px;
 }
@@ -201,6 +202,8 @@ product-card-body{
   padding: 5px;
 }
 .product-vendor-title{
+  padding-top: 50px;
+  text-align: center;
   z-index:3;
 }
 .product-card-container .card .contentBx .size span:hover{
@@ -282,7 +285,7 @@ product-card-body{
       <h3>{{card_product.price | money}}<h3>
       {%else%}
       <div class = "price-section">
-      <div class = "pre-discount-price">{{card_product.price | money}}</div>
+      <div class = "pre-discount-price">{{card_product.compare_at_price | money}}</div>
       <div class = "discounted-price">{{card_product.price | money}}</div>
       <div>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</div>
       </div>
@@ -290,16 +293,12 @@ product-card-body{
 
       <div class="size">
         {%for size in card_product.variants%}
-        {% if size.available%}
-        <form method="post" action="/cart/add">
-
-          <input  type="hidden" name="id" value="{{ size.id }}" />
-
-          <input class= "size-buttons" type="submit" value="{{size.title}}" />
-
-        </form>
-        {% comment %} <div class= "size-buttons">{{size.title}}</div>  {% endcomment %}
-        {%endif%}
+          {% if size.available%}
+            <form method="post" action="/cart/add">
+              <input  type="hidden" name="id" value="{{ size.id }}" />
+              <input class= "size-buttons" type="submit" value="{{size.title}}" />
+            </form>
+          {%endif%}
         {%endfor%}
       </div>
       <a class= "view-all-btn" href="{{ card_product.url }}">View Product</a>
