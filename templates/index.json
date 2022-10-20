@@ -47,8 +47,15 @@
         "show_text_below": false
       }
     },
+    "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
+      "type": "menu-panel",
+      "settings": {
+        "menu": "product-menu"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -211,6 +218,7 @@
   },
   "order": [
     "image_banner",
+    "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "rich_text",
     "featured_collection",
     "collage",

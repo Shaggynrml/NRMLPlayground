@@ -35,7 +35,12 @@ product-card-body{
   position: relative;
   width: 320px;
   height: 450px;
-  padding:10px;
+}
+@media screen and (max-width:750px){
+  .product-card-container{
+    width: calc(320px/2);
+    height: calc(450px/2);
+  }
 }
 
 .product-card-container .card{
@@ -46,7 +51,16 @@ product-card-body{
   border-radius: 20px;
   overflow: hidden;
 }
-
+@media screen and (max-width:750px){
+  .product-card-container .card{
+    position: relative;
+    width: calc(320px/2);
+    height: calc(450px/2);
+    background:url("{{ 'marbleBackground.jpg' | asset_img_url: '1600x' }}");
+    border-radius: calc(20px/2);
+    overflow: hidden;
+  }
+}
 .product-card-container .card:before{
   content: '';
   position: absolute;
@@ -59,9 +73,14 @@ product-card-body{
   transition: 0.5s ease-in-out;
   z-index: 0;
 }
-
 .product-card-container .card:hover:before{
   clip-path: circle(300px at 80% -20%);
+}
+@media screen and (max-width:750px){
+  .product-card-container .card:before{
+  background:url("{{ 'marbelBackground2.jpg' | asset_img_url: '600x' }}");
+  clip-path: circle(calc(150px/2) at 80% -20%);
+  }
 }
 
 .product-card-container .card:after{
@@ -74,7 +93,12 @@ product-card-body{
   font-style: italic;
   color: rgba(0,0,0,0.25)
 }
-
+@media screen and (max-width:750px){
+  .product-card-container .card:after{
+    font-size: calc(6em);
+    font-weight: calc(800);
+  }
+}
 .product-card-container .card .imgBx{
   position: absolute;
   top: 50%;
@@ -90,7 +114,17 @@ product-card-body{
   transform: translateY(0%);
     
 }
-
+@media screen and (max-width: 750px){
+  .product-card-container .card .imgBx{
+    position: absolute;
+    top: 0%;
+    transform: translateY(0%);
+    z-index: 1;
+    width: 100%;
+    height: calc(220px/2);
+    transition: 0.5s;
+  }
+}
 .product-card-container .card .imgBx img{
   position: absolute;
   top: 50%;
@@ -98,7 +132,15 @@ product-card-body{
   transform: translate(-50%, -50%);
   width: 270px;
 }
-
+@media screen and (max-width:750px){
+  .product-card-container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(270px/2);
+  }
+}
 .product-card-container .card .contentBx{
   position: absolute;
   bottom: 0;
@@ -108,9 +150,20 @@ product-card-body{
   transition: 1s;
   z-index: 2;
 }
-
 .product-card-container .card:hover .contentBx{
   height: 210px;
+}
+
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(210px/2);
+    text-align: center;
+    transition: 1s;
+    z-index: 2;
+  }
 }
 
 .product-card-container .card .contentBx h2{
@@ -120,24 +173,37 @@ product-card-body{
   letter-spacing: 1px;
   color: #000;
   margin: 0;
+  }
+
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx h2{
+    position: relative;
+    font-weight: calc(600/2);
+    font-size: 12px;
+    padding-bottom:calc(5px/2);
+    letter-spacing: calc(1px/2);
+    color: #000;
+    margin: 0;
+    }
 }
 
-.product-card-container .card .contentBx .size, .container .card .contentBx .color {
-  display: flex;
+.product-card-container .card .contentBx .size {
+  display: none;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 8px 20px;
-  transition: 0.5s;opacity: 0;
+  transition: 1.5s;opacity: 0;
   visibility: hidden;
   padding-top: 0;
   padding-bottom: 10;
 }
 
 .product-card-container .card:hover .contentBx .size{
+  display:flex;
   opacity: 1;
   visibility: visible;
-  transition-delay: 0.5s;
+  transition-delay: 1.5s;
  
 }
 
@@ -146,6 +212,7 @@ product-card-body{
   visibility: visible;
   transition-delay: 0.6s;
 }
+
 
 .product-card-container .card .contentBx .size h3, .container .card .contentBx .color h3{
   color: #fff;
@@ -159,6 +226,28 @@ product-card-body{
 .product-card-container .card:hover .contentBx .size-buttons{
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx h3, .container .card .contentBx .color h3{
+    color: #fff;
+    font-weight: calc(250/2);
+    font-size: calc(12px/2);
+    text-transform: uppercase;
+    letter-spacing: calc(1px/2);
+    margin-right: calc(10px/2);
+  }
+
+  .product-card-container .card .contentBx .size-buttons{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .size{
+    display: none
+  }
 }
 .size-buttons{
   width: 40px;
@@ -181,9 +270,30 @@ product-card-body{
   border-color: #fff;
   border-width: 0px;
 }
-.size{
-  padding: 5px;
-}
+
+@media screen and (max-width:750px){
+  .size-buttons{
+    width: calc(40px/2);
+    height: calc(25px/2);
+    text-align: center;
+    line-height: calc(26px/2);
+    font-size: calc(12px/2);
+    display: inline-block;
+    overflow:hidden;
+    padding-top:calc(2px/2);
+    color: #111;
+    background: #fff;
+    margin:calc(2px/2);
+    transition: 0.5s;
+    color: #111;
+    border-radius: calc(4px/2);
+    cursor: pointer;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    border-color: #fff;
+    border-width: 0px;
+  }
+ }
 .size-buttons:hover{
  background:#778899;
 }
@@ -191,20 +301,46 @@ product-card-body{
   display: flex;
   flex-direction: horizontal;
   justify-content: center;
-  align-item: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px){
+  .price-section{
+      font-size:10px;
+  }
 }
 .pre-discount-price{
   color:"777";
   text-decoration:line-through;
   padding: 5px;
 }
+@media screen and (max-width:750px){
+  .pre-discount-price{
+    color:"777";
+    text-decoration:line-through;
+    padding:calc(5px/2);
+  } 
+}
+
 .discounted-price{
   padding: 5px;
+}
+@media screen and (max-width:750px){
+  .discounted-price{
+    padding: calc(5px/2);
+  }
 }
 .product-vendor-title{
   padding-top: 50px;
   text-align: center;
   z-index:3;
+}
+@media screen and (max-width:750px){
+  .product-vendor-title{
+    padding-top: calc(50px/2);
+    text-align: center;
+    z-index:3;
+  }
 }
 .product-card-container .card .contentBx .size span:hover{
   background: #778899;
@@ -229,22 +365,38 @@ product-card-body{
   background: #fff;
   border-radius: 4px;
   margin-top: 10px;
+  margin-bottom:5px;
   text-decoration: none;
   font-weight: 600;
   color: #111;
   opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s;
+  transform: translateY(20px);
+  transition: 0.35s;
   margin-top: 0;
 }
 
 .product-card-container .card:hover .contentBx a{
   opacity: 1;
   transform: translateY(0px);
-  transition-delay: 0.75s;
+  transition-delay: 0.35s;
   
 }
-
+@media screen and (max-width:750px){
+.product-card-container .card .contentBx a{
+  display: inline-block;
+  padding: calc(10px/2) calc(20px/2);
+  background: #fff;
+  border-radius: calc(4px/2);
+  margin-top: calc(10px/2);
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  margin-top: 0;
+}
+}
 </style>
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
@@ -282,7 +434,7 @@ product-card-body{
       {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
       {%if card_product.price == card_product.compare_at_price%}
-      <h3>{{card_product.price | money}}<h3>
+      <div>{{card_product.price | money}}<div>
       {%else%}
       <div class = "price-section">
       <div class = "pre-discount-price">{{card_product.compare_at_price | money}}</div>
@@ -290,7 +442,7 @@ product-card-body{
       <div>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</div>
       </div>
       {%endif%}
-
+      <a class= "view-all-btn" href="{{ card_product.url }}">View Product</a>
       <div class="size">
         {%for size in card_product.variants%}
           {% if size.available%}
@@ -301,7 +453,6 @@ product-card-body{
           {%endif%}
         {%endfor%}
       </div>
-      <a class= "view-all-btn" href="{{ card_product.url }}">View Product</a>
     </div>
   </div>
 {% comment %} </div>
