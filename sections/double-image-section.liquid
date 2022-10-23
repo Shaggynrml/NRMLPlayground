@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+{% schema %}
+    {
+        "name": "Double Image",
+        "tag": "section",
+        "class": "section-double-image",
+        "settings": [
+            {
+            "type": "collection",
+            "id": "collection",
+            "label": "collection"
+            },
+            {
+            "type": "text",
+            "id": "title",
+            "default": "Featured collection",
+            "label": "Title"
+            },
+            {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "t:sections.collage.blocks.image.settings.image.label"
+        },
+                {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "t:sections.collage.blocks.image.settings.image.label"
+        }
+        ],
+        "presets": [
+            {
+            "name": "new-arrival-grid"
+            }
+        ]
+    }
+{% endschema %}

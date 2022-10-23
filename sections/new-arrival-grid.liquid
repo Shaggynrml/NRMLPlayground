@@ -10,12 +10,16 @@
     .small-product-card{
         transform: scale(0.9);
     }
+    .new-arrival-title{
+        text-align:center;
+        font-size: 30px;
+    }
     .new-arrival-grid-container{
         width: 100%;
         justify-content:center;
         align-items:center;
     }
-    .new-arrival-grid-row-1{
+    .new-arrival-grid-row{
         margin: 0px;
         padding: 5px;
         text-align: center;
@@ -24,32 +28,59 @@
         width:100%;
         list-style-type:none;
         justify-content: center;
+        overflow: hidden;
+    }
+    .new-arrival-grid-mobile-row{
+        display:none;
     }
     @media screen and (max-width: 750px){
-        .new-arrival-grid-row-1{
-
+        .new-arrival-grid-mobile-row{
+        margin: 0px;
+        text-align: center;
+        grid-auto-flow: row;
+        display:flex;
+        width:100%;
+        list-style-type:none;
+        justify-content: center;
+        padding:0px;
         }
+        .new-arrival-grid-row{
+            display:none;
+    }
     }
 </style>
 
-    <div>
+    <div class="new-arrival-title">
         {{section.settings.title}}
     </div>
     <div class = "new-arrival-grid-container">
-        <ul class = "new-arrival-grid-row-1">
-            {%for product in section.settings.collection.products limit:rowSize %}
+        <ul class = "new-arrival-grid-row">
+            {%for product in section.settings.collection.products limit:6 %}
                 <li id= "item" class = "small-product-card">
                     {%render 'card-product', card_product:product %}
                 </li>
-            {%endfor%}
-            
+            {%endfor%}            
         </ul>
-        <ul class = "new-arrival-grid-row-1">
-            {%for product in section.settings.collection.products limit:rowSize offset:continue %}
-                <li class = "small-product-card">
+        <ul class = "new-arrival-grid-row">
+            {%for product in section.settings.collection.products limit: 6 offset: continue %}
+                <li id= "item" class = "small-product-card">
                     {%render 'card-product', card_product:product %}
                 </li>
-            {%endfor%}
+            {%endfor%}            
+        </ul>
+        <ul class = "new-arrival-grid-mobile-row">
+            {%for product in section.settings.collection.products limit:2 %}
+                <li id= "item" class = "small-product-card">
+                    {%render 'card-product', card_product:product %}
+                </li>
+            {%endfor%}            
+        </ul>
+        <ul class = "new-arrival-grid-mobile-row">
+            {%for product in section.settings.collection.products limit: 2 offset: continue%}
+                <li id= "item" class = "small-product-card">
+                    {%render 'card-product', card_product:product %}
+                </li>
+            {%endfor%}            
         </ul>
     </div>
 
