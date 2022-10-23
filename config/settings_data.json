@@ -98,6 +98,7 @@
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_cart_note": false,
+    "cart_drawer_collection": "frontpage",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
