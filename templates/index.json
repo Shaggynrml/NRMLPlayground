@@ -53,6 +53,13 @@
         "menu": "product-menu"
       }
     },
+    "86928ebd-1ce2-48d1-8d72-e60989d4b93b": {
+      "type": "new-arrival-grid",
+      "settings": {
+        "collection": "frontpage",
+        "title": "Featured collection"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "disabled": true,
@@ -219,6 +226,7 @@
   "order": [
     "image_banner",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
+    "86928ebd-1ce2-48d1-8d72-e60989d4b93b",
     "rich_text",
     "featured_collection",
     "collage",
