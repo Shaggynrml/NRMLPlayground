@@ -163,7 +163,7 @@
   text-decoration: none;
   padding: 10px 20px;
   position: relative;
-  z-index: 10;
+  z-index: 6;
 }
 .input-group.search-group {
     height: 50px;
@@ -245,6 +245,12 @@
   transition-delay: 0.2s;
 }
 
+.nrmlicon {
+    background: url("{{ 'nrmllogobigger.png' | asset_img_url: '1200x' }}");
+    height: 35px;
+    width: 30px;
+    display: block;
+}
 </style>
 
 {%- style -%}
@@ -453,7 +459,7 @@
     <nav data-breakpoint="tablet" class="navbar_container header-wrapper">
       <a href="{{ routes.root_url }}" class="navbar__link">
         <span class="navbar__icon">
-          <span data-feather="home"></span>
+          <span class= "nrmlicon"></span>
         </span>
         <span class="navbar__label">Home</span>
       </a>
@@ -475,7 +481,7 @@
     <div class="searchbar__link">
       <span class="searchbar__icon">
         <form action="{{ routes.search_url }}">
-          <div class="input-group search-group">
+          <div class="input-group search-group"> 
               <input type="text" 	name="q" value="{{ search.terms | escape }}" class="form-control search-control" placeholder="Enter your search term...">
           </div>
         </form>

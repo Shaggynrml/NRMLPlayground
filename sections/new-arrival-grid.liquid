@@ -1,10 +1,16 @@
+<script>
+    var windowSize = window.outerWidth;
+    if (windowSize <=750) {
+    {% assign rowSize = 2%}
+    } else {
+     {% assign rowSize = 4%}
+    }
+</script>
 <style>
     .small-product-card{
         transform: scale(0.9);
     }
     .new-arrival-grid-container{
-        display:flex;
-        overflow:hidden;
         width: 100%;
         justify-content:center;
         align-items:center;
@@ -13,30 +19,39 @@
         margin: 0px;
         padding: 5px;
         text-align: center;
+        grid-auto-flow: row;
         display:flex;
         width:100%;
         list-style-type:none;
+        justify-content: center;
     }
     @media screen and (max-width: 750px){
+        .new-arrival-grid-row-1{
 
+        }
     }
 </style>
 
-
-<div class = "new-arrival-grid-container">
     <div>
         {{section.settings.title}}
     </div>
-    <ul class = "new-arrival-grid-row-1">
-        {%for product in section.settings.collection.products%}
-             <li class = "small-product-card">
-                {%render 'card-product', card_product:product %}
-             </li>
-        {%endfor%}
-    </ul>
-</div>
-
-
+    <div class = "new-arrival-grid-container">
+        <ul class = "new-arrival-grid-row-1">
+            {%for product in section.settings.collection.products limit:rowSize %}
+                <li id= "item" class = "small-product-card">
+                    {%render 'card-product', card_product:product %}
+                </li>
+            {%endfor%}
+            
+        </ul>
+        <ul class = "new-arrival-grid-row-1">
+            {%for product in section.settings.collection.products limit:rowSize offset:continue %}
+                <li class = "small-product-card">
+                    {%render 'card-product', card_product:product %}
+                </li>
+            {%endfor%}
+        </ul>
+    </div>
 
 
 {% schema %}
