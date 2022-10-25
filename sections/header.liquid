@@ -245,6 +245,18 @@
     width: 30px;
     display: block;
 }
+.carticon {
+    background: url("{{ 'shopping-cart.png' | asset_img_url: '1200x' }}");
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+.accounticon {
+    background: url("{{ 'account.png' | asset_img_url: '1200x' }}");
+    height: 32px;
+    width: 32px;
+    display: block;
+}
 </style>
 
 {%- style -%}
@@ -460,20 +472,14 @@
 
       <a href="#" class="navbar__link">
         <span class="navbar__icon">
-          <span data-feather="user"></span>
+          <span class="accounticon"></span>
         </span>
         <span class="navbar__label">User</span>
       </a>
 
       <a href="{{ routes.cart_url }}" class="navbar__link" class="navbar__link header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         <span class="navbar__icon">
-                  {%- liquid
-          if cart == empty
-            render 'icon-cart-empty'
-          else
-            render 'icon-cart'
-          endif
-        -%}
+        <span class="carticon"></span>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
@@ -486,6 +492,7 @@
         </span>
         <span class="navbar__label">Cart</span>
       </a>
+      
     </nav>
         <form class="searchbar__link" action="{{ routes.search_url }}">
           <div class="input-group search-group"> 

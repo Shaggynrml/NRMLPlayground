@@ -1,10 +1,12 @@
-{%- liquid
-  if cart == empty
-    render 'icon-cart-empty'
-  else
-    render 'icon-cart'
-  endif
--%}
+<style>
+.carticon {
+    background: url("{{ 'shopping-cart.png' | asset_img_url: '1200x' }}");
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+</style>
+<span class="carticon"></span>
 <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
 {%- if cart != empty -%}
   <div class="cart-count-bubble">
