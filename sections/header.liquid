@@ -159,6 +159,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: transparent;
   text-align: center;
   text-decoration: none;
   padding: 10px 20px;
@@ -177,7 +178,6 @@
     padding: 10px 20px;
     width: 620%;
     color: #000;
-    z-index: 10;
     cursor: auto;
     background-color: #fff;
     border-radius: 100px;
@@ -215,36 +215,30 @@
   padding-top: 15px;
   outline: 0 none;
   position: absolute;
+  background-color:transparent;
   right: 0;
   top: 0;
   z-index: 1;
   cursor: pointer;
   -webkit-backface-visibility: hidden;
-
   transition: width 0.25s;
 }
-
-.searchbar__icon {
-  justify: center;
-  align: center;
+.searchbutton{
   display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 5;
+  background: url("{{ 'searchicon.png' | asset_img_url: '1200x' }}");
+  height: 50px;
+  width: 50px;
+  top:0%;
+  left:0%;
+  transform: scale(0.6);
+  border: none;
+  overflow:visible;
+  padding:0px;
+  margin:0px;
+  align-self:center;
+  justify-self: center;
+  position:absolute;
 }
-.searchbar__label {
-  display: block;
-  margin-top: 10px;
-  font-family: "Roboto Mono", sans-serif;
-  color: #e022bb;
-  position: relative;
-  bottom: 0;
-  font-size: 0.9375rem;
-  transform: translateY(200%);
-  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
-  transition-delay: 0.2s;
-}
-
 .nrmlicon {
     background: url("{{ 'nrmllogobigger.png' | asset_img_url: '1200x' }}");
     height: 35px;
@@ -471,22 +465,34 @@
         <span class="navbar__label">User</span>
       </a>
 
-      <a href="/cart" class="navbar__link">
+      <a href="{{ routes.cart_url }}" class="navbar__link" class="navbar__link header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         <span class="navbar__icon">
-          <span data-feather="shopping-cart"></span>
+                  {%- liquid
+          if cart == empty
+            render 'icon-cart-empty'
+          else
+            render 'icon-cart'
+          endif
+        -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
         </span>
         <span class="navbar__label">Cart</span>
       </a>
     </nav>
-    <div class="searchbar__link">
-      <span class="searchbar__icon">
-        <form action="{{ routes.search_url }}">
+        <form class="searchbar__link" action="{{ routes.search_url }}">
           <div class="input-group search-group"> 
               <input type="text" 	name="q" value="{{ search.terms | escape }}" class="form-control search-control" placeholder="Enter your search term...">
+              <button class="searchbutton"></button>
           </div>
         </form>
-      <span>
-    </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
