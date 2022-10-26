@@ -50,13 +50,13 @@
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
       "settings": {
-        "menu": "product-menu"
+        "menu": ""
       }
     },
     "86928ebd-1ce2-48d1-8d72-e60989d4b93b": {
       "type": "new-arrival-grid",
       "settings": {
-        "collection": "frontpage",
+        "collection": "recently-added",
         "title": "Featured collection"
       }
     },
