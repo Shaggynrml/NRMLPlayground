@@ -169,6 +169,7 @@ product-card-body{
 .product-card-container .card .contentBx h2{
   position: relative;
   font-weight: 600;
+  font-size: 20px;
   padding-bottom: 5px;
   letter-spacing: 1px;
   color: #000;
@@ -179,7 +180,7 @@ product-card-body{
   .product-card-container .card .contentBx h2{
     position: relative;
     font-weight: calc(600/2);
-    font-size: 12px;
+    font-size: 10px;
     padding-bottom:calc(5px/2);
     letter-spacing: calc(1px/2);
     color: #000;
@@ -430,6 +431,7 @@ product-card-body{
       {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
     </div>
     </a>
+
     <div class="contentBx">
       {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
@@ -454,6 +456,7 @@ product-card-body{
         {%endfor%}
       </div>
     </div>
+
   </div>
 {% comment %} </div>
 
