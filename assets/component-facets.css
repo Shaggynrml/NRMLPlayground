@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   padding-top: 1rem;
+  z-index: 4;
 }
 
 .active-facets-mobile {
@@ -268,7 +269,7 @@
   position: sticky;
   top: 0;
   background-color: rgb(var(--color-background));
-  z-index: 1;
+  z-index: 6;
 }
 
 .facets__list {
