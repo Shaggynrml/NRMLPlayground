@@ -35,6 +35,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/All_Stone_Island_Hoodies_1_copy_0f0619d0-6ab4-4f50-81e3-f7c83eb48351.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
