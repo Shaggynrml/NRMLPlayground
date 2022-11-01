@@ -55,14 +55,14 @@
     </div>
     <div class = "new-arrival-grid-container">
         <ul class = "new-arrival-grid-row">
-            {%for product in section.settings.collection.products limit:6 %}
+            {%for product in section.settings.collection.products limit:4 %}
                 <li id= "item" class = "small-product-card">
                     {%render 'card-product', card_product:product %}
                 </li>
             {%endfor%}            
         </ul>
         <ul class = "new-arrival-grid-row">
-            {%for product in section.settings.collection.products limit: 6 offset: continue %}
+            {%for product in section.settings.collection.products limit: 4 offset: continue %}
                 <li id= "item" class = "small-product-card">
                     {%render 'card-product', card_product:product %}
                 </li>
