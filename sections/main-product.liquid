@@ -392,7 +392,7 @@
                 <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
                 <div class="select">
                   <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
-                    {%- for variant in product.variants -%}
+                    {%- for variant in product.variants.option1.values -%}
                       <option
                         {% if variant == product.selected_variant %}selected="selected"{% endif %}
                         {% if variant.available == false %}disabled{% endif %}
