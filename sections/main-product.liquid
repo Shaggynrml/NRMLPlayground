@@ -338,15 +338,15 @@
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                       <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ product.options_with_values[0].option.name }}</legend>
-                        {%- for value in product.options_with_values[0] -%}
-                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        <legend class="form__label">{{ product.options_with_values[0].name }}</legend>
+                        {%- for value in product.options_with_values[0].values -%}
+                          <input type="radio" id="{{ section.id }}-{{  product.options_with_values[0].position }}-{{ forloop.index0 }}"
                                 name="{{ product.options_with_values[0].name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
+                                {% if  product.options_with_values[0].selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label for="{{ section.id }}-{{ product.options_with_values[0].position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
                         {%- endfor -%}
