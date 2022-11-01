@@ -394,7 +394,7 @@
                   <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
                     {%- for variant in product.variants -%}
                       <option
-                        {% if variant == product.selected_variant %}selected="selected"{% endif %}
+                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
                         {% if variant.available == false %}disabled{% endif %}
                         value="{{ variant.id }}"
                       >
@@ -422,16 +422,16 @@
                 </div>
 
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_variant.id }}" disabled>
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product-form__buttons">
                     <button
                       type="submit"
                       name="add"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
-                      {% if product.selected_variant.available == false %}disabled{% endif %}
+                      {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
                         <span>
-                          {%- if product.selected_variant.available -%}
+                          {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
                             {{ 'products.product.sold_out' | t }}
@@ -452,10 +452,10 @@
 
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-              {%- assign pick_up_availabilities = product.selected.store_availabilities | where: 'pick_up_enabled', true -%}
+              {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
               <pickup-availability class="product__pickup-availabilities no-js-hidden quick-add-hidden"
-                {% if product.selected and pick_up_availabilities.size > 0 %} available{% endif %}
+                {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
                 data-root-url="{{ routes.root_url }}"
                 data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 data-has-only-default-variant="{{ product.has_only_default_variant }}"
