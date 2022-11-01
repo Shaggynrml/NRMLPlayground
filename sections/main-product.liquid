@@ -431,7 +431,7 @@
                       {% if product.selected.available == false %}disabled{% endif %}
                     >
                         <span>
-                          {%- if product.available -%}
+                          {%- if product.selected.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
                             {{ 'products.product.sold_out' | t }}
