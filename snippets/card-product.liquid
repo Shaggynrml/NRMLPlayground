@@ -450,7 +450,7 @@ product-card-body{
           {% if size.available%}
             <form method="post" action="/cart/add">
               <input  type="hidden" name="id" value="{{ size.id }}" />
-              <input class= "size-buttons" type="submit" value="{{size.title}}" />
+              <input class= "size-buttons" type="submit" value="{{size.option1}}" />
             </form>
           {%endif%}
         {%endfor%}
