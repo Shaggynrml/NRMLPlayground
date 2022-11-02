@@ -341,7 +341,9 @@
 
                   {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
-                        <legend class="form__label" >{{ option.name }}</legend>
+                        {%- if option.name == "Size" -%}
+                          <legend class="form__label" >{{ option.name }}</legend>
+                        {% endif %}
                         {%- for value in option.values -%}
                           <input {%- if option.name != "Size" -%}type="hidden"{%- else -%} type="radio" {% endif %}  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
