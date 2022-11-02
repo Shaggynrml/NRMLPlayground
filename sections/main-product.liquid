@@ -345,7 +345,7 @@
                           <legend class="form__label" >{{ option.name }}</legend>
                         {% endif %}
                         {%- for value in option.values -%}
-                          <input {%- if option.name != "Size" -%}type="hidden"{%- else -%} type="radio" {% endif %}  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          <input {% if option.name != "Size" %}type="hidden"{% else %} type="radio" {% endif %}  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
