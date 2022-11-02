@@ -343,13 +343,13 @@
                       <fieldset class="js product-form__input">
                         <legend class="form__label" >{{ option.name }}</legend>
                         {%- for value in option.values -%}
-                          <input {%- if option.name != "size" -%}type="hidden"{%- else -%} type="radio" {% endif %}  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                          <input {%- if option.name != "Size" -%}type="hidden"{%- else -%} type="radio" {% endif %}  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          {%- if option.name != "Size" -%}
+                          {%- if option.name == "Size" -%}
                           <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {%- if option.name != "Size" -%}type="hidden"{%- else -%} type="radio" {% endif %}>
                             {{ value }}
                           </label>
