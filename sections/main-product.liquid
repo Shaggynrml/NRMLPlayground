@@ -349,7 +349,7 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {%- if option.name != "Size" -%}type="hidden"{%- else -%} type="radio" {% endif %}>
                             {{ value }}
                           </label>
                         {%- endfor -%}
