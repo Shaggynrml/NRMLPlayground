@@ -341,12 +341,12 @@
 
                   {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
-                        <legend class="form__label" {% if option.name != "Size" %}hidden{% endif %} >{{ option.name }}</legend>
+                        <legend class="form__label" {% if option.name != "Size" %}type="hidden"{% endif %} >{{ option.name }}</legend>
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
-                                {% if option.name != "Size" %}hidden{% endif %}
+                                {% if option.name != "Size" %}type="hidden"{% endif %}
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
