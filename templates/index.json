@@ -58,7 +58,7 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "recently-added",
-        "title": "Featured collection"
+        "title": "New Arrivals"
       }
     },
     "rich_text": {
