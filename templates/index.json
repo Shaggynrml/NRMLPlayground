@@ -58,7 +58,7 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "recently-added",
-        "title": "Featured collection"
+        "title": "New Arrivals"
       }
     },
     "rich_text": {
@@ -95,16 +95,16 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "NIKE",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "nike",
         "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
@@ -116,6 +116,33 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "aa161693-d1b6-455f-8f0d-fc0699991ad5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "JORDAN",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "jordan",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -238,6 +265,19 @@
         "button_link_one": "",
         "button_link_two": ""
       }
+    },
+    "4a275486-cbba-4d6d-8169-a105ed371ca5": {
+      "type": "double-image-section",
+      "settings": {
+        "collection": "",
+        "title": "Featured collection",
+        "image-one": "shopify:\/\/shop_images\/Release_Radar_Dunk.jpg",
+        "image-two": "shopify:\/\/shop_images\/Jordan_1_Low_Red_1.jpg",
+        "image-one-mobile": "shopify:\/\/shop_images\/Dr.Marten_Mobile.jpg",
+        "image-two-mobile": "shopify:\/\/shop_images\/All_Stone_Island_Hoodies_Mobile.jpg",
+        "button_link_one": "",
+        "button_link_two": ""
+      }
     }
   },
   "order": [
@@ -246,9 +286,11 @@
     "86928ebd-1ce2-48d1-8d72-e60989d4b93b",
     "rich_text",
     "featured_collection",
+    "aa161693-d1b6-455f-8f0d-fc0699991ad5",
     "collage",
     "video",
     "multicolumn",
-    "2d9068a4-e6ff-45ee-938c-1344739b1150"
+    "2d9068a4-e6ff-45ee-938c-1344739b1150",
+    "4a275486-cbba-4d6d-8169-a105ed371ca5"
   ]
 }
