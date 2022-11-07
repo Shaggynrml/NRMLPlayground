@@ -442,7 +442,7 @@ product-card-body{
       {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
       <h2>{{card_product.title}}</h2>
       {%if card_product.price == card_product.compare_at_price%}
-      <div>{{card_product.price | money}}<div>
+      <div>{{card_product.price | money}}</div>
       {%else%}
       <div class = "price-section">
       <div class = "pre-discount-price">{{card_product.compare_at_price | money}}</div>
