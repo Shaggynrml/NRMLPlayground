@@ -431,7 +431,7 @@ product-card-body{
 <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"> {% endcomment %}
 <div class="product-card-container">
   <div class="card">
-    <div class = "product-vendor-title">{{card_product.vendor}}<div>
+    <div class = "product-vendor-title">{{card_product.vendor}}</div>
     <a  href="{{ card_product.url }}">
     <div class="imgBx" >
       {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
