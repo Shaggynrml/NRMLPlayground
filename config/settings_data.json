@@ -95,6 +95,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
+    "favicon": "shopify:\/\/shop_images\/NRML_BLACK_1000x_cd651b20-57b2-49ca-9c72-7eba1f970773.png",
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_cart_note": false,
