@@ -113,8 +113,8 @@
                             <dl>
                               {%- if item.product.has_only_default_variant == false -%}
                                   <div class="product-option">
-                                    <dt>{{ item.options[0].name }}: </dt>
-                                    <dd>{{ item.options[0].value }}</dd>
+                                    <dt>{{ item.options_with_values[0].name }}: </dt>
+                                    <dd>{{ item.options_with_values[0].value }}</dd>
                                   </div>
                               {%- endif -%}
 
