@@ -95,7 +95,10 @@
 
 /* Show the direct sub nested-dropdowns when hovering the list item */
 .nested-dropdowns li:hover > ul {
-    display: block;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 200px;
 }
 .child-link{
     background-color: #D9D9D9;
@@ -110,6 +113,13 @@
 .menu-buttons{
     color:#000;
     text-decoration:none;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 </style>
