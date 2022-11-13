@@ -109,7 +109,7 @@
   overflow: hidden;
   position: relative;
   transition: 0.2s ease-in-out;
-  justify-self:spread;
+  justify-self:center;
 }
 .navbar__link:hover .navbar__icon {
   color: #D9D9D9;
@@ -477,7 +477,7 @@
         <span class="navbar__label">User</span>
       </a>
 
-      <a href="{{ routes.cart_url }}" class="navbar__link" class="navbar__link header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" class="navbar__link" class=" header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         <span class="navbar__icon">
         <span class="carticon"></span>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
