@@ -15,7 +15,7 @@
             "button_label": "CANADA GOOSE",
             "link": "shopify:\/\/collections\/canada-goose",
             "button_style_secondary": false,
-            "box_align": "bottom-left",
+            "box_align": "top-right",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
