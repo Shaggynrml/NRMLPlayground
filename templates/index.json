@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h0"
+            "heading_size": "h2"
           }
         },
         "text": {
@@ -37,12 +37,12 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/All_Stone_Island_Hoodies_1_copy_0f0619d0-6ab4-4f50-81e3-f7c83eb48351.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "adapt_height_first_image": true,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true
@@ -74,6 +74,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
@@ -262,8 +263,8 @@
         "image-two": "shopify:\/\/shop_images\/desktopbannerpng.png",
         "image-one-mobile": "shopify:\/\/shop_images\/Canada_Goose_Mobile.jpg",
         "image-two-mobile": "shopify:\/\/shop_images\/FallEssentialBanner.png",
-        "button_link_one": "",
-        "button_link_two": ""
+        "button_link_one": "shopify:\/\/collections\/accessories-stone-island",
+        "button_link_two": "shopify:\/\/blogs\/release-calendar"
       }
     },
     "4a275486-cbba-4d6d-8169-a105ed371ca5": {
@@ -275,8 +276,8 @@
         "image-two": "shopify:\/\/shop_images\/Jordan_1_Low_Red_1.jpg",
         "image-one-mobile": "shopify:\/\/shop_images\/Dr.Marten_Mobile.jpg",
         "image-two-mobile": "shopify:\/\/shop_images\/All_Stone_Island_Hoodies_Mobile.jpg",
-        "button_link_one": "",
-        "button_link_two": ""
+        "button_link_one": "shopify:\/\/collections\/nike-tech-fleece",
+        "button_link_two": "shopify:\/\/products\/nike-acg-lowcate-dm8019-002-june-25th"
       }
     }
   },
