@@ -3,6 +3,8 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 
+
+
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
@@ -116,10 +118,10 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+              <h2 class="banner__heading {{block.settings.heading_colour}} {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
+              <div class="banner__text {{block.settings.subheading_colour}}" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
@@ -300,6 +302,40 @@
           "id": "heading",
           "default": "Image slide",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+
+        {
+          "type": "select",
+          "id": "heading_colour",
+          "options": [
+            {
+              "value": "banner__heading_black",
+              "label": "Black"
+            },
+            {
+              "value": "banner__heading_white",
+              "label": "White"
+            }
+          ],
+          "default": "banner__heading_white",
+          "label": "Heading Colour"
+        },
+
+        {
+          "type": "select",
+          "id": "subheading_colour",
+          "options": [
+            {
+              "value": "banner__text_black",
+              "label": "Black"
+            },
+            {
+              "value": "banner__text_white",
+              "label": "White"
+            }
+          ],
+          "default": "banner__text_white",
+          "label": "Subheading Colour"
         },
         {
           "type": "select",

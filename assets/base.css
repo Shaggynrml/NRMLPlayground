@@ -1048,6 +1048,22 @@ summary::-webkit-details-marker {
   row-gap: 0;
 }
 
+.banner__heading_black{
+  color: black;
+}
+
+.banner__heading_white{
+  color: white
+}
+
+.banner__text_black{
+  color: black;
+}
+
+.banner__text_white{
+  color: white
+}
+
 @media screen and (max-width: 749px) {
   .grid__item.slider__slide--full-width {
     width: 100%;
