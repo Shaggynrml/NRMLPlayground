@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/NRML_ANNI_Banner.jpg",
-            "heading": "Image slide",
+            "heading": "",
             "heading_colour": "banner__heading_white",
             "subheading_colour": "banner__text_white",
             "heading_size": "h2",
