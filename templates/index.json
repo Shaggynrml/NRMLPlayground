@@ -208,19 +208,11 @@
     },
     "collage": {
       "type": "collage",
-      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
+            "collection": "alpha-industry"
           }
         },
         "collection-1": {
@@ -228,12 +220,18 @@
           "settings": {
             "collection": ""
           }
+        },
+        "77157392-5d23-4477-b672-13dc19174fdc": {
+          "type": "collection",
+          "settings": {
+            "collection": "stussy"
+          }
         }
       },
       "block_order": [
         "collection-0",
-        "product",
-        "collection-1"
+        "collection-1",
+        "77157392-5d23-4477-b672-13dc19174fdc"
       ],
       "settings": {
         "heading": "Multimedia collage",
@@ -266,8 +264,9 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/alpha_fd9bf17b-aed7-4695-b9b5-0857ab4bcc93.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
