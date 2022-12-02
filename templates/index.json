@@ -109,6 +109,7 @@
     },
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
+      "disabled": true,
       "settings": {
         "menu": "menu-panel"
       }
