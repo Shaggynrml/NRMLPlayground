@@ -212,19 +212,6 @@
         "padding_bottom": 36
       }
     },
-    "2d9068a4-e6ff-45ee-938c-1344739b1150": {
-      "type": "double-image-section",
-      "settings": {
-        "collection": "",
-        "title": "Featured collection",
-        "image-one": "shopify:\/\/shop_images\/5L3A6819.jpg",
-        "image-two": "shopify:\/\/shop_images\/5L3A1153_1.jpg",
-        "image-one-mobile": "shopify:\/\/shop_images\/billionais.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/5L3A7958.png",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=BILLIONAIRE+BOYS+CLUB",
-        "button_link_two": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=THE+NORTH+FACE"
-      }
-    },
     "3e3798b1-8688-44a0-b13e-7f66ed9ba3e0": {
       "type": "featured-blog",
       "settings": {
@@ -242,6 +229,19 @@
         "padding_bottom": 36
       }
     },
+    "2d9068a4-e6ff-45ee-938c-1344739b1150": {
+      "type": "double-image-section",
+      "settings": {
+        "collection": "",
+        "title": "Featured collection",
+        "image-one": "shopify:\/\/shop_images\/5L3A6819.jpg",
+        "image-two": "shopify:\/\/shop_images\/5L3A1153_1.jpg",
+        "image-one-mobile": "shopify:\/\/shop_images\/billionais.png",
+        "image-two-mobile": "shopify:\/\/shop_images\/5L3A7958.png",
+        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=BILLIONAIRE+BOYS+CLUB",
+        "button_link_two": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=THE+NORTH+FACE"
+      }
+    },
     "4a275486-cbba-4d6d-8169-a105ed371ca5": {
       "type": "double-image-section",
       "settings": {
@@ -257,6 +257,7 @@
     },
     "89c47a63-afc8-4873-81d5-e27c5633af1c": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Editorials",
         "heading_size": "h1",
@@ -281,8 +282,8 @@
     "featured_collection",
     "aa161693-d1b6-455f-8f0d-fc0699991ad5",
     "collage",
-    "2d9068a4-e6ff-45ee-938c-1344739b1150",
     "3e3798b1-8688-44a0-b13e-7f66ed9ba3e0",
+    "2d9068a4-e6ff-45ee-938c-1344739b1150",
     "4a275486-cbba-4d6d-8169-a105ed371ca5",
     "89c47a63-afc8-4873-81d5-e27c5633af1c"
   ]
