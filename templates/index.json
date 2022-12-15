@@ -232,15 +232,14 @@
     "2d9068a4-e6ff-45ee-938c-1344739b1150": {
       "type": "double-image-section",
       "settings": {
-
         "image-1-title": "Billionaire Boys Club",
-        "image-one": "shopify:\/\/shop_images\/5L3A6819.jpg",
-        "image-one-mobile": "shopify:\/\/shop_images\/billionais.png",
+        "image-one": "shopify:\/\/shop_images\/5L3A8180.jpg",
+        "image-one-mobile": "shopify:\/\/shop_images\/5L3A8190.jpg",
         "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=BILLIONAIRE+BOYS+CLUB",
-        "image-2-title": "The North Face",
-        "image-two": "shopify:\/\/shop_images\/5L3A1153_1.jpg",
-        "image-two-mobile": "shopify:\/\/shop_images\/5L3A7958.png",
-        "button_link_two": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=THE+NORTH+FACE"
+        "image-2-title": "Alpha Industries",
+        "image-two": "shopify:\/\/shop_images\/5L3A8257.png",
+        "image-two-mobile": "shopify:\/\/shop_images\/5L3A8219.jpg",
+        "button_link_two": "https:\/\/nrml.ca\/collections\/all?filter.v.price.lte=&filter.p.vendor=ALPHA+INDUSTRIES"
       }
     },
     "4a275486-cbba-4d6d-8169-a105ed371ca5": {
