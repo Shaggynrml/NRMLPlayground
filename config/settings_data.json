@@ -170,6 +170,10 @@
         ],
         "settings": {
           "color_scheme": "background-1",
+          "privacy-policies-link": "shopify:\/\/pages\/privacy-policy-old",
+          "FAQ-link": "shopify:\/\/pages\/faq",
+          "our-dna-link": "shopify:\/\/pages\/about-us-1",
+          "contact-us-link": "shopify:\/\/pages\/contact-us",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,

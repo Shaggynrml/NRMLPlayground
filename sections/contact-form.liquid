@@ -87,10 +87,22 @@
         <button type="submit" class="button">
           {{ 'templates.contact.form.send' | t }}
         </button>
+          <div>
+      <div class="{%- if section.settings.content_position == 'lg:justify-center' -%}text-center{%- endif -%}">
+      </div>
+      <div class="rte mt-theme">
+        {{ page.content }}
+      </div>
+      <p class="address-text"><strong>STORE</strong><br/> 184 Rideau Street, Ottawa ON K1N5X6 Canada</p>
+      <p class="number-text" style="margin-bottom:20px;"><strong>PHONE: </strong>+1 (613) 562-2043</p>  
+      <p class="number-text1"><strong>ONLINE ORDERS </strong></p>  
+      <p class="number-text"><strong>PHONE: </strong>+1 (613) 979-8901</p>  
+      <p class="email-text"><strong>EMAIL: </strong>support@nrml.ca</p>  
+    </div>
+</div>
       </div>
     {%- endform -%}
   </div>
-</div>
 
 {% schema %}
 {
