@@ -245,14 +245,14 @@
     "4a275486-cbba-4d6d-8169-a105ed371ca5": {
       "type": "double-image-section",
       "settings": {
-        "image-1-title": "Dr. Martin",
-        "image-one": "shopify:\/\/shop_images\/5L3A1178_1.jpg",
-        "image-one-mobile": "shopify:\/\/shop_images\/asdfaas.png",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=DR+MARTENS",
-        "image-2-title": "Nike Tech Fleece",
-        "image-two": "shopify:\/\/shop_images\/5L3A0631.jpg",
-        "image-two-mobile": "shopify:\/\/shop_images\/asdf.png",
-        "button_link_two": "shopify:\/\/collections\/nike-tech-fleece"
+        "image-1-title": "Stüssy",
+        "image-one": "shopify:\/\/shop_images\/STUSSYDESKTOP.png",
+        "image-one-mobile": "shopify:\/\/shop_images\/STUSSY_MOBILE_c046f7f7-1c09-4aca-b735-07acb42991e4.png",
+        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=STUSSY",
+        "image-2-title": "Nike",
+        "image-two": "shopify:\/\/shop_images\/nikedesktop_a41f7aa6-0c4a-414e-9b3e-0d3c91526e37.png",
+        "image-two-mobile": "shopify:\/\/shop_images\/NIKEMOBILE.png",
+        "button_link_two": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=NIKE"
       }
     },
     "89c47a63-afc8-4873-81d5-e27c5633af1c": {
