@@ -178,16 +178,16 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "the-north-face"
-          }
-        },
         "collection-0": {
           "type": "collection",
           "settings": {
             "collection": "air-jordan-1-retro-high-og-stealth"
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-north-face"
           }
         },
         "77157392-5d23-4477-b672-13dc19174fdc": {
@@ -198,8 +198,8 @@
         }
       },
       "block_order": [
-        "collection-1",
         "collection-0",
+        "collection-1",
         "77157392-5d23-4477-b672-13dc19174fdc"
       ],
       "settings": {
