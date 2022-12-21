@@ -217,7 +217,11 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  </head>
+  
+  {% render 'qikify-apps' %}
+</head>
 
   <body class="gradient"><div class="pagefly-container">{{ content_for_layout }}</div></body>
 </html>
+
+{% section 'sezzle-widget' %}
