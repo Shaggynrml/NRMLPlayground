@@ -172,7 +172,7 @@
           "color_scheme": "background-1",
           "privacy-policies-link": "shopify:\/\/pages\/privacy-policy-old",
           "FAQ-link": "shopify:\/\/pages\/faq",
-          "our-dna-link": "shopify:\/\/pages\/about-us-1",
+          "our-dna-link": "shopify:\/\/pages\/about-us",
           "contact-us-link": "shopify:\/\/pages\/contact-us",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
@@ -201,6 +201,17 @@
       "custome-header": {
         "type": "custome-header",
         "settings": {
+        }
+      },
+      "sezzle-widget": {
+        "type": "sezzle-widget",
+        "settings": {
+          "show-sezzle-widget": true,
+          "color": "inherit",
+          "font-size": 14,
+          "font-family": "inherit",
+          "product-page-alignment": "auto",
+          "cart-page-alignment": "auto"
         }
       }
     },
