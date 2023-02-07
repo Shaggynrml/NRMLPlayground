@@ -9,6 +9,7 @@
     },
     "9f925376-4221-46bf-8ea3-ce9e2fd8cac5": {
       "type": "about-us",
+      "disabled": true,
       "settings": {
       }
     }
