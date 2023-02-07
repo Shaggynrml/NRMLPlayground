@@ -6,9 +6,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "8d6ac83a-0f58-4f8b-b62d-2b9467d68079": {
+      "type": "about-us",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "8d6ac83a-0f58-4f8b-b62d-2b9467d68079"
   ]
 }
