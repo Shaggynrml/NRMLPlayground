@@ -187,15 +187,20 @@ aside p {
 	margin-bottom: 1em;
     color: #000;
 }
+.aboutUsHeading{
+	padding-bottom: 10px; 
+	font-weight: 300;
+	font-size: 1.5em;
+}
 </style>
 
 
 <div>
 	<div>
-		<h1>Our DNA</h1>
+		<div class ="aboutUsHeading">Our DNA</div>
 		<p>NRML has become synonymous with street culture throughout Canada, nowhere more than in its capital city Ottawa where NRML's flagship location lives. As the longest running sneaker boutique in the country NRML has been carefully curating the finest apparel and footwear for the past 25 years. Over time NRML has grown from humble beginnings as a neighbourhood store to a 10,000 sq/ft, 3 level retail experience.</p>
 	</div>
-    <h1>Our Core Values</h1>
+    <div class ="aboutUsHeading">Our Core Values</div>
 </div>
 <main>
 	<ul id="cards">
@@ -219,7 +224,7 @@ aside p {
 					
 				</div>
 				<figure>
-					<img src="{{ 'inspiration.png' | asset_img_url: '1200x' }}" alt="Image description">
+					<img src="{{ 'inclusivness.png' | asset_img_url: '1200x' }}" alt="Image description">
 				</figure>
 			</div>
 		</li>
@@ -231,7 +236,7 @@ aside p {
 					
 				</div>
 				<figure>
-					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+					<img src="{{ 'inspiration.png' | asset_img_url: '1200x' }}" alt="Image description">
 				</figure>
 			</div>
 		</li>
