@@ -8,7 +8,7 @@
 }
 
 #cards {
-	padding-bottom: calc(var(--numcards) * 3 * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+	padding-bottom: calc(var(--numcards) * 1.5 * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
 	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
@@ -103,7 +103,7 @@ main {
 #cards {
 	list-style: none;
 	outline: calc(var(--outline-width) * 10) solid blue;
-	
+	padding:5;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
@@ -191,18 +191,20 @@ aside p {
 	padding-bottom: 10px; 
 	font-weight: 300;
 	font-size: 1.5em;
-}
+} 
 </style>
 
 
 <div>
 	<div>
 		<div class ="aboutUsHeading">Our DNA</div>
-		<p>NRML has become synonymous with street culture throughout Canada, nowhere more than in its capital city Ottawa where NRML's flagship location lives. As the longest running sneaker boutique in the country NRML has been carefully curating the finest apparel and footwear for the past 25 years. Over time NRML has grown from humble beginnings as a neighbourhood store to a 10,000 sq/ft, 3 level retail experience.</p>
 	</div>
-    <div class ="aboutUsHeading">Our Core Values</div>
+	
+	<div>
+    	<div class ="aboutUsHeading">Our Core Values</div>
+	</div>
 </div>
-<main>
+<div>
 	<ul id="cards">
 		<li class="card" id="card_1">
 			<div class="card__content">
@@ -224,7 +226,7 @@ aside p {
 					
 				</div>
 				<figure>
-					<img src="{{ 'inclusivness.png' | asset_img_url: '1200x' }}" alt="Image description">
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
 				</figure>
 			</div>
 		</li>
@@ -253,7 +255,9 @@ aside p {
 			</div>
 		</li>
 	</ul>
-</main>
+</div>
+
+
 <aside>
     <h2>Land acknoledgement</h2>
 	<p>NRML acknowledges that the land on which we gather is the traditional unceded territory of the Algonquin Anishnaabeg People. The Algonquin peoples have lived on this land since time immemorial. We are grateful to have the opportunity to be present in this territory.
