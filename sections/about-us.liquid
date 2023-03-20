@@ -1,14 +1,14 @@
 <style>
 :root {
-	--card-height: 40vw;
-	--card-margin: 4vw;
-	--card-top-offset: 1em;
-	--numcards: 4;
+	--card-height: 40rem;
+	--card-margin: 30em;
+	--card-top-offset: 1rem;
+	--numcards: 3;
 	--outline-width: 0px;
 }
 
 #cards {
-	padding-bottom: calc(var(--numcards) * 1.5 * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+	padding-bottom: calc(var(--numcards) * 0.5 * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
 	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
@@ -24,14 +24,10 @@
 	--index: 3;
 }
 
-#card_4 {
-	--index: 4;
-}
-
 .card {
 	position: sticky;
 	top: 0;
-	padding-top: calc(var(--index) * var(--card-top-offset));
+	padding-top: calc(var(--index) * 0.5 * var(--card-top-offset));
 }
 
 @supports (animation-timeline: works) {
@@ -46,7 +42,7 @@
 		;
 		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
 		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
+		time-range: 3s;
 	}
 
 	.card {
@@ -95,10 +91,7 @@ body {
 	font-size: calc(1em + 0.5vw);
 }
 
-main {
-	width: 80vw;
-	margin: 0 auto;
-}
+
 
 #cards {
 	list-style: none;
@@ -106,8 +99,6 @@ main {
 	padding:5;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--numcards), var(--card-height));
-	gap: var(--card-margin);
 }
 
 .card {
@@ -116,9 +107,8 @@ main {
 
 .card__content {
 	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-	background: rgb(255, 255, 255);
-	color: rgb(10, 5, 7);
-	border-radius: 1em;
+	background: #ededed;
+	color: #252525;
 	overflow: hidden;
 
 	display: grid;
@@ -160,6 +150,7 @@ h1 {
 h2 {
 	font-weight: 300;
 	font-size: 1.5em;
+	color: #252525;
 }
 
 p {
@@ -192,77 +183,79 @@ aside p {
 	font-weight: 300;
 	font-size: 1.5em;
 } 
+.aboutUsContainer{
+	width: 80vw;
+	margin: 0 auto;
+}
+ @media screen and (max-width:750px){
+	.card__content {
+		box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+		background: #ededed;
+		color: #252525;
+		overflow: hidden;
+
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas: "text" "img";
+
+		align-items: stretch;
+		outline: var(--outline-width) solid lime;
+	}
+	.card__content > figure > img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+ }
 </style>
 
-
-<div>
+<div class = "aboutUsContainer">
 	<div>
-		<div class ="aboutUsHeading">Our DNA</div>
+		<div>
+			<div class ="aboutUsHeading">Our Core Values</div>
+		</div>
 	</div>
-	
 	<div>
-    	<div class ="aboutUsHeading">Our Core Values</div>
+		<ul id="cards">
+			<li class="card" id="card_1">
+				<div class="card__content">
+					<div>
+						<h2>COMMUNITY INVOLVEMENT</h2>
+						<p>Community involvement has been a consistent practice of NRML’s since we began. We take pride in our position as a place to contribute to our local community to improve upon social wellbeing. Over the years we have contributed to youth service programs, community initiatives and donations of apparel and footwear to transitional and emergency shelters.</p>
+						
+					</div>
+					<figure>
+						<img src="{{ 'integrity.png' | asset_img_url: '1200x' }}" alt="Image description">
+					</figure>
+				</div>
+			</li>
+			<li class="card" id="card_2">
+				<div class="card__content">
+					<div>
+						<h2>GROWTH, DEVELOPMENT & DIVERSITY</h2>
+						<p>Through diversity and inclusion we hold space for one another to show up  fully and authentically contribute to our shared goal. Through respect and celebration of our team’s diversity, we are each afforded, and in turn afford others, the opportunity to contribute to and benefit from our company’s success. At  NRML we are committed to creating an inclusive environment  where all employees feel valued, respected and engaged. We proudly foster the development of our team members and take great pride in internal promotion. </p>
+						
+					</div>
+					<figure>
+						<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+					</figure>
+				</div>
+			</li>
+			<li class="card" id="card_3">
+				<div class="card__content">
+					<div>
+						<h2>ENVIRONMENTAL RESPONSIBILITY</h2>
+						<p>NRML is committed to reducing our impact on the planet. We will strive to improve our environmental impact over time and to continue to initiate new projects and ventures that will further reduce our impact on the planet. We strive to eliminate waste by taking part in waste recycling programs, we partner with apparel and footwear recycling programs keeping unwanted goods out of landfills and continuously find ways to improve upon our energy consumption.</p>
+						
+					</div>
+					<figure>
+						<img src="{{ 'inspiration.png' | asset_img_url: '1200x' }}" alt="Image description">
+					</figure>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
-<div>
-	<ul id="cards">
-		<li class="card" id="card_1">
-			<div class="card__content">
-				<div>
-					<h2>Inspiration</h2>
-					<p>We have come a long way and we still have a ways to go. We promote a safe space where people feel confident to share ideas and feedback to inspire the team to grow.</p>
-					
-				</div>
-				<figure>
-					<img src="{{ 'integrity.png' | asset_img_url: '1200x' }}" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_2">
-			<div class="card__content">
-				<div>
-					<h2>Inclusiveness</h2>
-					<p>We are a team and work together. We put our best foot forward, take pride in the work we do, and support each other.</p>
-					
-				</div>
-				<figure>
-					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_3">
-			<div class="card__content">
-				<div>
-					<h2>Initiative</h2>
-					<p>We do not always need to be asked to fix the simple things. If something is out of place, we take the extra second to make it right.</p>
-					
-				</div>
-				<figure>
-					<img src="{{ 'inspiration.png' | asset_img_url: '1200x' }}" alt="Image description">
-				</figure>
-			</div>
-		</li>
-		<li class="card" id="card_4">
-			<div class="card__content">
-				<div>
-					<h2>Integrity</h2>
-					<p>We are accountable for our opportunities and utilize them as growth. Our integrity keeps us honest and reliable.</p>
-					
-				</div>
-				<figure>
-					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
-				</figure>
-			</div>
-		</li>
-	</ul>
-</div>
-
-
-<aside>
-    <h2>Land acknoledgement</h2>
-	<p>NRML acknowledges that the land on which we gather is the traditional unceded territory of the Algonquin Anishnaabeg People. The Algonquin peoples have lived on this land since time immemorial. We are grateful to have the opportunity to be present in this territory.
-</p>
-</aside>
 
 {% schema %}
     {
