@@ -1,12 +1,90 @@
 {
   "sections": {
+    "fc96d98b-d714-497b-a861-4241d21cf71f": {
+      "type": "parolax-banner",
+      "blocks": {
+        "6b1837a7-6f92-48d5-aec2-a7d7d04c2ab5": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR DNA",
+            "heading_size": "h1"
+          }
+        },
+        "b6596205-86e8-43cb-89fc-aa185374e240": {
+          "type": "text",
+          "settings": {
+            "text": "NRML has become synonymous with street culture throughout Canada, nowhere more than in its capital city Ottawa where NRML's flagship location lives. As the longest running sneaker boutique in the country NRML has been carefully curating the finest apparel and footwear for the past 25 years. Over time NRML has grown from humble beginnings as a neighbourhood store to a 10,000 sq\/ft, 3 level retail experience.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "6b1837a7-6f92-48d5-aec2-a7d7d04c2ab5",
+        "b6596205-86e8-43cb-89fc-aa185374e240"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "image": "shopify:\/\/shop_images\/shoewall.jpg",
+        "heading_colour": "white",
+        "body_colour": "white",
+        "Body": "Featured collection"
+      }
+    },
     "db3801c8-2925-44b5-bc13-643633e7db5c": {
       "type": "about-us",
+      "settings": {
+      }
+    },
+    "515a1cf1-3011-4c34-ac44-6986bc1aac77": {
+      "type": "parolax-banner",
+      "blocks": {
+        "2b38bcd4-9835-48c8-9340-bddf9f883e51": {
+          "type": "heading",
+          "settings": {
+            "heading": "GROWTH, DEVELOPMENT & DIVERSITY",
+            "heading_size": "h1"
+          }
+        },
+        "2beaf812-7358-40d2-97bc-b4c768a7645b": {
+          "type": "text",
+          "settings": {
+            "text": "Through diversity and inclusion we hold space for one another to show up  fully and authentically contribute to our shared goal. Through respect and celebration of our team’s diversity, we are each afforded, and in turn afford others, the opportunity to contribute to and benefit from our company’s success. At  NRML we are committed to creating an inclusive environment  where all employees feel valued, respected and engaged. We proudly foster the development of our team members and take great pride in internal promotion. ",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "2b38bcd4-9835-48c8-9340-bddf9f883e51",
+        "2beaf812-7358-40d2-97bc-b4c768a7645b"
+      ],
+      "settings": {
+        "title": "GROWTH, DEVELOPMENT & DIVERSITY",
+        "image": "shopify:\/\/shop_images\/3a6ea370f638412b7c0c28cc8428e8dda2e048be-1100x735_6972d341-52e1-443c-b039-9b673aad143f.jpg",
+        "heading_colour": "white",
+        "body_colour": "white",
+        "Body": "Featured collection"
+      }
+    },
+    "51b4fe2e-3a25-4399-920f-73261d5985aa": {
+      "type": "info-card",
+      "settings": {
+        "title": "Featured collection",
+        "heading_colour": "white",
+        "body_colour": "white",
+        "Body": "Featured collection"
+      }
+    },
+    "0fbc5940-1909-495c-a15b-e6a2a5acab31": {
+      "type": "careers",
       "settings": {
       }
     }
   },
   "order": [
-    "db3801c8-2925-44b5-bc13-643633e7db5c"
+    "fc96d98b-d714-497b-a861-4241d21cf71f",
+    "db3801c8-2925-44b5-bc13-643633e7db5c",
+    "515a1cf1-3011-4c34-ac44-6986bc1aac77",
+    "51b4fe2e-3a25-4399-920f-73261d5985aa",
+    "0fbc5940-1909-495c-a15b-e6a2a5acab31"
   ]
 }

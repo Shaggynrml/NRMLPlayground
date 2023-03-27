@@ -48,7 +48,7 @@ product-card-body{
   position: relative;
   width: 370px;
   height: 500px;
-  background:url("{{ 'marbleBackground.jpg' | asset_img_url: '1600x' }}");
+  background: #ededed;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -255,7 +255,8 @@ product-card-body{
 .size {
   padding: 5px;
   flex-direction: horizontal;
-  flex: 0 0 100%;
+  width:100%;
+  flex-flow: row wrap;
 }
 
 @media screen and (max-width: 750px){

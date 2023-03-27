@@ -1,0 +1,535 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - card_product: {Object} Product Liquid object (optional)
+    - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+    - show_rating: {Boolean} Show the product rating. Default: false
+    - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - show_quick_add: {Boolean} Show the quick add button.
+    - section_id: {String} The ID of the section that contains this card.
+
+    Usage:
+    {% render 'card-product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+secondary-product-card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ededed;
+}
+
+.secondary-product-card-container{
+  position: relative;
+  width: 23vw;
+  height: 30vw;
+  padding:0.8vw;
+  margin:0.8vw;
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container{
+  width: 30vw;
+  height: 40vw;
+  }
+}
+
+.secondary-product-card-container .card{
+  position: relative;
+  width: 100%;
+  height: auto;  
+  background: #ededed;
+  overflow: hidden;
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card{
+    position: relative;
+    width: 30vw;
+    height: 40vw;
+    background: #ededed;
+    overflow: hidden;
+  }
+}
+.secondary-product-card-container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#e9e9e9;
+  clip-path: circle(10vw at 80% 20%);
+  transition: 1s ease-in-out;
+  z-index: 0;
+}
+@media screen and (min-width:750px){
+  .secondary-product-card-container .card:hover:before{
+    clip-path: circle(30vw at 80% -20%);
+  }
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card:before{
+  background:#e9e9e9;
+  clip-path: circle(30vw at 80% -20%);
+  }
+}
+
+.secondary-product-card-container .card:after{
+  content: "NRML";
+  position: absolute;
+  top: 60%;
+  left:-5%;
+  font-size: 8vw;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(0,0,0,0.05)
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card:after{
+    left:5%;
+    font-size: 11vw;
+    font-weight: 800;
+  }
+}
+.secondary-product-card-container .card .imgBx{
+  position: relative;
+  transform: translateY(30%);
+  width: 100%;
+  height: auto;
+  transition: 1s;
+  justify-self: center;
+  z-index: 2;
+}
+
+.secondary-product-card-container .card:hover .imgBx{
+  top: 0%;
+  left: 0%;
+  transform: translateY(-5%);
+    
+}
+@media screen and (max-width: 750px){
+  .secondary-product-card-container .card .imgBx{
+    width: 100%;
+    transition: 1s;
+    z-index: 2;
+    transform: translateY(-5%);
+  }
+}
+.secondary-product-card-container .card .imgBx img{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15vw; 
+  }
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card .imgBx img{
+    position: relative;
+    width: 25vw;
+  }
+}
+.secondary-product-card-container .card .secondary-contentBx{
+  position: absolute;
+  width: 100%;
+  bottom:-5%;
+  height: auto;
+  text-align: center;
+  transition: 1s;
+  z-index: 2;
+}
+
+@media screen and (min-width:750px){
+  .secondary-product-card-container .card:hover .secondary-contentBx{
+    transform: translate(0%, -10%);
+    transition: 1s;
+  }
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card .secondary-contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+    z-index: 2;
+  }
+}
+
+.secondary-product-card-container .card .secondary-contentBx h2{
+  position: relative;
+  font-weight: 600;
+  font-size: 1vw;
+  padding:0.4vw;
+  letter-spacing: 0.1rem;
+  color: #000;
+  margin: 0;
+  }
+
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card .secondary-contentBx h2{
+    position: relative;
+    font-weight: calc(600/2);
+    font-size: 2vw;
+    color: #000;
+    margin: 0;
+    }
+}
+
+.secondary-product-card-container .card .secondary-contentBx .secondary-size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5vw 2vw;
+  transition: 1s;
+  opacity: 0;
+  visibility: visible;
+  padding-top: 0.5vw;
+  width:100%
+}
+
+@media screen and (min-width:750px){
+.secondary-product-card-container .card:hover .secondary-contentBx .secondary-size {
+  display:flex;
+  opacity: 1;
+  visibility: visible;
+}
+}
+@media screen and (min-width:750px){
+.secondary-product-card-container .card:hover .secondary-contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 6s;
+}
+}
+
+.secondary-product-card-container .card .secondary-contentBx .secondary-size h3, .container .card .secondary-contentBx .color h3{
+  color: #fff;
+  font-weight: 250;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-right: 1rem;
+}
+@media screen and (min-width:750px){
+.secondary-product-card-container .card:hover .secondary-contentBx .secondary-size-buttons{
+  opacity: 1;
+  visibility: visible;
+}
+}
+@media screen and (max-width:750px){
+  .secondary-product-card-container .card .secondary-contentBx h3, .container .card .secondary-contentBx .color h3{
+    color: #fff;
+    font-weight: calc(250/2);
+    font-size: calc(12px/2);
+    text-transform: uppercase;
+    letter-spacing: calc(1px/2);
+    margin-right: calc(10px/2);
+  }
+
+  .secondary-product-card-container .card .secondary-contentBx .secondary-size-buttons{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.secondary-size {
+  flex-direction: horizontal;
+  flex: 0 0 100%;
+  width:100%;
+  flex-flow: row wrap;
+
+}
+
+@media screen and (max-width: 750px){
+  .secondary-size{
+    display: none
+  }
+}
+.secondary-size-buttons{
+  width: 2.5vw;
+  height: 2vw;
+  font-size: 0.8vw;
+  display: flex;
+  overflow:hidden;
+  padding-top:2px;
+  color: #111;
+  background: #fff;
+  margin:2px;
+  transition: 1s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: #fff;
+  border-width: 0px;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (max-width:750px){
+  .secondary-size-buttons{
+    width: calc(40px/2);
+    height: calc(25px/2);
+    text-align: center;
+    line-height: calc(26px/2);
+    font-size: calc(12px/2);
+    display: inline-block;
+    overflow:hidden;
+    padding-top:calc(2px/2);
+    color: #111;
+    background: #fff;
+    margin:calc(2px/2);
+    transition: 0.5s;
+    color: #111;
+    border-radius: calc(4px/2);
+    cursor: pointer;
+    transition: 0.5s;opacity: 0;
+    border-color: #fff;
+    border-width: 0px;
+  }
+ }
+.secondary-size-buttons:hover{
+ background:#778899;
+}
+.price-section{
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  align-items: center;
+  font-size:1vw;
+}
+
+@media screen and (max-width: 750px){
+  .price-section{
+      font-size:2vw;
+  }
+}
+.pre-discount-price{
+  color:"777";
+  text-decoration:line-through;
+  padding: 1vw;
+}
+@media screen and (max-width:750px){
+  .pre-discount-price{
+    color:"777";
+    text-decoration:line-through;
+    padding:calc(5px/2);
+  } 
+}
+
+.discounted-price{
+  padding: 1vw;
+}
+@media screen and (max-width:750px){
+  .discounted-price{
+    padding: calc(5px/2);
+  }
+}
+.secondary-product-vendor-title{
+  padding-top: 0vw;
+  padding-bottom: 0vw;
+  text-align: center;
+  font-size: 1vw;
+  z-index:2;
+}
+@media screen and (max-width:750px){
+  .secondary-product-vendor-title{
+    font-size: 2vw;
+  }
+}
+.secondary-product-card-container .card .secondary-contentBx .secondary-size span:hover{
+  background: #778899;
+}
+
+
+.secondary-product-card-container .card .secondary-contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.secondary-product-card-container .card .secondary-contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.secondary-product-card-container .card .secondary-contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.secondary-product-card-container .card .secondary-contentBx a{
+  display: inline-block;
+  padding: 1vw;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom:5px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(0.5vw);
+  transition: 1s;
+  margin-top: 0;
+}
+
+.secondary-product-card-container .card:hover .secondary-contentBx a{
+  opacity: 1;
+  transform: translateY(0.3vw);
+  transition-delay: 0.15s;
+  
+}
+@media screen and (max-width:750px){
+.secondary-product-card-container .card .secondary-contentBx a{
+  display: inline-block;
+  background: #fff;
+  border-radius: calc(4px/2);
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay:1s;
+  text-align: center;
+  justify-content:center;
+  align-content: center;
+  padding:3vw;
+}
+}
+
+.secondary-view-all-btn{
+    width:10vw;
+    height:2vw;
+    font-size:1vw;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background:#fdfdfd;
+    display: flex;
+    line-height:0;
+}
+@media screen and (max-width:750px){
+    .secondary-view-all-btn{
+    width:20vw;
+    height:3.5vw;
+    font-size:1.9vw;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    background:#fdfdfd;
+    padding:0vw;
+    margin:0vw;
+}
+}
+</style>
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+{%- if card_product and card_product != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == nil
+      assign ratio = 1
+    endif
+  -%}
+  {% comment %} <div class="card-wrapper underline-links-hover">
+    <div class="card
+      card--{{ settings.card_style }}
+      {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+<div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"> {% endcomment %}
+<div class="secondary-product-card-container">
+  <div class="card">
+    <div class = "secondary-product-vendor-title">{{card_product.vendor}}</div>
+    <div class="imgBx">
+        {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
+    </div>
+    <div class="secondary-contentBx">
+      <h2>{{card_product.title}}</h2>
+      {%if card_product.price == card_product.compare_at_price%}
+      <div class = "price-section">{{card_product.price | money}}</div>
+      {%else%}
+      <div class = "price-section">
+        <div class = "pre-discount-price">{{card_product.compare_at_price | money}}</div>
+        <div class = "discounted-price">{{card_product.price | money}}</div>
+        <div>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</div>
+      </div>
+      {%endif%}
+      <a class="secondary-view-all-btn" href="{{ card_product.url }}">View Product</a>
+      <div class="secondary-size">
+        {%for size in card_product.variants%}
+          {% if size.available%}
+            <product-form class="product-form" data-cart-type="{{ settings.cart_type }}">
+                {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input  type="hidden" name="id" value="{{ size.id }}" />
+                <input class= "secondary-size-buttons" type="submit" value="{{size.option1}}" />
+                            {% comment %} <div class="loading-overlay__spinner hidden">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                            </div> {% endcomment %}
+                {%- endform -%}
+            </product-form>
+          {%endif%} 
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+</div>
+{%- else -%}
+  <div class="card-wrapper underline-links-hover">
+    <div class="card
+      card--{{ settings.card_style }}
+      card--text
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
+      style="--ratio-percent: 100%;"
+    >
+      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: 100%;">
+        <div class="card__content">
+          <div class="card__information">
+            <h3 class="card__heading">
+              <a role="link" aria-disabled="true" class="full-unstyled-link">
+                {{ 'onboarding.product_title' | t }}
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" aria-disabled="true" class="full-unstyled-link">
+              {{ 'onboarding.product_title' | t }}
+            </a>
+          </h3>
+          <div class="card-information">
+            {%- if show_vendor -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+            {%- endif -%}
+            {% render 'price' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
