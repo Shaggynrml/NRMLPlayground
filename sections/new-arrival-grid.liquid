@@ -67,14 +67,14 @@
             {%endfor%}            
         </ul>
         <ul class = "new-arrival-grid-mobile-row">
-            {%for product in section.settings.collection.products limit:3 %}
+            {%for product in section.settings.collection.products limit:2 %}
                 <li id= "item">
                     {%render 'secondary-card-product', card_product:product %}
                 </li>
             {%endfor%}            
         </ul>
         <ul class = "new-arrival-grid-mobile-row">
-            {%for product in section.settings.collection.products limit: 3 offset: continue%}
+            {%for product in section.settings.collection.products limit: 2 offset: continue%}
                 <li id= "item" >
                     {%render 'secondary-card-product', card_product:product %}
                 </li>

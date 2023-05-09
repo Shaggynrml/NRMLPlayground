@@ -572,19 +572,19 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 1440px) {
   .small-hide {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
+@media screen and (min-width: 1440px) and (max-width: 1445px) {
   .medium-hide {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1439px) {
   .large-up-hide {
     display: none !important;
   }
@@ -1009,31 +1009,41 @@ summary::-webkit-details-marker {
 
 /* component-grid */
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  padding: 0;
+  display: grid;
+  gap: 32px 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 16px;
   list-style: none;
-  column-gap: var(--grid-mobile-horizontal-spacing);
-  row-gap: var(--grid-mobile-vertical-spacing);
+  padding-inline-start:20px;
+  position: relative;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
   .grid {
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
+@media screen and (min-width: 1445px) {
+  .grid {
+    column-gap: var(--grid-desktop-horizontal-spacing);
+    row-gap: var(--grid-desktop-vertical-spacing);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 .grid:last-child {
   margin-bottom: 0;
 }
 
 .grid__item {
-  width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
+  width: 100%;
   max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
   flex-grow: 1;
   flex-shrink: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -2267,7 +2277,7 @@ input[type='checkbox'] {
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   padding:0px;
 }
 

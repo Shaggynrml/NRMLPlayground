@@ -41,8 +41,8 @@ secondary-product-card-body{
 }
 @media screen and (max-width:750px){
   .secondary-product-card-container{
-  width: 30vw;
-  height: 40vw;
+  width: 40vw;
+  height: 50vw;
   }
 }
 
@@ -56,8 +56,8 @@ secondary-product-card-body{
 @media screen and (max-width:750px){
   .secondary-product-card-container .card{
     position: relative;
-    width: 30vw;
-    height: 40vw;
+    width: 40vw;
+    height: 50vw;
     background: #ededed;
     overflow: hidden;
   }
@@ -99,7 +99,7 @@ secondary-product-card-body{
 @media screen and (max-width:750px){
   .secondary-product-card-container .card:after{
     left:5%;
-    font-size: 11vw;
+    font-size: 21vw;
     font-weight: 800;
   }
 }
@@ -124,7 +124,7 @@ secondary-product-card-body{
     width: 100%;
     transition: 1s;
     z-index: 2;
-    transform: translateY(-5%);
+    transform: translateY(10%);
   }
 }
 .secondary-product-card-container .card .imgBx img{
@@ -137,7 +137,7 @@ secondary-product-card-body{
 @media screen and (max-width:750px){
   .secondary-product-card-container .card .imgBx img{
     position: relative;
-    width: 25vw;
+    width: 35vw;
   }
 }
 .secondary-product-card-container .card .secondary-contentBx{
@@ -391,7 +391,7 @@ secondary-product-card-body{
 }
 @media screen and (max-width:750px){
 .secondary-product-card-container .card .secondary-contentBx a{
-  display: inline-block;
+  display:inline-block;
   background: #fff;
   border-radius: calc(4px/2);
   text-decoration: none;
@@ -420,7 +420,7 @@ secondary-product-card-body{
 }
 @media screen and (max-width:750px){
     .secondary-view-all-btn{
-    width:20vw;
+    width:25vw;
     height:3.5vw;
     font-size:1.9vw;
     justify-self: center;
@@ -481,11 +481,11 @@ secondary-product-card-body{
                 {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 <input  type="hidden" name="id" value="{{ size.id }}" />
                 <input class= "secondary-size-buttons" type="submit" value="{{size.option1}}" />
-                            {% comment %} <div class="loading-overlay__spinner hidden">
+                 <div class="loading-overlay__spinner hidden">
                                 <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                                     <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                                 </svg>
-                            </div> {% endcomment %}
+                            </div> 
                 {%- endform -%}
             </product-form>
           {%endif%} 
