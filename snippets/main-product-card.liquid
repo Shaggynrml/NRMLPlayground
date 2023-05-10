@@ -42,6 +42,13 @@
     .product-card:hover .product-card-product-image{
       transform: translateY(-10%);
     }
+    .product-card:hover .product-card-size-section{
+      visibility: visible;
+      opacity: 1;
+      z-index:2;
+    }
+
+
   }
   .product-image-size {
     width: 100%;
@@ -65,15 +72,15 @@
     top:60%;
     }
 
-  .product-card:hover .product-card-size-section{
-    visibility: visible;
-    opacity: 1;
-  } 
-  .size-buttons{
+
+  .product-card-size-buttons{
     background: rgba(0,0,0,0);
     border:none;
     text-align:left;
     padding-left:0;
+  }
+  .product-card-size-buttons:hover{
+    color:#FF0000;
   }
   .product-card-title {
     font-size: 1rem;
@@ -155,7 +162,7 @@
           <product-form class="product-form" data-cart-type="{{ settings.cart_type }}">
             {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
               <input  type="hidden" name="id" value="{{ size.id }}" />
-              <input class= "size-buttons" type="submit" value="{{size.option1}}" />
+              <input class= "product-card-size-buttons" type="submit" value="{{size.option1}}" />
                         <div class="loading-overlay__spinner hidden">
                           <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                             <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
