@@ -318,26 +318,23 @@ secondary-product-card-body{
   }
 }
 .pre-discount-price{
-  color:"777";
+  color: #979797;
   text-decoration:line-through;
-  padding: 1vw;
+  padding: 0vw;
 }
 @media screen and (max-width:750px){
   .pre-discount-price{
-    color:"777";
+    color:#979797;
     text-decoration:line-through;
     padding:calc(5px/2);
   } 
 }
 
 .discounted-price{
-  padding: 1vw;
+  padding-right: 0.5vw;
+  padding-left: 0.2vw;
 }
-@media screen and (max-width:750px){
-  .discounted-price{
-    padding: calc(5px/2);
-  }
-}
+
 .secondary-product-vendor-title{
   padding-top: 0vw;
   padding-bottom: 0vw;
@@ -457,7 +454,7 @@ secondary-product-card-body{
     >
 <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"> {% endcomment %}
 <div class="secondary-product-card-container">
-  <div class="card">
+  <div class="card border-0">
     <div class = "secondary-product-vendor-title">{{card_product.vendor}}</div>
     <div class="imgBx">
         {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}

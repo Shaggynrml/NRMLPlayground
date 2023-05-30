@@ -25,7 +25,7 @@
   -%}
   <div class="card-wrapper underline-links-hover">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
-    <div class="card article-card
+    <div class="card  border-0 article-card
       card--{{ settings.card_style }}
       {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
       {% if article.image and show_image %} card--media{% else %} card--text{% endif %}

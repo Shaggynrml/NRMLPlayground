@@ -83,7 +83,7 @@
     color:#FF0000;
   }
   .product-card-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: left;
     text-decoration:none !important;
     color:#121212;
@@ -94,7 +94,7 @@
   }
 
   .product-card--price {
-    font-size: .8125em;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: left;
@@ -110,7 +110,9 @@
     width:100%;
     overflow:hidden;
   }
-
+  .product-card__price--old{
+    text-decoration:line-through;
+  }
   @media only screen and (max-width: 900px) {
     .product-card {
       flex-direction: column;
@@ -180,6 +182,7 @@
       <div class="product-card--price">
         <span class="product-card__price--old">{{ product.compare_at_price_max | money }}</span>
         <span class="product-card__price--new">{{ product.price | money }}</span>
+        <span>save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
       </div>
     {% else %}
       <div class="product-card--price">{{ product.price | money }}</div>
