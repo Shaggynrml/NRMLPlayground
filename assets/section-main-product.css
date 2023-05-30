@@ -1,5 +1,6 @@
 .product {
   margin: 0;
+  display: flex;
 }
 
 .product.grid {

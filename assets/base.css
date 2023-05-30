@@ -197,6 +197,9 @@
   --text-alignment: var(--blog-card-text-alignment);
 }
 
+.card{
+  border:none;
+}
 .contains-content-container,
 .content-container {
   --border-radius: var(--text-boxes-radius);
