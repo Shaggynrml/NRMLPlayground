@@ -12,7 +12,11 @@
   padding-bottom:20px;
 }
 .grey-outline{
-  background: "#e5e5e5"
+  background: #e5e5e5
+}
+
+.darker-outline{
+  background: #d9d9d9
 }
 .day-mark {
    width: 7px;
@@ -66,8 +70,11 @@
 .empty-day:hover {
    cursor: default !important;
    background-color: #fff !important;
+   display:block !important;
 }
-
+.empty-day:empty{
+    display:block
+}
 #table-body .row .col {
    padding: .75rem;
 }
@@ -223,7 +230,7 @@ function createCalendar(date, side) {
 
       for (let i = 1; i < (startDate.getDay() || 7); i++) {
          let emptyDivCol = document.createElement("div");
-         emptyDivCol.className = "col empty-day";
+         emptyDivCol.className = " col empty-day";
          currentTr.appendChild(emptyDivCol);
       }
 
@@ -248,7 +255,7 @@ function createCalendar(date, side) {
             selectedDayBlock = currentDay;
             setTimeout(() => {
                currentDay.classList.add("grey-outline");
-               currentDay.classList.add("grey-outline");
+               currentDay.classList.add("darker-outline");
             }, 900);
          }
          currentDay.innerHTML = i;
@@ -312,6 +319,11 @@ function addEvent(title, desc) {
    globalEventObj[selectedDate.toDateString()][title] = desc;
 }
 
+function addReleases(){
+
+
+}
+
 function showEvents() {
    let sidebarEvents = document.getElementById("sidebarEvents");
    let objWithDate = globalEventObj[selectedDate.toDateString()];
@@ -362,15 +374,16 @@ console.log(selectedDayBlock)
       return;
    }
     
+
    if (selectedDayBlock) {
-      if (selectedDayBlock.classList.contains("grey-outline") && selectedDayBlock.classList.contains("lighten-3")) {
+      if (selectedDayBlock.classList.contains("grey-outline") && selectedDayBlock.classList.contains("darker-outline")) {
          selectedDayBlock.classList.remove("grey-outline");
-         selectedDayBlock.classList.remove("lighten-3");
+         selectedDayBlock.classList.remove("darker-outline");
       }
    }
    selectedDayBlock = e.target;
    selectedDayBlock.classList.add("grey-outline");
-   selectedDayBlock.classList.add("grey-outline");
+   selectedDayBlock.classList.add("darker-outline");
 
    selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(e.target.innerHTML));
 
@@ -412,7 +425,11 @@ console.log(selectedDayBlock)
   "tag": "section",
   "class": "section",
   "settings": [
-
+       {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured-blog.settings.blog.label"
+    }
   ],
   "presets": [
             {
