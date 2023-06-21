@@ -6,9 +6,16 @@
       "settings": {
         "menu": "menu-panel"
       }
+    },
+    "7c08491c-76f4-49b8-81a8-8a7a233d3a81": {
+      "type": "calendar",
+      "settings": {
+        "blog": "release-calendar"
+      }
     }
   },
   "order": [
-    "19bd4163-e85f-458e-b36b-bebd37c0a6e3"
+    "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
+    "7c08491c-76f4-49b8-81a8-8a7a233d3a81"
   ]
 }

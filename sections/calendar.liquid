@@ -1,15 +1,18 @@
 <style>
  .box-one{
-  outline-style: dotted;
+   background:#ededed;
+   padding:1em;
  }
 .box-two{
-  outline-style: dashed;
+   background:#d9d9d9;
+   overflow-y: scroll;
  }
 .calendar-grid{
 
 }
 .container{
-  padding-bottom:20px;
+   width:100%;
+   padding-bottom:20px;
 }
 .grey-outline{
   background: #e5e5e5
@@ -21,18 +24,19 @@
 .day-mark {
    width: 7px;
    height: 7px;
-   background-color: #b39ddb;
+   background-color: #616161;
    border-radius: 100px;
-   position: absolute;
-   left: 47%;
-   top: 67%;
+   position:absolute;
+   left: 46%;
+   top: 70%;
+}
+
+.day-mark:empty{
+   display:block;
 }
 
 .calendar-content {
-   background-color: #fff;
-   padding: 20px;
-   padding-left: 15%;
-   padding-right: 15%;
+   padding: 1.5em;
    overflow: hidden;
 }
 .content-wrapper {
@@ -41,10 +45,16 @@
    margin-left: 300px;
 }
 
+.card-img{
+   width:60%;
+   height:60%;
+   margin-right:1em;
+}
+
 .event-mark {
    width: 5px;
    height: 5px;
-   background-color: teal;
+   background-color: #efefef;
    border-radius: 100px;
    position: absolute;
    left: 46%;
@@ -52,13 +62,39 @@
 }
 
 .eventCard {
-   background-color: #fff;
    color: black;
-   padding: 12px 24px 12px 24px;
-   border-bottom: 1px solid #E5E5E5;
-   white-space: nowrap;
+   padding: 0.5em;
+   background-color:#e5e5e5;
    position: relative;
    animation: slideInDown 0.5s;
+   margin:0.5em;
+   display:flex;
+}
+
+.eventCard-header {
+   font-weight: bold;
+}
+
+.eventCard-description {
+   color: grey;
+}
+
+.eventCard-mark-wrapper {
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 100%;
+   width: 60px;
+}
+
+.eventCard-mark {
+   width: 8px;
+   height: 8px;
+   background-color: #b39ddb;
+   border-radius: 100px;
+   position: absolute;
+   left: 50%;
+   top: 45%;
 }
 
 #table-body .col:hover {
@@ -80,10 +116,28 @@
 }
 
 #table-body .col {
-   border: 1px solid transparent;
+   border: 1px solid #252525;
 }
 
 #table-body {}
+
+.prev-button {
+   cursor: pointer;
+   color: grey !important;
+}
+
+.prev-button i {
+   font-size: 4em;
+}
+
+.next-button {
+   cursor: pointer;
+   color: grey !important;
+}
+
+.next-button i {
+   font-size: 4em;
+}
 
 #table-body .row {
    margin-bottom: 0;
@@ -129,12 +183,20 @@
       padding-right: 0;
    }
 }
+
+@media (max-width:767px){
+   .calendarContainer{
+      display:flex;
+      flex-direction: column-reverse;
+   }
+}
 </style>
 
 
 
 
-<h2 class= "section-title"> Release Calendar</h2>
+
+<h2 class= "section-title">  </h2>
 
 
 
@@ -146,8 +208,8 @@
 
 
 
-<div class= "container">
-  <div class="row no-gutters">
+<div class= "container ">
+  <div class="row calendarContainer">
     <div class="col-12 col-md-4 box-two">
       <div class="sidebar-title">
         <h4>Events</h4>
@@ -157,12 +219,12 @@
         <div class="empty-message">Sorry, no releases on selected date</div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-8 box-one calendar-grid">
+    <div class="col-12 col-sm-12 col-md-8 box-one calendar-grid">
       <div class="calendar-header">
         <div class="header-text">
-          <h3 id="month-name">February</h3>
           <h5 id="todayDayName">Today is Friday 7 Feb</h5>
         </div>
+        <h3 id="month-name">February</h3>
         <a class="prev-button" id="prev">prev</a>
         <a class="next-button" id="next">next</a>
       </div>
@@ -199,6 +261,7 @@ var currentDate = new Date();
 var selectedDate = currentDate;
 var selectedDayBlock = null;
 var globalEventObj = {};
+var articles = {{ section.settings.blog.articles | json }};
 
 var sidebar = document.getElementById("sidebar");
 
@@ -290,8 +353,10 @@ function createCalendar(date, side) {
 
    }, !side ? 0 : 270);
 }
+document.addEventListener("DOMContentLoaded", function() {
+  createCalendar(currentDate);
+});
 
-createCalendar(currentDate);
 
 var todayDayName = document.getElementById("todayDayName");
 todayDayName.innerHTML = "Today is " + currentDate.toLocaleString("en-US", {
@@ -320,10 +385,19 @@ function addEvent(title, desc) {
 }
 
 function addReleases(){
-
-
+ for (var i = 0; i < 50; i++) {
+   if (articles[i].tags.includes("%")){
+      var releaseDateTag = articles[i].tags.split("%")[1]
+      releaseDate = new Date(releaseDateTag)
+      if (!globalEventObj[releaseDate.toDateString()]) {
+         globalEventObj[releaseDate.toDateString()] = {};
+      }
+      globalEventObj[releaseDate.toDateString()][articles[i].title] = articles[i];
+      console.log(articles[i])
+   }
+ }
 }
-
+addReleases();
 function showEvents() {
    let sidebarEvents = document.getElementById("sidebarEvents");
    let objWithDate = globalEventObj[selectedDate.toDateString()];
@@ -342,11 +416,21 @@ function showEvents() {
          let eventDescription = document.createElement("div");
          eventDescription.className = "eventCard-description";
 
-         eventHeader.appendChild(document.createTextNode(key));
-         eventContainer.appendChild(eventHeader);
+         let imgArticle = document.createElement('img');
+         imgArticle.className = "card-img"
 
-         eventDescription.appendChild(document.createTextNode(objWithDate[key]));
-         eventContainer.appendChild(eventDescription);
+         let eventText = document.createElement("div");
+
+         eventHeader.appendChild(document.createTextNode(key));
+         eventText.appendChild(eventHeader);
+
+         eventDescription.innerHTML = objWithDate[key].body_html;
+         eventText.appendChild(eventDescription)
+
+         imgArticle.src = objWithDate[key].image.src
+         
+         eventContainer.appendChild(imgArticle)
+         eventContainer.appendChild(eventText)
 
          let markWrapper = document.createElement("div");
          markWrapper.className = "eventCard-mark-wrapper";
@@ -369,7 +453,7 @@ function showEvents() {
 }
 
 gridTable.onclick = function (e) {
-console.log(selectedDayBlock)
+
    if (!e.target.classList.contains("col") || e.target.classList.contains("empty-day")) {
       return;
    }
@@ -404,18 +488,10 @@ console.log(selectedDayBlock)
   
    showEvents();
 
-   if (!selectedDayBlock.querySelector(".day-mark")) {
-      selectedDayBlock.appendChild(document.createElement("div")).className = "day-mark";
-   }
+  if (selectedDayBlock && !selectedDayBlock.querySelector(".day-mark")) {
+    selectedDayBlock.appendChild(document.createElement("div")).className = "day-mark";
+  }
 
-   let inputs = addForm.getElementsByTagName("input");
-   for (let i = 0; i < inputs.length; i++) {
-      inputs[i].value = "";
-   }
-   let labels = addForm.getElementsByTagName("label");
-   for (let i = 0; i < labels.length; i++) {
-      labels[i].className = "";
-   }
 
 
 </script>
