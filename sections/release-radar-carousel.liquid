@@ -1,6 +1,7 @@
+
 <style>
 :root {
-    --height: calc( 80vh - 50px );
+    --height: calc( 40vh - 50px );
     --width: 450px;
 }
 
@@ -172,7 +173,7 @@
     height: 100%;
     z-index: 1;
     opacity: 1;
-    background: linear-gradient(160deg, rgba(2,0,36,0) 40%, rgba(118,221,136,.5) 70%, rgba(0,255,246,.6) 100%);
+    
     transition: all .66s cubic-bezier(.55,.24,.18,1);
 }
 
@@ -210,13 +211,12 @@
 }
 
 .carousel__contents .user__title {
-    font-family: lexend;
     font-size: .875em;
     letter-spacing: 1.25px;
     font-weight: 500;
     text-transform: uppercase;
     color: transparent;
-    background: linear-gradient( 270deg, rgb(67, 255, 0), rgb(0, 255, 247) );
+    background: #252525;
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0.85;
@@ -236,27 +236,20 @@
 
 @media screen and (max-width: 800px) {
     .carousel__item img {
-        width: calc(var(--width) * .5);
+        width: 100%;
+        height:auto;
+        aspect-ratio: 5/4;
     }
     .carousel__contents {
-        transform: translateX(-100%) rotate(90deg);
-        transform-origin: bottom right;
-        align-items: end;
-        justify-content: end;
-        background-image: radial-gradient( ellipse at 100% 100%, rgba(0, 0, 0,.4) 0%, transparent 50% );
-        background-position: -100% 100%;
-        flex-direction: column;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-align: right;
+        font-size: .5em;
+        
     }
     [data-active] .carousel__contents {
         background-position: 100% 100%;
     }
     .carousel__contents .user__title,
     .carousel__contents .user__name {
-        max-width: 70vh;
+        max-width: calc(var(--width) - 285px);
         transform: translateX(200px);
     }
 }
@@ -272,22 +265,10 @@
 [data-active] .carousel__contents .user__title {
     opacity: 0.85; 
     transition-delay: 0.05s;
+    
 }
 
 /*
-
-    
-
-
-
-
-
-
-
-
-
-
-
     non-demo css
 */
 
@@ -297,7 +278,7 @@
     padding: 1em;
     justify-self: end;
     grid-row: 1;
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 1em;
 }
@@ -323,8 +304,54 @@ body, html {
     padding: 0;
     align-items: start;
 }
+.section-title{
+        padding:1.5vw;
+        font-size: 2vw;
+}
 </style>
-<script>
+
+
+    <h2 class= "section-title">Upcoming Releases</h2>
+   <main id="app">
+    <section class="carousel">
+        <ul class="carousel__list">
+             {%- for article in section.settings.blog.articles reversed limit:15-%}
+                <li class="carousel__item" tabindex="0" >
+                    <div class="carousel__box">
+                        <div class="carousel__image"><img
+                srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+                src="{{ article.image.src | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ article.image.src.alt | escape }}"
+                class="motion-reduce"
+                {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+              ></div>
+                        <div class="carousel__contents">
+                            <h2 class="user__name">{{ article.title | truncate: 50 | escape }}</h2>
+                            <h3 class="user__title">{{ article.tag | strip_html | truncatewords: 30 }}</h3> 
+                        </div>
+                    </div>
+                </li>
+             {%- endfor -%}
+        </ul>
+        <div class="carousel__nav"><button class="prev"><svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M9.586 4l-6.586 6.586a2 2 0 0 0 0 2.828l6.586 6.586a2 2 0 0 0 2.18 .434l.145 -.068a2 2 0 0 0 1.089 -1.78v-2.586h7a2 2 0 0 0 2 -2v-4l-.005 -.15a2 2 0 0 0 -1.995 -1.85l-7 -.001v-2.585a2 2 0 0 0 -3.414 -1.414z"></path>
+                </svg><span>prev</span></button><button class="next"><span>next</span><svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12.089 3.634a2 2 0 0 0 -1.089 1.78l-.001 2.586h-6.999a2 2 0 0 0 -2 2v4l.005 .15a2 2 0 0 0 1.995 1.85l6.999 -.001l.001 2.587a2 2 0 0 0 3.414 1.414l6.586 -6.586a2 2 0 0 0 0 -2.828l-6.586 -6.586a2 2 0 0 0 -2.18 -.434l-.145 .068z"></path>
+                </svg></button></div>
+    </section>
+</main>
+
+
+<script defer="defer">
     const d = document;
     const $q = d.querySelectorAll.bind(d);
     const $g = d.querySelector.bind(d);
@@ -428,132 +455,32 @@ body, html {
     $list.addEventListener( "keyup", handleSlideKey );
 
 </script> 
-
-
-    <section class="carousel">
-        <ul class="carousel__list">
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Anthony Lee</h2>
-                        <h3 class="user__title">Archetypal Professor of Recognition</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Alicia Chevalier</h2>
-                        <h3 class="user__title">Corporate Usability Analyst</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Nate Boucher</h2>
-                        <h3 class="user__title">Customer Impact Officer</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1614204424926-196a80bf0be8?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Leah Harris</h2>
-                        <h3 class="user__title">Designer and Bandit</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0" data-active="data-active">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1536766768598-e09213fdcf22?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Angelina Laurent</h2>
-                        <h3 class="user__title">Oracle for Inspiration</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Gal Gadot</h2>
-                        <h3 class="user__title">Acting Designer and Consultant</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Albert Sørensen</h2>
-                        <h3 class="user__title">Neural Big Shot of Anticipation</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1553514029-1318c9127859?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Candice Marchand</h2>
-                        <h3 class="user__title">Mindful Realist of Motion Laws </h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1596813362035-3edcff0c2487?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Jennifer Salazar</h2>
-                        <h3 class="user__title">Design Habitué</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Antonin Dufour</h2>
-                        <h3 class="user__title">Human-Centered Designer</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Melissa Simon</h2>
-                        <h3 class="user__title">International Infrastructure Analyst</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="carousel__item" tabindex="0">
-                <div class="carousel__box">
-                    <div class="carousel__image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?fit=crop&amp;h=720&amp;q=80" width="480" height="720" /></div>
-                    <div class="carousel__contents">
-                        <h2 class="user__name">Brandon Murray</h2>
-                        <h3 class="user__title">Central Functionality VP</h3>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="carousel__nav"><button class="prev"><svg width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M9.586 4l-6.586 6.586a2 2 0 0 0 0 2.828l6.586 6.586a2 2 0 0 0 2.18 .434l.145 -.068a2 2 0 0 0 1.089 -1.78v-2.586h7a2 2 0 0 0 2 -2v-4l-.005 -.15a2 2 0 0 0 -1.995 -1.85l-7 -.001v-2.585a2 2 0 0 0 -3.414 -1.414z"></path>
-                </svg><span>prev</span></button><button class="next"><span>next</span><svg width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M12.089 3.634a2 2 0 0 0 -1.089 1.78l-.001 2.586h-6.999a2 2 0 0 0 -2 2v4l.005 .15a2 2 0 0 0 1.995 1.85l6.999 -.001l.001 2.587a2 2 0 0 0 3.414 1.414l6.586 -6.586a2 2 0 0 0 0 -2.828l-6.586 -6.586a2 2 0 0 0 -2.18 -.434l-.145 .068z"></path>
-                </svg></button></div>
-    </section>
 {% schema %}
 {
   "name": "release carousel",
   "tag": "section",
   "class": "section",
   "settings": [
-
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Blog posts",
+      "label": "t:sections.featured-blog.settings.heading.label"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.post_limit.label"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured-blog.settings.blog.label"
+    }
   ],
   "presets": [
             {
