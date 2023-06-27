@@ -68,23 +68,23 @@
             "collection": "purple-jeans"
           }
         },
-        "4e6b45b0-5ed5-4e5d-8c4d-ac3772c6daab": {
-          "type": "collection",
-          "settings": {
-            "collection": "icecream"
-          }
-        },
         "d3d1f1c3-2f9b-4c0b-b5b2-ed821fcfd230": {
           "type": "collection",
           "settings": {
             "collection": "chinatown-market"
           }
+        },
+        "4e6b45b0-5ed5-4e5d-8c4d-ac3772c6daab": {
+          "type": "collection",
+          "settings": {
+            "collection": "icecream"
+          }
         }
       },
       "block_order": [
         "template--14321586536514__93b9328c-bfd0-4299-8b90-7d0ed043c9ce-16878799393dade6e5-2",
-        "4e6b45b0-5ed5-4e5d-8c4d-ac3772c6daab",
-        "d3d1f1c3-2f9b-4c0b-b5b2-ed821fcfd230"
+        "d3d1f1c3-2f9b-4c0b-b5b2-ed821fcfd230",
+        "4e6b45b0-5ed5-4e5d-8c4d-ac3772c6daab"
       ],
       "settings": {
         "heading": "Multimedia collage",
