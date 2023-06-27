@@ -2280,8 +2280,8 @@ input[type='checkbox'] {
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  padding:0px;
+  padding: 1em;
+  width: 100%;
 }
 
 @media screen and (min-width: 990px) {
