@@ -336,7 +336,7 @@ body, html {
               ></div>
                         <div class="carousel__contents">
                             <h2 class="user__name">{{ article.title | truncate: 50 | escape }}</h2>
-                            <h3 class="user__title">{{ article.tag | strip_html | truncatewords: 30 }}</h3> 
+                            <h3 class="user__title">{{ article.excerpt | strip_html | truncatewords: 30 }}</h3> 
                         </div>
                     </div>
                 </li>
