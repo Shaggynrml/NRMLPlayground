@@ -12,6 +12,12 @@
     z-index: 2;
     text-align:left;
 }
+
+@media only screen and (max-width: 900px){
+    .text-slide-content{
+        display: none;
+    }
+}
 .text-slide-content a{
     text-decoration:none !important;
 }
@@ -91,6 +97,7 @@
 {%- endstyle -%}
 
 <div class= "text-slide-banner-container">
+        <a href="{{section.settings.link}}">
         {{ section.settings.image | image_url: width: 2500 | image_tag:
             loading: 'lazy',
             width: "100%",
@@ -100,6 +107,7 @@
             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
             alt: section.settings.image.alt | escape
         }}
+        </a>
         <div class="text-slide-content {{section.settings.text-alignment}}">
             <a href="{{section.settings.link}}">
             <div class= "text">
