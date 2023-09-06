@@ -14,7 +14,7 @@
   overflow-y: auto;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1444px) {
   .facets-container > * + * {
     margin-top: 0;
   }
@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1444px) {
   .facets-container {
     grid-template-columns: auto minmax(0, max-content);
     column-gap: 2rem;
@@ -40,7 +40,7 @@
   padding-left: 2.5rem;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1444px) {
   .facet-filters {
     padding-left: 3rem;
   }
@@ -504,7 +504,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   width: 1.2rem;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1444px) {
   .active-facets__button svg {
     margin-right: -0.4rem;
     margin-top: 0.1rem;
@@ -948,7 +948,7 @@ input.mobile-facets__checkbox {
   display: block;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1444px) {
   .facets-vertical {
     display: flex;
   }
@@ -1094,7 +1094,7 @@ input.mobile-facets__checkbox {
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1445px) {
+@media screen and (min-width: 1444px) and (max-width: 1445px) {
   .facets-vertical .active-facets__button {
     padding: 1rem;
     margin-bottom: 0;
