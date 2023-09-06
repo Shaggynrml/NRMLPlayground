@@ -1,5 +1,6 @@
 /* Color custom properties */
-
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
@@ -412,7 +413,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  font-family: 'Helvetica Neue', sans-serif;
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
@@ -479,7 +480,7 @@ h3,
 
 h4,
 .h4 {
-  font-family: var(--font-heading-family);
+  font-family: 'Helvetica Neue', sans-serif;
   font-style: var(--font-heading-style);
   font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
@@ -575,19 +576,19 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1444px) {
   .small-hide {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1445px) {
+@media screen and (min-width: 1444px) and (max-width: 1445px) {
   .medium-hide {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1444px) {
   .large-up-hide {
     display: none !important;
   }
@@ -613,21 +614,7 @@ table:not([class]) th {
   opacity: 0.7;
 }
 
-a:empty,
-ul:empty,
-dl:empty,
-div:empty,
-section:empty,
-article:empty,
-p:empty,
-h1:empty,
-h2:empty,
-h3:empty,
-h4:empty,
-h5:empty,
-h6:empty {
-  display: none;
-}
+
 
 .link,
 .customer a {
@@ -666,9 +653,6 @@ h6:empty {
   margin-left: 1rem;
 }
 
-a:not([href]) {
-  cursor: not-allowed;
-}
 
 .circle-divider::after {
   content: '\2022';

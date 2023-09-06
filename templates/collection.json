@@ -2,7 +2,6 @@
   "sections": {
     "02569311-7293-43d5-a985-3e6041b752fe": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "template--14321586962498__02569311-7293-43d5-a985-3e6041b752fe-166870033669335f60-0": {
           "type": "heading",
@@ -38,6 +37,7 @@
         "template--14321586962498__02569311-7293-43d5-a985-3e6041b752fe-166870033669335f60-1",
         "template--14321586962498__02569311-7293-43d5-a985-3e6041b752fe-166870033669335f60-2"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Pre_BF_Slim_Banner.jpg",
         "image_overlay_opacity": 0,
