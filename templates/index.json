@@ -26,24 +26,24 @@
         "menu": "menu-panel"
       }
     },
+    "ef6c9fa2-598a-4f64-a204-45849701cfec": {
+      "type": "double-image-section",
+      "settings": {
+        "image-1-title": "",
+        "image-one": "shopify:\/\/shop_images\/tile2.png",
+        "image-one-mobile": "shopify:\/\/shop_images\/tile2.png",
+        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=POLO+RALPH+LAUREN",
+        "image-2-title": "",
+        "image-two": "shopify:\/\/shop_images\/tile3.png",
+        "image-two-mobile": "shopify:\/\/shop_images\/tile3.png",
+        "button_link_two": "shopify:\/\/collections\/yzy-x-gap"
+      }
+    },
     "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
       "type": "featured-kicks",
       "settings": {
         "title": "Featured collection",
         "collection": "new-arrival-footwear"
-      }
-    },
-    "ef6c9fa2-598a-4f64-a204-45849701cfec": {
-      "type": "double-image-section",
-      "settings": {
-        "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/sale40igpost.png",
-        "image-one-mobile": "shopify:\/\/shop_images\/sale_Story.png",
-        "button_link_one": "shopify:\/\/collections\/flash-sale",
-        "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/outnow_post.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/OUT_NOW_STORY.png",
-        "button_link_two": "shopify:\/\/collections\/yzy-x-gap"
       }
     },
     "7381c80b-4b3a-496b-a822-00a4cef333a6": {
@@ -57,32 +57,29 @@
     "3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4": {
       "type": "collage",
       "blocks": {
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-video-1": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-product-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
         "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "chinatown-market"
+          }
+        },
+        "8327908c-a97b-4631-9af1-8e8f62170044": {
+          "type": "collection",
+          "settings": {
+            "collection": "footwear-all"
+          }
+        },
+        "40e6ece8-2012-4674-b44f-94db9968f9f7": {
+          "type": "collection",
+          "settings": {
+            "collection": "jordan-footwear-men"
           }
         }
       },
       "block_order": [
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-video-1",
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-product-1",
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-collection-1"
+        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-collection-1",
+        "8327908c-a97b-4631-9af1-8e8f62170044",
+        "40e6ece8-2012-4674-b44f-94db9968f9f7"
       ],
       "settings": {
         "heading": "Multimedia collage",
@@ -150,8 +147,8 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7",
     "ef6c9fa2-598a-4f64-a204-45849701cfec",
+    "a2aa638f-b6ff-4197-8434-0d8edce785d7",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
