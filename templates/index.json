@@ -9,39 +9,7 @@
         "subtext-colour": "#252525",
         "text-alignment": "top-left",
         "image": "shopify:\/\/shop_images\/banner_44be0d33-dd6f-4c1a-a4be-ba1fd1e8dbf0.png",
-        "link": ""
-      }
-    },
-    "93b339ff-7a5a-4220-a5b1-bd71a1e18e6a": {
-      "type": "image-banner",
-      "blocks": {
-        "template--14321586536514__93b339ff-7a5a-4220-a5b1-bd71a1e18e6a-168787929097c61a2f-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "shopify:\/\/collections\/25-nike-and-jordan-sale",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--14321586536514__93b339ff-7a5a-4220-a5b1-bd71a1e18e6a-168787929097c61a2f-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Banner_c93d0ed5-5cf8-4c98-a853-1a8eac547bf4.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=POLO+RALPH+LAUREN"
       }
     },
     "185b0658-ee1c-4cde-9fac-af4af026305f": {
@@ -180,7 +148,6 @@
   },
   "order": [
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
-    "93b339ff-7a5a-4220-a5b1-bd71a1e18e6a",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "a2aa638f-b6ff-4197-8434-0d8edce785d7",
