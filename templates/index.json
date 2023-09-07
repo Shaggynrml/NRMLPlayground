@@ -26,6 +26,13 @@
         "menu": "menu-panel"
       }
     },
+    "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
+      "type": "featured-kicks",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "new-arrival-footwear"
+      }
+    },
     "ef6c9fa2-598a-4f64-a204-45849701cfec": {
       "type": "double-image-section",
       "settings": {
@@ -39,11 +46,13 @@
         "button_link_two": "shopify:\/\/collections\/yzy-x-gap"
       }
     },
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
-      "type": "featured-kicks",
+    "5810a254-65cb-44f7-b950-1def18a81da2": {
+      "type": "double-image-section",
       "settings": {
-        "title": "Featured collection",
-        "collection": "new-arrival-footwear"
+        "image-1-title": "",
+        "button_link_one": "",
+        "image-2-title": "",
+        "button_link_two": ""
       }
     },
     "7381c80b-4b3a-496b-a822-00a4cef333a6": {
@@ -147,8 +156,9 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
-    "ef6c9fa2-598a-4f64-a204-45849701cfec",
     "a2aa638f-b6ff-4197-8434-0d8edce785d7",
+    "ef6c9fa2-598a-4f64-a204-45849701cfec",
+    "5810a254-65cb-44f7-b950-1def18a81da2",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
