@@ -3,13 +3,13 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
       "type": "text-slide-banner",
       "settings": {
-        "title": "Polo Ralph Lauren",
-        "subheading": "Get the latest now.",
-        "text-colour": "#252525",
-        "subtext-colour": "#252525",
+        "title": "Honor the Gift",
+        "subheading": "New collection just in.",
+        "text-colour": "#4E3524",
+        "subtext-colour": "#4E3524",
         "text-alignment": "top-left",
-        "image": "shopify:\/\/shop_images\/banner_44be0d33-dd6f-4c1a-a4be-ba1fd1e8dbf0.png",
-        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=POLO+RALPH+LAUREN"
+        "image": "shopify:\/\/shop_images\/HTG.gif",
+        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=HONOR+THE+GIFT"
       }
     },
     "185b0658-ee1c-4cde-9fac-af4af026305f": {
