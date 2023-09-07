@@ -1,12 +1,5 @@
 {
   "sections": {
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
-      "type": "featured-kicks",
-      "settings": {
-        "title": "Featured collection",
-        "collection": "new-arrival-footwear"
-      }
-    },
     "93b339ff-7a5a-4220-a5b1-bd71a1e18e6a": {
       "type": "image-banner",
       "blocks": {
@@ -43,7 +36,7 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "all",
-        "title": "Featured collection"
+        "title": "NEW ARRIVALS"
       }
     },
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
@@ -51,6 +44,13 @@
       "disabled": true,
       "settings": {
         "menu": "menu-panel"
+      }
+    },
+    "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
+      "type": "featured-kicks",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "new-arrival-footwear"
       }
     },
     "ef6c9fa2-598a-4f64-a204-45849701cfec": {
@@ -156,10 +156,10 @@
     }
   },
   "order": [
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7",
     "93b339ff-7a5a-4220-a5b1-bd71a1e18e6a",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
+    "a2aa638f-b6ff-4197-8434-0d8edce785d7",
     "ef6c9fa2-598a-4f64-a204-45849701cfec",
     "93b9328c-bfd0-4299-8b90-7d0ed043c9ce",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
