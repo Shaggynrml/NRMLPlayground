@@ -30,7 +30,7 @@
       "type": "featured-kicks",
       "settings": {
         "title": "Featured collection",
-        "collection": "new-arrival-footwear"
+        "collection": "footwear-all"
       }
     },
     "ef6c9fa2-598a-4f64-a204-45849701cfec": {
@@ -51,7 +51,7 @@
       "settings": {
         "image-1-title": "",
         "button_link_one": "",
-        "image-2-title": "",
+        "image-2-title": "Featured collection",
         "button_link_two": ""
       }
     },
