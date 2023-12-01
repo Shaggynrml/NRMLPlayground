@@ -2,7 +2,7 @@
 <style>
   @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
   @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
-  @import "compass/css3";
+
 
 
 
@@ -152,7 +152,7 @@
   border-radius: 1px;
 }
 .product-card--price {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: left;
@@ -169,7 +169,7 @@
   color: rgb(17, 17, 17);
   z-index: 1;
   transition-duration: .5s;
-  font-size: 1.04em;
+  font-size: 1.64em;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -273,36 +273,154 @@
       width: 60px
   }
   }
+
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: #ffffff; /* Fallback color */
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+
+input[type=checkbox] {
+  display: none;
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: flex;
+  width: 70%;
+  max-width: none;
+  transition: transform 0.25s ease;
+  border:none;
+  cursor: zoom-in;
+  padding-top:1rem;
+  justify-content: center;
+  flex-direction: column;
+  overflow:scroll;
+}
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(2);
+  padding-top:1rem;
+  cursor: zoom-out;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.1s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.modalClose {
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.modalClose:hover,
+.modalClose:focus {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-navigation-container{
+  display: flex;
+  flex-direction: horizontal;
+  justify-content:center;
+
+
+}
+.imgLabel{
+  justify-self: center;
+}
+.modal-button-right{
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+}
+.modal-button-left{
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
 </style>
 
+{%- style -%}
+
+{%- endstyle -%}
+
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <div class= "primary-product-container">
     <div class= "primary-product-images-container col-12 col-lg-6">
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
             <div>
               <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
-                  <div class="carousel-inner">
+                  <div id = "carouselInner" class="carousel-inner">
                     {%- for media in product.media -%}
-                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                      <img id="Thumbnail-{{ section.id }}-{{ forloop.index }}"
-                          src="{{ media | image_url: width: 1800, height: 1000 }}"
-                          sizes="(min-width: 1200px) calc((1200px - 19.5rem) / 12), (min-width: 750px) calc((100vw - 16.5rem) / 8), calc((100vw - 8rem) / 5)"
-                          alt="{{ media.alt | escape }}"
-                          loading="lazy"
-                        >
-                    </div>
+                      <div class="carousel-item {% if forloop.first %} active {% endif %}" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 1 }}%;">
+                        <img id="img-{{ forloop.index }}"
+                            src="{{ media | image_url: width: 1800, height: 1000 }}"
+                            sizes="(min-width: 1200px) calc((1200px - 19.5rem) / 12), (min-width: 750px) calc((100vw - 16.5rem) / 8), calc((100vw - 8rem) / 5)"
+                            alt="{{ media.alt | escape }}"
+                            
+                          >
+                      </div>              
                     {%- endfor -%}
                   </div>
+
                   <ol class="carousel-indicators ">
-                  {%- for media in product.media -%}
-                  {% assign slideIndex = forloop.index0 %}
-                    <li class="list-inline-item{% if forloop.first %} active {% endif %}"> <a id="carousel-selector-{{slideIndex}}" class="{% if forloop.first %} selected {% endif %}" data-slide-to="{{slideIndex}}" data-target="#myCarousel">                     <img id="Thumbnail-{{ section.id }}-{{ forloop.index }}"
-                          src="{{ media | image_url: width: 80, height: 50 }}"
-                          alt="{{ media.alt | escape }}"
-                          loading="lazy"
-                        > </a> </li>
+                    {%- for media in product.media -%}
+                      {% assign slideIndex = forloop.index0 %}
+                      <li class="list-inline-item{% if forloop.first %} active {% endif %}"> 
+                        <a id="carousel-selector-{{slideIndex}}" class="{% if forloop.first %} selected {% endif %}" data-slide-to="{{slideIndex}}" data-target="#myCarousel">                    
+                          <img id="Thumbnail-{{ forloop.index }}"
+                                src="{{ media | image_url: width: 80, height: 50 }}"
+                                alt="{{ media.alt | escape }}"
+                                loading="lazy"
+                              > 
+                        </a> 
+                      </li>
                     {%- endfor -%}
                   </ol>
               </div>
@@ -436,13 +554,33 @@
           {% if product.tags contains 'CLEARANCE' or  product.tags contains 'RELEASE'%}
             <p>*This product is final sale and will not be accepted for any returns or exchanges which includes for store credit.</p>
           {% endif %}
-              We want you to be fully satisfied with your purchase. If you are not satisfied with an item you purchased, you may return the item within 30 days of delivery for a full refund of the purchase price in store credit, minus the shipping, handling or other additional charges. The item must be unworn, undamaged and accompanied by the original receipt in order to be eligible for a return. All sale and promotional items are final sale. To conduct a return, please contact us through our contact form or email us at support@nrml.ca with your order number and name of item(s) you wish to return. Please note, NRML does not offer refunds, but upon inspection, will gladly provide you with a store credit or an item exchange. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.
+              We want you to be fully satisfied with your purchase. If you are not satisfied with an item you purchased, you may return the item within 30 days of delivery for a full refund of the purchase price in store credit, minus the shipping, handling or other additional charges. The item must be unworn, undamaged and accompanied by the original receipt in order to be eligible for a return. All sale and promotional items are final sale. To conduct a return, please contact us through our contact form or email us at help@nrml.ca with your order number and name of item(s) you wish to return. Please note, NRML does not offer refunds, but upon inspection, will gladly provide you with a store credit or an item exchange. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.
           </p></div>
       </div>
     </div>
   </div>
   
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<input type= "checkbox" id = "zoomCheck">
+
+<label class="imgLabel" for ="zoomCheck">
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+</label>
+  <div class="modal-navigation-container">
+
+  <span class = "modal-button-left" id="modal-button-left">⟵</i> </span>
+
+  <!-- The Close Button -->
+  <span class="modalClose">✕</span>
   
+  <span class = "modal-button-right" id = "modal-button-right">⟶</span>
+
+  </div>
+
+</div>
   
   
   {%- liquid
@@ -452,6 +590,55 @@
       assign seo_media = product.media
     endif
   -%}
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("carouselInner");
+var modalImg = document.getElementById("img01");
+var modalLeft = document.getElementById("modal-button-left")
+var modalRight = document.getElementById("modal-button-right")
+const media = {{product.media | json}}
+var currentIndex = 0
+
+img.onclick = function(){
+  modal.style.display = "flex";
+  modalImg.src = media[currentIndex].src;
+}
+
+modalLeft.onclick = function(){
+  
+  if (currentIndex == 0){
+    currentIndex = media.length - 1
+    modalImg.src = media[currentIndex].src;
+  } else {
+    currentIndex = currentIndex - 1
+    modalImg.src = media[currentIndex].src; 
+  }
+ 
+
+}
+
+modalRight.onclick = function(){
+    if (currentIndex == (media.length - 1)){
+    currentIndex = 0
+    modalImg.src = media[currentIndex].src;
+  } else {
+    currentIndex = currentIndex + 1
+    modalImg.src = media[currentIndex].src; 
+  }
+ 
+}
+ 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modalClose")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
 
   <script type="application/ld+json">
     {
