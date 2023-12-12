@@ -115,7 +115,6 @@
   text-decoration:underline;
 }
 .product-pricing{
-  padding-bottom: 20px;
   padding-top: 30px;
 }
 .shaggys-add-to-cart-button{
@@ -124,6 +123,7 @@
   border: none;
   background-color: #d9d9d9;
   display: flex;
+  margin-top:1rem;
   align-items: center;
   justify-content: center;
   text-align:center;
@@ -154,7 +154,6 @@
 .product-card--price {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   text-align: left;
 }
   .product-card__price--old{
@@ -512,21 +511,18 @@ input[type=checkbox]:checked ~ label > img {
           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
           <div class="product-form__buttons">
           <button
-            type="submit"
-            name="add"
-            class="shaggys-add-to-cart-button"
-            {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-          >
-          <span class="IconContainer"> 
-            {% render 'icon-close' %}
-          </span>
-          <p class = "text"> {{ 'products.product.add_to_cart' | t }}</p>
-          <div class="loading-overlay__spinner hidden">
-          </div>
-        </button>
-          {%- if block.settings.show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
+              type="submit"
+              name="add"
+              class="shaggys-add-to-cart-button"
+              {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+            >
+            <span class="IconContainer"> 
+              {% render 'icon-close' %}
+            </span>
+            <p class = "text"> {{ 'products.product.add_to_cart' | t }}</p>
+            <div class="loading-overlay__spinner hidden">
+            </div>
+          </button>
           </div>
         {%- endform -%}
         </product-form>
@@ -705,6 +701,7 @@ span.onclick = function() {
           "default": "Pop-up link text",
           "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
         },
+        
         {
           "id": "page",
           "type": "page",
