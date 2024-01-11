@@ -1,0 +1,126 @@
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<style>
+    .new-arrival-card-container{
+        border-radius: 6px;
+        padding:10px;
+        margin:10px;
+        min-width:40px;
+        max-width:350px;
+        width:100%;
+        flex-grow: 1;
+        display:flex;
+        flex-direction:column;
+    }
+    .new-arrival-card-container:hover .new-arrival-card-title{
+        display:none;
+
+    }
+    .new-arrival-card-container:hover .new-arrival-card-vendor{
+        display:none;
+
+    }
+    .new-arrival-card-container:hover .price-section{
+        display:none;
+
+    }    
+    .new-arrival-card-image{
+        padding:5px;
+        display:block;
+        border-radius: 6px;
+        transition: transform .2s;
+        
+    }
+    .new-arrival-card-container:hover .new-arrival-card-image{
+        transform: scale(1.1);
+    } 
+    .new-arrival-card-title{
+        padding-left:10px;
+        font-size:1.25rem;
+        font-weight:700;
+        text-size-adjust: auto;
+        width:100%;
+         
+        
+        
+    }
+    .new-arrival-card-title a{
+        text-decoration:none !important;
+        color: #151515
+    } 
+    .new-arrival-card-vendor{
+        padding-left:10px;
+        padding-top:15px;
+        font-size:1rem;
+    }
+
+    .new-arrival-card-price{
+        padding-left:10px;
+        padding-top:5px;
+        font-size:1rem;
+    }
+    .price-section{
+        display: flex;
+    }
+    .pre-discount-price{
+        text-decoration:line-through;
+        padding-right:2px;
+    }
+    .discounted-price{
+        padding-right:2px;
+    }
+    .button-section{
+        display:none; 
+    }
+    .new-arrival-card-container:hover .button-section{
+        display:flex;
+        justify-content:center;
+        padding-top:10px; 
+    }
+</style>
+
+
+<div class = "new-arrival-card-container">
+    <a href = "{{card_product.url}}">
+        {% assign image = card_product.featured_image %}
+        {% assign ratio = 0.75 %}
+        {% assign default = 'grande' %}
+        {% assign sizes = '(min-width: 1360px) (max-width:100%) 650px, 45vw' %}
+
+        <img  class="new-arrival-card-image"src="{{ image | product_img_url: default }}"
+            srcset="
+                {{ image | product_img_url: 'pico' }} {% if ratio < 1 %}{{ 16 | times: ratio | round }}{% else %}16{% endif %}w,
+                {{ image | product_img_url: 'icon' }} {% if ratio < 1 %}{{ 32 | times: ratio | round }}{% else %}32{% endif %}w,
+                {{ image | product_img_url: 'thumb' }} {% if ratio < 1 %}{{ 50 | times: ratio | round }}{% else %}50{% endif %}w,
+                {{ image | product_img_url: 'small' }} {% if ratio < 1 %}{{ 100 | times: ratio | round }}{% else %}100{% endif %}w,
+                {{ image | product_img_url: 'compact' }} {% if ratio < 1 %}{{ 160 | times: ratio | round }}{% else %}160{% endif %}w,
+                {{ image | product_img_url: 'medium' }} {% if ratio < 1 %}{{ 240 | times: ratio | round }}{% else %}240{% endif %}w,
+                {{ image | product_img_url: 'large' }} {% if ratio < 1 %}{{ 480 | times: ratio | round }}{% else %}480{% endif %}w,
+                {{ image | product_img_url: 'grande' }} {% if ratio < 1 %}{{ 600 | times: ratio | round }}{% else %}600{% endif %}w,
+                {{ image | product_img_url: '1024x1024' }} {% if ratio < 1 %}{{ 1024 | times: ratio | round }}{% else %}1024{% endif %}w,
+                {{ image | product_img_url: '2048x2048' }} {% if ratio < 1 %}{{ 2048 | times: ratio | round }}{% else %}2048{% endif %}w
+            "
+            sizes="{{ sizes }}"
+            alt="{{ image.alt | escape }}"
+            width="100%"
+        />
+    </a>
+    <div class= "new-arrival-card-vendor">
+        {{card_product.vendor}}
+    </div>   
+    <div id="card-product-title" class= "new-arrival-card-title">
+        <a href = "{{card_product.url}}" >
+            {{card_product.title}}
+        </a>
+    </div>
+    <div class="button-section">
+        {%render 'primary-button', button_content:"View Product", button_link:card_product.url %}
+    </div>
+</div>
+
+<script>
+    var fontsize = document.getElementById("card-product-title").style.fontSize;
+
+
+
+</script>

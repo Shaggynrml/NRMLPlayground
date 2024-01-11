@@ -8,7 +8,7 @@
         "text-colour": "#4E3524",
         "subtext-colour": "#4E3524",
         "text-alignment": "top-left",
-        "image": "shopify:\/\/shop_images\/HTG.gif",
+        "image": "shopify:\/\/shop_images\/Women_Nike_Dunk_Low_PRM_Bacon_banner.jpg",
         "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=HONOR+THE+GIFT"
       }
     },
@@ -26,24 +26,12 @@
         "menu": "menu-panel"
       }
     },
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7": {
-      "type": "featured-kicks",
+    "7381c80b-4b3a-496b-a822-00a4cef333a6": {
+      "type": "release-radar-carousel",
       "settings": {
-        "title": "Featured collection",
-        "collection": "footwear-all"
-      }
-    },
-    "ef6c9fa2-598a-4f64-a204-45849701cfec": {
-      "type": "double-image-section",
-      "settings": {
-        "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/tile2.png",
-        "image-one-mobile": "shopify:\/\/shop_images\/tile2.png",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=POLO+RALPH+LAUREN",
-        "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/tile3.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/tile3.png",
-        "button_link_two": "shopify:\/\/collections\/yzy-x-gap"
+        "heading": "Blog posts",
+        "post_limit": 3,
+        "blog": "release-calendar"
       }
     },
     "5810a254-65cb-44f7-b950-1def18a81da2": {
@@ -57,51 +45,6 @@
         "image-two": "shopify:\/\/shop_images\/4-2_ee229d52-d7f7-4998-8118-109871c2ce2a.png",
         "image-two-mobile": "shopify:\/\/shop_images\/4-2_ee229d52-d7f7-4998-8118-109871c2ce2a.png",
         "button_link_two": "shopify:\/\/blogs\/release-calendar"
-      }
-    },
-    "7381c80b-4b3a-496b-a822-00a4cef333a6": {
-      "type": "release-radar-carousel",
-      "settings": {
-        "heading": "Blog posts",
-        "post_limit": 3,
-        "blog": "release-calendar"
-      }
-    },
-    "3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4": {
-      "type": "collage",
-      "blocks": {
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "chinatown-market"
-          }
-        },
-        "8327908c-a97b-4631-9af1-8e8f62170044": {
-          "type": "collection",
-          "settings": {
-            "collection": "footwear-all"
-          }
-        },
-        "40e6ece8-2012-4674-b44f-94db9968f9f7": {
-          "type": "collection",
-          "settings": {
-            "collection": "jordan-footwear-men"
-          }
-        }
-      },
-      "block_order": [
-        "template--14321586536514__3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4-collection-1",
-        "8327908c-a97b-4631-9af1-8e8f62170044",
-        "40e6ece8-2012-4674-b44f-94db9968f9f7"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1": {
@@ -160,11 +103,8 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
-    "a2aa638f-b6ff-4197-8434-0d8edce785d7",
-    "ef6c9fa2-598a-4f64-a204-45849701cfec",
-    "5810a254-65cb-44f7-b950-1def18a81da2",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
-    "3cfff7ed-00cf-4c80-a4c5-fb844ddd63b4",
+    "5810a254-65cb-44f7-b950-1def18a81da2",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af"
   ]
