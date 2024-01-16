@@ -26,6 +26,16 @@
         "menu": "menu-panel"
       }
     },
+    "parolax_banner_EwxDpL": {
+      "type": "parolax-banner",
+      "settings": {
+        "title": "CHECK THIS OUT",
+        "image": "shopify:\/\/shop_images\/download.png",
+        "heading_colour": "white",
+        "body_colour": "white",
+        "Body": "CHECK THIS OUT"
+      }
+    },
     "7381c80b-4b3a-496b-a822-00a4cef333a6": {
       "type": "release-radar-carousel",
       "settings": {
@@ -103,6 +113,7 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
+    "parolax_banner_EwxDpL",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "5810a254-65cb-44f7-b950-1def18a81da2",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
