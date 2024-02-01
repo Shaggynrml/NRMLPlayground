@@ -2,41 +2,21 @@
     .double-image-container{
         width: 100%;
         display:flex;
-        flex-direction:row;
+        flex-direction:horizontal;
         justify-content: center;
         align-items: center;
-        
          
     }
         
     .first-image-container{
-        display:grid;
+        display:flex;
         padding:10px;
         height:200;
         width:200;
         justify-content: center;
         align-items: center;
-        
-    }
-    .image-title-desktop{
-        display: grid;
-        align-items: end;
-        font-family: sans-serif;
-        font-size: 2.3rem;
-        font-weight: bold;
-        color: #0000;
-        padding: .75rem;
-        background: var(--c,#0009);
-        clip-path: inset(0 var(--_i,100%) 0 0);
-        -webkit-mask:
-            linear-gradient(#000 0 0),
-            linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-        -webkit-mask-clip: text, padding-box;
-        margin: -1px;
     }
 
-    .first-image-container:hover .image-title-desktop
     @media screen and (max-width:750px){
         .first-image-container{
             display:none;
@@ -48,14 +28,10 @@
         padding:10px;
         justify-content: center;
         align-items: center;
-        
     } 
     @media screen and (max-width:750px){
         .second-image-container{
             display:none;
-        }
-        .double-image-container {
-        flex-direction:column;
         }
     }
 
@@ -65,7 +41,6 @@
         height: 90%;
         object-fit:fill;
         justify-self: center;
-        border-radius:5rem;
         
     }
 
@@ -74,7 +49,7 @@
         height: 90%;
         object-fit:cover;
         justify-self: center;
-        border-radius:5rem;
+        
     }
 
 
@@ -110,43 +85,53 @@
         height: 100%;
         object-fit:cover;
     }
-
+    .image-title-desktop{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 6px;
+    }
     @media screen and (max-width:750px){
     .image-title-desktop{
         display: none;
     }
     }
-
+    .image-title-mobile{
+        text-align: center;
+    }
+    @media screen and (min-width:750px){
+    .image-title-mobile{
+        display: none;
+    }
+    }
 
 </style>
 
 <div class= "double-image-container">
    
-    <div>
-        
+        <div>
+        <div class= "image-title-desktop"> {{ section.settings.image-1-title | escape }}</div>
         <a class = "first-image-container" href = "{{section.settings.button_link_one}}">
             <img src = "{{section.settings.image-one| img_url: 'master'}}" class = "first-image" alt="">
-            <div class= "image-title-desktop"> {{ section.settings.image-1-title | escape }}</div>
         </a>
-    </div>
-
-    <div>
+        </div>
+    
+        <div>
         <div class= "image-title-desktop">{{ section.settings.image-2-title | escape }}</div>
-        <a class = "first-image-container" href = "{{section.settings.button_link_two}}">
+         <a class = "first-image-container" href = "{{section.settings.button_link_two}}">
             <img src = "{{section.settings.image-two| img_url: 'master'}}" alt="" class = "second-image">
         </a>
-    </div>
+        </div>
 
 
     <div>
-        
-        <a class = "first-image-container-mobile" href = "{{section.settings.button_link_one}}">
+        <div class= "image-title-mobile">{{ section.settings.image-1-title | escape }}</div>
+        <a  class = "first-image-container-mobile" href = "{{section.settings.button_link_one}}">
             <img src = "{{section.settings.image-one-mobile| img_url: 'master'}}" class = "first-image-mobile" alt=""/>
         </a>
     </div>
 
     <div >
-        
+    <div class= "image-title-mobile"> {{ section.settings.image-2-title | escape }}</div>
          <a class = "second-image-container-mobile" href = "{{section.settings.button_link_two}}">
             <img src = "{{section.settings.image-two-mobile| img_url: 'master'}}" alt="" class = "second-image-mobile"/>
         </a>

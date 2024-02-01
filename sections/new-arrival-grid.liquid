@@ -4,29 +4,37 @@
 </script>
 <style>
     .new-arrival-title{
-        padding-left: 1.5vw;
-        font-size:4vw;
+        align-self:start;
+        font-size:4rem;
         font-weight: 200;
         line-height: 1.15;
         color: #545454;
+        padding-left:10%;
+        padding-bottom:10px;
+        padding-top:20px;
         
     }
     .new-arrival-grid-container{
         justify-content: center;
         padding-bottom:20px;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
     }
     
     .xxl-row{
-        display: flex;
-        flex-direction: horizontal;
-        justify-content:center;
-        flex-wrap:wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        gap: 1em;
+        width:80%;
 
     }
     .new-arrival-item{
         display:flex;
-        flex-grow:1;
         justify-content:center;
+        width:100%;
     }
     .mobile-row{
         display:none;
@@ -36,23 +44,44 @@
             display:none;
         }
         .mobile-row{
-            display: flex;
-            flex-direction: horizontal;
-            justify-content:center;
-            flex-wrap:wrap;
+            display: grid;
+            grid-template-columns: repeat(1, 3fr);
+            gap: 1em;
+            width:80%;
+        }
+
+        .new-arrival-title{
+            align-self:center;
+            justify-content: center;
+            padding-left:0;
+            padding-bottom:10px;
+        }
+        .new-arrival-grid-container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: center;
         }
     }
-   
+    .new-arrival-view-all{
+        padding-top:10px;
+    }
+    @media only screen and (min-width:1450px){
+         .xxl-row{
+            display: grid;
+            grid-template-columns: repeat(4, 3fr);
+            gap: 1em;
+         }
+    }   
 </style>
     
 
-    <div class="new-arrival-title">
-        {{section.settings.title}}
-    </div>
-
     <div class="new-arrival-grid-container">
+        <div class="new-arrival-title">
+            {{section.settings.title}}
+        </div>
     <div class = "xxl-row">
-            {%for product in section.settings.collection.products limit: 10 %}
+            {%for product in section.settings.collection.products limit: 12 %}
                 <div class="new-arrival-item">
                     {%render 'new-arrival-card', card_product:product %}
                 </div>
@@ -67,7 +96,9 @@
             {%endfor%}            
         
     </div>
-
+    <div class="new-arrival-view-all">
+         {%render 'primary-button', button_content:"View All", button_link:section.settings.collection.url %}
+    </div>
     </div>
 
 
