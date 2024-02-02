@@ -4,7 +4,9 @@
       "type": "featured-release",
       "settings": {
         "heading": "heading",
-        "article": "release-calendar\/air-force-1-low-year-of-the-dragon"
+        "article": "release-calendar\/air-force-1-low-year-of-the-dragon",
+        "product_link": "",
+        "is_released": false
       }
     },
     "23062976-1a00-4384-b579-63caeaa631fa": {
