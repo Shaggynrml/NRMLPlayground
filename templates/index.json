@@ -16,7 +16,9 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "all",
-        "title": "NEW ARRIVALS"
+        "title": "NEW ARRIVALS",
+        "product_limit_desktop": 8,
+        "product_limit_mobile": 4
       }
     },
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
@@ -55,6 +57,45 @@
         "image-two": "shopify:\/\/shop_images\/4-2_ee229d52-d7f7-4998-8118-109871c2ce2a.png",
         "image-two-mobile": "shopify:\/\/shop_images\/4-2_ee229d52-d7f7-4998-8118-109871c2ce2a.png",
         "button_link_two": "shopify:\/\/blogs\/release-calendar"
+      }
+    },
+    "collection_list_r3FKtx": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_84MUW4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "femme-nike"
+          }
+        },
+        "featured_collection_43iYbh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "femme-jordan"
+          }
+        },
+        "featured_collection_9QPmqM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "honor-the-gift"
+          }
+        },
+        "featured_collection_6itxzQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chinatown-market"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_84MUW4",
+        "featured_collection_43iYbh",
+        "featured_collection_9QPmqM",
+        "featured_collection_6itxzQ"
+      ],
+      "settings": {
+        "title": "Collections",
+        "columns_desktop": 3
       }
     },
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1": {
@@ -107,6 +148,7 @@
     "parolax_banner_EwxDpL",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "5810a254-65cb-44f7-b950-1def18a81da2",
+    "collection_list_r3FKtx",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af"
   ]
