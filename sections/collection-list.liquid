@@ -3,10 +3,11 @@
   align-items:center;
   justify-content:center;
   display:flex;
+
 }
 .collection-list-carousel-wrapper{
     white-space:nowrap;
-    overflow:scroll;
+    overflow-x:scroll;
     display:flex;
     margin-left:1vw;
 }
@@ -20,9 +21,53 @@
   object-fit:cover;
   min-width:400px;
 }
+@media only screen and (max-width:739px){
+  .collection-list-carousel-item{
+    min-width:350px;
+  }
+}
+.collection-list-arrow-container{
+  width:100%;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+}
+
+@media only screen and (max-width:739px){
+  .collection-list-arrow-container{
+    display:none;
+  }
+}
+
+.collection-list-arrow-wrapper{
+  justify-content:center;
+  display:flex;
+  width:97%;
+  
+}
+.collection-list-left-arrow{
+  padding: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  background-color:#fff;
+  margin-top:20px;
+}
+.collection-list-right-arrow{
+  padding: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  background-color:#fff;
+  margin-top:20px;
+}
 </style>
   <div class="collection-list-container">
-  <div class ="collection-list-carousel-wrapper">
+  <div class ="collection-list-carousel-wrapper" id = "collection-list-carousel-wrapper">
     {%- for block in section.blocks -%} 
       <div class ="collection-list-carousel-item">
         {% render 'card-collection', card_collection: block.settings.collection %}
@@ -30,7 +75,45 @@
     {%- endfor -%}
   </div>
   </div>
+  <div class = "collection-list-arrow-container">
+    <div class = "collection-list-arrow-wrapper">
+      <button id="slideLeft" type="button" class = "collection-list-left-arrow">
 
+      </button>
+      <button id="slideRight" type="button" class = "collection-list-right-arrow">
+        
+      </button>
+    </div>
+  </div>
+
+
+<script>
+  const buttonRight = document.getElementById('slideRight');
+  const buttonLeft = document.getElementById('slideLeft');
+  var slider = document.getElementById("collection-list-carousel-wrapper")
+
+    buttonRight.onclick = function () {
+      sideScroll(slider,'right',1,1200,5);
+    };
+    buttonLeft.onclick = function () {
+      sideScroll(slider,'left',1,1200,5);
+    };
+
+    function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
+</script>
 {% schema %}
 {
   "name": "t:sections.collection-list.name",

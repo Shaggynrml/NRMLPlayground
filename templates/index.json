@@ -85,13 +85,41 @@
           "settings": {
             "collection": "chinatown-market"
           }
+        },
+        "featured_collection_ENX9wH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fred-perry"
+          }
+        },
+        "featured_collection_npC4fb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cdg-x-converse"
+          }
+        },
+        "featured_collection_g7PbrV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "miansai"
+          }
+        },
+        "featured_collection_y6Fxhg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nba-1"
+          }
         }
       },
       "block_order": [
         "featured_collection_84MUW4",
         "featured_collection_43iYbh",
         "featured_collection_9QPmqM",
-        "featured_collection_6itxzQ"
+        "featured_collection_6itxzQ",
+        "featured_collection_ENX9wH",
+        "featured_collection_npC4fb",
+        "featured_collection_g7PbrV",
+        "featured_collection_y6Fxhg"
       ],
       "settings": {
         "title": "Collections",
