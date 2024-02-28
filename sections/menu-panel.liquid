@@ -2,7 +2,7 @@
     .menu-panel-container{
         width:100%;
         padding: 10px;
-        z-index: 177777;
+        z-index: 1;
         display:flex;
         align-items:center;
         justify-content:center;
@@ -18,8 +18,8 @@
         flex-direction: horizontal;
         justify-content: center;
         align-items: center;
-        z-index: 100;
-        width:90%;
+        z-index: 1;
+        width:95%;
         border-color: rgb(190, 190, 190);
         border-radius:  8px;
         border-style: solid;
@@ -37,7 +37,6 @@
     padding:0px;
     width:100%;
     height:auto;
-    
     border-radius:50px;    
 }
 
@@ -67,9 +66,14 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width:900px;
-    max-width:900px;
-    
+    width:1500px;
+    background-color:#fff;
+    border-color: rgb(190, 190, 190);
+    border-top-color:#fff;
+    border-radius: 0px 0px 8px 8px;
+    border-style: solid;
+    border-width: 1px;
+   
 }
 
 /* The second level sub nested-dropdowns */
@@ -90,10 +94,13 @@
 
 /* Show the direct sub nested-dropdowns when hovering the list item */
 .nested-dropdowns li:hover > ul {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 200px;
+    max-width: 470px;
+    animation: clippath 0.2s ease-in-out;
+    
 }
 .child-link{
     
@@ -118,6 +125,24 @@
 }
 .menu-buttons:hover{
      text-decoration:underline;
+}
+
+@keyframes clippath {
+    0%{
+         clip-path: inset(100% 100% 0% 0%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+    75% {
+        clip-path: inset(0% 25% 15% 0%);
+    }
+    50% {
+        clip-path: inset( 0% 50% 30% 0%);
+    }
+    25% {
+        clip-path: inset(0% 75% 60% 0%);
+    }
 }
 
 </style>
