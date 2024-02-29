@@ -166,6 +166,13 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "release_blog_list_mXGhmk": {
+      "type": "release-blog-list",
+      "settings": {
+        "heading": "Blog posts",
+        "blog": "release-calendar"
+      }
     }
   },
   "order": [
@@ -177,6 +184,7 @@
     "5810a254-65cb-44f7-b950-1def18a81da2",
     "collection_list_r3FKtx",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
-    "969e6bfe-64c4-4659-ab49-510f5085c3af"
+    "969e6bfe-64c4-4659-ab49-510f5085c3af",
+    "release_blog_list_mXGhmk"
   ]
 }
