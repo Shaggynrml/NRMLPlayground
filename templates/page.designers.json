@@ -1,12 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "designer_list_Qhpr4B": {
       "type": "designer-list",
       "settings": {
@@ -14,13 +7,80 @@
     },
     "designer_featured_A6FhfM": {
       "type": "designer-featured",
+      "blocks": {
+        "featured_designer_mGFMnp": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/nike-logo_844043b8-c85c-447a-a267-324d11cb4e51.webp",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_jid37n": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-jordan_4c45e903-6ab7-4fa1-8ad6-57d41511c764.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_zTLzbD": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-stussy_c0ad702d-1585-406a-b725-3f7bcf7214f8.webp",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_NB3QK9": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-NB_2b7b55c8-6fd2-4f0a-bd85-caa84ba0aa9b.webp",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_tA4E8k": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-adidas_8b10fddf-1d4c-478a-83fd-b040216044e7.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_PkUg7y": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-reebok_8e99d454-9e7e-4a01-847d-6830a2294753.jpg",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_eL93x6": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-asics_118186ee-2bcc-472d-962f-16ca206e9e95.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_iUzKQF": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/logo-purple_a57e8ad5-6cc6-4974-8ca7-c789e0aef4ff.webp",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_designer_mGFMnp",
+        "featured_designer_jid37n",
+        "featured_designer_zTLzbD",
+        "featured_designer_NB3QK9",
+        "featured_designer_tA4E8k",
+        "featured_designer_PkUg7y",
+        "featured_designer_eL93x6",
+        "featured_designer_iUzKQF"
+      ],
       "settings": {
         "image_one": "shopify:\/\/shop_images\/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"
       }
     }
   },
   "order": [
-    "main",
     "designer_list_Qhpr4B",
     "designer_featured_A6FhfM"
   ]
