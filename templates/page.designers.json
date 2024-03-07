@@ -11,10 +11,17 @@
       "type": "designer-list",
       "settings": {
       }
+    },
+    "designer_featured_A6FhfM": {
+      "type": "designer-featured",
+      "settings": {
+        "image_one": "shopify:\/\/shop_images\/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"
+      }
     }
   },
   "order": [
     "main",
-    "designer_list_Qhpr4B"
+    "designer_list_Qhpr4B",
+    "designer_featured_A6FhfM"
   ]
 }
