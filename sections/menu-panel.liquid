@@ -58,7 +58,7 @@
     display: none;
 
     /* Absolute position */
-    left: 0;
+    left: 0%;
     position: absolute;
     top: 100%;
 
@@ -78,9 +78,9 @@
 
 /* The second level sub nested-dropdowns */
 .nested-dropdowns ul ul {
-    left: 100%;
+    left: 0;
     position: absolute;
-    top: 0;
+    top: 100%;
     width:100%;
     
 
@@ -95,10 +95,10 @@
 /* Show the direct sub nested-dropdowns when hovering the list item */
 .nested-dropdowns li:hover > ul {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 470px;
+    max-width: 600px;
     animation: clippath 0.2s ease-in-out;
     
 }
@@ -121,6 +121,7 @@
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    font-size:1.25rem;
     
 }
 .menu-buttons:hover{
@@ -164,7 +165,7 @@
                                     <ul >
                                     {% for grandchild_link in child_link.links %}
                                         <li>
-                                                <a class= "menu-buttons grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                                <a class= "" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
                                         </li>
                                     {% endfor %}
                                     </ul>
