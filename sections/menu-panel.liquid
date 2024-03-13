@@ -1,7 +1,8 @@
-<style>
+{% style %}
     .menu-panel-container{
         width:100%;
-        padding: 10px;
+        padding-top:10px;
+        padding-bottom:10px;
         z-index: 1;
         display:flex;
         align-items:center;
@@ -14,169 +15,112 @@
     }
     .menu-panel{
         height: auto;
-        display: flex;
-        flex-direction: horizontal;
-        justify-content: center;
+        display: grid;
+        grid-auto-flow:column;
+        gap:7rem;
+        justify-content:center;
         align-items: center;
         z-index: 1;
-        width:95%;
+        width:97%;
         border-color: rgb(190, 190, 190);
         border-radius:  8px;
         border-style: solid;
         border-width: 1px;
+        padding:10px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .top-level-container{
+        display:block;
+    }
+    .top-level-link-container a{
+        color: #545454;
+        font-size:1.5rem;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+    }
+    .top-level-link-container a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
     }
 
-    .nested-dropdowns {
-    display: flex;
-    flex-direction: horizontal;
-    justify-content: space-evenly;
-    align-items: center;
-    /* Reset list styles */
-    list-style-type: none;
-    margin: 0;
-    padding:0px;
-    width:100%;
-    height:auto;
-    border-radius:50px;    
-}
-
-.nested-dropdowns li {
-    cursor: pointer;
-    z-index:5;
-    /* Spacing */
-    padding: 1rem;
-
-    /* Used to position the sub nested-dropdowns */
-    position: relative;
-}
-
-/* The sub nested-dropdowns */
-.nested-dropdowns ul {
-
-
-    /* Hidden by default */
-    display: none;
-
-    /* Absolute position */
-    left: 0%;
-    position: absolute;
-    top: 100%;
-
-    /* Reset styles */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width:1500px;
-    background-color:#fff;
-    border-color: rgb(190, 190, 190);
-    border-top-color:#fff;
-    border-radius: 0px 0px 8px 8px;
-    border-style: solid;
-    border-width: 1px;
-   
-}
-
-/* The second level sub nested-dropdowns */
-.nested-dropdowns ul ul {
-    left: 0;
-    position: absolute;
-    top: 100%;
-    width:100%;
-    
-
-}
-
-/* Change background color of list item when being hovered */
-.nested-dropdowns li:hover {
-    text-decoration:underline;
-    border-radius: 50px;
-}
-
-/* Show the direct sub nested-dropdowns when hovering the list item */
-.nested-dropdowns li:hover > ul {
-    display: grid;
-    grid-template-columns: auto auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 600px;
-    animation: clippath 0.2s ease-in-out;
-    
-}
-.child-link{
-    
-    padding: 10px;
-    
-}
-.grandchild-link{
-    
-    padding: 10px;
-    
-}
-.menu-buttons{
-    color:#000;
-    text-decoration:none;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    font-size:1.25rem;
-    
-}
-.menu-buttons:hover{
-     text-decoration:underline;
-}
-
-@keyframes clippath {
-    0%{
-         clip-path: inset(100% 100% 0% 0%);
+    .top-level-link-container a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
-    100% {
-        clip-path: inset(0 0 0 0);
-    }
-    75% {
-        clip-path: inset(0% 25% 15% 0%);
-    }
-    50% {
-        clip-path: inset( 0% 50% 30% 0%);
-    }
-    25% {
-        clip-path: inset(0% 75% 60% 0%);
-    }
-}
 
-</style>
+    .mega-menu-container{
+        display:none;
+        grid-area:auto;
+        justify-content:center;
+        width:97vw;
+        height:500px;
+        background-color:#fff;
+        position:absolute;
+        left:1.5%;
+        margin-top:5px;
+        padding-top:45px;
+        border-color: rgb(190, 190, 190);
+        border-radius: 0px  0px 8px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-top:#fff;
+    }
+    .top-level-link-container:hover + .mega-menu-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content:center;
+    }
+    .child-link-with-child-container{
+        display:flex;
+        flex-direction:column;
+        background-colour:#000;
+        align-items: center;
+        border-color: #000;
+        border-style: solid;
+        border-width: 1px;
+    }
+    .child-link-without-child{
+        justify-self: center;
+    }
+    
+{% endstyle %}
 
 <div class="menu-panel-container">
     <div class= "menu-panel">
-        <ul class="nested-dropdowns">
         {% for link in section.settings.menu.links %}
-            <li>
-                <a class= "menu-buttons " href="{{ link.url }}">{{ link.title }}</a>
-                {% if link.links.size > 0 %}
-                    <ul>
-                        {% for child_link in link.links %}
-                            <li>
-                                <div class="nested-dropdowns__item">
-                                    <a class= "menu-buttons child-link" href="{{ child_link.url }}">{{ child_link.title }}</a>
-                                </div>
-                                {% if child_link.links.size > 0 %}
-                                    <ul >
-                                    {% for grandchild_link in child_link.links %}
-                                        <li>
-                                                <a class= "" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                        </ul>
-                {% endif %}
-            </li>
+        <div>
+            <div class="top-level-link-container">
+                <a class= "top-level-link" href="{{ link.url }}">{{ link.title }}</a>
+            </div>    
+            {% if link.links.size > 0 %}
+            <div class="mega-menu-container">
+                {% for child_link in link.links %}                              
+                        {% if child_link.links.size > 0 %}
+                            <div class="child-link-with-child-container">
+                                <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                {% for grandchild_link in child_link.links %}
+                                        <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                {% endfor %}
+                            </div>
+                        {%else%}
+                                <a class= "child-link-without-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
         {% endfor %}
-        </ul>
     </div>
 </div>
 
