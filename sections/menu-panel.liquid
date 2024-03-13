@@ -30,13 +30,10 @@
         padding-left:15px;
         padding-right:15px;
     }
-    .top-level-container{
-        display:block;
-    }
+
     .top-level-link-container a{
         color: #545454;
-        font-size:1.5rem;
-        display: inline-block;
+        font-size:1.2vw;
         position: relative;
         text-decoration: none;
     }
@@ -63,43 +60,118 @@
         grid-area:auto;
         justify-content:center;
         width:97vw;
-        height:500px;
+        min-height:500px;
+        height:auto;
         background-color:#fff;
         position:absolute;
         left:1.5%;
-        margin-top:5px;
         padding-top:45px;
         border-color: rgb(190, 190, 190);
         border-radius: 0px  0px 8px 8px;
         border-style: solid;
         border-width: 1px;
         border-top:#fff;
+        font-size: 1.5rem;
+        padding-bottom:45px;
     }
-    .top-level-link-container:hover + .mega-menu-container{
+    .mega-menu-container a{
+        color: #545454;
+        text-decoration: none;
+    }
+    .dropdown-container:hover .mega-menu-container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
         justify-content:center;
+        animation: clippath 0.2s ease-in-out;
     }
+
+    
     .child-link-with-child-container{
         display:flex;
         flex-direction:column;
-        background-colour:#000;
         align-items: center;
-        border-color: #000;
-        border-style: solid;
-        border-width: 1px;
+
     }
+    .child-link-with-child-container a{
+        color: #545454;
+        position: relative;
+        text-decoration: none;
+    }
+    .child-link-with-child-container a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .child-link-with-child-container a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
     .child-link-without-child{
-        justify-self: center;
+        justify-self:center;
     }
     
+    .child-link-without-child a{
+        color: #545454;
+        font-size:1vw;
+        position: relative;
+        text-decoration: none;
+    }
+    .child-link-without-child a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .child-link-without-child a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .grandchild-link {
+        font-size: 1vw;
+        color: rgb(190, 190, 190);
+    }
+    .child-link-with-child{
+        font-size:1.2vw
+    }
+    @keyframes clippath {
+    0%{
+         clip-path: inset(0% 0% 100% 0%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+    75% {
+        clip-path: inset(0% 0% 15% 0%);
+    }
+    50% {
+        clip-path: inset( 0% 0% 30% 0%);
+    }
+    25% {
+        clip-path: inset(0% 0% 65% 0%);
+    }
+}
 {% endstyle %}
 
 <div class="menu-panel-container">
     <div class= "menu-panel">
         {% for link in section.settings.menu.links %}
-        <div>
+        <div class="dropdown-container">
             <div class="top-level-link-container">
                 <a class= "top-level-link" href="{{ link.url }}">{{ link.title }}</a>
             </div>    
@@ -114,7 +186,9 @@
                                 {% endfor %}
                             </div>
                         {%else%}
-                                <a class= "child-link-without-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                            <div class= "child-link-without-child">
+                                <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
+                            </div>
                         {% endif %}
                 {% endfor %}
             </div>
