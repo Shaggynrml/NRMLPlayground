@@ -4,17 +4,29 @@
     .featured-designers{
         justify-content: center;
         display: flex;
+        margin: 20px 0px 30px;
     }
 
     .brand-wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 50px 10px;
+        gap: 50px 20px;
         width: 90%;
     }
 
-    .brand-card{
+    .brand-wrapper:hover .brand-card img{
+        opacity: 0.25;
+        transition: transform .2s ease-in-out; /* Animation */
+    }
 
+    .brand-card:hover a img{
+        opacity: 1 !important;
+        transform: scale(1.2) !important; /* (120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .brand-card{
+        display:flex;
+        align-items: center;
     }
 
     /* picture */
@@ -23,6 +35,19 @@
         width: 100%;
     }
 
+
+    @media only screen and (max-width: 990px){
+        .brand-wrapper{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 700px){
+        .brand-wrapper{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
 </style>
 <div class="featured-designers">
     <div class="brand-wrapper">
