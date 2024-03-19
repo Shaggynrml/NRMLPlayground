@@ -87,20 +87,7 @@
 <div class="release-blog-list-container">
     <div class = "release-blog-list-title"> {{section.settings.heading}}</div>
     <div class= "release-list-container" id="release-list-container">
-        {% comment %} {%-for article in section.settings.blog.articles  limit:15-%}
-            <div class="release-entry">
-                <div class="release-entry-image">
-                <img
-                    src="{{ article.image.src | image_url: width: 833 }}"
-                >
-                </div>
-                <div class = "release-entry-content">
-                    {{article.excerpt}}
-                    {{article.title}}
-                    {{article.content}}                
-                </div>
-            </div>
-        {%-endfor-%} {% endcomment %}
+
     </div>
 </div>
 

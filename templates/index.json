@@ -213,6 +213,12 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
+
+    "release_blog_list_mXGhmk": {
+      "type": "release-blog-list",
+      "settings": {
+        "heading": "Blog posts",
+        "blog": "release-calendar"
       }
     }
   },
@@ -227,5 +233,7 @@
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af",
     "image_banner_GMqYT6"
+    "release_blog_list_mXGhmk"
+
   ]
 }
