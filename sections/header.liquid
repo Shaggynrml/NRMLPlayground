@@ -121,6 +121,7 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
+
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
@@ -293,11 +294,6 @@
       </header-drawer>
     {%- endif -%}
       <div class="menu-buttons">
-        <a>New Arrivals</a>
-        
-        <a>Release Radar</a>
-        
-        <a>Sale</a>
       </div>
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
       <details-modal class="header__search">
@@ -719,6 +715,21 @@
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_one",
+      "label": "Button link 1"
+    },
+    {
+      "type": "url",
+      "id": "button_link_two",
+      "label": "Button link 2"
+    },
+    {
+      "type": "url",
+      "id": "button_link_three",
+      "label": "Button link 3"
     },
     {
       "type": "select",
