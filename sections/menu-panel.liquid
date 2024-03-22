@@ -171,6 +171,9 @@
 <div class="menu-panel-container">
     <div class= "menu-panel">
         {% for link in section.settings.menu.links %}
+            {% if link.title=="HOME"%}
+                {% continue %}
+            {% endif %}
         <div class="dropdown-container">
             <div class="top-level-link-container">
                 <a class= "top-level-link" href="{{ link.url }}">{{ link.title }}</a>
