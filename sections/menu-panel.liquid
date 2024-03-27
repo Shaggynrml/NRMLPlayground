@@ -66,6 +66,7 @@
         position:absolute;
         left:1.5%;
         padding-top:45px;
+        padding-left: 4.5vw;
         border-color: rgb(190, 190, 190);
         border-radius: 0px  0px 8px 8px;
         border-style: solid;
@@ -86,17 +87,44 @@
         animation: clippath 0.2s ease-in-out;
     }
 
+    .mega-menu-container-designers{
+        display:none;
+        width:97vw;
+        min-height:500px;
+        height:auto;
+        background-color:#fff;
+        position:absolute;
+        left:1.5%;
+        padding-top:45px;
+        padding-left: 4.5vw;
+        border-color: rgb(190, 190, 190);
+        border-radius: 0px  0px 8px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-top:#fff;
+        font-size: 1.5rem;
+        padding-bottom:45px;
+    }
+
+    .dropdown-container:hover .mega-menu-container-designers{
+        display: block;
+        column-width: 250px;
+        gap: 1rem;
+        justify-content:center;
+        animation: clippath 0.2s ease-in-out;
+    }
+
     
     .child-link-with-child-container{
         display:flex;
         flex-direction:column;
-        align-items: center;
-
+        align-items: start;
     }
     .child-link-with-child-container a{
         color: #545454;
         position: relative;
         text-decoration: none;
+        font-weight: bold;
     }
     .child-link-with-child-container a::after {
         content: '';
@@ -116,7 +144,9 @@
     }
 
     .child-link-without-child{
-        justify-self:center;
+        display:flex;
+        padding: 1rem;
+        justify-self:start;
     }
     
     .child-link-without-child a{
@@ -144,7 +174,9 @@
 
     .grandchild-link {
         font-size: 1vw;
+        padding: 0.5rem 0 0.5rem;
         color: rgb(190, 190, 190);
+        font-weight: normal !important;
     }
     .child-link-with-child{
         font-size:1.2vw
@@ -177,10 +209,11 @@
         <div class="dropdown-container">
             <div class="top-level-link-container">
                 <a class= "top-level-link" href="{{ link.url }}">{{ link.title }}</a>
-            </div>    
-            {% if link.links.size > 0 %}
+            </div>
+            <!-- Styling for links with children -->
+            {% if link.links.size > 0 and link.title != "DESIGNERS"%}
             <div class="mega-menu-container">
-                {% for child_link in link.links %}                              
+                {% for child_link in link.links %}           
                         {% if child_link.links.size > 0 %}
                             <div class="child-link-with-child-container">
                                 <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
@@ -188,11 +221,18 @@
                                         <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
                                 {% endfor %}
                             </div>
-                        {%else%}
-                            <div class= "child-link-without-child">
-                                <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
-                            </div>
                         {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+             <!-- Styling for links without children (aka designers) -->
+            {% if link.links.size > 0 and link.title == "DESIGNERS"%}
+            <div class="mega-menu-container-designers">
+                {% for child_link in link.links %}                              
+                    <div class= "child-link-without-child">
+                        <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
+                    </div>
                 {% endfor %}
             </div>
             {% endif %}
