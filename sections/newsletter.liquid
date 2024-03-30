@@ -13,10 +13,39 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .newsletter {
+    overflow:hidden;
+    position: relative;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .bg-img {
+      opacity: 0.4;
+      position: absolute;
+      left: 0;
+      top: -60px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media  screen and (min-width: 1025px) {
+    .bg-img{
+      opacity: 0.4;
+      position: absolute;
+      left: 0;
+      top: -470px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <img class="bg-img" src= "{{ section.settings.background_img | img_url: 'master' }}" />
+  <div class="newsletter__wrapper content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
@@ -79,32 +108,9 @@
   "class": "section",
   "settings": [
     {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
+      "type": "image_picker",
+      "id": "background_img",
+      "label": "Background Image" 
     },
     {
       "type": "checkbox",
