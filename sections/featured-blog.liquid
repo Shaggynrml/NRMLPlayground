@@ -12,7 +12,6 @@
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
 	--item-font-size: 7vw;
-	counter-reset: blog-list;
   	overflow:hidden;
   
 }
@@ -32,19 +31,7 @@
 	transition: opacity 0.4s;
 }
 
-.blog-list__item-link::before {
-	all: initial;
-	counter-increment: blog-list;
-	position: absolute;
-	bottom: 60%;
-	left: 0;
-	pointer-events: none;
-}
 
-.blog-list__item-link:hover {
-	transition-duration: 0.1s;
-	opacity: 0;
-}
 
 .blog-list__item-img {
 	pointer-events: none;
@@ -59,11 +46,7 @@
 
 
 
-.blog-list__item-link:hover + .blog-list__item-img {
-	opacity: 1;
-	transform: translate3d(calc(-100% - 6vw),-30%,0) rotate3d(0,0,1,4deg);
-	transition: all 0.4s;
-}
+
 
 /* Make sure 3 items are visible in the viewport by setting suitable font size. */
 
@@ -89,13 +72,7 @@
 	transition: opacity 0.1s;
 }
 
-.blog-list__item-link:hover ~ .marquee .marquee__inner {
-	animation-play-state: running;
-	opacity: 1;
-	transition-duration: 0.4s;
 
-  
-}
 
 .marquee span {
 	text-align: center;
@@ -138,7 +115,84 @@
    height:20rem;
    max-height: 300px;
   }
+}
 
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.blog-list__item{
+		padding: 0 0;
+		overflow: hidden;
+		height: 10vh;
+	}
+	.blog-list{
+		display: grid;
+		padding: 2vh 0;
+	}
+	.blog-list__item-mobile{
+		position: relative;
+		width: 100%
+	}
+	.blog-list__item-mobile p{
+		position: absolute;
+		margin-left: 0.5rem;
+		font-size: 3.5vw;
+		-webkit-text-fill-color: #545454;
+		transition: opacity 0.4s;
+	}
+	.blog-list__item-link{
+		display:none;
+	}
+	.background-img-mobile {
+		width: 100%;
+		height: auto;
+		position: relative;
+		opacity: 0.3;
+	}
+	.blog-list__item-img {
+		display:none;
+	}
+	.marquee{
+		display:none;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.blog-list__item-mobile{
+		display: none;
+	}
+	.background-img-mobile {
+		display: none;
+	}
+	.blog-list__item-link::before {
+		all: initial;
+		position: absolute;
+		bottom: 60%;
+		left: 0;
+		pointer-events: none;
+	}
+	
+	.blog-list__item-link:hover {
+		transition-duration: 0.1s;
+		opacity: 0;
+	}
+
+	.blog-list__item-link:hover + .blog-list__item-img {
+		opacity: 1;
+		transform: translate3d(calc(-100% - 6vw),-30%,0) rotate3d(0,0,1,4deg);
+		transition: all 0.4s;
+	}
+
+	.blog-list__item-link:hover ~ .marquee .marquee__inner {
+		animation-play-state: running;
+		opacity: 1;
+		transition-duration: 0.4s;
+	}
 
 }
 
@@ -149,8 +203,10 @@
 
   <div class="blog-list">
    <div class="featured-blog-title">{{section.settings.heading}}</div>
-    {%- for article in section.settings.blog.articles limit:3-%}
+    {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
       <div class="blog-list__item">
+
+		<a class="blog-list__item-mobile" href={{article.url}}><p>{{article.title}}</p><img class="background-img-mobile" src="{{ article.image.src | image_url: width: 533}}" alt="Some image"/></a>
         <a class="blog-list__item-link" href={{article.url}}>{{article.title}}</a>
         <img class="blog-list__item-img" src="{{ article.image.src | image_url: width: 533}}" alt="Some image"/>
         <div class="marquee">
@@ -163,6 +219,9 @@
         </div>
       </div>
     {%endfor%}
+	<div class="center">
+		{%render 'primary-button', button_content:"View All", button_link:section.settings.blog.url %}
+	</div>
   </div>
 </div>
 
