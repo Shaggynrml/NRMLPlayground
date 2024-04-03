@@ -144,7 +144,6 @@
     }
 
     .child-link-without-child{
-        display:flex;
         padding: 1rem;
         justify-self:start;
     }
@@ -212,18 +211,22 @@
             </div>
             <!-- Styling for links with children -->
             {% if link.links.size > 0 and link.title != "DESIGNERS"%}
-            <div class="mega-menu-container">
-                {% for child_link in link.links %}           
-                        {% if child_link.links.size > 0 %}
-                            <div class="child-link-with-child-container">
-                                <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
-                                {% for grandchild_link in child_link.links %}
-                                        <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                {% endfor %}
-            </div>
+                <div class="mega-menu-container">
+                    {% for child_link in link.links %}           
+                            {% if child_link.links.size > 0 %}
+                                <div class="child-link-with-child-container">
+                                    <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                    {% for grandchild_link in child_link.links %}
+                                            <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                    {% endfor %}
+                                </div>
+                            {% else %}                         
+                                <div class= "child-link-without-child">
+                                    <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                </div>
+                            {% endif %}
+                    {% endfor %}
+                </div>
             {% endif %}
 
              <!-- Styling for links without children (aka designers) -->
