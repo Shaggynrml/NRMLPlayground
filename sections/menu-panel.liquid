@@ -209,35 +209,31 @@
             <div class="top-level-link-container">
                 <a class= "top-level-link" href="{{ link.url }}">{{ link.title }}</a>
             </div>
-            <!-- Styling for links with children -->
             {% if link.links.size > 0 and link.title != "DESIGNERS"%}
                 <div class="mega-menu-container">
                     {% for child_link in link.links %}           
-                            {% if child_link.links.size > 0 %}
-                                <div class="child-link-with-child-container">
-                                    <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
-                                    {% for grandchild_link in child_link.links %}
-                                            <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                                    {% endfor %}
-                                </div>
-                            {% else %}                         
-                                <div class= "child-link-without-child">
-                                    <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
-                                </div>
-                            {% endif %}
+                        {% if child_link.links.size > 0 %}
+                            <div class="child-link-with-child-container">
+                                <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                {% for grandchild_link in child_link.links %}
+                                        <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                                {% endfor %}
+                            </div>
+                        {% else %}                         
+                            <div class= "child-link-without-child">
+                                <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
-            {% endif %}
-
-             <!-- Styling for links without children (aka designers) -->
-            {% if link.links.size > 0 and link.title == "DESIGNERS"%}
-            <div class="mega-menu-container-designers">
-                {% for child_link in link.links %}                              
-                    <div class= "child-link-without-child">
-                        <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
-                    </div>
-                {% endfor %}
-            </div>
+            {% elsif link.title == "DESIGNERS"%}
+                <div class="mega-menu-container-designers">
+                    {% for child_link in link.links %}                              
+                        <div class= "child-link-without-child">
+                            <a  href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
             {% endif %}
         </div>
         {% endfor %}
