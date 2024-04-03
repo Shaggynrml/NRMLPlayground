@@ -162,63 +162,60 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 52
       }
     },
-    "image_banner_GMqYT6": {
-      "type": "image-banner",
+    "release_blog_list_mXGhmk": {
+      "type": "release-blog-list",
+      "disabled": true,
+      "settings": {
+        "heading": "Blog posts",
+        "blog": "release-calendar"
+      }
+    },
+    "video_banner_R9gdJ3": {
+      "type": "video-banner",
       "blocks": {
-        "heading_dQNNQj": {
+        "heading_JyANp6": {
           "type": "heading",
           "settings": {
             "heading": "Image banner",
             "heading_size": "h1"
           }
         },
-        "text_nJnDBf": {
+        "text_8CAFcW": {
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
           }
         },
-        "buttons_hjar6Q": {
+        "buttons_taQhjA": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false
           }
         }
       },
       "block_order": [
-        "heading_dQNNQj",
-        "text_nJnDBf",
-        "buttons_hjar6Q"
+        "heading_JyANp6",
+        "text_8CAFcW",
+        "buttons_taQhjA"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/honor_the_gift_bannner.png",
+        "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e58b37ca58924fc7a23a5015002d5fc5.mp4",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-
-    "release_blog_list_mXGhmk": {
-      "type": "release-blog-list",
-      "settings": {
-        "heading": "Blog posts",
-        "blog": "release-calendar"
+        "show_text_below": false
       }
     }
   },
@@ -232,8 +229,7 @@
     "collection_list_r3FKtx",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af",
-    "image_banner_GMqYT6"
-    "release_blog_list_mXGhmk"
-
+    "release_blog_list_mXGhmk",
+    "video_banner_R9gdJ3"
   ]
 }
