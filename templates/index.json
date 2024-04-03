@@ -176,6 +176,7 @@
     },
     "video_ymMPTV": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
