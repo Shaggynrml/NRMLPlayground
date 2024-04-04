@@ -161,39 +161,37 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2"
       ],
       "settings": {
-        "background_img": "shopify:\/\/shop_images\/Black_White.jpg",
-        "color_scheme": "background-1",
-        "full_width": false,
+        "background_img": "shopify:\/\/shop_images\/nrml_logo_black.png",
+        "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
       }
     },
     "release_blog_list_mXGhmk": {
       "type": "release-blog-list",
-      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "blog": "release-calendar"
       }
     },
-    "video_banner_R9gdJ3": {
+    "video_banner_wKLFV6": {
       "type": "video-banner",
       "blocks": {
-        "heading_JyANp6": {
+        "heading_R9xgez": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Video banner",
             "heading_size": "h1"
           }
         },
-        "text_8CAFcW": {
+        "text_GwNxGp": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Give customers details about the video banner or content on the template.",
             "text_style": "body"
           }
         },
-        "buttons_taQhjA": {
+        "buttons_bLHpy8": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Button label",
@@ -203,35 +201,20 @@
         }
       },
       "block_order": [
-        "heading_JyANp6",
-        "text_8CAFcW",
-        "buttons_taQhjA"
+        "heading_R9xgez",
+        "text_GwNxGp",
+        "buttons_bLHpy8"
       ],
       "settings": {
-        "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e58b37ca58924fc7a23a5015002d5fc5.mp4",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "video_background_banner": "",
+        "video_overlay_opacity": 0,
+        "video_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
-    "video_ymMPTV": {
-      "type": "video",
-      "disabled": true,
-
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "show_text_below": true
       }
     }
   },
@@ -246,7 +229,6 @@
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af",
     "release_blog_list_mXGhmk",
-    "video_banner_R9gdJ3"
-    "video_ymMPTV"
+    "video_banner_wKLFV6"
   ]
 }
