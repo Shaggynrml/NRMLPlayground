@@ -2,7 +2,7 @@
 
 {%- style -%}
   #Banner-{{ section.id }}::after {
-    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+    opacity: {{ section.settings.video_overlay_opacity | divided_by: 100.0 }};
   }
 
   .video_background_banner {
@@ -25,10 +25,10 @@
 
 {%- endstyle -%}
 
-<div id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+<div id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.video_height }}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
 
     {%- if section.settings.video_background_banner != blank -%}
-        <div class="video_background_banner"> 
+        <div class="video_background_banner">
             <video autoplay muted loop id="VideoBackground">
                 <source src="{{ section.settings.video_background_banner }}" type="video/mp4">
             </video>
@@ -61,7 +61,7 @@
 
 {% schema %}
 {
-  "name": "Image/Video Banner",
+  "name": "Video Banner",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -72,33 +72,33 @@
     },
     {
       "type": "range",
-      "id": "image_overlay_opacity",
+      "id": "video_overlay_opacity",
       "min": 0,
       "max": 100,
       "step": 10,
       "unit": "%",
-      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+      "label": "Overlay Opacity",
       "default": 0
     },
     {
       "type": "select",
-      "id": "image_height",
+      "id": "video_height",
       "options": [
         {
           "value": "small",
-          "label": "t:sections.image-banner.settings.image_height.options__1.label"
+          "label": "Small"
         },
         {
           "value": "medium",
-          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+          "label": "Medium"
         },
         {
           "value": "large",
-          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+          "label": "Large"
         }
       ],
       "default": "medium",
-      "label": "t:sections.image-banner.settings.image_height.label",
+      "label": "Medium",
       "info": "t:sections.image-banner.settings.image_height.info"
     },
     {
@@ -107,43 +107,43 @@
       "options": [
         {
           "value": "top-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
+          "label": "Top Left"
         },
         {
           "value": "top-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+          "label": "Top Center"
         },
         {
           "value": "top-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+          "label": "Top Right"
         },
         {
           "value": "middle-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+          "label": "Middle Left"
         },
         {
           "value": "middle-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+          "label": "Middle Center"
         },
         {
           "value": "middle-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+          "label": "Middle Right"
         },
         {
           "value": "bottom-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+          "label": "Bottom Left"
         },
         {
           "value": "bottom-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+          "label": "Bottom Center"
         },
         {
           "value": "bottom-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
+          "label": "Bottom Right"
         }
       ],
       "default": "middle-center",
-      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+      "label": "Middle Center"
     },
     {
       "type": "checkbox",
@@ -157,19 +157,19 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+          "label": "Left"
         },
         {
           "value": "center",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+          "label": "Center"
         },
         {
           "value": "right",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+          "label": "Right"
         }
       ],
       "default": "center",
-      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+      "label": "Center"
     },
     {
       "type": "select",
@@ -210,19 +210,19 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__1.label"
+          "label": "Left"
         },
         {
           "value": "center",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__2.label"
+          "label": "Center"
         },
         {
           "value": "right",
-          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__3.label"
+          "label": "Right"
         }
       ],
       "default": "center",
-      "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+      "label": "Center"
     },
     {
       "type": "checkbox",
@@ -234,14 +234,14 @@
   "blocks": [
     {
       "type": "heading",
-      "name": "t:sections.image-banner.blocks.heading.name",
+      "name": "Heading",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "heading",
-          "default": "Image banner",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+          "default": "Video banner",
+          "label": "Heading"
         },
         {
           "type": "select",
@@ -249,32 +249,32 @@
           "options": [
             {
               "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
+              "label": "Small"
             },
             {
               "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
+              "label": "Medium"
             },
             {
               "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
+              "label": "Large"
             }
           ],
           "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "label": "Medium"
         }
       ]
     },
     {
       "type": "text",
-      "name": "t:sections.image-banner.blocks.text.name",
+      "name": "Text",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "text",
-          "default": "Give customers details about the banner image(s) or content on the template.",
-          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+          "default": "Give customers details about the video banner or content on the template.",
+          "label": "text"
         },
         {
           "type": "select",
@@ -282,38 +282,38 @@
           "options": [
             {
               "value": "body",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+              "label": "Body"
             },
             {
               "value": "subtitle",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+              "label": "Subtitle"
             },
             {
               "value": "caption-with-letter-spacing",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+              "label": "Uppercase"
             }
           ],
           "default": "body",
-          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+          "label": "Body"
         }
       ]
     },
     {
       "type": "buttons",
-      "name": "t:sections.image-banner.blocks.buttons.name",
+      "name": "Buttons",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "button_label_1",
           "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "label": "Button Label",
           "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
         },
         {
           "type": "url",
           "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+          "label": "Button Link"
         },
         {
           "type": "checkbox",
@@ -326,7 +326,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
+      "name": "Video Banner",
       "blocks": [
         {
           "type": "heading"
