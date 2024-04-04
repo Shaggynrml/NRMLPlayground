@@ -161,6 +161,7 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2"
       ],
       "settings": {
+        "background_img": "shopify:\/\/shop_images\/Black_White.jpg",
         "color_scheme": "background-1",
         "full_width": false,
         "padding_top": 40,
@@ -221,6 +222,7 @@
     "video_ymMPTV": {
       "type": "video",
       "disabled": true,
+
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
