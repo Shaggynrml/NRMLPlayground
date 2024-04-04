@@ -173,52 +173,6 @@
         "heading": "Blog posts",
         "blog": "release-calendar"
       }
-    },
-    "video_banner_ifP4Tj": {
-      "type": "video-banner",
-      "blocks": {
-        "heading_8Hx7Ey": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Video banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_ayTwjY": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the video banner or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_hVyr3x": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_8Hx7Ey",
-        "text_ayTwjY",
-        "buttons_hVyr3x"
-      ],
-      "settings": {
-        "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e58b37ca58924fc7a23a5015002d5fc5.mp4",
-        "video_overlay_opacity": 0,
-        "video_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
     }
   },
   "order": [
@@ -231,7 +185,6 @@
     "collection_list_r3FKtx",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af",
-    "release_blog_list_mXGhmk",
-    "video_banner_ifP4Tj"
+    "release_blog_list_mXGhmk"
   ]
 }
