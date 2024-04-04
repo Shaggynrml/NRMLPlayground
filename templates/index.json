@@ -176,35 +176,6 @@
     },
     "video_banner_wKLFV6": {
       "type": "video-banner",
-      "blocks": {
-        "heading_R9xgez": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_GwNxGp": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the video banner or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_bLHpy8": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_R9xgez",
-        "text_GwNxGp",
-        "buttons_bLHpy8"
-      ],
       "settings": {
         "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e58b37ca58924fc7a23a5015002d5fc5.mp4",
         "video_overlay_opacity": 0,
