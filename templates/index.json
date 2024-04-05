@@ -173,6 +173,54 @@
         "heading": "Blog posts",
         "blog": "release-calendar"
       }
+    },
+    "image_banner_Bke7fR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_JiLQnh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_ECayLf": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_UircF8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JiLQnh",
+        "text_ECayLf",
+        "buttons_UircF8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/new_balance_banner_6f148b1a-bcf6-463a-9a41-acf77fa537ca.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -185,6 +233,7 @@
     "collection_list_r3FKtx",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af",
-    "release_blog_list_mXGhmk"
+    "release_blog_list_mXGhmk",
+    "image_banner_Bke7fR"
   ]
 }
