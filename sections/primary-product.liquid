@@ -18,10 +18,32 @@
     font-size:1.8rem;
     font-family: 'Helvetica Neue', sans-serif;
   }
-  .product-vendor{
-    font-size:1rem;
+  
+  .product-vendor a{
+    display: inline-block;
+    position: relative;
+    font-size:1.3rem;
     font-family: 'Helvetica Neue', sans-serif;
-  }
+    text-decoration:none;
+    color:#545454;
+}
+
+.product-vendor a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #545454;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.product-vendor a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
   .carousel-item img {
   }
   .primary-product-images-container{
@@ -430,7 +452,11 @@ input[type=checkbox]:checked ~ label > img {
     </div>
     <div class= "primary-product-info-container col-12 col-lg-6 col-xl-4">
       <div class= "product-vendor">
-        {{product.vendor}}
+        {%for collection in product.collections%}
+          {% if collection.title == product.vendor  %}
+            <a href="{{ collection.url }}"> {{ collection.title }} </a>
+          {%endif%}
+        {% endfor %}
       </div>
       <div class= "product-title">
         {{product.title}}
