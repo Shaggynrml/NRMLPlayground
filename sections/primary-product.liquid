@@ -22,7 +22,7 @@
   .product-vendor a{
     display: inline-block;
     position: relative;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     font-family: 'Helvetica Neue', sans-serif;
     text-decoration:none;
     color:#545454;
@@ -453,8 +453,9 @@ input[type=checkbox]:checked ~ label > img {
     <div class= "primary-product-info-container col-12 col-lg-6 col-xl-4">
       <div class= "product-vendor">
         {%for collection in product.collections%}
-          {% if collection.title == product.vendor  %}
-            <a href="{{ collection.url }}"> {{ collection.title }} </a>
+          {% assign title = collection.title | upcase %}
+          {% if title == product.vendor  %}
+            <a href="{{ collection.url }}"> {{ title | downcase }} </a>
           {%endif%}
         {% endfor %}
       </div>

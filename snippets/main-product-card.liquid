@@ -70,7 +70,7 @@
     align-items:center;
     position:absolute;
     top:65%;
-    }
+  }
 
 
   .product-card-size-buttons{
@@ -91,6 +91,9 @@
   .product-card-title a {
     text-decoration:none !important;
     color:#121212;
+  }
+  .product-card-vendor {
+    text-transform: capitalize;
   }
 
   .product-card--price {
@@ -176,8 +179,8 @@
         {%endfor%}
     </div>
   <div class="product-card--info">
-    <div class = "product-card-vendor">{{product.vendor}}</div>
-    <div class="product-card-title"><a href="{{ product.url }}">{{ product.title }}</a></div>
+    <div class = "product-card-vendor">{{product.vendor | downcase}}</div>
+    <div class="product-card-title"><a href="{{ product.url }}">{{ product.title}}</a></div>
     {% if product.compare_at_price_max > product.price %}
       <div class="product-card--price">
         <span class="product-card__price--old">{{ product.compare_at_price_max | money }}</span>

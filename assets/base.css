@@ -389,6 +389,14 @@ body,
   font-weight: var(--font-body-weight);
 }
 
+/* 
+capitalize 1st letter of each word for links.
+must downcase strings if they are all caps in shopify.
+*/
+a {
+  text-transform: capitalize;
+}
+
 h1,
 h2,
 h3,
