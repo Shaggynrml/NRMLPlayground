@@ -202,7 +202,7 @@
 <div class="menu-panel-container">
     <div class= "menu-panel">
         {% for link in section.settings.menu.links %}
-            {% assign parent-title = link.title | downcase %}
+            {% assign parent-title = link.title %}
             {% if link.title=="HOME"%}
                 {% continue %}
             {% endif %}
