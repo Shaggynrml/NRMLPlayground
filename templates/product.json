@@ -4,9 +4,19 @@
       "type": "primary-product",
       "settings": {
       }
+    },
+    "collection_product_page_apceQT": {
+      "type": "collection-product-page",
+      "settings": {
+        "collection": "",
+        "title": "Featured collection",
+        "product_limit_desktop": 4,
+        "product_limit_mobile": 3
+      }
     }
   },
   "order": [
-    "7ce8fedc-9125-438a-90c9-1dbb976a6cdf"
+    "7ce8fedc-9125-438a-90c9-1dbb976a6cdf",
+    "collection_product_page_apceQT"
   ]
 }
