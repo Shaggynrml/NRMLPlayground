@@ -10,7 +10,7 @@
       "settings": {
         "collection": "",
         "title": "Featured collection",
-        "product_limit_desktop": 12,
+        "product_limit_desktop": 16,
         "product_limit_mobile": 3
       }
     }
