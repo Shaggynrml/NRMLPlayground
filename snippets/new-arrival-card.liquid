@@ -55,6 +55,7 @@
         padding-left:10px;
         padding-top:5px;
         font-size:1rem;
+        text-transform: capitalize;
     }
 
     .new-arrival-card-price{
@@ -135,7 +136,7 @@
         />
     </a>
     <div class= "new-arrival-card-vendor">
-        {{card_product.vendor}}
+        {{card_product.vendor | downcase}}
     </div>   
     <div id="card-product-title" class= "new-arrival-card-title">
         <a href = "{{card_product.url}}" >
