@@ -1,38 +1,20 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "video_banner_NxyrQD": {
       "type": "video-banner",
-      "blocks": {
-        "heading_mDtU4n": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_ViNgXD": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the video banner or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_NqQaCT": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_mDtU4n",
-        "text_ViNgXD",
-        "buttons_NqQaCT"
-      ],
       "settings": {
         "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
+        "hasLink": true,
+        "sectionVideoLink": "shopify:\/\/collections\/shop-all-sale",
         "video_overlay_opacity": 0,
         "video_height": "medium",
         "desktop_content_position": "middle-center",
