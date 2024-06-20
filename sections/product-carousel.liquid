@@ -1,0 +1,99 @@
+<style>
+    .product-carousel-container {
+        justify-content: center;
+        padding-bottom:20px;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    }
+    .product-container {
+        display: flex;
+        overflow-x: scroll;
+        gap: 1em;
+        width:97%;
+    }
+    .product-container::-webkit-scrollbar{
+        display:none;
+    }
+
+    .product-card {
+        display:flex;
+        flex: 1 0 24%;
+    }
+
+    @media only screen and (max-width:739px){
+        .product-card {
+            flex: 1 0 46%;
+        }
+    }
+
+    @media only screen and (min-width:740px){
+    }
+
+</style>
+
+<div class="product-carousel-container">
+
+    <h1>
+        {{ section.settings.title }}
+    </h1>
+
+    <div class="product-container">
+        {%for product in section.settings.collection.products limit: section.settings.product_limit_desktop %}
+            <div class = "product-card" id="product-card">
+                {% render 'new-arrival-card', card_product: product %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="new-arrival-view-all">
+         {%render 'primary-button', button_content:"View All", button_link: section.settings.collection.url %}
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "Product Carousel",
+    "tag": "section",
+    "class": "section-product-carousel",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "collection"
+            },
+            {
+            "type": "text",
+            "id": "title",
+            "default": "Featured collection",
+            "label": "Title"
+            },
+            {
+            "type": "range",
+            "id": "product_limit_desktop",
+            "min": 4,
+            "max": 12,
+            "step": 1,
+            "default": 8,
+            "label": "Products display on desktop"
+            },
+            {
+            "type": "range",
+            "id": "product_limit_mobile",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "default": 4,
+            "label": "Products displayed on mobile"
+            }
+    ],
+    "presets": [
+        {
+            "name": "Product Carousel"
+        }
+    ]
+}
+{% endschema %}
