@@ -1,16 +1,17 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
+    "product_carousel_K4CAeh": {
+      "type": "product-carousel",
+      "settings": {
+        "collection": "all",
+        "title": "Featured collection",
+        "product_limit_desktop": 12,
+        "product_limit_mobile": 4
+      }
+    },
     "video_banner_NxyrQD": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
         "hasLink": true,
@@ -201,6 +202,7 @@
     }
   },
   "order": [
+    "product_carousel_K4CAeh",
     "video_banner_NxyrQD",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
