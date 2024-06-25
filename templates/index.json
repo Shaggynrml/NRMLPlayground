@@ -98,7 +98,7 @@
     "double_image_section_jgBpb7": {
       "type": "double-image-section",
       "settings": {
-        "image-1-title": "Featured collection",
+        "image-1-title": "",
         "image-one": "shopify:\/\/shop_images\/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
         "image-one-mobile": "shopify:\/\/shop_images\/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
         "button_link_one": "https:\/\/nrml.ca\/collections\/all?filter.p.m.custom.apparel=Bottoms&filter.v.price.gte=&filter.v.price.lte=&filter.p.m.custom.bottoms=Shorts&sort_by=created-descending",
