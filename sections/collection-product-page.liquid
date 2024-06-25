@@ -13,41 +13,40 @@
     }
     .new-arrival-grid-container{
         justify-content: center;
-        padding-bottom:20px;
         width:100%;
         display:flex;
         flex-direction:column;
         align-items:center;
         justify-content: center;
     }
-    
-    
-    .xxl-row{
-        display: grid;
-        grid-template-columns: repeat(3, 3fr);
+
+    .product-container {
+        display: flex;
+        overflow-x: scroll;
         gap: 1em;
         width:97%;
-
     }
-
-    .xxl-row{
-        display: grid;
-        grid-template-columns: repeat(3, 3fr);
-        gap: 1em;
-        width:97%;
-
+    .product-container::-webkit-scrollbar{
+        height: 1vh;
+    }
+    .product-container::-webkit-scrollbar-track {
+        background-color: #ebebeb;
+        border-radius: 10px;
+        margin: 0 10vw 0 10vw;
+    }
+    .product-container::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #6d6d6d; 
     }
     .new-arrival-item{
         display:flex;
         justify-content:center;
+        padding-bottom: 10px;
         width:100%;
         flex: 1 0 24%;
     }
-    .mobile-row{
-        display:none;
-    }
     .new-arrival-view-all{
-        padding-top:10px;
+        padding-top:5px !important;
         display:flex;
         justify-content:center;
         align-items:center;
@@ -61,8 +60,8 @@
         -webkit-transform: rotate(-225deg);
         background-color:#fff;
         margin-top:2px;
-      }
-      .collection-list-right-arrow{
+    }
+    .collection-list-right-arrow{
         padding: 10px;
         border: solid black;
         border-width: 0 3px 3px 0;
@@ -71,46 +70,25 @@
         -webkit-transform: rotate(-45deg);
         background-color:#fff;
         margin-top:2px;
-      }
+    }
+    .new-arrival-grid-container::-webkit-scrollbar{
+        height: 1vh;
+    }
+    .new-arrival-grid-container::-webkit-scrollbar-track {
+        background-color: #ebebeb;
+        border-radius: 10px;
+        margin: 0 10vw 0 10vw;
+    }
+    .new-arrival-grid-container::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #6d6d6d; 
+    }
     @media only screen and (max-width:739px){
-        .xxl-row{
-            display:none;
+        .new-arrival-item {
+            flex: 1 0 46%;
         }
-        .mobile-row{
-            display: grid;
-            grid-template-columns: repeat(1, 3fr);
-            gap: 1em;
-            width:80%;
-        }
-
-        .new-arrival-title{
-            align-self:center;
-            justify-content: center;
-            padding-left:0;
-            padding-bottom:10px;
-        }
-        .new-arrival-grid-container{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content: center;
-        }
-        .collection-list-left-arrow{
-            display: none;
-          }
-          .collection-list-right-arrow{
-            display: none;
-          }
     }
     @media only screen and (min-width:740px){
-        .xxl-row{
-            display: flex;
-            overflow-x: scroll;
-            gap: 1em;
-        }
-        .xxl-row::-webkit-scrollbar{
-        display:none;
-        }
     }
 </style>
 
@@ -131,86 +109,20 @@
         <div class="new-arrival-title">
             <h1> Shop More {{product.vendor}} </h1>
         </div>
-    <div class = "xxl-row" id="xxl-row">
-    {% assign count = 0 %}        
-    {%for grid_product in page_collection.products limit: page_collection.products.size %}
-        {%  if count == section.settings.product_limit_desktop %}
-            {% break %}
-        {% endif %}
-
-        {% if product.title == grid_product.title %}
-            {% continue %}
-        {% endif %}
-
-        {% for item in grid_product.metafields.custom.Whowearsit.value%}
-            {% assign grid_product_type = grid_product.metafields.custom.type.value %}
-            {% if meta_gender.value contains item and meta_type == grid_product_type%}
-                <div class="new-arrival-item" id="new-arrival-item">
-                    {%render 'new-arrival-card', card_product: grid_product %}
-                </div>
-                {% assign count = count | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-    {%endfor%}
-    
-    {% if count == 0 %}
-        {%for grid_product in page_collection.products limit: page_collection.products.size %}
-        {%  if count == section.settings.product_limit_desktop %}
-            {% break %}
-        {% endif %}
-
-        {% if product.title == grid_product.title %}
-            {% continue %}
-        {% endif %}
-
-        {% for item in grid_product.metafields.custom.apparel.value%}
-            {% if meta_apparel contains item%}
-                <div class="new-arrival-item" id="new-arrival-item">
-                    {%render 'new-arrival-card', card_product: grid_product %}
-                </div>
-                {% assign count = count | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-    {%endfor%}
-
-    {% endif %}
-        
-    </div>
-
-    <div class = "mobile-row">
-        {% assign count = 0 %} 
-        {%for grid_product in page_collection.products limit: page_collection.products.size %}
-
-            {%  if count == section.settings.product_limit_mobile %}
-                {% break %}
-            {% endif %}
-
-            {% if product.title == grid_product.title %}
-                {% continue %}
-            {% endif %}
-            {% for item in grid_product.metafields.custom.Whowearsit.value%}
-                {% assign grid_product_type = grid_product.metafields.custom.type.value %}
-                {% if meta_gender.value contains item and meta_type == grid_product_type%}
-                    <div class="new-arrival-item">
-                        {%render 'new-arrival-card', card_product: grid_product %}
-                    </div>
-                    {% assign count = count | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-        {%endfor%}
-        
-        {% if count == 0 %}
+        <div class = "product-container">
+            {% assign count = 0 %}        
             {%for grid_product in page_collection.products limit: page_collection.products.size %}
-                {%  if count == section.settings.product_limit_mobile %}
+                {%  if count == section.settings.product_limit_desktop %}
                     {% break %}
                 {% endif %}
-    
+
                 {% if product.title == grid_product.title %}
                     {% continue %}
                 {% endif %}
-    
-                {% for item in grid_product.metafields.custom.apparel.value%}
-                    {% if meta_apparel contains item%}
+
+                {% for item in grid_product.metafields.custom.Whowearsit.value%}
+                    {% assign grid_product_type = grid_product.metafields.custom.type.value %}
+                    {% if meta_gender.value contains item and meta_type == grid_product_type%}
                         <div class="new-arrival-item" id="new-arrival-item">
                             {%render 'new-arrival-card', card_product: grid_product %}
                         </div>
@@ -218,17 +130,32 @@
                     {% endif %}
                 {% endfor %}
             {%endfor%}
-        {% endif %}      
-    </div>
-
-    <div class="new-arrival-view-all">
         
-        <button id="slideLeft" type="button" class = "collection-list-left-arrow"></button>
+            {% if count == 0 %}
+                {%for grid_product in page_collection.products limit: page_collection.products.size %}
+                    {%  if count == section.settings.product_limit_desktop %}
+                        {% break %}
+                    {% endif %}
 
-         {%render 'primary-button', button_content:"View All", button_link:page_collection.url %}
+                    {% if product.title == grid_product.title %}
+                        {% continue %}
+                    {% endif %}
 
-        <button id="slideRight" type="button" class = "collection-list-right-arrow"></button>
+                    {% for item in grid_product.metafields.custom.apparel.value%}
+                        {% if meta_apparel contains item%}
+                            <div class="new-arrival-item" id="new-arrival-item">
+                                {%render 'new-arrival-card', card_product: grid_product %}
+                            </div>
+                            {% assign count = count | plus: 1 %}
+                        {% endif %}
+                    {% endfor %}
+                {%endfor%}
+
+            {% endif %}    
+        </div>
     </div>
+    <div class="new-arrival-view-all">
+        {%render 'primary-button', button_content:"View All", button_link:page_collection.url %}
     </div>
 
 <script>
@@ -286,16 +213,7 @@
             "max": 16,
             "step": 1,
             "default": 8,
-            "label": "Products display on desktop"
-            },
-            {
-            "type": "range",
-            "id": "product_limit_mobile",
-            "min": 2,
-            "max": 8,
-            "step": 1,
-            "default": 4,
-            "label": "Products displayed on mobile"
+            "label": "Number of products displayed"
             }
         ],
         "presets": [
