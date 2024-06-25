@@ -12,13 +12,13 @@
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
       "type": "text-slide-banner",
       "settings": {
-        "title": "Honor the Gift",
-        "subheading": "New collection just in.",
+        "title": "",
+        "subheading": "",
         "text-colour": "#4E3524",
         "subtext-colour": "#4E3524",
         "text-alignment": "top-left",
-        "image": "shopify:\/\/shop_images\/Women_Nike_Dunk_Low_PRM_Bacon_banner.jpg",
-        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=HONOR+THE+GIFT"
+        "image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg",
+        "link": "shopify:\/\/collections\/shop-all-sale"
       }
     },
     "video_banner_NxyrQD": {
