@@ -1,12 +1,24 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "product_carousel_K4CAeh": {
-      "type": "product-carousel",
+    "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
+      "type": "text-slide-banner",
       "settings": {
-        "collection": "all",
-        "title": "Featured collection",
-        "product_limit_desktop": 12,
-        "product_limit_mobile": 4
+        "title": "Honor the Gift",
+        "subheading": "New collection just in.",
+        "text-colour": "#4E3524",
+        "subtext-colour": "#4E3524",
+        "text-alignment": "top-left",
+        "image": "shopify:\/\/shop_images\/Women_Nike_Dunk_Low_PRM_Bacon_banner.jpg",
+        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=HONOR+THE+GIFT"
       }
     },
     "video_banner_NxyrQD": {
@@ -26,49 +38,30 @@
         "show_text_below": false
       }
     },
-    "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
-      "type": "text-slide-banner",
-      "settings": {
-        "title": "Honor the Gift",
-        "subheading": "New collection just in.",
-        "text-colour": "#4E3524",
-        "subtext-colour": "#4E3524",
-        "text-alignment": "top-left",
-        "image": "shopify:\/\/shop_images\/Women_Nike_Dunk_Low_PRM_Bacon_banner.jpg",
-        "link": "https:\/\/nrml.ca\/collections\/all?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=HONOR+THE+GIFT"
-      }
-    },
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
       "settings": {
         "menu": "menu-panel"
       }
     },
-    "185b0658-ee1c-4cde-9fac-af4af026305f": {
-      "type": "new-arrival-grid",
+    "product_carousel_K4CAeh": {
+      "type": "product-carousel",
       "settings": {
         "collection": "all",
-        "title": "NEW ARRIVALS",
-        "product_limit_desktop": 8,
+        "title": "New Arrivals",
+        "product_limit_desktop": 12,
         "product_limit_mobile": 4
       }
     },
     "parolax_banner_EwxDpL": {
       "type": "parolax-banner",
+      "disabled": true,
       "settings": {
         "title": "CHECK THIS OUT",
         "image": "shopify:\/\/shop_images\/download.png",
         "heading_colour": "white",
         "body_colour": "white",
         "Body": "CHECK THIS OUT"
-      }
-    },
-    "7381c80b-4b3a-496b-a822-00a4cef333a6": {
-      "type": "release-radar-carousel",
-      "settings": {
-        "heading": "Blog posts",
-        "post_limit": 3,
-        "blog": "release-calendar"
       }
     },
     "5810a254-65cb-44f7-b950-1def18a81da2": {
@@ -84,71 +77,21 @@
         "button_link_two": "shopify:\/\/blogs\/release-calendar"
       }
     },
-    "collection_list_r3FKtx": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_84MUW4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "femme-nike"
-          }
-        },
-        "featured_collection_43iYbh": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "femme-jordan"
-          }
-        },
-        "featured_collection_9QPmqM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "honor-the-gift"
-          }
-        },
-        "featured_collection_6itxzQ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "chinatown-market"
-          }
-        },
-        "featured_collection_ENX9wH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "fred-perry"
-          }
-        },
-        "featured_collection_npC4fb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "cdg-x-converse"
-          }
-        },
-        "featured_collection_g7PbrV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "miansai"
-          }
-        },
-        "featured_collection_y6Fxhg": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "nba-1"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_84MUW4",
-        "featured_collection_43iYbh",
-        "featured_collection_9QPmqM",
-        "featured_collection_6itxzQ",
-        "featured_collection_ENX9wH",
-        "featured_collection_npC4fb",
-        "featured_collection_g7PbrV",
-        "featured_collection_y6Fxhg"
-      ],
+    "185b0658-ee1c-4cde-9fac-af4af026305f": {
+      "type": "new-arrival-grid",
       "settings": {
-        "title": "Collections",
-        "columns_desktop": 3
+        "collection": "all",
+        "title": "NEW ARRIVALS",
+        "product_limit_desktop": 8,
+        "product_limit_mobile": 4
+      }
+    },
+    "7381c80b-4b3a-496b-a822-00a4cef333a6": {
+      "type": "release-radar-carousel",
+      "settings": {
+        "heading": "Blog posts",
+        "post_limit": 3,
+        "blog": "release-calendar"
       }
     },
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1": {
@@ -192,27 +135,18 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "release_blog_list_mXGhmk": {
-      "type": "release-blog-list",
-      "settings": {
-        "heading": "Blog posts",
-        "blog": "release-calendar"
-      }
     }
   },
   "order": [
-    "product_carousel_K4CAeh",
-    "video_banner_NxyrQD",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
+    "video_banner_NxyrQD",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
-    "185b0658-ee1c-4cde-9fac-af4af026305f",
+    "product_carousel_K4CAeh",
     "parolax_banner_EwxDpL",
-    "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "5810a254-65cb-44f7-b950-1def18a81da2",
-    "collection_list_r3FKtx",
+    "185b0658-ee1c-4cde-9fac-af4af026305f",
+    "7381c80b-4b3a-496b-a822-00a4cef333a6",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
-    "969e6bfe-64c4-4659-ab49-510f5085c3af",
-    "release_blog_list_mXGhmk"
+    "969e6bfe-64c4-4659-ab49-510f5085c3af"
   ]
 }
