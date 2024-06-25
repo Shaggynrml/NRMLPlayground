@@ -16,7 +16,7 @@
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/nike-logo_844043b8-c85c-447a-a267-324d11cb4e51.webp",
-            "brand_link": "https:\/\/nrml.ca\/collections\/nike"
+            "brand_link": "shopify:\/\/collections\/nike"
           }
         },
         "featured_designer_jid37n": {
