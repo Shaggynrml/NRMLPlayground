@@ -44,14 +44,14 @@
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/logo-adidas_8b10fddf-1d4c-478a-83fd-b040216044e7.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/adidas"
           }
         },
         "featured_designer_eL93x6": {
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/asics_logo_black.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/asics"
           }
         },
         "featured_designer_PkUg7y": {
