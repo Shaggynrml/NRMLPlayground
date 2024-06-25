@@ -1,11 +1,14 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "designer_list_Qhpr4B": {
-      "type": "designer-list",
-      "settings": {
-        "menu_designers": "nrmls-designers-2024"
-      }
-    },
     "designer_featured_A6FhfM": {
       "type": "designer-featured",
       "blocks": {
@@ -44,17 +47,17 @@
             "brand_link": ""
           }
         },
-        "featured_designer_PkUg7y": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-reebok_8e99d454-9e7e-4a01-847d-6830a2294753.jpg",
-            "brand_link": ""
-          }
-        },
         "featured_designer_eL93x6": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-asics_118186ee-2bcc-472d-962f-16ca206e9e95.png",
+            "designer_img": "shopify:\/\/shop_images\/asics_logo_black.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_PkUg7y": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/HONOR_THE_GIFT_LOGO_1880a5ce-3e2d-480e-9e22-30305a721d07.png",
             "brand_link": ""
           }
         },
@@ -72,17 +75,23 @@
         "featured_designer_zTLzbD",
         "featured_designer_NB3QK9",
         "featured_designer_tA4E8k",
-        "featured_designer_PkUg7y",
         "featured_designer_eL93x6",
+        "featured_designer_PkUg7y",
         "featured_designer_iUzKQF"
       ],
       "settings": {
         "image_one": "shopify:\/\/shop_images\/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"
       }
+    },
+    "designer_list_Qhpr4B": {
+      "type": "designer-list",
+      "settings": {
+        "menu_designers": "nrmls-designers-2024"
+      }
     }
   },
   "order": [
-    "designer_list_Qhpr4B",
-    "designer_featured_A6FhfM"
+    "designer_featured_A6FhfM",
+    "designer_list_Qhpr4B"
   ]
 }
