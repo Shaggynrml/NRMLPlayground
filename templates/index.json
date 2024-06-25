@@ -80,8 +80,8 @@
     "185b0658-ee1c-4cde-9fac-af4af026305f": {
       "type": "new-arrival-grid",
       "settings": {
-        "collection": "all",
-        "title": "NEW ARRIVALS",
+        "collection": "stussy",
+        "title": "Stussy",
         "product_limit_desktop": 8,
         "product_limit_mobile": 4
       }
