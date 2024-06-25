@@ -11,6 +11,7 @@
   "sections": {
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
       "type": "text-slide-banner",
+      "disabled": true,
       "settings": {
         "title": "",
         "subheading": "",
@@ -23,13 +24,12 @@
     },
     "video_banner_NxyrQD": {
       "type": "video-banner",
-      "disabled": true,
       "settings": {
         "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
         "hasLink": true,
         "sectionVideoLink": "shopify:\/\/collections\/shop-all-sale",
         "video_overlay_opacity": 0,
-        "video_height": "large",
+        "video_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
