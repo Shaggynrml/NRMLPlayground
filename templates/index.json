@@ -11,7 +11,6 @@
   "sections": {
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
       "type": "text-slide-banner",
-      "disabled": true,
       "settings": {
         "title": "",
         "subheading": "",
@@ -24,6 +23,7 @@
     },
     "video_banner_NxyrQD": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
         "hasLink": true,
