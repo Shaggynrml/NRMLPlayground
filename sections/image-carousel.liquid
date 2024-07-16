@@ -1,0 +1,21 @@
+<style>
+
+</style>
+
+<div class=img_container>
+    <img src="{{section.settings.image}}" width=auto height=auto/>
+</div>
+
+{% schema %}
+{
+    "name": "Image Carousel",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Carousel"
+        } 
+    ]
+}
+{% endschema %}
