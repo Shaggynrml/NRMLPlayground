@@ -1,14 +1,37 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
+    "image_carousel_BmBzLT": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_NXF3Cq": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/PURPLE_BANNER_47adf21d-9a18-48b0-b2ad-95af44450281.png"
+          }
+        },
+        "slide_txetig": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/KoolAid_Banner.jpg"
+          }
+        },
+        "slide_bEGqtk": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NXF3Cq",
+        "slide_txetig",
+        "slide_bEGqtk"
+      ],
+      "settings": {
+        "heading": "Title"
+      }
+    },
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459": {
       "type": "text-slide-banner",
       "settings": {
@@ -49,8 +72,7 @@
       "settings": {
         "collection": "all",
         "title": "New Arrivals",
-        "product_limit_desktop": 12,
-        "product_limit_mobile": 4
+        "product_limit_desktop": 12
       }
     },
     "parolax_banner_EwxDpL": {
@@ -152,6 +174,7 @@
     }
   },
   "order": [
+    "image_carousel_BmBzLT",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "video_banner_NxyrQD",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
