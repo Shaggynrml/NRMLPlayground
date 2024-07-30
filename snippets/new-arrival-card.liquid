@@ -53,7 +53,8 @@
     }
     .pre-discount-price{
         text-decoration:line-through;
-        padding-right:2px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: red;
     }
     .discounted-price{
         padding-right:2px;
@@ -151,7 +152,8 @@
     </div>
     {% if card_product.compare_at_price_max > card_product.price %}
       <div class="new-arrival-card-price">
-        <span class="product-card__price--old">{{ card_product.compare_at_price_max | money }}</span>
+
+        <span class="pre-discount-price" >{{ card_product.compare_at_price_max | money }}</span>
         <span class="product-card__price--new">{{ card_product.price | money }}</span>
         <span>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
       </div>
