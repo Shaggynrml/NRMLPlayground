@@ -1,10 +1,43 @@
 {%- style -%}
+    .page-title{
+        text-align: center; 
+    }
 {%- endstyle -%}
+
+<h1 class="page-title">FaQ</h1>
+
   {% schema %}
   {
   "name": "Collapsible Page Break",
   "tag": "section",
   "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headingName",
+      "label": "Name of the Heading",
+      "default":"Heading Name"
+    }
+  ], 
+ "blocks": [
+    {
+      "type": "text",
+      "name": "Collapsible Break",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Section Name",
+          "default": "Section Title"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "Contents"
+        },
+      ]
+    }
+  ],
   "presets": [
       {
       "name": "Collapsible Page Break" 
