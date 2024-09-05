@@ -197,45 +197,36 @@
             </div>
           </div>
         {%- else -%}
-          {% paginate search.results by 24 %}
-            <div class="template-search__results collection" id="product-grid" data-id="{{ section.id }}">
-              <div class="loading-overlay gradient"></div>
-              <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
-                {%- for item in search.results -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
-
-                  <li class="">
-                    {%- case item.object_type -%}
-                      {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                          {% render 'new-arrival-card',
-                            card_product: item,
-                            media_aspect_ratio: section.settings.image_ratio,
-                            show_secondary_image: section.settings.show_secondary_image,
-                            show_vendor: section.settings.show_vendor,
-                            show_rating: section.settings.show_rating,
-                            lazy_load: lazy_load,
-                            show_quick_add: section.settings.enable_quick_add,
-                            section_id: section.id
-
-                          %}
-                    {%- endcase -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
+        <div 
+          {% if section.settings.filter_type == 'vertical' %} class="facets-vertical page-width"{% endif %}>
+            {%- if search.filters != empty -%}
+              {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+                <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-search-filters" data-id="{{ section.id }}">
+                  {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
+                </aside>
               {%- endif -%}
-            </div>
-          {% endpaginate %}
-        {%- endif -%}
-      </div>
-    </div>
-  {%- endif -%}
-</div>
+            {%- endif -%}
+            <div class="product-grid-container" id="ProductGridContainer">
+              {%- if search.results.size == 0 and search.filters != empty -%}
+                <div class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
+                  <div class="loading-overlay gradient"></div>
+                  <div class="title-wrapper center">
+                    <h2 class="title title--primary">
+                      {{ 'sections.collection_template.empty' | t }}<br>
+                      {{ 'sections.collection_template.use_fewer_filters_html' | t: link: search_url, class: "underlined-link link" }}
+                    </h2>
+                  </div>
+                </div>
+              {%- else -%}
+                {% paginate search.results by 24 %}
+                  <div class="template-search__results collection" id="product-grid" data-id="{{ section.id }}">
+                    <div class="loading-overlay gradient"></div>
+                    <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+                      {%- for item in search.results -%}
+                        {% assign lazy_load = false %}
+                        {%- if forloop.index > 2 -%}
+                          {%- assign lazy_load = true -%}
+                        {%- endif -%}
 
 {% schema %}
 {
