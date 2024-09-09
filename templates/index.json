@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_carousel_BmBzLT": {
@@ -70,7 +79,7 @@
     "product_carousel_K4CAeh": {
       "type": "product-carousel",
       "settings": {
-        "collection": "all",
+        "collection": "all-sort_by-manual-filter-v-price-gte-filter-v-price-lte-filter-v-availability-1",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
