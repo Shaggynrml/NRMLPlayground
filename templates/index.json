@@ -79,7 +79,7 @@
     "product_carousel_K4CAeh": {
       "type": "product-carousel",
       "settings": {
-        "collection": "all-sort_by-manual-filter-v-price-gte-filter-v-price-lte-filter-v-availability-1",
+        "collection": "all",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
