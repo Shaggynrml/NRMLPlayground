@@ -116,6 +116,7 @@
     text-align:center !important; 
   }
   .shaggys-form__inputs input[type='radio']:checked + label {
+    text-decoration:line-through;
     background-color:#252525;
     color: #d3d3d3;
     border: 1px solid #d3d3d3;
@@ -492,6 +493,7 @@
                       value="{{ size.id | escape }}"
                       form="{{ product_form_id }}"
                       {% if product.selected_variant.option1 == size.option1 %}checked{% endif %}
+                      {% if size.available == false %} disabled {% endif %}
                   >
                   <label for="{{ size.option1 }}"  type="radio">
                   {{ size.option1 }}
