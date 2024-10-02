@@ -27,19 +27,11 @@
             "row_content": "<h5>We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:</h5><ul><li><h6>Communicate with you;</h6></li><li><h6>Screen our orders for potential risk or fraud; and</h6></li><li><h6>When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</h6></li></ul><h5>We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).</h5>"
           }
         },
-        "text_6U4eAC": {
-          "type": "text",
-          "settings": {
-            "heading": "SHOE SIZING GUIDE",
-            "row_content": "<h3><strong>Are the shoe sizes on the site in US sizes?</strong></h3><h5>All shoes found on our site are based on the US size chart. <br/>For more details please refer to the chart below:</h5>",
-            "imageSelect": "shopify://shop_images/size_conversion_chart.gif"
-          }
-        },
         "text_kRQG8F": {
           "type": "text",
           "settings": {
-            "heading": "ORDERING",
-            "row_content": "<h3>Can I cancel my order?</h3><h5>Customers wishing to cancel orders should email <a href=\"mailto:support@nrml.ca\" title=\"Email\">support@nrml.ca</a> immediately. If the product has already been shipped to the customer, please see the exchange and return policy for more information. Please note, all <strong>sale and promotional items are final sale</strong> once the order is shipped.<br/><br/>Cancellation requests may be subjected to up to 25% restocking fee at our discretion. This may include but not limited to bot transactions and organic transactions. </h5><h3><br/>Why was my order cancelled?</h3><h5>Orders can be cancelled for several reasons. If an order is canceled for any reason, NRML.ca will contact you through email.</h5><h3><br/>In Store Pick Up Policy</h3><ul><li><h5>We will keep your order for a maximum of three months from the date your order was first marked \"ready for pick up\".</h5></li><li><h5>You will receive three reminder emails at: (a) one month (b) two months (c) three months</h5></li><li><h5>After the third reminder, you will have seven days as your last chance to pick up your order and / or contact us about your order. </h5></li><li><h5>On the eighth day we will automatically refund your order and the item will be restocked. </h5></li><li><h5>We reserve the right to use our best judgement and are under no obligation to hold your item past the timeline indicated above</h5></li></ul>"
+            "heading": "SHARING YOUR PERSONAL INFORMATION",
+            "row_content": "<p>We share your Personal Information with third parties to help us use your Personal Information, as described above. For example, we use Shopify to power our online store--you can read more about how Shopify uses your Personal Information <a href=\"https://www.shopify.com/legal/privacy\" target=\"_blank\" title=\"https://www.shopify.com/legal/privacy\">here</a></p><p>We also use Google Analytics to help us understand how our customers use the Site -- you can read more about how Google uses your Personal Information <a href=\"https://www.google.com/intl/en/policies/privacy/\" target=\"_blank\" title=\"https://www.google.com/intl/en/policies/privacy/\">here</a></p><p>You can also opt-out of Google Analytics <a href=\"https://tools.google.com/dlpage/gaoptout.\" target=\"_blank\" title=\"https://tools.google.com/dlpage/gaoptout.\">here</a></p><p>Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.</p>"
           }
         },
         "text_xaiA7K": {
@@ -73,7 +65,6 @@
       },
       "block_order": [
         "text_UCrYbA",
-        "text_6U4eAC",
         "text_kRQG8F",
         "text_xaiA7K",
         "text_V78HGK",
