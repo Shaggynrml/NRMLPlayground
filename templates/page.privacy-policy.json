@@ -1,0 +1,93 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_page_break_mcTQWW": {
+      "type": "collapsible-page-break",
+      "blocks": {
+        "text_UCrYbA": {
+          "type": "text",
+          "settings": {
+            "heading": "GENERAL QUESTIONS",
+            "row_content": "<h3>Can I place an item on hold?</h3><h5>Holds for an item are permitted on a case-by-case basis. However, there are restrictions that do apply. It is important that the customer must contact the Online Customer Service prior to anything being put on hold. You can reach us through our contact form <a href=\"https://nrml.ca/pages/contact-us\">here</a>, send us an email at <a href=\"mailto:support@nrml.ca\" title=\"Email\">support@nrml.ca</a> or call us at +1 (613) 562-2043.</h5><h3><br/>Will these shoes be releasing online?</h3><h5>In-store sneaker releases are made available for purchase online on a case-by-case basis. All new releases have a one-per-customer policy. Any additional orders will be automatically cancelled. All online sneaker releases will be announced via NRML's <a href=\"https://www.instagram.com/nrml/?hl=en\" target=\"_blank\">Instagram</a>, <a href=\"https://www.facebook.com/NRML.CA/\">Facebook</a> and online newsletter. Limited stock may cause high profile releases to be sold in-store only.</h5>"
+          }
+        },
+        "text_6U4eAC": {
+          "type": "text",
+          "settings": {
+            "heading": "SHOE SIZING GUIDE",
+            "row_content": "<h3><strong>Are the shoe sizes on the site in US sizes?</strong></h3><h5>All shoes found on our site are based on the US size chart. <br/>For more details please refer to the chart below:</h5>",
+            "imageSelect": "shopify://shop_images/size_conversion_chart.gif"
+          }
+        },
+        "text_kRQG8F": {
+          "type": "text",
+          "settings": {
+            "heading": "ORDERING",
+            "row_content": "<h3>Can I cancel my order?</h3><h5>Customers wishing to cancel orders should email <a href=\"mailto:support@nrml.ca\" title=\"Email\">support@nrml.ca</a> immediately. If the product has already been shipped to the customer, please see the exchange and return policy for more information. Please note, all <strong>sale and promotional items are final sale</strong> once the order is shipped.<br/><br/>Cancellation requests may be subjected to up to 25% restocking fee at our discretion. This may include but not limited to bot transactions and organic transactions. </h5><h3><br/>Why was my order cancelled?</h3><h5>Orders can be cancelled for several reasons. If an order is canceled for any reason, NRML.ca will contact you through email.</h5><h3><br/>In Store Pick Up Policy</h3><ul><li><h5>We will keep your order for a maximum of three months from the date your order was first marked \"ready for pick up\".</h5></li><li><h5>You will receive three reminder emails at: (a) one month (b) two months (c) three months</h5></li><li><h5>After the third reminder, you will have seven days as your last chance to pick up your order and / or contact us about your order. </h5></li><li><h5>On the eighth day we will automatically refund your order and the item will be restocked. </h5></li><li><h5>We reserve the right to use our best judgement and are under no obligation to hold your item past the timeline indicated above</h5></li></ul>"
+          }
+        },
+        "text_xaiA7K": {
+          "type": "text",
+          "settings": {
+            "heading": "RETURNS",
+            "row_content": "<h4><em>It is absolutely important to us that you are completely satisfied with your purchase that is why we offer </em><em><strong>a credit note or exchange only </strong></em><em>in cases which: </em></h4><ul><li><h4><em>     The item does not fit you</em></h4></li><li><h4><em>     You are not satisfied with the quality</em></h4></li><li><h4><em>     You have simply changed your mind</em></h4></li></ul><h3><br/>Do I have to pay for my return shipping?</h3><h5>NRML.ca will cover the return shipping expense for you if it is our mistake that you are returning the item. If something doesn’t fit or you simply don’t like we will gladly accept your return if it is unworn and unwashed within a 30 day period from the initial shipping date. The customer will be responsible for the return expenses. Please note, all <strong>sale and promotional items are</strong> <strong>final sale</strong> once the order is shipped. Re-stocking fees may apply for certain items. NRML does not offer refunds, but upon inspection, will gladly provide you with a store credit. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.</h5><h3><br/>How long does it take for my return/item exchange to be processed?</h3><h5>The moment it arrives to our return department, the store credit will be processed. For any item exchanges, the customer is responsible for all shipping expenses. Before the exchange is processed, the customer can expect an invoice for the shipping fee sent by us. Once the payment is received, a new tracking number will be made and the exchange will be processed.</h5><h3><br/>I received a damaged item, what do I do?</h3><h5>Please send an email to <a href=\"mailto:support@nrml.ca\" title=\"Email\">support@nrml.ca</a> letting us know what the issue is with the damaged goods along with the order number and a photo of the described damage. Once an email has been submitted, customer service will contact you with further instructions. NRML will not accept or assume responsibility for lost or damaged packages once handed over to the postal service.</h5><h5>What do I do if I receive the wrong product or size?</h5><h5>If you received the wrong item or size, please call us at +1 (613) 562-2043 or email us at <a href=\"mailto:support@nrml.ca\" title=\"email\">support@nrml.ca</a>. It is important that you contact us before returning the item, so that we can assist you with a return slip and shipping fees. If you do not contact us, you are responsible for all return shipping charges. Please have your order number available and ready. If you do not know your order number, please log in to your account to find the number in your order history or refer to your order confirmation email.</h5><h3><br/>What's the return address?</h3><h5>If you wish to return an item, please contact us first. All online purchases cannot be returned/exchanged in-store.</h5><h3><br/>Can I process a return In-store?</h3><h5>Unfortunately our online store is separate from our physical locations, the item(s) that you have ordered will have to be shipped to our return address, no exceptions.</h5>"
+          }
+        },
+        "text_V78HGK": {
+          "type": "text",
+          "settings": {
+            "heading": "SHIPPING",
+            "row_content": "<h3><strong>Can I return an item?</strong></h3><h5>We want you to be fully satisfied with your purchase. If you are not satisfied with an item you purchased, you may return the item within 30 days of delivery for a full refund of the purchase price in <strong>store credit</strong>, minus the shipping, handling or other additional charges. The item must be unworn, undamaged and accompanied by the original receipt in order to be eligible for a return. All <strong>sale and promotional items are final sale</strong>. To conduct a return, please contact us through our <a href=\"https://nrml.ca/pages/contact-us\">contact form</a> or email us at support@nrml.ca with your order number and name of item(s) you wish to return. Please note, NRML does not offer refunds, but upon inspection, will gladly provide you with a store credit or an item exchange. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.</h5><h3><strong><br/>Do you ship World Wide?</strong></h3><h5>Yes! NRML.ca does ship internationally and to the United States, but there are some locations we are unable to ship to. If we are unable to ship to your location, we will promptly contact you. Some products cannot be shipped to certain locations due to licensure laws.</h5><h3><strong><br/>How long will it take for my order to be shipped?</strong></h3><h5>Orders are typically processed within 2-5 day period once the order has been made. We only ship out orders on weekdays; if you place an order after store hours or during the weekend, it will be shipped out the first following business day. </h5><p><strong> *Due to high order counts order may take longer than usual to be processed at this time.</strong></p><h3><strong><br/>How will my order be shipped?</strong></h3><h5>All orders are shipped via Canada Post, UPS or Canada Post. For any specific carrier or urgency requests, please email us at support@nrml.ca. </h5><h4><strong><br/>PLEASE NOTE:</strong></h4><p>During holiday season or sale season, orders will take longer the usual as there will be a larger the usual order volume.<br/>In the case of any anticipated releases and holidays, it may take longer than usual to process your order.<br/>During holiday season or sale season, orders will take longer the usual as there will be a larger the usual order volume.</p><h5>Please reach out to us if you have any questions about your order.</h5><p></p>"
+          }
+        },
+        "text_yLNHUy": {
+          "type": "text",
+          "settings": {
+            "heading": "GUIDE PACKAGE PROTECTION",
+            "row_content": "<h3><strong>What is Guide Package Protection?</strong></h3><h5>Guide Package Protection protects your order against loss, damage, theft, and more. In just a couple of clicks, you'll receive a refund or replacement for approved claims. To cover your order, make sure Guide Package protection is checked before you place your order at checkout. </h5><h3><strong><br/>Guide Protection for NMRL</strong></h3><h5>If you opt out of Guide Package Protection then NRML is not liable for lost, damaged, or stolen items.</h5><h3><strong><br/>How do I file a claim with Guide Package Protection?</strong></h3><h5>If you’ve purchased package protection and need to make a claim, head <a href=\"https://app.guideprotection.com/\">here</a> to File a Claim.</h5><h3><strong><br/>How do I buy Guide Package Protection?</strong></h3><h5>Guide Package Protection will be available to add once you reach Checkout. Once it is added, it will appear at checkout as a product before your order is placed.</h5><h3><strong> <br/>What am I covered for?</strong></h3><h5>Guide Package Protection covers lost, damaged, stolen packages.</h5><h3><strong><br/>What do I get if my claim is successful?</strong></h3><h5>You have the option of a refund or replacement of your order.</h5><h3><strong><br/>How much does Package Protection cost?</strong></h3><h5>The cost of Guide Package Protection depends on the total value of your order.</h5><h3><strong><br/>How long before my delivery is classed as lost?</strong></h3><h5>If your parcel hasn't had an updated tracking scan in 5 days, it’s considered lost in transit, and you can make a claim.</h5><h3><strong><br/>What happens if my parcel is stolen / if it says delivered but I haven’t received it?</strong></h3><h5>File a claim as normal <a href=\"https://app.guideprotection.com/\">here</a> and Guide will go ahead and process your claim.</h5><h3><strong><br/>How long do I have to file a claim?</strong></h3><h5><strong>30 – 45 days depending on the claim type. This is from the date you placed your order.</strong></h5>"
+          }
+        },
+        "text_7Cmyim": {
+          "type": "text",
+          "settings": {
+            "heading": "SHOE RELEASE RAFFLE | HOW TO ENTER",
+            "row_content": "<h5>NRML oftens has sought after sneaker shoe releases, often released via a Raffle Format. Details about specific sneaker releases can be found: On our <a href=\"https://nrml.ca/blogs/release-calendar\" target=\"_blank\" title=\"https://nrml.ca/blogs/release-calendar\">Release Radar Page</a>, Features Page, and <a href=\"https://www.instagram.com/nrml/?hl=en\" target=\"_blank\" title=\"https://www.instagram.com/nrml/?hl=en\">Instagram Feed</a>.</h5><h3><strong>How to Enter for your Chance to Purchase:</strong></h3><ul><li><h5>Follow <a href=\"https://www.instagram.com/nrml/?hl=en\" target=\"_blank\" title=\"https://www.instagram.com/nrml/?hl=en\">@nrml on Instagram</a></h5></li><li><h5>Like & Share to your story | \"Shoe Release\" Post </h5></li><li><h5>Tag three friends in the comments</h5></li><li><h5>Fill out the raffle form located on our features page (and also linked in our Instagram Bio when raffle is announced)</h5></li></ul><h4><em><strong>NOTE:</strong></em></h4><h5>1. Winners will be contacted via Instagram Direct Message from @nrml and be sent an invoice to purchase the desired raffle item. (Winners will only be contacted from our official Instagram account @nrml) </h5><h5>2. Winners must complete their purchase by 5pm on the day the invoice is received, if not you will lose your chance to purchase, and a new winner will be chosen.</h5><h5>3.  Invoices must be completed by the person who has won the raffle. Therefore all contact information must match between the raffle form, shipping and billing information. </h5>"
+          }
+        }
+      },
+      "block_order": [
+        "text_UCrYbA",
+        "text_6U4eAC",
+        "text_kRQG8F",
+        "text_xaiA7K",
+        "text_V78HGK",
+        "text_yLNHUy",
+        "text_7Cmyim"
+      ],
+      "settings": {
+        "headingName": "Frequently Asked Questions",
+        "genericContent": "<h3><strong>Can I cancel my order?</strong></h3><h5>Customers wishing to cancel orders should email <a href=\"mailto:support@nrml.ca\">support@nrml.ca</a> immediately. If the product has already been shipped to the customer, please see the exchange and return policy for more information. Please note, all <strong>sale and promotional items are final sale</strong> once the order is shipped. No exceptions.</h5><h3><br/>Do I have to pay for my return shipping?</h3><h5>NRML.ca will cover the return shipping expense for you if it is our mistake that you are returning the item. If something doesn’t fit or you simply don’t like the item, we will gladly issue store credit/exchange if it is unworn and unwashed within a 30 day period from the initial shipping date. The customer will be responsible for the return expenses. Please note, all <strong>sale and promotional items are final sale</strong> once the order is shipped. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.</h5><h3><br/>Do you ship World Wide?</h3><h5>Yes! NRML.ca does ship internationally however there are some locations we are unable to ship to. If we are unable to ship to your location, we will promptly contact you. Some products cannot be shipped to certain locations due to licensure laws.</h5><h3><br/>Will these shoes be releasing online?</h3><h5>In-store sneaker releases are made available for purchase online on a case-by-case basis. All new releases have a one-per-customer policy. Any additional orders will be cancelled. All online sneaker releases will be announced via NRML's <a href=\"https://www.instagram.com/nrml/?hl=en\" target=\"_blank\">Instagram</a>, <a href=\"https://www.facebook.com/NRML.CA/\">Facebook</a> and online newsletter. Limited stock may cause high profile releases to be sold in-store only.</h5><p> </p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_page_break_mcTQWW"
+  ]
+}
