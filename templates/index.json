@@ -6,26 +6,20 @@
         "slide_NXF3Cq": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/PURPLE_BANNER_47adf21d-9a18-48b0-b2ad-95af44450281.png",
-            "hasLink": true,
-            "banner_url": ""
+            "slide_image": "shopify:\/\/shop_images\/PURPLE_BANNER_47adf21d-9a18-48b0-b2ad-95af44450281.png"
           }
         },
         "slide_txetig": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/KoolAid_Banner.jpg",
-            "hasLink": true,
-            "banner_url": ""
+            "slide_image": "shopify:\/\/shop_images\/KoolAid_Banner.jpg"
           }
         },
         "slide_bEGqtk": {
           "type": "slide",
           "disabled": true,
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg",
-            "hasLink": true,
-            "banner_url": ""
+            "slide_image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg"
           }
         }
       },
