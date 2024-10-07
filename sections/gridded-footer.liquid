@@ -74,15 +74,37 @@ grid-row-start: 5;
           "type": "richtext",
           "id": "genericContent",
           "label": "Insert Text",
-        }
+        },
         {
             "type": "image_picker",
             "id": "NRMLLogo",
             "label": "Add an Image"
           },
     ],
-    "blocks":[
-    ], 
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Collapsible Break",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Name",
+            "default": "Section Title"
+          },
+          {
+            "type": "richtext",
+            "id": "row_content",
+            "label": "Contents"
+          },
+          {
+            "type": "image_picker",
+            "id": "NRMLLogo",
+            "label": "Add an Image"
+          },
+        ]
+      }
+    ],
     "presets": [
         {
         "name": "Gridded Footer" 
