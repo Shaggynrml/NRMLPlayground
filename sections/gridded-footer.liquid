@@ -5,6 +5,9 @@
 {{ 'section-email-signup-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {%- style -%}
+.image{
+
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -52,30 +55,15 @@ grid-row-start: 5;
 {%- endstyle-%}
 
 <div class="grid-container">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  <div class="item1">Image</div>
-=======
   <div class="item1">    
         <img class="image" src="{{block.settings.NRMLLogo | image_url: width: auto, height: auto}}"/></div>
->>>>>>> Stashed changes
-=======
-  <div class="item1">Image</div>
->>>>>>> parent of 4b64b6a (grid changes)
-=======
-  <div class="item1">Image</div>
->>>>>>> parent of 4b64b6a (grid changes)
   <div class="item2">Socials</div>
-  <div class="item3">Text</div>
+  <div class="item3">Txt</div>
   <div class="item4">Google Review</div>
   <div class="item5">                   
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div class="klaviyo-form-T4QtEK"></div>
-=======
-=======
->>>>>>> parent of 4b64b6a (grid changes)
+
+
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'heading' -%}
