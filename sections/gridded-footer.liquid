@@ -1,0 +1,92 @@
+
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
+{{ 'section-email-signup-banner.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: white;
+  padding: 2px;
+}
+
+.grid-container > div {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start:1;
+  grid-row-end:4;
+}
+.item2{
+	grid-row-start:4;
+}
+.item3{
+	  grid-row-start:1;
+    grid-row-end:4;
+    grid-column-start: 2;
+}.item4{
+	  grid-row-start:4;
+    grid-column-start: 2;
+}
+
+.item5{
+	grid-row-start:1;
+    grid-row-end:5;
+    grid-column-start: 3;
+}
+.item6{
+grid-column-start:1;
+grid-column-end:4;
+grid-row-start: 5;
+}
+
+{%- endstyle-%}
+
+<div class="grid-container">
+  <div class="item1">{% if blocks.settings.imageSelect != null%}
+    <img class="image" src="{{blocks.settings.imageSelect| image_url: width: auto, height: auto}}"/>
+  {% endif %}</div>
+  <div class="item2">Socials</div>
+  <div class="item3">Text</div>
+  <div class="item4">Google Review</div>
+  <div class="item5">                   
+    <div class="klaviyo-form-T4QtEK"></div>
+  </div>
+  <div class="item6"></div>
+</div>
+
+{% schema %}
+{
+    "name": "Gridded Footer",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+          "type": "richtext",
+          "id": "genericContent",
+          "label": "Insert Text",
+        }
+        {
+            "type": "image_picker",
+            "id": "NRMLLogo",
+            "label": "Add an Image"
+          },
+    ],
+    "blocks":[
+    ], 
+    "presets": [
+        {
+        "name": "Gridded Footer" 
+        }
+    ]
+  }
+{% endschema %}
