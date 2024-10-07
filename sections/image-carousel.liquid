@@ -46,7 +46,7 @@
 
 <h1> {{ section.settings.heading }} </h1>
 <div class="img_container">
-    {% for block in section.block %}
+    {% for block in section.blocks %}
         <a class="{% if block.settings.hasLink == false%} hasLink-no {% else %} haslink {% endif %}" href="{{block.settings.banner_url}}" id="{{ "slide" | append:forloop.index }}">
             <img class="image" src="{{block.settings.slide_image | image_url: width: auto, height: auto}}"/>
         </a>

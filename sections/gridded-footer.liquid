@@ -1,10 +1,7 @@
-
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
-{{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
-{{ 'section-email-signup-banner.css' | asset_url | stylesheet_tag }}
-{{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {%- style -%}
+.image{
+  display: grid;
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -52,19 +49,23 @@ grid-row-start: 5;
 {%- endstyle-%}
 
 <div class="grid-container">
-  <div class="item1">{% if blocks.settings.NRMLLogo!= null%}
-    <img class="image" src="{{blocks.settings.NRMLLogo| image_url: width: auto, height: auto}}"/>
-  {% endif %}</div>
+  <div class="item1">
+      <img class="image" src="{{settings.nrmlLogo| image_url: width: 300}}"/></div>
   <div class="item2">Socials</div>
+ 
   <div class="item3">Txt</div>
+ 
   <div class="item4">Google Review</div>
+ 
   <div class="item5">                   
     <div class="klaviyo-form-T4QtEK"></div>
   </div>
+
   <div class="item6"></div>
 </div>
 
-{% schema %}
+
+{%- schema -%}
 {
     "name": "Gridded Footer",
     "tag": "section",
@@ -76,39 +77,30 @@ grid-row-start: 5;
           "label": "Insert Text",
         },
         {
-            "type": "image_picker",
-            "id": "NRMLLogo",
-            "label": "Add an Image"
-          },
+          "type": "image_picker",
+          "id": "nrmlLogo",
+          "label": "Add the Logo"
+        },
+    
     ],
-    "blocks": [
+    "blocks":[
       {
-        "type": "text",
-        "name": "LogoPLC",
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading",
-            "label": "Section Name",
-            "default": "Section Title"
-          },
-          {
-            "type": "richtext",
-            "id": "row_content",
-            "label": "Contents"
-          },
-          {
-            "type": "image_picker",
-            "id": "NRMLLogo",
-            "label": "Add an Image"
-          },
-        ]
-      }
+      "type": "image",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "imageSelect",
+        "label": "Add an Image" 
+        }
+    ]
+  }
     ],
     "presets": [
         {
         "name": "Gridded Footer" 
         }
     ]
-  }
-{% endschema %}
+}
+{%- endschema -%}
