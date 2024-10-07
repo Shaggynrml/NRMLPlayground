@@ -52,11 +52,11 @@ grid-row-start: 5;
 {%- endstyle-%}
 
 <div class="grid-container">
-  <div class="item1">{% if blocks.settings.imageSelect != null%}
-    <img class="image" src="{{blocks.settings.imageSelect| image_url: width: auto, height: auto}}"/>
+  <div class="item1">{% if blocks.settings.NRMLLogo!= null%}
+    <img class="image" src="{{blocks.settings.NRMLLogo| image_url: width: auto, height: auto}}"/>
   {% endif %}</div>
   <div class="item2">Socials</div>
-  <div class="item3">Text</div>
+  <div class="item3">Txt</div>
   <div class="item4">Google Review</div>
   <div class="item5">                   
     <div class="klaviyo-form-T4QtEK"></div>
@@ -84,7 +84,7 @@ grid-row-start: 5;
     "blocks": [
       {
         "type": "text",
-        "name": "Collapsible Break",
+        "name": "LogoPLC",
         "settings": [
           {
             "type": "text",
