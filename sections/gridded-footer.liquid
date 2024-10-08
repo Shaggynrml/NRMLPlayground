@@ -4,9 +4,21 @@
   height: auto;
   max-width: 8rem;
 }
+.copyright-footer{
+  padding: 15px 0;
+  font-size:12px;
+  color:#252525;
+}
+.footer-socials{
+  display: flex;
+    list-style: none;
+    margin: 0 1rem !important;
+    padding: 0;
+    text-align: center;
+}
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 20% auto auto;
   gap: 10px;
   background-color: white;
   padding: 2px;
@@ -44,99 +56,30 @@
 }
 .item6{
 grid-column-start:1;
-grid-column-end:4;
+grid-column-end:2;
 grid-row-start: 5;
 }
 .item7{
-grid-column-start:1;
-grid-column-end:4;
-grid-row-start: 6;
+grid-column-start:2;
+grid-column-end:3;
+grid-row-start: 5;
 }
+
 
 {%- endstyle-%}
 
 <div class="grid-container">
-  <div class="item1"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/>
-  <div class="item6"><ul class="footer-socials" role="list">
-    {%- if settings.social_twitter_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
-          {%- render 'icon-twitter' -%}
-          <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_facebook_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
-          {%- render 'icon-facebook' -%}
-          <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_pinterest_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
-          {%- render 'icon-pinterest' -%}
-          <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_instagram_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-          {%- render 'icon-instagram' -%}
-          <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_tiktok_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
-          {%- render 'icon-tiktok' -%}
-          <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_tumblr_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
-          {%- render 'icon-tumblr' -%}
-          <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_snapchat_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
-          {%- render 'icon-snapchat' -%}
-          <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_youtube_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
-          {%- render 'icon-youtube' -%}
-          <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_vimeo_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
-          {%- render 'icon-vimeo' -%}
-          <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-  </ul></div></div>
+  <div class="item1"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/></div>
   <div class="item2">Socials</div>
   <div class="item3">Txt</div>
-  <div class="item4">Google Review</div>
+  <div class="item4">
+
+
+  </div>
   <div class="item5">                   
     <div class="klaviyo-form-T4QtEK"></div> </div>
   <div class="item6"><ul class="footer-socials" role="list">
+   <li> <g:ratingbadge merchant_id=118552518></g:ratingbadge> </li>
     {%- if settings.social_twitter_link != blank -%}
       <li class="list-social__item">
         <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
@@ -210,8 +153,8 @@ grid-row-start: 6;
       </li>
     {%- endif -%}
   </ul></div>
+<div class="item7"><div class="copyright-footer">2022 © NRML</div></div>
 </div>
-
 {% schema %}
 {
     "name": "Gridded Footer",
