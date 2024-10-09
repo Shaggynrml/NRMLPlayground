@@ -15,54 +15,6 @@
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
-.grid-container {
-  display: grid;
-  grid-template-columns: 20% auto auto;
-  gap: 10px;
-  background-color: white;
-  padding: 2px;
-}
-
-.grid-container > div {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-.item1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start:1;
-  grid-row-end:2;
-}
-.item2{
-	grid-row-start:2;
-}
-.item3{
-	  grid-row-start:1;
-    grid-row-end:4;
-    grid-column-start: 2;
-}.item4{
-	  grid-row-start:4;
-    grid-column-start: 2;
-}
-
-.item5{
-	grid-row-start:1;
-    grid-row-end:5;
-    grid-column-start: 3;
-}
-.item6{
-grid-column-start:1;
-grid-column-end:2;
-grid-row-start: 5;
-}
-.item7{
-grid-column-start:2;
-grid-column-end:3;
-grid-row-start: 5;
-}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
@@ -171,7 +123,6 @@ navigation li a, .custom-footer, .custom-footer li a {
     list-style: none;
     margin: 0 1rem !important;
     padding: 0;
-    text-align: center;
 }
 
 
@@ -265,94 +216,99 @@ textarea {
 }
 
 {%- endstyle -%}
-<div class="grid-container">
-  <div class="item1"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/></div>
-  <div class="item2">Socials</div>
-  <div class="item3">Txt</div>
-  <div class="item4">
-
-
+  <div class="page-wrapper">
+    <footer>
+      <div class="footer-bottom">
+            <div>
+              <div class="copyright-footer">2022 © NRML</div>
+            </div>
+            <div class="links-footer">
+              <nav id="footer-navigation" class="site-navigation footer-navigation centered-box" role="navigation">
+                <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
+                  <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="{{section.settings.FAQ-link}}">FAQ</a></li>
+                  <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="{{section.settings.contact-us-link}}">Contact</a></li>
+                  <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="{{section.settings.privacy-policies-link}}">Privacy Policy</a></li>
+                  <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="{{section.settings.our-dna-link}}">DNA</a></li>
+                </ul>
+              </nav>
+            </div>
+            <ul class="footer-socials" role="list">
+              {%- if settings.social_twitter_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                    {%- render 'icon-twitter' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_facebook_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+                    {%- render 'icon-facebook' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_pinterest_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+                    {%- render 'icon-pinterest' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_instagram_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                    {%- render 'icon-instagram' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tiktok_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+                    {%- render 'icon-tiktok' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tumblr_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+                    {%- render 'icon-tumblr' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_snapchat_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+                    {%- render 'icon-snapchat' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_youtube_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+                    {%- render 'icon-youtube' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_vimeo_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+                    {%- render 'icon-vimeo' -%}
+                    <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+            </ul>
+      </div>
+    </footer>
   </div>
-  <div class="item5">                   
-    <div class="klaviyo-form-T4QtEK"></div> </div>
-  <div class="item6"><ul class="footer-socials" role="list">
-   <li> <g:ratingbadge merchant_id=5448631881></g:ratingbadge> </li>
-    {%- if settings.social_twitter_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
-          {%- render 'icon-twitter' -%}
-          <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_facebook_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
-          {%- render 'icon-facebook' -%}
-          <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_pinterest_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
-          {%- render 'icon-pinterest' -%}
-          <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_instagram_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-          {%- render 'icon-instagram' -%}
-          <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_tiktok_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
-          {%- render 'icon-tiktok' -%}
-          <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_tumblr_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
-          {%- render 'icon-tumblr' -%}
-          <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_snapchat_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
-          {%- render 'icon-snapchat' -%}
-          <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_youtube_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
-          {%- render 'icon-youtube' -%}
-          <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-    {%- if settings.social_vimeo_link != blank -%}
-      <li class="list-social__item">
-        <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
-          {%- render 'icon-vimeo' -%}
-          <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-  </ul></div>
-<div class="item7"><div class="copyright-footer">2022 © NRML</div>
-</div>
-</div>
 {% schema %}
 {
   "name": "t:sections.footer.name",
