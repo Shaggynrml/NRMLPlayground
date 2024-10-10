@@ -5,20 +5,21 @@
   max-width: 8rem;
 }
 .copyright-footer{
-  padding: 0 3rem;
+  padding: 15px 0;
   font-size:12px;
   color:#252525;
-  text-align:left;
 }
 .footer-socials{
   display: flex;
     list-style: none;
     margin: 0 1rem !important;
+    padding: 0;
     text-align: center;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 20% auto auto;
+  gap: 10px;
   background-color: white;
   padding: 2px;
 }
@@ -29,90 +30,55 @@
   padding: 20px 0;
   font-size: 30px;
 }
-.linkList {
-  list-style-type: none;
-  padding: 0px 3rem;
-}
-.linkListTitle{
-  font-Size: 20px;
-  text-align: left;
-  font-family:monospace;
 
-}
-.linkListStyle{
-  font-Size: 15px;
-  text-align: left;
-  font-family:monospace;
-}
-
-.logoGrid {
+.item1 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start:1;
   grid-row-end:2;
 }
-.navGrid{
+.item2{
 	grid-row-start:2;
-  grid-row-end:5;
-}
-.navGridA{
-  grid-row-start:1;
-  grid-row-end:2;
-}
-.navGridB{
-  grid-row-start:3;
-  grid-row-end:4;
 }
 .item3{
 	  grid-row-start:1;
-    grid-row-end:6;
+    grid-row-end:4;
+    grid-column-start: 2;
+}.item4{
+	  grid-row-start:4;
     grid-column-start: 2;
 }
 
-.emailGrid{
+.item5{
 	grid-row-start:1;
-    grid-row-end:6;
+    grid-row-end:5;
     grid-column-start: 3;
 }
-.socialsGrid{
+.item6{
 grid-column-start:1;
 grid-column-end:2;
 grid-row-start: 5;
 }
-.copyrightGrid{
-grid-row-start: 6;
-grid-column-start:1;
-grid-column-end:4;
+.item7{
+grid-column-start:2;
+grid-column-end:3;
+grid-row-start: 5;
 }
 
 
 {%- endstyle-%}
 
 <div class="grid-container">
-  <div class="logoGrid"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/></div>
-  <div class="navGrid"> <div class="navGridA"> 
-    <ul class="linkList">
-      <li class="linkListTitle"><b>SUPPORT</b></li>
-    <li class="linkListStyle"><a href="{{section.settings.FAQlink}}">FAQ</a></li>
-    <li class="linkListStyle"><a href="{{section.settings.contactLink}}">CONTACT US</a></li>
-    <li class="linkListStyle"><a href="{{section.settings.termsLink}}">MOBILE SERVICE TERMS</a></li>
-    <li class="linkListStyle"><a href="{{section.settings.policyLink}}">PRIVACY POLICY</a></li>
-  </ul>
-</div>
-<div class="navGridB">
-  <ul class="linkList">
-  <li class="linkListTitle"><b>ABOUT</b></li>
-  <li class="linkListStyle"><a href="{{section.settings.FAQlink}}">DNA</a></li>
-  <li class="linkListStyle"><a href="{{section.settings.contactLink}}">RADAR</a></li>
-  <li class="linkListStyle"><a href="{{section.settings.termsLink}}">EVENTS</a></li>
-  </ul>
-</div>
-</div>
-  <div class="item3">
+  <div class="item1"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/></div>
+  <div class="item2">Socials</div>
+  <div class="item3">Txt</div>
+  <div class="item4">
+
+
   </div>
-  <div class="emailGrid">                   
+  <div class="item5">                   
     <div class="klaviyo-form-T4QtEK"></div> </div>
-  <div class="socialsGrid"><ul class="footer-socials" role="list">
+  <div class="item6"><ul class="footer-socials" role="list">
    <li> <g:ratingbadge merchant_id=118552518></g:ratingbadge> </li>
     {%- if settings.social_twitter_link != blank -%}
       <li class="list-social__item">
@@ -187,7 +153,7 @@ grid-column-end:4;
       </li>
     {%- endif -%}
   </ul></div>
-<div class="copyrightGrid"><div class="copyright-footer">2022 © NRML</div></div>
+<div class="item7"><div class="copyright-footer">2022 © NRML</div></div>
 </div>
 {% schema %}
 {
@@ -204,26 +170,7 @@ grid-column-end:4;
           "type": "image_picker",
           "id": "nrmlLogo",
           "label": "Add Logo"
-        },
-        {
-          "type": "url",
-          "id": "FAQlink",
-          "label": "FAQ link"
-        },
-        {
-          "type": "url",
-          "id": "contactLink",
-          "label": "Contact Link"
-        },
-        {
-          "type": "url",
-          "id": "termsLink",
-          "label": "Terms link"
-        },          
-          {"type": "url",
-          "id": "policyLink",
-          "label": "Privacy Policy link"
-        },
+        }
     ],
     "presets": [
         {
