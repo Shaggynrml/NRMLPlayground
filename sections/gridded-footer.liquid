@@ -31,7 +31,7 @@
 }
 .linkList {
   list-style-type: none;
-  padding: 0px 3rem;
+  padding:0 3rem;
 }
 .linkListTitle{
   font-Size: 20px;
@@ -84,13 +84,60 @@ grid-row-start: 6;
 grid-column-start:1;
 grid-column-end:4;
 }
+@media screen and (max-width: 660px) {
+  .grid-container {
+    grid-template-columns:100%;
+    background-color: #f2f2f2;
+  }
+  .logoGrid {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start:1;
+  grid-row-end:2;
+}
+.navGrid{
+	grid-row-start:2;
+  grid-row-end:5;
+}
+.navGridA{
+  grid-row-start:1;
+  grid-row-end:2;
+}
+.navGridB{
+  grid-row-start:1;
+  grid-row-end:2;
+  grid-column-start:2;
+  grid-column-end:3;
+}
+
+.emailGrid{
+	grid-row-start:5;
+    grid-row-end:6;
+    grid-column-start: 1;
+}
+.socialsGrid{
+grid-column-start:1;
+grid-row-start: 7;
+}
+.copyrightGrid{
+grid-row-start: 8;
+grid-column-start:1;
+}
+.copyright-footer{
+  padding: 0 3rem;
+  font-size:12px;
+  color:#252525;
+  text-align:center;
+}
+}
 
 
 {%- endstyle-%}
 
 <div class="grid-container">
   <div class="logoGrid"><img class="image" src="{{section.settings.nrmlLogo| image_url: width: auto, height: auto}}"/></div>
-  <div class="navGrid"> <div class="navGridA"> 
+  <div class="navGrid"> 
+  <div class="navGridA"> 
     <ul class="linkList">
       <li class="linkListTitle"><b>SUPPORT</b></li>
     <li class="linkListStyle"><a href="{{section.settings.FAQlink}}">FAQ</a></li>
@@ -108,10 +155,10 @@ grid-column-end:4;
   </ul>
 </div>
 </div>
-  <div class="item3">
-  </div>
+  <div class="item3"></div>
   <div class="emailGrid">                   
-    <div class="klaviyo-form-T4QtEK"></div> </div>
+    <div class="klaviyo-form-T4QtEK"></div> 
+  </div>
   <div class="socialsGrid"><ul class="footer-socials" role="list">
    <li> <g:ratingbadge merchant_id=118552518></g:ratingbadge> </li>
     {%- if settings.social_twitter_link != blank -%}
