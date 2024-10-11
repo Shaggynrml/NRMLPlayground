@@ -34,11 +34,11 @@
     }
     .image-mobile{
         width:100%;
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 8px 8px 8px 8px;
     }
     .image-desktop{
         width:100%;
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 8px 8px 8px 8px;
     }
     .image-title-mobile{
         font-size:3rem;
@@ -97,8 +97,8 @@
         width:48%;
         border-color: rgb(190, 190, 190);
         border-radius:8px;
-        border-style: solid;
-        border-width: 0px;
+        border-style: none;
+        border-width: 1px;
         margin:0.5vw;
         justify-content:center;
         align-items:center;
@@ -107,7 +107,7 @@
     .image-container-desktop{
         width:100%;
     }
-.button-overlay {
+    .button-overlay {
         position: relative;
         display: inline-block;
     }
@@ -118,12 +118,13 @@
         width: 100%;
         height: 10%;
         border:0;
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-family: monospace;
+        font-style:italic;
         opacity: 0.8;
         color:black;
         background-color:white;
-        border-radius:0px 0px 0px 8px;
+        border-radius:0px 0px 8px 8px;
         border-color: #8e44ad;
         overflow: hidden;
         z-index: 1;
@@ -144,12 +145,15 @@
     }
     .button-overlay button:hover {
         color: #fff;
+        letter-spacing:2px;
+        text-decoration:underline;
+        transition: width 350ms ease-in-out;
     }
     .button-overlay button:hover:after {
         width: 110%;
     }
 
-    @media screen and (max-width:750px){
+    @media screen and (max-width:780px){
         .mobile-tiles{
             display:flex;
             flex-direction:column;
@@ -162,8 +166,11 @@
         
         }
 
-        
+        .button-overlay button {
+        transform: translate(0%, -100%);
+        font-size: 2.7rem;
     }
+}
     {%- endstyle -%}
 
 <div class= "double-image-container">
@@ -179,8 +186,9 @@
             <div class="button-overlay">  
             <a class = "image-container-desktop" href = "{{section.settings.button_link_one}}">
                 <img src = "{{section.settings.image-one| img_url: 'master'}}" class = "image-desktop" alt="">
+            
+            <button>{{section.settings.button1-text}}</button>
             </a>
-            <button class="btn-one">SHOP NOW</button>
         </div>
         </div>
         <div class="desktop-tile-container">
@@ -192,8 +200,9 @@
             <div class="button-overlay">  
             <a class = "image-container-desktop" href = "{{section.settings.button_link_two}}">
                 <img src = "{{section.settings.image-two| img_url: 'master'}}" alt="" class = "image-desktop">
+            
+                <button>{{section.settings.button2-text}}</button>
             </a>
-            <button>SHOP NOW 2</button>
         </div>
         </div>
     </div>
@@ -205,17 +214,22 @@
             <div class="button-overlay">  
             <a  class = "image-container-mobile" href = "{{section.settings.button_link_one}}">
                 <img src = "{{section.settings.image-one-mobile| img_url: 'master'}}" class = "image-mobile" alt=""/>
-            </a>
-            <button>AGH</button>
+            
+                <button>{{section.settings.button1-text}}</button>
+        </a>
         </div>
     </div>
         <div class="mobile-tile-container">
             {%if section.settings.image-2-title != blank%}
             <a class= "image-title-mobile" href = "{{section.settings.button_link_two}}"> {{ section.settings.image-2-title | escape }}</a>
             {%endif%}
+            <div class="button-overlay"> 
             <a class = "image-container-mobile" href = "{{section.settings.button_link_two}}">
                 <img src = "{{section.settings.image-two-mobile| img_url: 'master'}}" alt="" class = "image-mobile"/>
-            </a>
+            
+                <button>{{section.settings.button2-text}}</button>
+        </a>
+            </div>
         </div>
     </div>
 </div>
@@ -238,10 +252,17 @@
                 "id": "image-one",
                 "label": "t:sections.collage.blocks.image.settings.image.label"
             },
+
             {
                 "type": "image_picker",
                 "id": "image-one-mobile",
                 "label": "Image 1 Mobile"
+            },
+            {
+                "type": "text",
+                "id": "button1-text",
+                "default": "SHOP NOW",
+                "label": "Button 1 Text"
             },
             {
             "type": "url",
@@ -263,7 +284,13 @@
                 "type": "image_picker",
                 "id": "image-two-mobile",
                 "label": "Image 2 Mobile"
-            },           
+            }, 
+            {
+                "type": "text",
+                "id": "button2-text",
+                "default": "SHOP NOW",
+                "label": "Button 2 Text"
+            },          
             {
             "type": "url",
             "id": "button_link_two",
