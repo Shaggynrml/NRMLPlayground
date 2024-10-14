@@ -136,12 +136,12 @@
     "double_image_button_overlay_44den3": {
       "type": "double-image-button-overlay",
       "settings": {
-        "image-1-title": "Featured collection",
+        "image-1-title": "",
         "image-one": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
         "image-one-mobile": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
         "button1-text": "SHOP SNEAKERS",
         "button_link_one": "",
-        "image-2-title": "Featured collection",
+        "image-2-title": "",
         "image-two": "shopify://shop_images/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
         "image-two-mobile": "shopify://shop_images/HTG-HATS-GIF_ff26bf0b-ac15-4231-be68-8ad3fb35c093.gif",
         "button2-text": "SHOP HATS",
