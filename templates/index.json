@@ -11,8 +11,16 @@
   "sections": {
     "gridded_footer_bcbzNn": {
       "type": "gridded-footer",
+      "disabled": true,
       "settings": {
-        "genericContent": ""
+        "genericContent": "",
+        "FAQlink": "",
+        "contactLink": "",
+        "termsLink": "",
+        "policyLink": "",
+        "DNALink": "",
+        "radarLink": "",
+        "eventsLink": ""
       }
     },
     "image_carousel_BmBzLT": {
@@ -85,8 +93,7 @@
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
       "settings": {
-        "menu": "menu-panel
-
+        "menu": "menu-panel-0"
       }
     },
     "product_carousel_K4CAeh": {
@@ -108,19 +115,6 @@
         "Body": "CHECK THIS OUT"
       }
     },
-    "5810a254-65cb-44f7-b950-1def18a81da2": {
-      "type": "double-image-section",
-      "settings": {
-        "image-1-title": "",
-        "image-one": "shopify://shop_images/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
-        "image-one-mobile": "shopify://shop_images/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
-        "button_link_one": "https://nrml.ca/collections/all?filter.p.m.custom.footwear=Sneakers",
-        "image-2-title": "",
-        "image-two": "shopify://shop_images/RELEASE_RDAR_OREAR.png",
-        "image-two-mobile": "shopify://shop_images/RELEASE_RDAR_OREAR.png",
-        "button_link_two": "shopify://blogs/release-calendar"
-      }
-    },
     "185b0658-ee1c-4cde-9fac-af4af026305f": {
       "type": "new-arrival-grid",
       "settings": {
@@ -137,6 +131,21 @@
         "heading": "Blog posts",
         "post_limit": 3,
         "blog": "release-calendar"
+      }
+    },
+    "double_image_button_overlay_44den3": {
+      "type": "double-image-button-overlay",
+      "settings": {
+        "image-1-title": "Featured collection",
+        "image-one": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
+        "image-one-mobile": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
+        "button1-text": "SHOP SNEAKERS",
+        "button_link_one": "",
+        "image-2-title": "Featured collection",
+        "image-two": "shopify://shop_images/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
+        "image-two-mobile": "shopify://shop_images/HTG-HATS-GIF_ff26bf0b-ac15-4231-be68-8ad3fb35c093.gif",
+        "button2-text": "SHOP HATS",
+        "button_link_two": ""
       }
     },
     "double_image_section_jgBpb7": {
@@ -187,6 +196,7 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-1",
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2"
       ],
+      "disabled": true,
       "settings": {
         "background_img": "shopify://shop_images/DZ4137-700-PHSYD003_b1bb76d5-386e-458c-9d7a-692d5cb158dd.png",
         "full_width": true,
@@ -203,9 +213,9 @@
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "product_carousel_K4CAeh",
     "parolax_banner_EwxDpL",
-    "5810a254-65cb-44f7-b950-1def18a81da2",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
     "7381c80b-4b3a-496b-a822-00a4cef333a6",
+    "double_image_button_overlay_44den3",
     "double_image_section_jgBpb7",
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1",
     "969e6bfe-64c4-4659-ab49-510f5085c3af"
