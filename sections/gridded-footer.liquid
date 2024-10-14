@@ -1,3 +1,4 @@
+
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {%- style -%}
 .image {
@@ -237,6 +238,7 @@ grid-column-start:1;
 <div class="copyrightGrid"><div class="copyright-footer">2022 © NRML</div></div>
 </div>
 {% schema %}
+
 {
     "name": "Gridded Footer",
     "tag": "section",
@@ -283,11 +285,14 @@ grid-column-start:1;
           "id": "eventsLink",
           "label": "Events link"
         },
+
+
     ],
     "presets": [
         {
         "name": "Gridded Footer" 
         }
     ]
-  }
-{% endschema %}
+}
+{%- endschema -%}
+

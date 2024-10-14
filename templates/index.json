@@ -1,25 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "gridded_footer_bcbzNn": {
+      "type": "gridded-footer",
+      "settings": {
+        "genericContent": ""
+      }
+    },
     "image_carousel_BmBzLT": {
       "type": "image-carousel",
       "blocks": {
         "slide_NXF3Cq": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/PURPLE_BANNER_47adf21d-9a18-48b0-b2ad-95af44450281.png"
+            "slide_image": "shopify://shop_images/PURPLE_BANNER_47adf21d-9a18-48b0-b2ad-95af44450281.png",
+            "hasLink": true,
+            "banner_url": ""
           }
         },
         "slide_txetig": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/KoolAid_Banner.jpg"
+            "slide_image": "shopify://shop_images/KoolAid_Banner.jpg",
+            "hasLink": true,
+            "banner_url": ""
           }
         },
         "slide_bEGqtk": {
           "type": "slide",
           "disabled": true,
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg"
+            "slide_image": "shopify://shop_images/Static_Banner_Frame.jpg",
+            "hasLink": true,
+            "banner_url": ""
           }
         }
       },
@@ -40,17 +61,17 @@
         "text-colour": "#4E3524",
         "subtext-colour": "#4E3524",
         "text-alignment": "top-left",
-        "image": "shopify:\/\/shop_images\/Static_Banner_Frame.jpg",
-        "link": "shopify:\/\/collections\/shop-all-sale"
+        "image": "shopify://shop_images/Static_Banner_Frame.jpg",
+        "link": "shopify://collections/shop-all-sale"
       }
     },
     "video_banner_NxyrQD": {
       "type": "video-banner",
       "disabled": true,
       "settings": {
-        "video_background_banner": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
+        "video_background_banner": "https://cdn.shopify.com/videos/c/o/v/b4693fcdc3cb46bdbfadfba93964cb50.mp4",
         "hasLink": true,
-        "sectionVideoLink": "shopify:\/\/collections\/shop-all-sale",
+        "sectionVideoLink": "shopify://collections/shop-all-sale",
         "video_overlay_opacity": 0,
         "video_height": "medium",
         "desktop_content_position": "middle-center",
@@ -64,7 +85,8 @@
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
       "settings": {
-        "menu": "menu-panel-1"
+        "menu": "menu-panel
+
       }
     },
     "product_carousel_K4CAeh": {
@@ -80,7 +102,7 @@
       "disabled": true,
       "settings": {
         "title": "CHECK THIS OUT",
-        "image": "shopify:\/\/shop_images\/download.png",
+        "image": "shopify://shop_images/download.png",
         "heading_colour": "white",
         "body_colour": "white",
         "Body": "CHECK THIS OUT"
@@ -90,13 +112,13 @@
       "type": "double-image-section",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
-        "image-one-mobile": "shopify:\/\/shop_images\/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/all?filter.p.m.custom.footwear=Sneakers",
+        "image-one": "shopify://shop_images/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
+        "image-one-mobile": "shopify://shop_images/SNEAKERS-GIF_1_04a07015-b55d-41a9-95c4-60838cc5b7ba.gif",
+        "button_link_one": "https://nrml.ca/collections/all?filter.p.m.custom.footwear=Sneakers",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/RELEASE_RDAR_OREAR.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/RELEASE_RDAR_OREAR.png",
-        "button_link_two": "shopify:\/\/blogs\/release-calendar"
+        "image-two": "shopify://shop_images/RELEASE_RDAR_OREAR.png",
+        "image-two-mobile": "shopify://shop_images/RELEASE_RDAR_OREAR.png",
+        "button_link_two": "shopify://blogs/release-calendar"
       }
     },
     "185b0658-ee1c-4cde-9fac-af4af026305f": {
@@ -121,13 +143,13 @@
       "type": "double-image-section",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
-        "image-one-mobile": "shopify:\/\/shop_images\/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/all?filter.p.m.custom.apparel=Bottoms&filter.v.price.gte=&filter.v.price.lte=&filter.p.m.custom.bottoms=Shorts&sort_by=created-descending",
+        "image-one": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
+        "image-one-mobile": "shopify://shop_images/SHORTS_29c145e4-3cc8-46ba-9a1a-ae87f9880b33.png",
+        "button_link_one": "https://nrml.ca/collections/all?filter.p.m.custom.apparel=Bottoms&filter.v.price.gte=&filter.v.price.lte=&filter.p.m.custom.bottoms=Shorts&sort_by=created-descending",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
-        "image-two-mobile": "shopify:\/\/shop_images\/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
-        "button_link_two": "shopify:\/\/collections\/hats-2024"
+        "image-two": "shopify://shop_images/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
+        "image-two-mobile": "shopify://shop_images/HTG-HATS-GIF_a1dabe51-a052-4963-a1d5-372ae8e1c403.gif",
+        "button_link_two": "shopify://collections/hats-2024"
       }
     },
     "632aeaf1-23a9-4aba-99e1-e7ce7361e3a1": {
@@ -151,7 +173,7 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
           }
         },
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2": {
@@ -166,7 +188,7 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2"
       ],
       "settings": {
-        "background_img": "shopify:\/\/shop_images\/DZ4137-700-PHSYD003_b1bb76d5-386e-458c-9d7a-692d5cb158dd.png",
+        "background_img": "shopify://shop_images/DZ4137-700-PHSYD003_b1bb76d5-386e-458c-9d7a-692d5cb158dd.png",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -174,6 +196,7 @@
     }
   },
   "order": [
+    "gridded_footer_bcbzNn",
     "image_carousel_BmBzLT",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "video_banner_NxyrQD",

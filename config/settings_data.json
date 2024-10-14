@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -83,19 +92,19 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
-    "social_twitter_link": "https:\/\/twitter.com\/NRMLCO",
-    "social_facebook_link": "https:\/\/www.facebook.com\/NRML.CA\/",
+    "social_twitter_link": "https://twitter.com/NRMLCO",
+    "social_facebook_link": "https://www.facebook.com/NRML.CA/",
     "social_pinterest_link": "",
-    "social_instagram_link": "https:\/\/www.instagram.com\/nrml",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@nrml.ca",
+    "social_instagram_link": "https://www.instagram.com/nrml",
+    "social_tiktok_link": "https://www.tiktok.com/@nrml.ca",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "https:\/\/www.youtube.com\/nrmlonline",
+    "social_youtube_link": "https://www.youtube.com/nrmlonline",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/NRML_BLACK_1000x_cd651b20-57b2-49ca-9c72-7eba1f970773.png",
+    "favicon": "shopify://shop_images/NRML_BLACK_1000x_cd651b20-57b2-49ca-9c72-7eba1f970773.png",
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_cart_note": false,
@@ -123,10 +132,10 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/NRML_BLACK_1000x_6abe899d-718a-4cb8-9f64-50f1fac41a65.png",
+          "logo": "shopify://shop_images/NRML_BLACK_1000x_6abe899d-718a-4cb8-9f64-50f1fac41a65.png",
           "logo_width": 50,
           "logo_position": "middle-left",
-          "menu": "menu-panel-1",
+          "menu": "menu-panel-0",
           "button_link_one": "",
           "button_link_two": "",
           "button_link_three": "",
@@ -162,7 +171,7 @@
             "disabled": true,
             "settings": {
               "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
             }
           }
         },
@@ -173,10 +182,10 @@
         ],
         "settings": {
           "color_scheme": "background-1",
-          "privacy-policies-link": "shopify:\/\/pages\/privacy-policy-old",
-          "FAQ-link": "shopify:\/\/pages\/faq",
-          "our-dna-link": "shopify:\/\/pages\/about-us",
-          "contact-us-link": "shopify:\/\/pages\/contact-us",
+          "privacy-policies-link": "shopify://pages/privacy-policy-old",
+          "FAQ-link": "shopify://pages/faq",
+          "our-dna-link": "shopify://pages/about-us",
+          "contact-us-link": "shopify://pages/contact-us",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
@@ -223,14 +232,21 @@
     ],
     "blocks": {
       "13768625480086291342": {
-        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {
+        }
+      },
+
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "914574027208035924": {
-        "type": "shopify:\/\/apps\/camouflage-hide-sold-variants\/blocks\/hide-oos-variants\/12f79890-9cb9-4b70-ac12-64dd825d687e",
-        "disabled": false,
+        "type": "shopify://apps/camouflage-hide-sold-variants/blocks/hide-oos-variants/12f79890-9cb9-4b70-ac12-64dd825d687e",
+        "disabled": true,
         "settings": {
           "theme_name": "",
           "selector_type": "",
@@ -239,12 +255,14 @@
           "other_file_name": "2ab921a-mixed-type.js",
           "reverse_options": true
         }
+
       },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
+
       }
     }
   },
@@ -398,7 +416,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
