@@ -225,6 +225,20 @@
           "product-page-alignment": "auto",
           "cart-page-alignment": "auto"
         }
+      },
+      "gridded-footer": {
+        "type": "gridded-footer",
+        "settings": {
+          "genericContent": "",
+          "nrmlLogo": "shopify://shop_images/NRML_Logo.png",
+          "FAQlink": "shopify://pages/faq",
+          "contactLink": "shopify://pages/contact-us",
+          "termsLink": "",
+          "policyLink": "",
+          "DNALink": "shopify://pages/our-dna",
+          "radarLink": "",
+          "eventsLink": ""
+        }
       }
     },
     "content_for_index": [
@@ -237,7 +251,6 @@
         "settings": {
         }
       },
-
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -255,14 +268,6 @@
           "other_file_name": "2ab921a-mixed-type.js",
           "reverse_options": true
         }
-
-      },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-
       }
     }
   },
