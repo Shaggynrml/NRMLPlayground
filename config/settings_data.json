@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -135,7 +135,7 @@
           "logo": "shopify://shop_images/NRML_BLACK_1000x_6abe899d-718a-4cb8-9f64-50f1fac41a65.png",
           "logo_width": 50,
           "logo_position": "middle-left",
-          "menu": "menu-panel-1",
+          "menu": "menu-panel",
           "button_link_one": "",
           "button_link_two": "",
           "button_link_three": "",
