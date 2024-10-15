@@ -99,7 +99,7 @@
     "product_carousel_K4CAeh": {
       "type": "product-carousel",
       "settings": {
-        "collection": "all",
+        "collection": "back-to-school-collection",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
