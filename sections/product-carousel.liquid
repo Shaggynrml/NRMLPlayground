@@ -71,7 +71,7 @@
     </div>
 
     <div class="new-arrival-view-all">
-         {%render 'primary-button', button_content:"View All", button_link: section.settings.collection.url %}
+         {%render 'primary-button', button_content:"View All", button_link: section.settings.collection_url %}
     </div>
 
 </div>
@@ -89,6 +89,12 @@
                 "type": "collection",
                 "id": "collection",
                 "label": "collection"
+                },
+                {"type": "url",
+                "id": "collection_url",
+                "label": "Collection Link",
+                "default":"{{ section.settings.collection.url }}",
+                "info": "Note: By default, button is linked to collection link and old filtering UI. Change and manually add the link to the new searchanise filter on collection "
                 },
                 {
                 "type": "text",
