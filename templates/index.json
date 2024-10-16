@@ -100,7 +100,7 @@
       "type": "product-carousel",
       "settings": {
         "collection": "all",
-        "collection_url": "shopify://collections/all",
+        "collection_url": "shopify://collections/bd-clearance",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
