@@ -100,7 +100,7 @@
       "type": "product-carousel",
       "settings": {
         "collection": "all",
-        "collection_url": "https://nrml.ca/pages/search-results-page?collection=all",
+        "collection_url": "shopify://collections/all",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
