@@ -100,6 +100,7 @@
       "type": "product-carousel",
       "settings": {
         "collection": "all",
+        "collection_url": "https://nrml.ca/pages/search-results-page?collection=all",
         "title": "New Arrivals",
         "product_limit_desktop": 12
       }
@@ -119,6 +120,7 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "stussy",
+        "collection_url": "https://nrml.ca/pages/search-results-page?collection=stussy",
         "title": "Stussy",
         "product_limit_desktop": 8,
         "product_limit_mobile": 6
