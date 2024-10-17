@@ -1,19 +1,27 @@
 {%- style -%}
+.big-grid{
+    padding: 50px;
+    border-style:solid;
+}
 .button-grid{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8rem 8rem 8rem 8rem;
-  background-color:black;
-  gap:2px;
+  gap:2rem;
   
 }
 
 .button-grid> div {
-    background-color:grey;
     margin: auto;
     width: 80%;
     height:100%;
     padding:10px
+}
+.button-grid> a {
+    margin: auto;
+    display: grid;
+    width: 80%;
+    height:100%;
 }
 .centeredButtons{
 
@@ -22,25 +30,50 @@
     width: 100%;
     height:100%;
     font-size: 2.5rem;
+    font-family: monospace;
+    transition: all 0.5s;
+}
+.sizeButtons{
+    transition: all 0.5s;
+}
+.sizeButtons:before{
+    background-color:white;
+    color: block;
+}
+.sizeButtons:hover{
+    background-color:black;
+    color: white;
+    content:">"
 }
 .shopAllGrid{
     grid-column-start:2;
     grid-column-end:4;
     
 }
-.shopAllGrid> button{
+.shopAllGrid> a{
     width: 100%;
     height:100%;
     font-size: 2.5rem;
     font-family:monospace;
-    transition: all 0.5s;
+    padding: 14px 25px;
+    text-align: center;
+    display: grid;
+    transition: all 0.3s;
+}
+.shopAllGrid> button{
+    width: 100%;
+    height:100%;
+    font-size: 5rem;
+    padding: 14px 25px;
+    font-family:monospace;
+    transition: all 0.3s;
 }
 .shopAllButton{
     background-color:white;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .shopAllButton:after {
     content: '»';
@@ -64,14 +97,73 @@
 }
 
 {%- endstyle-%}
-
+<h1 style="text-align: center; padding=2rem;">SHOP BY SIZE</h1>
+<div class="big-grid">
 <div class="button-grid">
-    {% for i in (1..12)%}
-    <div class="centeredButtons"> <button>{{i}}</button> </div>
-    {% endfor %}
-    <div class="shopAllGrid"><button class="shopAllButton">SHOP ALL</button></div>
+    <a href="{{ section.settings.buttonURL1 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName1}}</button> 
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL2 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName2}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL3 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName3}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL4 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName4}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL5 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName5}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL6 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName6}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL7 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName7}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL8 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName8}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL9 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName9}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL10 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName10}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL11 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName11}}</button>
+    </div>
+    </a>
+    <a href="{{ section.settings.buttonURL12 }}">
+    <div class="centeredButtons">
+        <button class="sizeButtons">SIZE {{section.settings.buttonName12}}</button>
+    </div>
+    </a>
+    
+    <div class="shopAllGrid"><a style= "shopAllButton" href="{{ section.settings.shopAllLink}}"><button class="shopAllButton">SHOP ALL</button></a></div>
 </div>
-
+</div>
 {% schema %}
 
 {
@@ -83,6 +175,126 @@
           "type": "url",
           "id": "shopAllLink",
           "label": "Insert link",
+        },
+        {
+            "type":"text",
+            "id":"buttonName1",
+            "label":"Button Name 1",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL1",
+            "label":"Button 1 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName2",
+            "label":"Button Name 2",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL2",
+            "label":"Button 2 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName3",
+            "label":"Button Name 3",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL3",
+            "label":"Button 3 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName4",
+            "label":"Button Name 4",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL4",
+            "label":"Button 4 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName5",
+            "label":"Button Name 5",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL5",
+            "label":"Button 5 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName6",
+            "label":"Button Name 6",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL6",
+            "label":"Button 6 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName7",
+            "label":"Button Name 7",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL7",
+            "label":"Button 7 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName8",
+            "label":"Button Name 8",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL8",
+            "label":"Button 8 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName9",
+            "label":"Button Name 9",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL9",
+            "label":"Button 9 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName10",
+            "label":"Button Name 10",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL10",
+            "label":"Button 10 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName11",
+            "label":"Button Name 11",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL11",
+            "label":"Button 11 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName12",
+            "label":"Button Name 12",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL12",
+            "label":"Button 12 URL ",
         },
     ],
     "presets": [
