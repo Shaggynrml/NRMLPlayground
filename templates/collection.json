@@ -71,6 +71,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
@@ -99,7 +100,6 @@
       "block_order": [
         "searchanise_search_filter_app_block_mHCiUU"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
