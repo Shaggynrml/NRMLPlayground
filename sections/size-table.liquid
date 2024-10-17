@@ -1,0 +1,94 @@
+{%- style -%}
+.button-grid{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 8rem 8rem 8rem 8rem;
+  background-color:black;
+  gap:2px;
+  
+}
+
+.button-grid> div {
+    background-color:grey;
+    margin: auto;
+    width: 80%;
+    height:100%;
+    padding:10px
+}
+.centeredButtons{
+
+}
+.centeredButtons> button{
+    width: 100%;
+    height:100%;
+    font-size: 2.5rem;
+}
+.shopAllGrid{
+    grid-column-start:2;
+    grid-column-end:4;
+    
+}
+.shopAllGrid> button{
+    width: 100%;
+    height:100%;
+    font-size: 2.5rem;
+    font-family:monospace;
+    transition: all 0.5s;
+}
+.shopAllButton{
+    background-color:white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.shopAllButton:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    right:2px;  
+    transition: 0.8s;
+    color:white;
+}
+.shopAllButton:hover{
+    padding-right: 6rem;
+    padding-left:2rem;
+    background-color:black;
+    color:white;
+    text-decoration:underline;
+}
+.shopAllButton:hover:after {
+    opacity: 1;
+    right: 38%;
+    color:white;
+}
+
+{%- endstyle-%}
+
+<div class="button-grid">
+    {% for i in (1..12)%}
+    <div class="centeredButtons"> <button>{{i}}</button> </div>
+    {% endfor %}
+    <div class="shopAllGrid"><button class="shopAllButton">SHOP ALL</button></div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Size table",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+          "type": "url",
+          "id": "shopAllLink",
+          "label": "Insert link",
+        },
+    ],
+    "presets": [
+        {
+        "name": "Size Table" 
+        }
+    ]
+}
+{%- endschema -%}
