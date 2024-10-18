@@ -6,7 +6,7 @@
 .button-grid{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 8rem 8rem 8rem 8rem;
+  grid-template-rows: 8rem 8rem 8rem auto;
   gap:2rem;
   
 }
@@ -92,12 +92,12 @@
 }
 .shopAllButton:hover:after {
     opacity: 1;
-    right: 38%;
+    right: 15%;
     color:white;
 }
 
-{%- endstyle-%}
-<h1 style="text-align: center; padding=2rem;">SHOP BY SIZE</h1>
+{%- endstyle-%}    
+<h1 style="text-align: center; padding=2rem;">{{section.settings.titleText}}</h1>
 <div class="big-grid">
 <div class="button-grid">
     <a href="{{ section.settings.buttonURL1 }}">
@@ -157,12 +157,18 @@
     </a>
     <a href="{{ section.settings.buttonURL12 }}">
     <div class="centeredButtons">
-        <button class="sizeButtons">SIZE {{section.settings.buttonName12}}</button>
+        <button class="sizeButtons">SIZ {{section.settings.buttonName12}}</button>
     </div>
     </a>
-    
-    <div class="shopAllGrid"><a style= "shopAllButton" href="{{ section.settings.shopAllLink}}"><button class="shopAllButton">SHOP ALL</button></a></div>
-</div>
+{%if section.settings.bottomButtonText != blank%}
+    <div class="shopAllGrid">
+        <a style= "shopAllButton" href="{{ section.settings.bottomButtonURL}}">
+            <button class="shopAllButton">{{section.settings.bottomButtonText}}</button>
+        </a>
+    </div>
+{%endif%}
+
+    </div>
 </div>
 {% schema %}
 
@@ -171,10 +177,10 @@
     "tag": "section",
     "class": "section",
     "settings": [
-        {
-          "type": "url",
-          "id": "shopAllLink",
-          "label": "Insert link",
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
         },
         {
             "type":"text",
@@ -296,6 +302,17 @@
             "id":"buttonURL12",
             "label":"Button 12 URL ",
         },
+        {
+            "type": "text",
+            "id": "bottomButtonText",
+            "label": "Bottom Button Text",
+          },
+        {
+            "type":"url",
+            "id":"bottomButtonURL",
+            "label":"Bottom Button URL",
+        },
+ 
     ],
     "presets": [
         {
