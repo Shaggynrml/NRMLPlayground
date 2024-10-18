@@ -1,47 +1,83 @@
 {% style %}
 .main-grid{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 8rem 8rem 8rem;
-    gap:2rem;
+    grid-template-columns: auto auto auto auto auto auto auto ;
+    grid-template-rows: auto auto;
+    background-color:white ;
+    gap: 5px;
+    margin:8px;
 }
 .gridHeading{
-    grid-row-start:1;
-    grid-row-end:4;
+    display:grid;
+    grid-column-start:1;
+    grid-column-end:8;
     border-bottom-style:solid;
 }
-.buttonGrid{
-display: grid;
-grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
-grid-template-rows: 50% 50%;
-background-color:blue;
-gap: 5px;
+.headingButton{
+    width:100%;
+    text-align:left;
+    border-style:none;
+    font-size: 3rem;
+    transition: all 0.5s;
+}
+.headingButton:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    right:2px;  
+    transition: 0.8s;
+    color:white;
+}
+.headingButton:hover{
+    padding-right: 6rem;
+    padding-left:2rem;
+    background-color:black;
+    color:white;
+    text-decoration:underline;
+}
+.headingButton:hover:after {
+    opacity: 1;
+    right: 15%;
+    color:white;
+}
+.gridStyling{
+    margin: auto;
+    width: 93%;
+    height:100%;
+    padding:10px;
+    background-color: white;
+}
+.gridStyling> a{
+    display: grid;
+}
+.gridStyling> a > button{
+    font-size: 2.5rem;
+    font-family: monospace;
+    transition: all 0.5s;
+    border-style:none;
 }
 {% endstyle %}
-<div class="main-grid">
-    <div class="gridHeading">MENS</div>
-    <div class= "buttonGrid">
-        <div>Be</div>
-        <div>a</div>
-        <div>y</div>
-        <div>ve</div>
+    <div class="gridHeading"><a href="nrml.ca"><button class="headingButton">{{section.settings.gridHeading}}</button></a></div>
+    <div class= "main-grid">
+{% for i in (7..20) %}
+    <div class="gridStyling"><a href="nrml.ca"><button> SIZE {{i}} </button></a></div>
+{% endfor %}
     </div>
-</div>
 {%schema %}
 {
-"name": "Size table",
+"name": "Button Grid",
     "tag": "section",
     "class": "section",
     "settings": [
         {   
             "type":"text",
-            "id":"titleText",
-            "label": "Insert Title",
+            "id":"gridHeading",
+            "label": "Insert Heading",
         }
     ],
     "presets": [ 
     {
-    "name": "Size Table" 
+    "name": "Button Grid" 
     }
 ]
 }
