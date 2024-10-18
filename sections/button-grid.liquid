@@ -1,0 +1,48 @@
+{% style %}
+.main-grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 8rem 8rem 8rem;
+    gap:2rem;
+}
+.gridHeading{
+    grid-row-start:1;
+    grid-row-end:4;
+    border-bottom-style:solid;
+}
+.buttonGrid{
+display: grid;
+grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+grid-template-rows: 50% 50%;
+background-color:blue;
+gap: 5px;
+}
+{% endstyle %}
+<div class="main-grid">
+    <div class="gridHeading">MENS</div>
+    <div class= "buttonGrid">
+        <div>Be</div>
+        <div>a</div>
+        <div>y</div>
+        <div>ve</div>
+    </div>
+</div>
+{%schema %}
+{
+"name": "Size table",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
+        }
+    ],
+    "presets": [ 
+    {
+    "name": "Size Table" 
+    }
+]
+}
+{%endschema %}
