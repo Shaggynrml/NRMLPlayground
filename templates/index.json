@@ -9,6 +9,44 @@
  */
 {
   "sections": {
+    "button_grid_jb6ETw": {
+      "type": "button-grid",
+      "settings": {
+        "gridHeading": "MENS FOOTWEAR"
+      }
+    },
+    "size_table_hJhtMA": {
+      "type": "size-table",
+      "settings": {
+        "titleText": "SHOP BY SIZE",
+        "buttonName1": "",
+        "buttonURL1": "",
+        "buttonName2": "",
+        "buttonURL2": "",
+        "buttonName3": "",
+        "buttonURL3": "",
+        "buttonName4": "",
+        "buttonURL4": "",
+        "buttonName5": "",
+        "buttonURL5": "",
+        "buttonName6": "",
+        "buttonURL6": "",
+        "buttonName7": "",
+        "buttonURL7": "",
+        "buttonName8": "",
+        "buttonURL8": "",
+        "buttonName9": "",
+        "buttonURL9": "",
+        "buttonName10": "",
+        "buttonURL10": "",
+        "buttonName11": "",
+        "buttonURL11": "",
+        "buttonName12": "",
+        "buttonURL12": "",
+        "bottomButtonText": "SHOP ALL FOOTWEAR",
+        "bottomButtonURL": ""
+      }
+    },
     "gridded_footer_bcbzNn": {
       "type": "gridded-footer",
       "disabled": true,
@@ -208,6 +246,8 @@
     }
   },
   "order": [
+    "button_grid_jb6ETw",
+    "size_table_hJhtMA",
     "gridded_footer_bcbzNn",
     "image_carousel_BmBzLT",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
