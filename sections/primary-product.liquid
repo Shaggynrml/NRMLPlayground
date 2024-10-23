@@ -479,6 +479,9 @@
       {% if product.tags contains 'CLEARANCE' or  product.tags contains 'RELEASE'%}
         <p style="color:red;">*This product is final sale and will not be accepted for any returns or exchanges which includes for store credit.</p>
       {% endif %}
+            {% if product.type contains "FOOTWEAR"%}
+      <p>*PLEASE NOTE: CONSECUTIVE ORDERS AND ORDERS PLACED BY PROXY SERVER OFTEN INDICATE BOT ACTIVITY AND WILL BE SUBJECT TO A 10% RESTOCKING FEE. <a href= "https://nrml.ca/pages/faq"> FIND OUT MORE. </a></p>
+      {%- endif -%}
       <div class= "size-picker-section">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
         

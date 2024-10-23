@@ -21,7 +21,8 @@
   display: grid;
   grid-template-columns: 20% auto auto;
   background-color: white;
-  padding: 2px;
+  border-top-style:ridge;
+  border-width:thick;
 }
 
 .grid-container > div {
@@ -145,14 +146,15 @@ grid-column-start:1;
     <li class="linkListStyle"><a href="{{section.settings.contactLink}}">CONTACT US</a></li>
     <li class="linkListStyle"><a href="{{section.settings.termsLink}}">MOBILE SERVICE TERMS</a></li>
     <li class="linkListStyle"><a href="{{section.settings.policyLink}}">PRIVACY POLICY</a></li>
+    <li class="linkListStyle"><a href="{{section.settings.shippingLink}}">SHIPPING</a></li>
   </ul>
 </div>
 <div class="navGridB">
   <ul class="linkList">
   <li class="linkListTitle"><b>ABOUT</b></li>
-  <li class="linkListStyle"><a href="{{section.settings.FAQlink}}">DNA</a></li>
-  <li class="linkListStyle"><a href="{{section.settings.contactLink}}">RADAR</a></li>
-  <li class="linkListStyle"><a href="{{section.settings.termsLink}}">EVENTS</a></li>
+  <li class="linkListStyle"><a href="{{section.settings.DNAlink}}">DNA</a></li>
+  <li class="linkListStyle"><a href="{{section.settings.radarLink}}">RADAR</a></li>
+  <li class="linkListStyle"><a href="{{section.settings.eventsLink}}">EVENTS</a></li>
   </ul>
 </div>
 </div>
@@ -268,7 +270,11 @@ grid-column-start:1;
           "type": "url",
           "id": "termsLink",
           "label": "Terms link"
-        },          
+        },    
+        {"type": "url",
+          "id": "shippingLink",
+          "label": "Shipping link"
+        },     
           {"type": "url",
           "id": "policyLink",
           "label": "Privacy Policy link"

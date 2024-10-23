@@ -1,13 +1,13 @@
 {% style %}
-.outsideBorder{
-    border-bottom-style:solid;
-    background-color:#f2f2f2;
-    color:#545454
-}
 .sectionHeading{
-    text-align: center;
-    background-color:#545454;
-    color:#545454;
+    align-self:start;
+    font-size:4rem;
+    font-weight: 200;
+    line-height: 1.15;
+    color: #545454;
+    padding-left:1.5%;
+    padding-bottom:10px;
+    padding-top:20px;
 }
 .main-grid{
     color:#545454;
@@ -27,6 +27,7 @@
 .headingButton{
     width:100%;
     text-align:left;
+    background-color:white;
     border-style:none;
     font-size: 3rem;
     transition: all 0.5s;
@@ -74,14 +75,39 @@
     background-color:white;
 }
 .gridStyling> a > button:hover{
-background-color:#545454;
-color:white;
+color: #fff;
+background-color: #545454 !important;
 transition: all 0.5s;
+box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+transform: translateY(-2px);
+}
+
+@media screen and (max-width: 660px) {
+    .main-grid{
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+}
+    .sectionHeading {
+    text-align:center;
+}
+.gridStyling> a > button{
+    font-size: 1.3rem;
+    font-family: monospace;
+    transition: all 0.5s;
+    border-style:solid;
+    border-width:thin;
+    border-color:#545454;
+    color:#545454;
+    background-color:white;
+}
+.headingButton{
+    font-size: 2.5rem;
+
+}
 }
 {% endstyle %}
 {%if section.settings.headingName != blank%}
-<div class="outsideBorder">
-<h1 class="sectionHeading">{{ section.settings.headingName }}</h1></div>
+<div class="sectionHeading">{{ section.settings.headingName }}</div>
 {%endif%}
 {% for blocks in section.blocks %}
     <div class="gridHeading"><a href="{{blocks.settings.gridHeadings}}"><button class="headingButton">{{blocks.settings.gridHeading}}</button></a></div>
