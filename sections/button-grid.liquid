@@ -1,5 +1,16 @@
 {% style %}
+.outsideBorder{
+    border-bottom-style:solid;
+    background-color:#f2f2f2;
+    color:#545454
+}
+.sectionHeading{
+    text-align: center;
+    background-color:#545454;
+    color:#545454;
+}
 .main-grid{
+    color:#545454;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto ;
     grid-template-rows: auto auto;
@@ -46,35 +57,223 @@
     height:100%;
     padding:10px;
     background-color: white;
+    color:#545454;
 }
 .gridStyling> a{
     display: grid;
+    text-decoration:none;
 }
 .gridStyling> a > button{
     font-size: 2.5rem;
     font-family: monospace;
     transition: all 0.5s;
-    border-style:none;
+    border-style:solid;
+    border-width:thin;
+    border-color:#545454;
+    color:#545454;
+    background-color:white;
+}
+.gridStyling> a > button:hover{
+background-color:#545454;
+color:white;
+transition: all 0.5s;
 }
 {% endstyle %}
-    <div class="gridHeading"><a href="nrml.ca"><button class="headingButton">{{section.settings.gridHeading}}</button></a></div>
+{%if section.settings.headingName != blank%}
+<div class="outsideBorder">
+<h1 class="sectionHeading">{{ section.settings.headingName }}</h1></div>
+{%endif%}
+{% for blocks in section.blocks %}
+    <div class="gridHeading"><a href="{{blocks.settings.gridHeadings}}"><button class="headingButton">{{blocks.settings.gridHeading}}</button></a></div>
     <div class= "main-grid">
-{% for i in (7..20) %}
-    <div class="gridStyling"><a href="nrml.ca"><button> SIZE {{i}} </button></a></div>
-{% endfor %}
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL1}}"><button> {{blocks.settings.buttonName1}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL2}}"><button> {{blocks.settings.buttonName2}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL3}}"><button> {{blocks.settings.buttonName3}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL4}}"><button> {{blocks.settings.buttonName4}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL5}}"><button> {{blocks.settings.buttonName5}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL6}}"><button> {{blocks.settings.buttonName6}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL7}}"><button> {{blocks.settings.buttonName7}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL8}}"><button> {{blocks.settings.buttonName8}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL9}}"><button> {{blocks.settings.buttonName9}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL10}}"><button> {{blocks.settings.buttonName10}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL11}}"><button> {{blocks.settings.buttonName11}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL12}}"><button> {{blocks.settings.buttonName12}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL13}}"><button> {{blocks.settings.buttonName13}} </button></a></div>
+    <div class="gridStyling"><a href="{{blocks.settings.buttonURL14}}"><button> {{blocks.settings.buttonName14}} </button></a></div>
     </div>
+{% endfor %}
+
 {%schema %}
 {
 "name": "Button Grid",
     "tag": "section",
     "class": "section",
     "settings": [
+        {
+            "type": "text",
+            "id": "headingName",
+            "label": "Name of the Heading",
+            "default":"Heading Name"
+          },
+    ],
+    "blocks": [
+        {
+            "type":"text",
+            "name":"Button Grid Name",
+            "settings":[
         {   
             "type":"text",
             "id":"gridHeading",
             "label": "Insert Heading",
-        }
-    ],
+        },
+        {
+        "type":"url",
+        "id":"headingURL",
+        "label": "Insert Heading URL",
+        },
+        {
+            "type":"text",
+            "id":"buttonName1",
+            "label":"Button Name 1",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL1",
+            "label":"Button 1 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName2",
+            "label":"Button Name 2",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL2",
+            "label":"Button 2 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName3",
+            "label":"Button Name 3",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL3",
+            "label":"Button 3 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName4",
+            "label":"Button Name 4",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL4",
+            "label":"Button 4 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName5",
+            "label":"Button Name 5",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL5",
+            "label":"Button 5 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName6",
+            "label":"Button Name 6",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL6",
+            "label":"Button 6 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName7",
+            "label":"Button Name 7",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL7",
+            "label":"Button 7 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName8",
+            "label":"Button Name 8",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL8",
+            "label":"Button 8 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName9",
+            "label":"Button Name 9",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL9",
+            "label":"Button 9 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName10",
+            "label":"Button Name 10",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL10",
+            "label":"Button 10 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName11",
+            "label":"Button Name 11",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL11",
+            "label":"Button 11 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName12",
+            "label":"Button Name 12",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL12",
+            "label":"Button 12 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName13",
+            "label":"Button Name 13",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL13",
+            "label":"Button 13 URL ",
+        },
+        {
+            "type":"text",
+            "id":"buttonName14",
+            "label":"Button Name 14",
+        },
+        {
+            "type":"url",
+            "id":"buttonURL14",
+            "label":"Button 14 URL ",
+        },
+    ]
+}
+],
     "presets": [ 
     {
     "name": "Button Grid" 
