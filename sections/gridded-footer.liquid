@@ -163,7 +163,9 @@ grid-column-start:1;
     <div class="klaviyo-form-T4QtEK"></div> 
   </div>
   <div class="socialsGrid"><ul class="footer-socials" role="list">
+{% if section.settings.gRate== true %}
    <li> <g:ratingbadge merchant_id=118552518></g:ratingbadge> </li>
+{% endif %}
     {%- if settings.social_twitter_link != blank -%}
       <li class="list-social__item">
         <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
@@ -255,6 +257,12 @@ grid-column-start:1;
           "type": "image_picker",
           "id": "nrmlLogo",
           "label": "Add Logo"
+        },
+        {
+          "type":"checkbox",
+          "id":"gRate",
+          "label":"SHow Google Rating Badge",
+          "default": false
         },
         {
           "type": "url",
