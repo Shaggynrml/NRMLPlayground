@@ -1,0 +1,524 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - card_product: {Object} Product Liquid object (optional)
+    - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+    - show_rating: {Boolean} Show the product rating. Default: false
+    - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - show_quick_add: {Boolean} Show the quick add button.
+    - section_id: {String} The ID of the section that contains this card.
+
+    Usage:
+    {% render 'card-product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+product-card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffff;
+  flex-basis: 33.3333%;
+}
+
+.product-card-container{
+  position: relative;
+  width: 370px;
+  height: 500px;
+}
+@media screen and (max-width:750px){
+  .product-card-container{
+    width: calc(340px/2);
+    height: calc(450px/2);
+  }
+}
+
+.product-card-container .card{
+  position: relative;
+  width: 370px;
+  height: 500px;
+  background: #ededed;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media screen and (max-width:750px){
+  .product-card-container .card{
+    position: relative;
+    width: calc(340px/2);
+    height: calc(450px/2);
+    background:url("{{ 'marbleBackground.jpg' | asset_img_url: '1600x' }}");
+    border-radius: calc(20px/2);
+    overflow: hidden;
+  }
+}
+.product-card-container .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url("{{ 'marbelBackground2.jpg' | asset_img_url: '600x' }}");
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+  z-index: 0;
+}
+@media screen and (min-width:750px){
+  .product-card-container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+}
+@media screen and (max-width:750px){
+  .product-card-container .card:before{
+  background:url("{{ 'marbelBackground2.jpg' | asset_img_url: '600x' }}");
+  clip-path: circle(calc(150px/2) at 80% -20%);
+  }
+}
+
+.product-card-container .card:after{
+  content: "NRML";
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: 6em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(0,0,0,0.25)
+}
+@media screen and (max-width:750px){
+  .product-card-container .card:after{
+    font-size: calc(6em);
+    font-weight: calc(800);
+  }
+}
+.product-card-container .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.product-card-container .card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+    
+}
+@media screen and (max-width: 750px){
+  .product-card-container .card .imgBx{
+    position: absolute;
+    top: 0%;
+    transform: translateY(0%);
+    z-index: 3;
+    width: 100%;
+    height: calc(220px/2);
+    transition: 0.5s;
+  }
+}
+.product-card-container .card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+}
+@media screen and (max-width:750px){
+  .product-card-container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(270px/2);
+  }
+}
+.product-card-container .card .contentBx{
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 2;
+}
+@media screen and (min-width:750px){
+  .product-card-container .card:hover .contentBx{
+    height: 210px;
+  }
+}
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(210px/2);
+    text-align: center;
+    transition: 1s;
+    z-index: 2;
+  }
+}
+
+.product-card-container .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 5px;
+  padding-top:0px;
+  letter-spacing: 1px;
+  color: #000;
+  margin: 0;
+  }
+
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx h2{
+    position: relative;
+    font-weight: calc(600/2);
+    font-size: 9px;
+    padding-bottom:calc(5px/2);
+    letter-spacing: calc(1px/2);
+    color: #000;
+    margin: 0;
+    }
+}
+
+.product-card-container .card .contentBx .size {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px 20px;
+  transition: 1.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 10;
+}
+
+@media screen and (min-width:750px){
+.product-card-container .card:hover .contentBx .size {
+  display:flex;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1.5s;
+ 
+}
+}
+@media screen and (min-width:750px){
+.product-card-container .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+}
+
+.product-card-container .card .contentBx .size h3, .container .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 250;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+@media screen and (min-width:750px){
+.product-card-container .card:hover .contentBx .size-buttons{
+  opacity: 1;
+  visibility: visible;
+}
+}
+@media screen and (max-width:750px){
+  .product-card-container .card .contentBx h3, .container .card .contentBx .color h3{
+    color: #fff;
+    font-weight: calc(250/2);
+    font-size: calc(12px/2);
+    text-transform: uppercase;
+    letter-spacing: calc(1px/2);
+    margin-right: calc(10px/2);
+  }
+
+  .product-card-container .card .contentBx .size-buttons{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.size {
+  padding: 5px;
+  flex-direction: horizontal;
+  width:100%;
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width: 750px){
+  .size{
+    display: none
+  }
+}
+.size-buttons{
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 12px;
+  display: inline-block;
+  overflow:hidden;
+  padding-top:2px;
+  color: #111;
+  background: #fff;
+  margin:2px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  border-color: #fff;
+  border-width: 0px;
+}
+
+@media screen and (max-width:750px){
+  .size-buttons{
+    width: calc(40px/2);
+    height: calc(25px/2);
+    text-align: center;
+    line-height: calc(26px/2);
+    font-size: calc(12px/2);
+    display: inline-block;
+    overflow:hidden;
+    padding-top:calc(2px/2);
+    color: #111;
+    background: #fff;
+    margin:calc(2px/2);
+    transition: 0.5s;
+    color: #111;
+    border-radius: calc(4px/2);
+    cursor: pointer;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    border-color: #fff;
+    border-width: 0px;
+  }
+ }
+.size-buttons:hover{
+ background:#778899;
+}
+.price-section{
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 750px){
+  .price-section{
+      font-size:10px;
+  }
+}
+.pre-discount-price{
+  color:"777";
+  text-decoration:line-through;
+  padding: 5px;
+}
+@media screen and (max-width:750px){
+  .pre-discount-price{
+    color:"777";
+    text-decoration:line-through;
+    padding:calc(5px/2);
+  } 
+}
+
+.discounted-price{
+  padding: 5px;
+}
+@media screen and (max-width:750px){
+  .discounted-price{
+    padding: calc(5px/2);
+  }
+}
+.product-vendor-title{
+  padding-top: 50px;
+  text-align: center;
+  z-index:2;
+}
+@media screen and (max-width:750px){
+  .product-vendor-title{
+    display: none;
+  }
+}
+.product-card-container .card .contentBx .size span:hover{
+  background: #778899;
+}
+
+
+.product-card-container .card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.product-card-container .card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.product-card-container .card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.product-card-container .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom:5px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.35s;
+  margin-top: 0;
+}
+
+.product-card-container .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.35s;
+  
+}
+@media screen and (max-width:750px){
+.product-card-container .card .contentBx a{
+  display: inline-block;
+  padding: calc(10px/2) calc(20px/2);
+  background: #fff;
+  border-radius: calc(4px/2);
+  margin-top: calc(10px/2);
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  margin-top: 0;
+}
+}
+</style>
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+{%- if card_product and card_product != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if card_product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == nil
+      assign ratio = 1
+    endif
+  -%}
+  {% comment %} <div class="card-wrapper underline-links-hover">
+    <div class="card
+      card--{{ settings.card_style }}
+      {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+<div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"> {% endcomment %}
+<div class="product-card-container">
+  <div class="card">
+    <div class = "product-vendor-title">{{card_product.vendor}}</div>
+    <a  href="{{ card_product.url }}">
+    <div class="imgBx" >
+      {{ card_product.featured_image | img_url: '600x600' | img_tag: product.featured_image.alt }}
+    </div>
+    </a>
+
+    <div class="contentBx">
+      {% comment %} <h2>{{card_product.vendor}}</h2> {% endcomment %}
+      <h2>{{card_product.title}}</h2>
+      {%if card_product.price == card_product.compare_at_price%}
+      <div>{{card_product.price | money}}</div>
+      {%else%}
+      <div class = "price-section">
+      <div class = "pre-discount-price">{{card_product.compare_at_price | money}}</div>
+      <div class = "discounted-price">{{card_product.price | money}}</div>
+      <div>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</div>
+      </div>
+      {%endif%}
+      <a class= "view-all-btn" href="{{ card_product.url }}">View Product</a>
+      <div class="size">
+        {%for size in card_product.variants%}
+          {% if size.available%}
+          <product-form class="product-form" data-cart-type="{{ settings.cart_type }}">
+            {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <input  type="hidden" name="id" value="{{ size.id }}" />
+              <input class= "size-buttons" type="submit" value="{{size.option1}}" />
+                        <div class="loading-overlay__spinner hidden">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                          </svg>
+                        </div>
+            {%- endform -%}
+          </product-form>
+          {%endif%}
+        {%endfor%}
+      </div>
+    </div>
+
+  </div>
+{% comment %} </div>
+
+    </div>
+  </div> {% endcomment %}
+{%- else -%}
+  <div class="card-wrapper underline-links-hover">
+    <div class="card
+      card--{{ settings.card_style }}
+      card--text
+      {% if extend_height %} card--extend-height{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
+      style="--ratio-percent: 100%;"
+    >
+      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: 100%;">
+        <div class="card__content">
+          <div class="card__information">
+            <h3 class="card__heading">
+              <a role="link" aria-disabled="true" class="full-unstyled-link">
+                {{ 'onboarding.product_title' | t }}
+              </a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" aria-disabled="true" class="full-unstyled-link">
+              {{ 'onboarding.product_title' | t }}
+            </a>
+          </h3>
+          <div class="card-information">
+            {%- if show_vendor -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+            {%- endif -%}
+            {% render 'price' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,449 @@
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+{%- if settings.cart_type == "drawer" -%}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+  {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
+
+<style>
+
+
+.nav_container{
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction:row;
+  padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  justify-content: center;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction:row;
+  background: #D9D9D9;
+  transition: 0.3s;
+  width: 100%;
+  margin:0px;
+  position: relative;
+}
+ @media screen and (min-width: 990px) {
+   .navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:row;
+    background: #D9D9D9;
+    transition: 0.3s;
+    width: 100%;
+    margin:0px;
+    position: relative;
+   }
+ }
+.navbar__link {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  justify-self:spread;
+}
+.navbar__link:hover .navbar__icon {
+  color: #e022bb;
+  transform: translateY(0) scale(0.9);
+}
+.navbar__link:hover .navbar__icon::before {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.navbar__link:hover .navbar__label {
+  transform: translateY(0);
+}
+.navbar__icon {
+  color: #333;
+  transform: translateY(15px);
+  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  position: relative;
+}
+.navbar__icon::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background: rgba(224, 34, 187, 0.15);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.navbar__label {
+  display: block;
+  margin-top: 10px;
+  font-family: "Roboto Mono", sans-serif;
+  color: #e022bb;
+  position: relative;
+  bottom: 0;
+  font-size: 0.9375rem;
+  transform: translateY(200%);
+  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  transition-delay: 0.2s;
+}
+.searchbar__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+}
+/* Search */
+
+.input-group.search-group {
+    height: 50px;
+    min-width: 50px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.input-group .form-control:hover, 
+.input-group .form-control:focus {
+    padding: 10px 20px;
+    width: 620%;
+    color: #000;
+    z-index: 10;
+    cursor: auto;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.input-group .form-control::-moz-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control:hover::-moz-placeholder,
+.input-group .form-control:focus::-moz-placeholder { 
+    color: #ddd;
+}
+.input-group .form-control:hover::-webkit-input-placeholder,
+.input-group .form-control:focus::-webkit-input-placeholder { 
+    color: #ddd;
+}
+
+.input-group .form-control:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-color: #e6e6e6;
+}
+
+.form-control.search-control {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  color: transparent;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  outline: 0 none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+
+  transition: width 0.25s;
+}
+  header-drawer {
+    justify-self: start;
+    padding:10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow: hidden;
+    position: relative;
+    align-self:center;
+  }
+
+
+.searchbar__icon {
+  justify: center;
+  align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+.searchbar__label {
+  display: block;
+  margin-top: 10px;
+  font-family: "Roboto Mono", sans-serif;
+  color: #e022bb;
+  position: relative;
+  bottom: 0;
+  font-size: 0.9375rem;
+  transform: translateY(200%);
+  transition: 0.3s cubic-bezier(0.09, 0.79, 0.57, 0.89);
+  transition-delay: 0.2s;
+}
+  @media screen and (min-width: 990px) {
+    header-drawer {
+      display: none;
+    }
+  }
+
+</style>
+    <nav data-breakpoint="tablet" class="navbar_container header-wrapper">
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="home"></span>
+      </span>
+      <span class="navbar__label">Home</span>
+    </a>
+
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="user"></span>
+      </span>
+      <span class="navbar__label">User</span>
+    </a>
+
+    <a href="#" class="navbar__link">
+      <span class="navbar__icon">
+        <span data-feather="shopping-cart"></span>
+      </span>
+      <span class="navbar__label">Cart</span>
+    </a>
+
+    <a href="#" class="searchbar__link">
+      <span class="searchbar__icon">
+        <form action="{{ routes.search_url }}">
+          <div class="input-group search-group">
+              <input type="text" 	name="q" value="{{ search.terms | escape }}" class="form-control search-control" placeholder="Enter your search term...">
+          </div>
+        </form>
+      <span>
+    </a>
+  </nav>
+
+<script>
+  feather.replace()
+</script>
+
+{% javascript %}
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.header = document.getElementById('shopify-section-header');
+      this.headerBounds = {};
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+      this.predictiveSearch = this.querySelector('predictive-search');
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+
+      this.createObserver();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
+    createObserver() {
+      let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (this.preventHide) return;
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.closeMenuDisclosure();
+      this.closeSearchModal();
+    }
+
+    reveal() {
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+    closeMenuDisclosure() {
+      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+      this.disclosures.forEach(disclosure => disclosure.close());
+    }
+
+    closeSearchModal() {
+      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+      this.searchModal.close(false);
+    }
+  }
+
+  customElements.define('sticky-header', StickyHeader);
+{% endjavascript %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.header.settings.margin_bottom.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 20
+    }
+  ]
+}
+{%endschema%}

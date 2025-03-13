@@ -1,0 +1,268 @@
+{% style %}
+    .menu-panel-container{
+        width:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        z-index: 1;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    @media screen and (max-width: 990px) {
+        .menu-panel-container{
+        display: none;
+        }
+    }
+    .menu-panel{
+        height: auto;
+        display: grid;
+        grid-auto-flow:column;
+        gap:7rem;
+        justify-content:center;
+        align-items: center;
+        z-index: 1;
+        width:97%;
+        border-color: rgb(190, 190, 190);
+        border-radius:  8px;
+        border-style: solid;
+        border-width: 1px;
+        padding:10px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .top-level-link-container a{
+        color: #545454;
+        font-size:1.2vw;
+        position: relative;
+        text-decoration: none;
+    }
+    .top-level-link-container a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .top-level-link-container a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .mega-menu-container{
+        display:none;
+        grid-area:auto;
+        justify-content:center;
+        width:97vw;
+        min-height:500px;
+        height:auto;
+        background-color:#fff;
+        position:absolute;
+        left:1.5%;
+        padding-top:45px;
+        padding-left: 4.5vw;
+        border-color: rgb(190, 190, 190);
+        border-radius: 0px  0px 8px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-top:#fff;
+        font-size: 1.5rem;
+        padding-bottom:45px;
+    }
+    .mega-menu-container a{
+        color: #545454;
+        text-decoration: none;
+    }
+    .dropdown-container:hover .mega-menu-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content:center;
+        animation: clippath 0.2s ease-in-out;
+    }
+
+    .mega-menu-container-designers{
+        display:none;
+        width:97vw;
+        min-height:500px;
+        height:auto;
+        background-color:#fff;
+        position:absolute;
+        left:1.5%;
+        padding-top:45px;
+        padding-left: 4.5vw;
+        border-color: rgb(190, 190, 190);
+        border-radius: 0px  0px 8px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-top:#fff;
+        font-size: 1.5rem;
+        padding-bottom:45px;
+    }
+
+    .dropdown-container:hover .mega-menu-container-designers{
+        display: block;
+        column-width: 250px;
+        gap: 1rem;
+        justify-content:center;
+        animation: clippath 0.2s ease-in-out;
+    }
+
+    
+    .child-link-with-child-container{
+        display:flex;
+        flex-direction:column;
+        align-items: start;
+    }
+    .child-link-with-child-container a{
+        color: #545454;
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .child-link-with-child-container a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .child-link-with-child-container a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .child-link-without-child{
+        padding: 1rem;
+        justify-self:start;
+    }
+    
+    .child-link-without-child a{
+        color: #545454;
+        font-size:1vw;
+        position: relative;
+        text-decoration: none;
+    }
+    .child-link-without-child a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #545454;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .child-link-without-child a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .grandchild-link {
+        font-size: 1vw;
+        padding: 0.5rem 0 0.5rem;
+        color: rgb(190, 190, 190);
+        font-weight: normal !important;
+    }
+    .child-link-with-child{
+        font-size:1.2vw
+    }
+    @keyframes clippath {
+    0%{
+         clip-path: inset(0% 0% 100% 0%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+    75% {
+        clip-path: inset(0% 0% 15% 0%);
+    }
+    50% {
+        clip-path: inset( 0% 0% 30% 0%);
+    }
+    25% {
+        clip-path: inset(0% 0% 65% 0%);
+    }
+}
+{% endstyle %}
+
+<div class="menu-panel-container">
+    <div class= "menu-panel">
+        {% for link in section.settings.menu.links %}
+            {% assign parent-title = link.title %}
+            {% if link.title=="HOME"%}
+                {% continue %}
+            {% endif %}
+        <div class="dropdown-container">
+            <div class="top-level-link-container">
+                <a class= "top-level-link" href="{{ link.url }}">{{ parent-title }}</a>
+            </div>
+            {% if link.links.size > 0 and link.title != "DESIGNERS"%}
+                <div class="mega-menu-container">
+                    {% for child_link in link.links %}
+                        {% assign child-title = child_link.title | downcase %}
+                        {% if child_link.links.size > 0 %}
+                            <div class="child-link-with-child-container">
+                                <a class= "child-link-with-child" href="{{ child_link.url }}">{{ child-title }}</a>
+                                {% for grandchild_link in child_link.links %}
+                                    {% assign grandchild-title = grandchild_link.title | downcase %}
+                                        <a class= "grandchild-link" href="{{ grandchild_link.url }}">{{ grandchild-title}}</a>
+                                {% endfor %}
+                            </div>
+                        {% else %}                         
+                            <div class= "child-link-without-child">
+                                <a  href="{{ child_link.url }}">{{ child-title }}</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% elsif link.title == "DESIGNERS"%}
+                <div class="mega-menu-container-designers">
+                    {% for child_link in link.links %}      
+                    {% assign child-title = child_link.title | downcase %}                        
+                        <div class= "child-link-without-child">
+                            <a  href="{{ child_link.url }}">{{ child-title }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Menu Panel",
+    "tag": "section",
+    "class": "section-menu-panel",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "t:sections.header.settings.menu.label"
+        }
+    ],
+    "presets": [
+      {
+        "name": "menu-panel-1",
+        "category": "Custom"
+      }
+    ]
+}
+
+{%endschema%}

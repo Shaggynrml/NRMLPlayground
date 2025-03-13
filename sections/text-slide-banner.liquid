@@ -1,0 +1,186 @@
+<style>
+.text-slide-banner-container{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    text-align: center;
+    width:100%;
+}
+.text-slide-content{
+    position:absolute;
+    z-index: 2;
+    text-align:left;
+}
+
+@media only screen and (max-width: 900px){
+    .text-slide-content{
+        display: none;
+    }
+}
+.text-slide-content a{
+    text-decoration:none !important;
+}
+.bg-image{
+    position:relative;
+    height:100%;
+    min-width:100%;
+}
+.text{
+    animation: slidein 3s forwards;
+    font-weight:300;
+    font-size:calc(16px + 0.390625vw);
+}
+.subtext{
+    animation: showup 2s forwards;
+    font-weight:300;
+    font-size:calc(12px + 0.390625vw);
+}
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    45% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    40% {opacity:0;}
+    80% {opacity:1;}
+    100% {opacity:1;}
+}
+</style>
+
+{%- style -%}
+    .text{
+        color: {{section.settings.text-colour}};
+    }
+    .subtext{
+        color:{{section.settings.subtext-colour}};
+    }
+{%- endstyle -%}
+
+<div class= "text-slide-banner-container">
+        <a href="{{section.settings.link}}">
+        {{ section.settings.image | image_url: width: 2500 | image_tag:
+            width: "100%",
+            height: "auto",
+            class: image_class,
+            sizes: sizes,
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+            alt: section.settings.image.alt | escape
+        }}
+        </a>
+        <div class="text-slide-content {{section.settings.text-alignment}}">
+            <a href="{{section.settings.link}}">
+            <div class= "text">
+                <p> {{section.settings.title}}</p>
+            </div>
+            </a>
+            <div class = "subtext">
+                <p>{{section.settings.subheading}}</p>
+            </div>
+        </div>
+
+</div>
+
+
+{% schema %}
+    {
+        "name": "Text Slide Banner",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+            "type": "text",
+            "id": "title",
+            "default": "Featured collection",
+            "label": "Title"
+            },
+            {
+            "type": "text",
+            "id": "subheading",
+            "default": "subheading",
+            "label": "subheading"
+            },            {
+            "type": "text",
+            "id": "text-colour",
+            "default": "#252525",
+            "label": "Text Color"
+            },
+            {
+            "type": "text",
+            "id": "subtext-colour",
+            "default": "#252525",
+            "label": "Subtext Color"
+            },
+            {
+            "type": "select",
+            "id": "text-alignment",
+            "options": [
+                {
+                "value": "top-left",
+                "label": "top left"
+                },
+                {
+                "value": "bottom-left",
+                "label": "bottom left"
+                }
+            ],
+            "default": "top-left",
+            "label": "Text alignment"
+            },
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+            },
+            {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+            }
+        ],
+        "presets": [
+            {
+            "name": "Text Slide Banner"
+            }
+        ]
+    }
+{% endschema %}

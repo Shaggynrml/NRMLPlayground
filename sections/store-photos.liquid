@@ -1,0 +1,52 @@
+<style>
+.image{
+    margin: 10px 
+}
+.image img{
+    width: 80%;
+}
+</style>
+<div>
+{% for block in section.blocks%}
+    <div class="image">
+        <img src="{{block.settings.image | image_url: width: 1500}}">
+    </div>
+{%- endfor -%}
+</div>
+{% schema %}
+{
+  "name": "Store Photos",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_image",
+      "name": "Featured Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+        "name": "Featured Image",
+        "blocks": [
+        {  
+          "type": "featured_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
