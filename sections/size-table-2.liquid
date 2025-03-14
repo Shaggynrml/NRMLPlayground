@@ -1,11 +1,11 @@
 {%- style -%}
 .grid-wrap{
-    padding: 5px 10px 5px 8rem;
+    padding: 5px 10px 5px 12rem;
 }
 .prime-grid{
   display: grid;
   position: relative;
-  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
 }
 
 .prime-grid> div {
@@ -26,11 +26,66 @@
     height:100%;
 }
 .sizedButtons{
+    width: 21rem;
+    height: 23rem;
+    font-size: 8rem;
+    background-color: black;
+    border-color:white;
+    border-style: solid;
+    border-width:3px;
+    color: white;
+    font-style:monospace;
+}
+@media (max-width: 1500px) {
+    .grid-wrap{
+    padding: 0px 10px 5px 8rem;
+    }
+    .sizedButtons {
     width: 17rem;
     height: 21rem;
-    font-size: 8rem
+    font-size: 6rem;
+    }
 }
-{%- endstyle-%}    
+@media (max-width: 1200px) {
+    .grid-wrap{
+    padding: 0px 10px 5px 4rem;
+}
+.sizedButtons{
+    width: 13rem;
+    height: 17rem;
+    font-size: 5rem
+}
+}
+@media (max-width: 850px) {
+    .grid-wrap{
+    padding: 0px 5px 5px 0px
+}
+.sizedButtons{
+    width: 11rem;
+    height: 15rem;
+    font-size: 2rem;
+
+
+}
+}
+@media (max-width: 650px) {
+    .grid-wrap{
+    padding: 8% 5px 5px 4%
+}
+.sizedButtons{
+    width: 14rem;
+    height: 18rem;
+    font-size: 350%
+}
+.prime-grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 15rem 15rem auto;
+}
+}
+{%- endstyle-%}   
+<h1 style="text-align: center; padding=2rem;">{{section.settings.titleText}}</h1>
 <div class= "grid-wrap">
     <div class="prime-grid">
         <a href="{{ section.settings.buttonURL1 }}">
@@ -55,7 +110,7 @@
         </a>
         <a href="{{ section.settings.buttonURL5 }}">
         <div class="primeDiv">
-            <button class="sizedButtons"> XXL {{section.settings.buttonName5}}</button>
+            <button class="sizedButtons">XXL {{section.settings.buttonName5}}</button>
         </div>
     </a>
     <a href="{{ section.settings.buttonURL5 }}">
