@@ -18,7 +18,7 @@
 }
 .countdown-digits{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
 }
 .countdown-digits > div {
   background-color: black;
@@ -39,7 +39,6 @@ grid-template-columns: 100%;
   text-align: center;
   font-size:2rem;
   color: #545454;
-
 }
 .sep{
   text-align: center;
@@ -47,32 +46,46 @@ grid-template-columns: 100%;
   font-style: monospace;
 
 }
-.demo{
-    text-align: center;
+.ArtB-grid{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start:2;
+  grid-row-end:3;
+}
+@media (max-width: 980px) {
+    .countdown-grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: 100%;
+}
+.countdown-labels{
+  font-size:1.5rem;
+}
 }
 {%- endstyle-%} 
+<div class = "release-blog-list-title">{{section.settings.blog-title}}</div>
 <div class= "countdown-grid"> 
-    <div class="demo">Image Here</div>
+    <div class= "featured-release-container">
+        <div class="featured-release-image-container">
+            <img src="{{ section.settings.article.image.src | image_url: width: 833 }}">
+        </div>
+    </div>
 <div class="countdown-block">
     <div class= "countdown-groups">
         <div class= "countdown-digits">
-            <div>1</div>
-            <div>2</div>
+            <div id=DLabel></div>
         </div>
         <p class= "sep">:</p>
         <div class= "countdown-digits">
-            <div>3</div>
-            <div>4</div>
+            <div id=HLabel></div>
         </div>
         <p class= "sep">:</p>
         <div class= "countdown-digits">
-            <div>5</div>
-            <div>6</div>
+            <div id=MLabel></div>
         </div>
         <p class= "sep">:</p>
         <div class= "countdown-digits">
-            <div>7</div>
-            <div>8</div>
+            <div id=SLabel></div>
         </div>
     </div>
     <div class="countdown-groups">
@@ -93,6 +106,12 @@ grid-template-columns: 100%;
         </div>
 </div>
 </div>
+<div clas="ArtB-grid">
+<div class ="featured-release-content"> 
+        <div class="featured-release-title">{{section.settings.article.title}}</div>
+        <div class="featured-release-body">{{section.settings.article.content}} </div>
+</div>
+</div>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("{{section.settings.date_picker}}").getTime();
@@ -111,16 +130,26 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Adding second integer if time is lss than 10
+    if(days < 10){days = "0" + days;}
+    if(hours < 10){hours = "0" + hours;}
+    if(minutes < 10){minutes = "0" + minutes;}
+    if(seconds < 10){seconds = "0" + seconds;}
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = "0"+days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("DLabel").innerHTML = days;
+  document.getElementById("HLabel").innerHTML = hours;
+  document.getElementById("MLabel").innerHTML = minutes;
+  document.getElementById("SLabel").innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "00" + "d " + "00" + "h "
-    + "00" + "m " + "00" + "s ";
+    document.getElementById("DLabel").innerHTML = "00";
+    document.getElementById("HLabel").innerHTML = "00";
+    document.getElementById("MLabel").innerHTML = "00";
+    document.getElementById("SLabel").innerHTML = "00";
     document.getElementById("demo2").innerHTML = "OUT NOW";
   }
 }, 1000);
@@ -145,12 +174,17 @@ var x = setInterval(function() {
             "default": "03/29/2025 15:37:25",
             "info": "e.g. mm/dd/yyyy hh:mm:ss"
           },
-        {
-            "type":"url",
-            "id":"bottomButtonURL",
-            "label":"Bottom Button URL",
-        },
- 
+          {
+            "type": "article",
+            "id": "article",
+            "label": "article"
+          },
+          {
+            "type": "url",
+            "id": "product_link",
+            "label": "Button link"
+          },
+
     ],
     "presets": [
         {
