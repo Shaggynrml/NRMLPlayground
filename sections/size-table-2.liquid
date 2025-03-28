@@ -7,6 +7,7 @@
   position: relative;
   grid-template-columns: 15% 15% 15% 15% 15% 15%;
   grid-template-rows:80% 20%;
+  row-gap:2rem;
 }
 
 .prime-grid> div {
@@ -58,6 +59,7 @@
     display: inline-block;
     position: relative;
     transition: 0.3s;
+    font-size:2rem;
 }
 .shopAllButton1:after {
     content: '»';
@@ -106,9 +108,7 @@
 .sizedButtons{
     width: 11rem;
     height: 15rem;
-    font-size: 2rem;
-
-
+    font-size: 4rem;
 }
 }
 @media (max-width: 650px) {
@@ -122,14 +122,18 @@
 }
 .prime-grid{
   display: grid;
-  position: relative;
   grid-template-columns: 48% 48%;
-  grid-template-rows: 15rem 15rem auto;
+  grid-template-rows: 15rem 15rem 15rem 5rem;
+  row-gap:3.75rem;
+}
+.shopAllGrid1{
+    grid-column-start:1;
+    grid-column-end:3;   
 }
 }
 {%- endstyle-%}   
 {%- if section.settings.titleText != blank -%}
-<h1 style="text-align: center; padding=2rem;">{{section.settings.titleText}}</h1>
+<h1 style="text-align: center; padding=2rem; color:#545454;">{{section.settings.titleText}}</h1>
 <hr style="border-top: 4px solid black;">
 {%- endif -%}
 <div class= "grid-wrap">
