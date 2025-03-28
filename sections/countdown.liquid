@@ -1,161 +1,98 @@
 {%- style -%}
-$greyBlue: hsl(237, 18%, 59%);
-$red: hsl(345, 95%, 68%);
-$topRed: hsl(345, 62%, 57%);
-$white: hsl(0, 0%, 100%);
-
-$desatBlue: hsl(236, 21%, 26%);
-$vDarkBlue: rgb(30, 31, 41);
-$vvDarkBlue: rgb(25, 26, 36);
-
-$top-card: rgb(44, 44, 68);
-$lightBG: rgba(37, 29, 44, 1);
-$darkBG: rgba(30, 30, 40, 1);
-
-$box-shadow: 0 7px 3px 0 rgb(21, 21, 21);
-$half-shadow: 0 3px rgba(71, 83, 115, 0.2) inset;
 .countdown-grid{
   display: grid;
   position: relative;
   grid-template-columns: 50% 50%;
 }
-.demo{
-     
+.countdown-block{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%
 }
+.countdown-groups{
+    display: grid;
+    grid-template-columns: 23% 2% 23% 2% 23% 2% 23%;
+    gap:0.5%;
+    background-color:white;
+}
+.countdown-digits{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.countdown-digits > div {
+  background-color: black;
+  border: 1px ridge #545454;
+  border-radius:3px;
+  padding: 0.1rem;
+  text-align: center;
+  font-size:4rem;
+  color: white;
 
-	.cards {
-		display: flex;
-		gap: 15px;
-		.card {
-			text-align: center;
-			font-size: 25px;
-			p {
-				color: $greyBlue;
-				font-size: 11px;
-				letter-spacing: 3px;
-				text-transform: uppercase;
-			}
-			// ** wraps halves
-			.flip-card {
-				display: flex;
-				flex-direction: column;
-				box-shadow: $box-shadow;
-				position: relative;
-				margin: 15px auto;
-			}
-			// ** all card halves
-			.top-half,
-			.bottom-half,
-			.top-flip,
-			.bottom-flip {
-				color: $red;
-				font-size: 35px;
-				height: 43px;
-				width: 77px;
-				padding: 23px 7px;
-				overflow: hidden;
-				text-align: center;
-				will-change: transform !important;
-				box-shadow: $half-shadow;
-			}
-			.top-half,
-			.top-flip {
-				color: $topRed;
-				border-radius: 5px 5px 0 0;
-				background-color: $top-card;
-				&::before {
-					@include notches();
-					bottom: -5px;
-					left: -5px;
-				}
-				&::after {
-					@include notches();
-					bottom: -5px;
-					right: -5px;
-				}
-			}
-			.bottom-half,
-			.bottom-flip {
-				display: flex;
-				justify-content: center;
-				align-items: flex-end; // ** need an flex-end alignment due to the flipping
-				border-radius: 0 0 5px 5px;
-				background-color: $desatBlue;
-				box-shadow: 0 -2px 5px 0 rgba(71, 83, 115, 0.7) inset;
-				&::before {
-					@include notches();
-					top: -5px;
-					left: -5px;
-				}
-				&::after {
-					@include notches();
-					top: -5px;
-					right: -5px;
-				}
-			}
-			// ************* flipping animations
-			// ** top and bottom flips take half a second, they each do one half of the animation
-			// ** top card flips up to center and where the bottom card is waiting to take over and lay down
-			.top-flip {
-				position: absolute;
-				transform-origin: bottom; // ** bottom pivot
-				transform: rotateX(0deg);
-				animation: flip-top 0.5s ease-in forwards;
-			}
-			.bottom-flip {
-				position: absolute;
-				bottom: 0;
-				transform-origin: top; // ** top pivot
-				transform: rotateX(
-					90deg
-				); // ** starts the div 'standing up', animation lays it 'flat'
-				animation: flip-bottom 0.5s ease-out 0.5s;
-			}
-		}
+}
+.countdown-labels{
+display: grid;
+grid-template-columns: 100%;
+  border: 1px ridge #545454;
+  border-radius:3px;
+  padding: 0.1rem;
+  text-align: center;
+  font-size:2rem;
+  color: #545454;
+
+}
+.sep{
+  text-align: center;
+  font-size:4rem;
+  font-style: monospace;
+
+}
+.demo{
+    text-align: center;
 }
 {%- endstyle-%} 
 <div class= "countdown-grid"> 
-    <div>Image Here</div>
-<div>
-
+    <div class="demo">Image Here</div>
+<div class="countdown-block">
+    <div class= "countdown-groups">
+        <div class= "countdown-digits">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <p class= "sep">:</p>
+        <div class= "countdown-digits">
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <p class= "sep">:</p>
+        <div class= "countdown-digits">
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <p class= "sep">:</p>
+        <div class= "countdown-digits">
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+    <div class="countdown-groups">
+        <div class= "countdown-labels">
+            <div>DAYS</div>
+        </div>
+        <div></div>
+        <div class= "countdown-labels">
+            <div>HOURS</div>
+        </div>
+        <div></div>
+        <div class= "countdown-labels">
+            <div>MINS</div>
+        </div>
+        <div></div>
+        <div class= "countdown-labels">
+            <div>SECS</div>
+        </div>
 </div>
-<div class='cards'>
-
-    <div class='card days'>
-        <div class='flip-card'>
-            <div class='top-half'>00</div>
-            <div class='bottom-half'>00</div>
-        </div>
-        <p>Days</p>
-    </div>
-
-    <div class='card hours'>
-        <div class='flip-card'>
-            <div class='top-half'>00</div>
-            <div class='bottom-half'>00</div>
-        </div>
-        <p>Hours</p>
-    </div>
-
-    <div class='card minutes'>
-        <div class='flip-card'>
-            <div class='top-half'>00</div>
-            <div class='bottom-half'>00</div>
-        </div>
-        <p>Minutes</p>
-    </div>
-
-    <div class='card seconds'>
-        <div class='flip-card'>
-            <div class='top-half'>00</div>
-            <div class='bottom-half'>00</div>
-        </div>
-        <p>Seconds</p>
-    </div>
-
 </div>
-</div>
-
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("{{section.settings.date_picker}}").getTime();
@@ -182,51 +119,11 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "0" + "d " + "0" + "h "
-    + "0" + "m " + "0" + "s ";
+    document.getElementById("demo").innerHTML = "00" + "d " + "00" + "h "
+    + "00" + "m " + "00" + "s ";
     document.getElementById("demo2").innerHTML = "OUT NOW";
   }
 }, 1000);
-const addFlip = (card, time) => {
-	// ** confirm time has changed
-	const currTime = card.querySelector(".top-half").innerText;
-	if (time == currTime) return;
-
-	let t = time <= 9 ? `0${time}` : time;
-	const topHalf = card.querySelector(".top-half");
-	const bottomHalf = card.querySelector(".bottom-half");
-	const topFlip = document.createElement("div");
-	const bottomFlip = document.createElement("div");
-
-	// ** add animation, populate with current time
-	topFlip.classList.add("top-flip");
-	topFlip.innerText = currTime;
-
-	bottomFlip.classList.add("bottom-flip");
-
-	// ** animation begins, update top-half to new time
-	topFlip.addEventListener("animationstart", () => {
-		topHalf.innerText = t;
-	});
-
-	// ** animation ends, remove animated div, update bottom animation to new time
-	topFlip.addEventListener("animationend", () => {
-		topFlip.remove();
-		bottomFlip.innerText = t;
-	});
-
-	// ** animation ends, update bottom-half to new time, remove animated div
-	bottomFlip.addEventListener("animationend", () => {
-		bottomHalf.innerText = t;
-		bottomFlip.remove();
-	});
-
-	card.appendChild(topFlip);
-	card.appendChild(bottomFlip);
-};
-
-initializeClock(countDownDate);
-
 </script>
 
 {% schema %}

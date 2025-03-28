@@ -46,7 +46,7 @@
      }
 
 </style>
-<div class = "release-blog-list-title">JUST RELEASED</div>
+<div class = "release-blog-list-title">{{section.settings.blog-title}}</div>
 <div class= "featured-release-container">
     <div class="featured-release-image-container">
         <img src="{{ section.settings.article.image.src | image_url: width: 833 }}">
@@ -74,6 +74,12 @@
       "default": "heading",
       "label": "heading"
     },
+    {
+        "type": "text",
+        "id": "blog-title",
+        "default": "JUST RELEASED",
+        "label": "heading"
+      },
     {
       "type": "article",
       "id": "article",
