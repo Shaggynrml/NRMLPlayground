@@ -1,0 +1,184 @@
+{%- style -%}
+.parent-grwrap{
+    display:grid;
+    position: relative;
+    grid-template-columns: 5% 95%;
+}
+.gr-block{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%;
+}
+.sizeFeature-2grid{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 1%;
+}
+.sizeFeature-3grid{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 1%;
+}
+.sizeFeature-4grid{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 1%;
+}
+.sizeFeature-5grid{
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19% 19%;
+    gap: 1%;
+}
+.sizeFeature-6grid{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    gap: 1%;
+}
+.button-blockWrap{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width:80%;
+ height:12rem;
+ font-size:4rem;
+ background: teal;
+}
+.button-Container{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: black;
+}
+.button-Container img{
+  width: 100%;
+  height: auto;
+}
+.button-Container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: {{section.settings.textColor}};
+  background-color:none;
+  font-size: 4rem;
+  padding: 3rem 3.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+{%- endstyle-%}
+<div class="parent-grwrap">
+    <div></div>
+<div class="gr-wrap">
+    <div class="sizeFeature-{{section.settings.colNumber}}grid">
+        <a href="{{ section.settings.buttonURL1 }}">
+            <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn"> S {{section.settings.buttonName1}}</button> 
+            </div>
+            </a>
+            <a href="{{ section.settings.buttonURL2 }}">
+                <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn"> M {{section.settings.buttonName2}}</button>
+            </div>
+            </a>
+    {%- if section.settings.colNumber> 2 -%}
+            <a href="{{ section.settings.buttonURL3 }}">
+                <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn"> L {{section.settings.buttonName3}}</button>
+            </div>
+            </a>
+    {%- endif -%}
+    {%- if section.settings.colNumber> 3 -%}
+            <a href="{{ section.settings.buttonURL4 }}">
+                <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn"> XL {{section.settings.buttonName4}}</button>
+            </div>
+            </a>
+    {%- endif%}
+    {%- if section.settings.colNumber> 4 -%}
+            <a href="{{ section.settings.buttonURL5 }}">
+                <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn">XXL {{section.settings.buttonName5}}</button>
+            </div>
+        </a>
+    {% endif %}
+        {%- if section.settings.colNumber> 5 -%}
+        <a href="{{ section.settings.buttonURL5 }}">
+            <div class="button-Container">
+                <img src="{{ section.settings.image| image_url: width: 833 }}">
+                <button class="btn">SIZE {{section.settings.buttonName5}}</button>
+            </div>
+        </a>
+    {% endif %}
+{%- if section.settings.colNumber> 5 -%}
+<a href="{{ section.settings.buttonURL5 }}">
+    <div class="button-Container">
+        <img src="{{ section.settings.image| image_url: width: 833 }}">
+        <button class="btn">SIZE {{section.settings.buttonName5}}</button>
+    </div>
+</a>
+{% endif %}
+</div>
+    </div>  
+</div>
+</div>
+
+{% schema %}
+{
+    "name": "Featured Sizes",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
+        },
+        {
+            "type": "text",
+            "id": "bottomButtonText",
+            "label": "Bottom Button Text",
+          },
+        {
+            "type":"url",
+            "id":"bottomButtonURL",
+            "label":"Bottom Button URL",
+        },
+        {
+            "type":"image_picker",
+            "id":"image",
+            "label": "Insert Image",
+        },
+        {
+        "type":"text",
+        "id":"textColor",
+        "label": "Button Text Color",
+        "default": "black",
+        "info": "Color Name or Color Hex Value (e.g. #000000)"
+        },
+        {
+        "type":"range",
+        "id":"colNumber",
+        "min":2,
+        "max":7,
+        "step":1,
+        "label":"Number of Columns",
+        "default":6,
+    },
+    ],
+    "presets": [
+        {
+        "name": "Featured Sizes" 
+        }
+    ]
+}
+{%- endschema -%}
