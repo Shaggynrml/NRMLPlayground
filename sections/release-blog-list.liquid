@@ -96,7 +96,7 @@
     var articles = []
     const currentDateList = new Date();
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 10; i++) {
         if (unformattedArticles[i].tags.includes("%")){
             var releaseDateTagList = unformattedArticles[i].tags.split("%")[1]
             var releaseDateList = new Date(releaseDateTagList)
