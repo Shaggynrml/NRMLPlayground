@@ -9,34 +9,15 @@
  */
 {
   "sections": {
-    "featured_release_yU33hr": {
-      "type": "featured-release",
-      "settings": {
-        "heading": "heading",
-        "blog-title": "JUST RELEASED",
-        "article": "release-calendar/air-force-1-low-year-of-the-dragon",
-        "product_link": "",
-        "is_released": false
-      }
-    },
     "release_blog_list_HjrXyJ": {
       "type": "release-blog-list",
       "settings": {
         "heading": "Blog posts",
         "blog": "release-calendar"
       }
-    },
-    "5a095dfc-7973-4f93-a30a-3c673a9f91f5": {
-      "type": "calendar",
-      "disabled": true,
-      "settings": {
-        "blog": "test-blog"
-      }
     }
   },
   "order": [
-    "featured_release_yU33hr",
-    "release_blog_list_HjrXyJ",
-    "5a095dfc-7973-4f93-a30a-3c673a9f91f5"
+    "release_blog_list_HjrXyJ"
   ]
 }
