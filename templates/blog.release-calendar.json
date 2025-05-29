@@ -37,6 +37,7 @@
     },
     "5a095dfc-7973-4f93-a30a-3c673a9f91f5": {
       "type": "calendar",
+      "disabled": true,
       "settings": {
         "blog": "test-blog"
       }
