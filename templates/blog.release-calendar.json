@@ -1,10 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "featured_release_yU33hr": {
       "type": "featured-release",
       "settings": {
         "heading": "heading",
-        "article": "release-calendar\/air-force-1-low-year-of-the-dragon",
+        "blog-title": "JUST RELEASED",
+        "article": "release-calendar/air-force-1-low-year-of-the-dragon",
         "product_link": "",
         "is_released": false
       }
@@ -22,7 +32,7 @@
       "type": "release-blog-list",
       "settings": {
         "heading": "Blog posts",
-        "blog": "release-calendar"
+        "blog": "test-blog"
       }
     },
     "5a095dfc-7973-4f93-a30a-3c673a9f91f5": {
