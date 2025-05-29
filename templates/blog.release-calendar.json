@@ -32,7 +32,7 @@
       "type": "release-blog-list",
       "settings": {
         "heading": "Blog posts",
-        "blog": "release-calendar"
+        "blog": "test-blog"
       }
     },
     "5a095dfc-7973-4f93-a30a-3c673a9f91f5": {
