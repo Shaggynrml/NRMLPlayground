@@ -9,14 +9,33 @@
  */
 {
   "sections": {
+    "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
+      "type": "menu-panel",
+      "settings": {
+        "menu": "menu-panel-0"
+      }
+    },
     "featured_sizes_b8RJFq": {
       "type": "featured-sizes",
       "blocks": {
         "text_anHxUj": {
           "type": "text",
           "settings": {
+            "bgColor": "#545454",
             "textColor": "black",
-            "colNumber": 6
+            "colNumber": 6,
+            "buttonName1": "",
+            "buttonURL1": "",
+            "buttonName2": "",
+            "buttonURL2": "",
+            "buttonName3": "",
+            "buttonURL3": "",
+            "buttonName4": "",
+            "buttonURL4": "",
+            "buttonName5": "",
+            "buttonURL5": "",
+            "buttonName6": "",
+            "buttonURL6": ""
           }
         }
       },
@@ -25,8 +44,9 @@
       ],
       "settings": {
         "titleText": "",
-        "bottomButtonText": "",
-        "bottomButtonURL": "",
+        "extNavLabel": "",
+        "extNavURL": "",
+        "bottomButtonWidth": 40,
         "desktopFontSize": 4,
         "mobileFontSize": 3
       }
@@ -151,12 +171,6 @@
         "show_text_below": false
       }
     },
-    "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
-      "type": "menu-panel",
-      "settings": {
-        "menu": "menu-panel-0"
-      }
-    },
     "product_carousel_K4CAeh": {
       "type": "product-carousel",
       "settings": {
@@ -268,6 +282,7 @@
     }
   },
   "order": [
+    "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "featured_sizes_b8RJFq",
     "button_grid_jb6ETw",
     "size_table_hJhtMA",
@@ -275,7 +290,6 @@
     "image_carousel_BmBzLT",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
     "video_banner_NxyrQD",
-    "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "product_carousel_K4CAeh",
     "parolax_banner_EwxDpL",
     "185b0658-ee1c-4cde-9fac-af4af026305f",
