@@ -15,84 +15,132 @@
         "featured_designer_KMPNJn": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/NikeDesignerLogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/NikeDesignerLogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_kXm8yY": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/JordanLogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/JordanLogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_HyADpa": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/HTGDesLogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/HTGDesLogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_YmEUxH": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/godspeedDeslogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/godspeedDeslogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_cmk7gE": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/ReigningChampDeslogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/ReigningChampDeslogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_Bx4Vdy": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DIMEDesignerLogo.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DIMEDesignerLogo.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_mnRLPQ": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_PURPLEB.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_PURPLEB.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_4UWxpU": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_POLO.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_POLO.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_eFagVp": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_NEWERA.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_NEWERA.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_UUeegT": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_NEWBALANCE.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_NEWBALANCE.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_gLbmBN": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_KSUBI.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_KSUBI.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         },
         "featured_designer_iQCjrV": {
           "type": "featured_designer",
           "settings": {
+<<<<<<< Updated upstream
             "designer_img": "shopify://shop_images/DesignerLogo_BBC.png",
+=======
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_BBC.png",
+>>>>>>> Stashed changes
             "brand_link": ""
           }
         }

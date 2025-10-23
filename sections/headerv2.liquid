@@ -643,8 +643,9 @@
 
 {% schema %}
 {
-  "name": "t:sections.header.name",
-  "class": "section-header",
+  "name": "header V2",
+  "tag":"section",
+  "class": "section",
   "settings": [
     {
       "type": "select",
@@ -799,6 +800,11 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
     }
-  ]
+  ],
+      "presets": [
+        {
+        "name": "Header V2" 
+        }
+    ]
 }
 {% endschema %}
