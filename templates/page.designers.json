@@ -1,77 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "designer_featured_A6FhfM": {
       "type": "designer-featured",
       "blocks": {
-        "featured_designer_mGFMnp": {
+        "featured_designer_KMPNJn": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/nike-logo_844043b8-c85c-447a-a267-324d11cb4e51.webp",
-            "brand_link": "shopify:\/\/collections\/nike"
+            "designer_img": "shopify://shop_images/NikeDesignerLogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_jid37n": {
+        "featured_designer_kXm8yY": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-jordan_4c45e903-6ab7-4fa1-8ad6-57d41511c764.png",
-            "brand_link": "shopify:\/\/collections\/jordan"
+            "designer_img": "shopify://shop_images/JordanLogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_zTLzbD": {
+        "featured_designer_HyADpa": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-stussy_c0ad702d-1585-406a-b725-3f7bcf7214f8.webp",
-            "brand_link": "shopify:\/\/collections\/stussy"
+            "designer_img": "shopify://shop_images/HTGDesLogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_NB3QK9": {
+        "featured_designer_YmEUxH": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-NB_2b7b55c8-6fd2-4f0a-bd85-caa84ba0aa9b.webp",
-            "brand_link": "shopify:\/\/collections\/new-balance"
+            "designer_img": "shopify://shop_images/godspeedDeslogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_tA4E8k": {
+        "featured_designer_cmk7gE": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-adidas_8b10fddf-1d4c-478a-83fd-b040216044e7.png",
-            "brand_link": "shopify:\/\/collections\/adidas"
+            "designer_img": "shopify://shop_images/ReigningChampDeslogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_eL93x6": {
+        "featured_designer_Bx4Vdy": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/asics_logo_black.png",
-            "brand_link": "shopify:\/\/collections\/asics"
+            "designer_img": "shopify://shop_images/DIMEDesignerLogo.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_PkUg7y": {
+        "featured_designer_mnRLPQ": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/HONOR_THE_GIFT_LOGO_1880a5ce-3e2d-480e-9e22-30305a721d07.png",
-            "brand_link": "shopify:\/\/collections\/honor-the-gift"
+            "designer_img": "shopify://shop_images/DesignerLogo_PURPLEB.png",
+            "brand_link": ""
           }
         },
-        "featured_designer_iUzKQF": {
+        "featured_designer_4UWxpU": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/logo-purple_a57e8ad5-6cc6-4974-8ca7-c789e0aef4ff.webp",
-            "brand_link": "shopify:\/\/collections\/purple-jeans"
+            "designer_img": "shopify://shop_images/DesignerLogo_POLO.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_eFagVp": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify://shop_images/DesignerLogo_NEWERA.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_UUeegT": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify://shop_images/DesignerLogo_NEWBALANCE.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_gLbmBN": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify://shop_images/DesignerLogo_KSUBI.png",
+            "brand_link": ""
+          }
+        },
+        "featured_designer_iQCjrV": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify://shop_images/DesignerLogo_BBC.png",
+            "brand_link": ""
           }
         }
       },
       "block_order": [
-        "featured_designer_mGFMnp",
-        "featured_designer_jid37n",
-        "featured_designer_zTLzbD",
-        "featured_designer_NB3QK9",
-        "featured_designer_tA4E8k",
-        "featured_designer_eL93x6",
-        "featured_designer_PkUg7y",
-        "featured_designer_iUzKQF"
+        "featured_designer_KMPNJn",
+        "featured_designer_kXm8yY",
+        "featured_designer_HyADpa",
+        "featured_designer_YmEUxH",
+        "featured_designer_cmk7gE",
+        "featured_designer_Bx4Vdy",
+        "featured_designer_mnRLPQ",
+        "featured_designer_4UWxpU",
+        "featured_designer_eFagVp",
+        "featured_designer_UUeegT",
+        "featured_designer_gLbmBN",
+        "featured_designer_iQCjrV"
       ],
       "settings": {
-        "image_one": "shopify:\/\/shop_images\/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"
+        "image_one": "shopify://shop_images/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"
       }
     },
     "designer_list_Qhpr4B": {
