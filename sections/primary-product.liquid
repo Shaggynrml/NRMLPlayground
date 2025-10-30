@@ -402,9 +402,47 @@
   }
 
   .payment-option{
-    align-conten: start;
+    align-content: start;
     border-style: none !important;
   }
+  .bnpl-option{
+    font-family: monospace;
+  }
+.bnpl-tooltip{
+    position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+.bnpl-tooltiptext{
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;  
+  opacity: 0;
+  transition: opacity 1s;
+  overflow:wrap;
+}
+.bnpl-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.bnpl-tooltip:hover .bnpl-tooltiptext{
+visibility: visible;
+  opacity: 0.8;
+}
+
 </style>
 
 {%- style -%}
@@ -545,7 +583,10 @@
             </div>
           {%- endcase -%}
       {%-  endfor -%}
-      </div>
+        </div>
+        {% if section.settings.BNPLShow == true %}
+        <div class="bnpl-option"> or buy now, pay later with 4 payments of {{ product.price | divided_by:4 | money }} <span class="bnpl-tooltip">ⓘ <span class="bnpl-tooltiptext"> Choose Sezzle or Klarna at checkout <br><a href= "{{section.settings.TooltipURL}}">Learn More</a></span></span> </div>
+    {% endif %}
       <div class = "buy-button-section">
         <product-form class="product-form" data-cart-type="{{ settings.cart_type }}">
         <div class="product-form__error-message-wrapper" role="alert" hidden>
@@ -623,7 +664,7 @@
 
 </div>
   
-  
+   
   {%- liquid
     if product.selected_or_first_available_variant.media
       assign seo_media = product.selected_or_first_available_variant.media
@@ -670,7 +711,7 @@ modalRight.onclick = function(){
   }
  
 }
- 
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modalClose")[0];
 
@@ -679,7 +720,6 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-
 
   <script type="application/ld+json">
     {
@@ -756,7 +796,17 @@ span.onclick = function() {
     }
   ],
   "settings": [
-      
+    {
+      "type":"checkbox",
+      "id":"BNPLShow",
+      "label":"Use Custom Buy Now Pay Later Information Bar",
+      "default": false
+    },
+    {
+      "type":"url",
+      "id":"TooltipURL",
+      "label":"URL for Tooltip Learn more section"
+    },
   ],
   "presets": [
       {
