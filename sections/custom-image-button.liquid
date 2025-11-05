@@ -1,0 +1,166 @@
+{%- style -%}    
+.cib-main-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 44%);
+  grid-column-gap: 10px;
+}
+.cib-cell-style{
+
+}
+.cib-sub-grid{
+background-color:blue;
+color:blue;
+}
+.cib-bottom-grid{
+  display: grid;
+  grid-template-columns: 67% 33%;
+  background-color:white;
+}
+.cib-border{
+    border: 1px solid black;
+}
+.image-desktop{
+    width:100%;
+}
+.desktop-tiles{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+.desktop-tile-container{
+    display:flex;
+    flex-direction:column;
+    border-color: rgb(190, 190, 190);
+    border-radius:8px;
+    border-style: none;
+    border-width: 1px;
+    margin:0.5vw;
+    justify-content:center;
+    align-items:center;
+}
+{%- endstyle -%}
+
+<div class="{{section.settings.gridStyle}}">
+    <div class="desktop-tile-container">
+        {%if section.settings.image-1-title != blank%}
+            <div class= "image-title-desktop">
+            <a  href = "{{section.settings.button_link_one}}">{{ section.settings.image-1-title | escape }}</a>
+            </div>
+        {%endif%}
+        <div class="button-overlay">  
+            <a class = "image-container-desktop" href = "{{section.settings.button_link_one}}">
+            <img src = "{{section.settings.image-one| img_url: 'master'}}" class = "image-desktop" alt="">
+            {% if section.settings.button1-text != blank%}
+                <div class="cib-bottom-grid">
+                    <div class="cib-border">Hello</div>
+            <button>{{section.settings.button1-text}}</button>
+                </div>
+            {% endif %}
+            </a>
+        </div>
+    </div>
+    <div class="desktop-tile-container">
+        {%if section.settings.image-1-title != blank%}
+            <div class= "image-title-desktop">
+            <a  href = "{{section.settings.button_link_one}}">{{ section.settings.image-1-title | escape }}</a>
+            </div>
+        {%endif%}
+        <div class="button-overlay">  
+            <a class = "image-container-desktop" href = "{{section.settings.button_link_one}}">
+                <img src = "{{section.settings.image-one| img_url: 'master'}}" class = "image-desktop" alt="">
+            {% if section.settings.button1-text != blank%}
+            <button>{{section.settings.button1-text}}</button>
+            {% endif %}
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Custom Image Button",
+        "tag": "section",
+        "class": "section",
+        "settings": [
+            {
+                "type": "select",
+                "id": "gridStyle",
+                "label": "Style",
+                "options":[
+                {
+                    "value": "cib-main-grid",
+                    "label": "red"
+                },
+                    {
+                    "value": "cib-sub-grid",
+                    "label": "blue"
+                },
+            ],
+                "default":"cib-main-grid"
+            },
+            {
+                "type": "text",
+                "id": "image-1-title",
+                "default": "Featured collection",
+                "label": "Image 1 Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image-one",
+                "label": "Image 1"
+            },
+
+            {
+                "type": "image_picker",
+                "id": "image-one-mobile",
+                "label": "Image 1 Mobile"
+            },
+            {
+                "type": "text",
+                "id": "button1-text",
+                "default": "SHOP NOW",
+                "label": "Button 1 Text"
+            },
+            {
+            "type": "url",
+            "id": "button_link_one",
+            "label": "Button link"
+            },
+            {
+                "type": "text",
+                "id": "image-2-title",
+                "default": "Featured collection",
+                "label": "Image 2 Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image-two",
+                "label": "Image 2"
+                },
+            {
+                "type": "image_picker",
+                "id": "image-two-mobile",
+                "label": "Image 2 Mobile"
+            }, 
+            {
+                "type": "text",
+                "id": "button2-text",
+                "default": "SHOP NOW",
+                "label": "Button 2 Text"
+            },          
+            {
+            "type": "url",
+            "id": "button_link_two",
+            "label": "Button link"
+            }
+        ],
+        "presets": [
+            {
+            "name": "Custom Image Button"
+            }
+        ]
+    }
+{% endschema %}
