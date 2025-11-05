@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_page_break_pHLrT3": {
+      "type": "collapsible-page-break",
+      "blocks": {
+        "text_xLjLkG": {
+          "type": "text",
+          "settings": {
+            "heading": "THE PRIZE",
+            "row_content": "<h2>Can I place an item on hold?<\/h2><ul><li><h2>There will be one winner<\/h2><\/li><li><h2>The precise is one NRML electronic Gift Card valued at $250 <\/h2><\/li><li><h2>Winners must 18 years of age or older to participate<\/h2><\/li><li><h2>NRML will contact winners, and confirm eligibility prior to announcing the final winner. <\/h2><\/li><li><h2>NRML is not responsible for any delays or prize cancellations; this is up to NRML’s discretion. NRML has no obligation to provide an alternative prize.<\/h2><\/li><\/ul>"
+          }
+        },
+        "text_ATw4iY": {
+          "type": "text",
+          "settings": {
+            "heading": "EXCLUSIONS & EXCEPTIONS",
+            "row_content": "<ul><li><h2>The Winner cannot reimburse their NRML Gift Card for Cash. <\/h2><\/li><li><h2>NRML does not maintain a record of gift cards, and is not responsible for replacing lost electronic gift card information. <\/h2><\/li><li><h2>NRML is not responsible for stolen gift card information. Ensure you keep your Gift Card confidential, to ensure no one uses your balance. NRML is not responsible to replace the Gift Card.<\/h2><\/li><\/ul>"
+          }
+        },
+        "text_E3iCWA": {
+          "type": "text",
+          "settings": {
+            "heading": "WHO CAN ENTER",
+            "row_content": "<ul><li><h2>Local and international entries are welcome. <\/h2><\/li><li><h2>Participants must be 18 years of age or older.<\/h2><\/li><\/ul>"
+          }
+        },
+        "text_8cWBRr": {
+          "type": "text",
+          "settings": {
+            "heading": "HOW TO ENTER",
+            "row_content": "<ul><li><h2>Sign up to receive SMS & E-Mail Marketing to be entered into the draw to win a NRML Gift Card valued at $250.<\/h2><\/li><li><h2>The draw begins Nov 21, 2024 and ends Dec 21, 2024 at 11:59pm est, any entries received after this deadline will not be valid.<\/h2><\/li><li><h2>Internet service providers fees may be applicable when signing up depending on your service provider.<\/h2><\/li><\/ul>"
+          }
+        },
+        "text_n3WKKD": {
+          "type": "text",
+          "settings": {
+            "heading": "HOW ARE WINNERS SELECTED & CONTACTED",
+            "row_content": "<ul><li><h2>Your entry will be entered into a raffle, and a winner will be selected at random. <\/h2><\/li><li><h2>Winners will be contacted via email and \/ or phone number provided when signing up for SMS and email marketing.<\/h2><\/li><\/ul>"
+          }
+        },
+        "text_iHwXiY": {
+          "type": "text",
+          "settings": {
+            "heading": "PERSONAL INFORMATIONS",
+            "row_content": "<h2>Please review our <a href=\"\/pages\/privacy-policy-1\" title=\"Privacy Policy\">privacy policy<\/a> for full details.<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xLjLkG",
+        "text_ATw4iY",
+        "text_E3iCWA",
+        "text_8cWBRr",
+        "text_n3WKKD",
+        "text_iHwXiY"
+      ],
+      "settings": {
+        "headingName": "NRML ‘GIFT CARD GIVEAWAY’ POLICY",
+        "genericContent": "<h2>By participating in this draw, you agree to terms and conditions. If you do not agree, then you should not participate. <\/h2>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_page_break_pHLrT3"
+  ]
+}

@@ -79,16 +79,16 @@
         "padding_bottom": 36
       }
     },
-    "1729096726bdd2e451": {
+    "17290982424aade75d": {
       "type": "apps",
       "blocks": {
-        "searchanise_search_filter_app_block_mHCiUU": {
+        "searchanise_search_filter_app_block_VHVChr": {
           "type": "shopify:\/\/apps\/searchanise-search-filter\/blocks\/app-block\/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
           "settings": {}
         }
       },
       "block_order": [
-        "searchanise_search_filter_app_block_mHCiUU"
+        "searchanise_search_filter_app_block_VHVChr"
       ],
       "settings": {
         "include_margins": true
@@ -99,6 +99,6 @@
     "02569311-7293-43d5-a985-3e6041b752fe",
     "banner",
     "product-grid",
-    "1729096726bdd2e451"
+    "17290982424aade75d"
   ]
 }

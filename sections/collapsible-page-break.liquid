@@ -1,5 +1,5 @@
 {%- style -%}
-.image{
+.colImage{
   display:block;
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +71,7 @@
 <div class="content">
   {{ blocks.settings.row_content }}
 {% if blocks.settings.imageSelect != null%}
-  <img class="image" src="{{blocks.settings.imageSelect| image_url: width: auto, height: auto}}"/>
+  <img class="colImage" src="{{blocks.settings.imageSelect| image_url: width: auto, height: auto}}"/>
 {% endif %}
 </div>
 

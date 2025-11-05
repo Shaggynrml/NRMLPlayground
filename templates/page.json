@@ -1,14 +1,61 @@
 {
   "sections": {
+    "custom_liquid_3igyDL": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"padding:0.5rem 25%\">\n<div>\n<h1 style=\"font-weight:900;font-size: 4.5rem \">NRML Wishlist<\/h1>\n<h2 style=\"font-size: 2.5rem\">Save what you love. Share with friends and family. Never miss out.<\/h2>\n<\/div>\n<div style=\"padding:1.5rem 0rem\">\n<h3 style=\"font-size:2rem\">\nCreate an NRML account to save your wishlist across all devices.\n<\/h3>\n<ul>\n<li style=\"font-size:1.5rem\">Keep track of your must have items <\/li>\n<li style=\"font-size:1.5rem\">Gift Ideas! Share your wishlist with friends or family for birthdays and holidays<\/li>\n<li style=\"font-size:1.5rem\">Last Chance! Get notified before your favourites sell out.\n<\/li>\n<\/ul>\n<\/div>\n<div style=\"padding 1rem 0rem\">\n<h3 style=\"font-size:2rem\"> Two ways to access:\n<\/h3>\n<ol>\n<li style=\"font-size:1.5rem\">Visit NRML.ca on desktop or mobile and tap Wishlist<\/li>\n<li style=\"font-size:1.5rem\">Download the NRML App for the fastest access and instant notifications.<\/li>\n<ol>\n<\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-style: italic;}"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1762358979a7257b36": {
+      "type": "apps",
+      "blocks": {
+        "se_wishlist_engine_wishlist_engine_page_UPACYW": {
+          "type": "shopify:\/\/apps\/se-wishlist-engine\/blocks\/wishlist-engine-page\/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "se_wishlist_engine_wishlist_engine_page_UPACYW"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1762358989b3cd221e": {
+      "type": "apps",
+      "blocks": {
+        "se_wishlist_engine_wishlist_engine_trending_4AFYFd": {
+          "type": "shopify:\/\/apps\/se-wishlist-engine\/blocks\/wishlist-engine-trending\/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "se_wishlist_engine_wishlist_engine_trending_4AFYFd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "custom_liquid_3igyDL",
+    "main",
+    "1762358979a7257b36",
+    "1762358989b3cd221e"
   ]
 }

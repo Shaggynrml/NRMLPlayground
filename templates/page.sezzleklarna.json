@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_page_break_pHLrT3": {
+      "type": "collapsible-page-break",
+      "blocks": {
+        "text_xLjLkG": {
+          "type": "text",
+          "settings": {
+            "heading": "GUIDE TO SEZZLE & KLARNA",
+            "row_content": "<h4>SHOP & ADD ITEMS TO YOUR CART<\/h4><ul><li>When ready, click checkout<\/li><\/ul><h4>CHOOSE SEZZLE or KLARNA at CHECKOUT<\/h4><ul><li>A debit or credit card is required <\/li><li>Choose Sezzle or Klarna as your payment option<\/li><li>You must be 18 years of age or older<\/li><li>You must be able to receive text messages to US or Canadian Number <\/li><\/ul><h3>LOGIN OR CREATE AN ACCOUNT<\/h3><ul><li>In order to finish your transaction, you will need to login or create an account via KLARNA or SEZZLE site<\/li><li>Once your account is created you can use it anytime with multiple vendors<\/li><\/ul><h3>COMPLETE YOUR PURCHASE<\/h3><ul><li>Your payment will be broken down into “4 Installments, to be paid every two weeks”<\/li><li>The first of four payment is due immediately at the time of purchase<\/li><li>The remaining three payments will be automatically deducted every two weeks, via your selected payment option. <\/li><\/ul>"
+          }
+        },
+        "text_mJUCJn": {
+          "type": "text",
+          "settings": {
+            "heading": "MORE INFORMATION",
+            "row_content": "<p>More information about <a href=\"https:\/\/sezzle.ca\/en-ca\/how-it-works\/\" target=\"_blank\" title=\"https:\/\/sezzle.ca\/en-ca\/how-it-works\/\">SEZZLE<\/a><\/p><p>More information about <a href=\"https:\/\/www.klarna.com\/ca\/customer-service\/\" target=\"_blank\" title=\"https:\/\/www.klarna.com\/ca\/customer-service\/\">KLARNA<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xLjLkG",
+        "text_mJUCJn"
+      ],
+      "settings": {
+        "headingName": "Sezzle & Klarna",
+        "genericContent": "<h2><strong>PURCHASING WITH “SEZZLE” or “KLARNA”<\/strong><\/h2><h5><em>Find out how to make 4 interest free payments and get everything you need today!<\/em><\/h5>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_page_break_pHLrT3"
+  ]
+}

@@ -17,16 +17,11 @@
         "buttons": {
           "type": "buttons",
           "settings": {}
-        },
-        "progressify_multi_bar_upsells_block_jA8Tde": {
-          "type": "shopify:\/\/apps\/progressify-multi-bar-upsells\/blocks\/block\/82c18c6a-85d2-42a6-aa30-f91433549659",
-          "settings": {}
         }
       },
       "block_order": [
         "subtotal",
-        "buttons",
-        "progressify_multi_bar_upsells_block_jA8Tde"
+        "buttons"
       ],
       "settings": {}
     },
@@ -34,7 +29,6 @@
       "type": "new-arrival-grid",
       "settings": {
         "collection": "jason-markk",
-        "collection_url": "{{ section.settings.collection.url }}",
         "title": "Featured collection",
         "product_limit_desktop": 4,
         "product_limit_mobile": 3

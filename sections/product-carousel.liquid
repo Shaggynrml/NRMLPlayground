@@ -71,7 +71,7 @@
     </div>
 
     <div class="new-arrival-view-all">
-         {%render 'primary-button', button_content:"View All", button_link: section.settings.collection_url %}
+          {%render 'primary-button', button_content:"View All", button_link: section.settings.collection_url %}
     </div>
 
 </div>
@@ -90,7 +90,8 @@
                 "id": "collection",
                 "label": "collection"
                 },
-                {"type": "url",
+                {
+                "type": "url",
                 "id": "collection_url",
                 "label": "Collection Link",
                 "default":"{{ section.settings.collection.url }}",

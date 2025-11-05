@@ -52,10 +52,10 @@
         display: flex;
     }
     .pre-discount-price{
-        text-decoration:line-through;
-        text-decoration-thickness: 2px;
-        text-decoration-color: red;
-        padding-right: 2px;
+      text-decoration:line-through;
+      text-decoration-thickness: 2px;
+      text-decoration-color: red;
+      padding-right:2px;
     }
     .discounted-price{
         padding-right:2px;
@@ -76,45 +76,45 @@
     font-size:1.5rem;
   }
 
-    @media only screen and (min-width:740px){
-        .new-arrival-card-container:hover .new-arrival-card-title{
-            display:none;
+  @media only screen and (min-width:740px){
+    .new-arrival-card-container:hover .new-arrival-card-title{
+        display:none;
 
-        }
-        .new-arrival-card-container:hover .new-arrival-card-vendor{
-            display:none;
-
-        }
-        .new-arrival-card-container:hover .new-arrival-card-price{
-            display:none;
-
-        }
-        .new-arrival-card-container:hover .new-arrival-card-image{
-            transform: scale(1.1);
-            transform: translateY(-10px)
-        } 
-        .new-arrival-card-container:hover .button-section{
-            display:flex;
-            justify-content:center;
-            padding-top:10px; 
-        }
-        .new-arrival-card-container:hover .new-arrival-card-size-section{
-            display:flex;
-            width:100%;
-            flex-flow: row wrap;
-            transition: 1s;
-            text-align:center;
-            justify-content: center;
-            align-items:center;
-            top:65%;
-            visibility: visible;
-            opacity: 1;
-            
-        }
-        .new-arrival-card-size-buttons:hover{
-            color:#FF0000;
-        }
     }
+    .new-arrival-card-container:hover .new-arrival-card-vendor{
+        display:none;
+
+    }
+    .new-arrival-card-container:hover .new-arrival-card-price{
+        display:none;
+
+    }
+    .new-arrival-card-container:hover .new-arrival-card-image{
+        transform: scale(1.1);
+        transform: translateY(-10px)
+    } 
+    .new-arrival-card-container:hover .button-section{
+        display:flex;
+        justify-content:center;
+        padding-top:10px; 
+    }
+    .new-arrival-card-container:hover .new-arrival-card-size-section{
+        display:flex;
+        width:100%;
+        flex-flow: row wrap;
+        transition: 1s;
+        text-align:center;
+        justify-content: center;
+        align-items:center;
+        top:65%;
+        visibility: visible;
+        opacity: 1;
+        
+    }
+    .new-arrival-card-size-buttons:hover{
+        color:#FF0000;
+      }
+  }
 </style>
 
 
@@ -153,8 +153,7 @@
     </div>
     {% if card_product.compare_at_price_max > card_product.price %}
       <div class="new-arrival-card-price">
-
-        <span class="pre-discount-price" >{{ card_product.compare_at_price_max | money }}</span>
+        <span class="pre-discount-price">{{ card_product.compare_at_price_max | money }}</span>
         <span class="product-card__price--new">{{ card_product.price | money }}</span>
         <span>save {{ card_product.compare_at_price_max | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%</span>
       </div>

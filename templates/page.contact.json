@@ -3,8 +3,97 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_4YwQNQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WynNHW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Retail Fall Hours<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_KB9NgE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Monday to Thursday | 10AM - 9PM<\/p><p>Friday & Saturday | 10AM - 9PM<\/p><p>Sunday | 10AM - 6PM<\/p><p><\/p><p><strong>Address: <\/strong>184 Rideau Street, Ottawa, ON, K1N 5X6, Canada<\/p><p><strong>Phone:<\/strong> +1(613) 562-2043<\/p><p><\/p>"
+          }
+        },
+        "heading_HtichY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ecustomer Service Hours<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_j3kcY7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Monday to Sunday |  10AM - 6PM<\/p><p><strong>Email: <\/strong>help@nrml.ca<\/p><p><strong>Phone: <\/strong>+1 (613) 979-8901<\/p>"
+          }
+        },
+        "heading_faXQhn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Careers<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_HFKJF4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are always seeking new talent! Send your resume and cover letter to:<\/p><p>jobs@nrml.ca<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WynNHW",
+        "text_KB9NgE",
+        "heading_HtichY",
+        "text_j3kcY7",
+        "heading_faXQhn",
+        "text_HFKJF4"
+      ],
+      "custom_css": [
+        "h2 {padding-left: 28px;}",
+        "p {padding-left: 30px; font-size: 1.5rem;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "custom_liquid_hCT69B": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "div {display: flex; justify-content: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d11200.45795465849!2d-75.6889303!3d45.4271934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0503c71ba2af%3A0x13184b49bf721d43!2sNRML!5e0!3m2!1sen!2sca!4v1728157559447!5m2!1sen!2sca\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "text_slide_banner_3TTePP": {
+      "type": "text-slide-banner",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "subheading": "",
+        "text-colour": "#252525",
+        "subtext-colour": "#252525",
+        "text-alignment": "top-left",
+        "image": "shopify:\/\/shop_images\/contact_page_banner.png",
+        "link": ""
       }
     },
     "form": {
@@ -13,13 +102,16 @@
         "heading": "",
         "heading_size": "h1",
         "color_scheme": "background-1",
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
+    "rich_text_4YwQNQ",
+    "custom_liquid_hCT69B",
+    "text_slide_banner_3TTePP",
     "form"
   ]
 }

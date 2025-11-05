@@ -3,104 +3,104 @@
     "designer_featured_A6FhfM": {
       "type": "designer-featured",
       "blocks": {
-        "featured_designer_KMPNJn": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/NikeDesignerLogo.png",
-            "brand_link": ""
-          }
-        },
-        "featured_designer_kXm8yY": {
+        "featured_designer_ByJcUN": {
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/JordanLogo.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/jordan"
           }
         },
-        "featured_designer_HyADpa": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/HTGDesLogo.png",
-            "brand_link": ""
-          }
-        },
-        "featured_designer_YmEUxH": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/godspeedDeslogo.png",
-            "brand_link": ""
-          }
-        },
-        "featured_designer_cmk7gE": {
+        "featured_designer_JH9cBz": {
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/ReigningChampDeslogo.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/reigning-champ"
           }
         },
-        "featured_designer_Bx4Vdy": {
+        "featured_designer_pkBq9i": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/DIMEDesignerLogo.png",
-            "brand_link": ""
+            "designer_img": "shopify:\/\/shop_images\/HTGDesLogo.png",
+            "brand_link": "shopify:\/\/collections\/honor-the-gift"
           }
         },
-        "featured_designer_mnRLPQ": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_PURPLEB.png",
-            "brand_link": ""
-          }
-        },
-        "featured_designer_4UWxpU": {
-          "type": "featured_designer",
-          "settings": {
-            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_POLO.png",
-            "brand_link": ""
-          }
-        },
-        "featured_designer_eFagVp": {
+        "featured_designer_pLFpyG": {
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/DesignerLogo_NEWERA.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/new-era"
           }
         },
-        "featured_designer_UUeegT": {
+        "featured_designer_7KydhH": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_NEWBALANCE.png",
-            "brand_link": ""
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_POLO.png",
+            "brand_link": "shopify:\/\/collections\/polo-ralph-lauren"
           }
         },
-        "featured_designer_gLbmBN": {
+        "featured_designer_RAJwm7": {
           "type": "featured_designer",
           "settings": {
-            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_KSUBI.png",
-            "brand_link": ""
+            "designer_img": "shopify:\/\/shop_images\/NikeDesignerLogo.png",
+            "brand_link": "shopify:\/\/collections\/nike"
           }
         },
-        "featured_designer_iQCjrV": {
+        "featured_designer_XhQbfj": {
           "type": "featured_designer",
           "settings": {
             "designer_img": "shopify:\/\/shop_images\/DesignerLogo_BBC.png",
-            "brand_link": ""
+            "brand_link": "shopify:\/\/collections\/billionaire-boys-club"
+          }
+        },
+        "featured_designer_6V3wWQ": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/DIMEDesignerLogo.png",
+            "brand_link": "shopify:\/\/collections\/dime"
+          }
+        },
+        "featured_designer_xmUjpy": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/godspeedDeslogo.png",
+            "brand_link": "shopify:\/\/collections\/godspeed"
+          }
+        },
+        "featured_designer_GJhCry": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_PURPLEB.png",
+            "brand_link": "shopify:\/\/collections\/purple-jeans"
+          }
+        },
+        "featured_designer_6pYURi": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_KSUBI.png",
+            "brand_link": "shopify:\/\/collections\/ksubi"
+          }
+        },
+        "featured_designer_DQtTmV": {
+          "type": "featured_designer",
+          "settings": {
+            "designer_img": "shopify:\/\/shop_images\/DesignerLogo_NEWBALANCE.png",
+            "brand_link": "shopify:\/\/collections\/new-balance"
           }
         }
       },
       "block_order": [
-        "featured_designer_KMPNJn",
-        "featured_designer_kXm8yY",
-        "featured_designer_HyADpa",
-        "featured_designer_YmEUxH",
-        "featured_designer_cmk7gE",
-        "featured_designer_Bx4Vdy",
-        "featured_designer_mnRLPQ",
-        "featured_designer_4UWxpU",
-        "featured_designer_eFagVp",
-        "featured_designer_UUeegT",
-        "featured_designer_gLbmBN",
-        "featured_designer_iQCjrV"
+        "featured_designer_ByJcUN",
+        "featured_designer_JH9cBz",
+        "featured_designer_pkBq9i",
+        "featured_designer_pLFpyG",
+        "featured_designer_7KydhH",
+        "featured_designer_RAJwm7",
+        "featured_designer_XhQbfj",
+        "featured_designer_6V3wWQ",
+        "featured_designer_xmUjpy",
+        "featured_designer_GJhCry",
+        "featured_designer_6pYURi",
+        "featured_designer_DQtTmV"
       ],
       "settings": {
         "image_one": "shopify:\/\/shop_images\/stussy_banner_2dea5825-0d11-4057-b136-d8ec86dd810b.jpg"

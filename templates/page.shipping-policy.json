@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_page_break_pHLrT3": {
+      "type": "collapsible-page-break",
+      "blocks": {
+        "text_xLjLkG": {
+          "type": "text",
+          "settings": {
+            "heading": "OTTAWA AREA",
+            "row_content": "<ul><li><h4>FREE Same Day Delivery with Trexity, for local orders only.<\/h4><\/li><li><h4><span style=\"text-decoration:underline\">Only eligible <\/span>on Orders with minimum value of  $175 before tax<\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles. <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        },
+        "text_8cWBRr": {
+          "type": "text",
+          "settings": {
+            "heading": "ONTARIO & QUEBEC",
+            "row_content": "<ul><li><h4><span style=\"text-decoration:underline\"><em><strong>FREE “GROUND SHIPPING” Ontario & Quebec via \"UPS\" & “CANADA POST”<\/strong><\/em><\/span><\/h4><\/li><li><h4><span style=\"text-decoration:underline\"><strong>Only eligible <\/strong><\/span>on Orders with a minimum value of  $175 before tax, however some exceptions apply, see below. <\/h4><\/li><li><h4>This offer is not eligible for “bulk” orders. <\/h4><\/li><li><h4>Free Shipping will be automatically applied at checkout.<\/h4><\/li><li><h4>This offer cannot be combined with any other shipping promotions or discounts.<\/h4><\/li><li><h4>This offer cannot be applied to previous purchases. <\/h4><\/li><li><h4>NRML has the right to discontinue or update “Free Ground Shipping” within Ontario & Quebec.<\/h4><\/li><li><h4>EXPRESS Shipping Available at a Cost <\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles.  <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        },
+        "text_n3WKKD": {
+          "type": "text",
+          "settings": {
+            "heading": "REMAINING PROVINCES",
+            "row_content": "<h4>Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Prince Edward Island, Saskatchewan<\/h4><ul><li><h4><span style=\"text-decoration:underline\"><em><strong>$15 FLAT RATE “GROUND SHIPPING” via \"UPS\" &“CANADA POST”<\/strong><\/em><\/span><\/h4><\/li><li><h4><span style=\"text-decoration:underline\"><strong>Only eligible <\/strong><\/span>on Orders with a minimum value of  $175 before tax, however some exceptions apply, see below. <\/h4><\/li><li><h4>This offer is not eligible for “bulk” orders. <\/h4><\/li><li><h4>This offer cannot be combined with any other shipping promotions or discounts.<\/h4><\/li><li><h4>This offer cannot be applied to previous purchases. <\/h4><\/li><li><h4>NRML has the right to discontinue or update “$15 FLAT RATE GROUND SHIPPING”<\/h4><\/li><li><h4>EXPRESS Shipping Available at a Cost <\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles. <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        },
+        "text_iHwXiY": {
+          "type": "text",
+          "settings": {
+            "heading": "TERRITORIES",
+            "row_content": "<ul><li><h4>At this time NRML <span style=\"text-decoration:underline\"><em><strong>does not <\/strong><\/em><\/span>offer FREE or a  FLAT shipping rate to YUKON,  NUNAVUT, or NORTHWEST TERRITORIES<\/h4><\/li><li><h4>Shipping will be calculated at time of purchase based on your location. <\/h4><\/li><li><h4>GROUND & EXPRESS Shipping is available at a cost. <\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles. <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        },
+        "text_Habfbc": {
+          "type": "text",
+          "settings": {
+            "heading": "EXPRESS SHIPPING CANADA",
+            "row_content": "<ul><li><h4>Options provided at checkout<\/h4><\/li><li><h4>Via Canada Post, Fedex, UPS, & Trexity<\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles. <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        },
+        "text_RB8pQJ": {
+          "type": "text",
+          "settings": {
+            "heading": "INTERNATIONAL & UNITED STATES",
+            "row_content": "<ul><li><h4>At this time NRML <span style=\"text-decoration:underline\"><em><strong>does not <\/strong><\/em><\/span>offer FREE or a FLAT shipping rate to the UNITED STATES or INTERNATIONAL Locations<\/h4><\/li><li><h4>Shipping will be calculated at time of purchase based on your location. <\/h4><\/li><li><h4>GROUND & EXPRESS Shipping is available at a cost. <\/h4><\/li><\/ul><h5>Please Note: Free Shipping may not be applicable to all \"Shoe Release\" items, depending on specific styles. <\/h5><h5>Free Shipping does not apply to Release Shoes and Apparel on release day. <\/h5><h5>Free Shipping does not apply to \"Stussy\" Brand Items.<\/h5>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xLjLkG",
+        "text_8cWBRr",
+        "text_n3WKKD",
+        "text_iHwXiY",
+        "text_Habfbc",
+        "text_RB8pQJ"
+      ],
+      "settings": {
+        "headingName": "NRML SHIPPING RATES",
+        "genericContent": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_page_break_pHLrT3"
+  ]
+}

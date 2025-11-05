@@ -9,9 +9,10 @@
 
     .brand-wrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 50px 20px;
         width: 90%;
+        
     }
 
     .brand-wrapper:hover .brand-card img{
@@ -21,18 +22,21 @@
 
     .brand-card:hover a img{
         opacity: 1 !important;
-        transform: scale(1.2) !important; /* (120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.05) !important; /* (105% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
 
     .brand-card{
         display:flex;
         align-items: center;
+        border: 2px solid #5a5a5a;
+        border-radius: 10px;
     }
 
     /* picture */
     .designer{
         height: auto;
         width: 100%;
+        border-radius: 10px;
     }
 
 

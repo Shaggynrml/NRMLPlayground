@@ -1,4 +1,49 @@
 {%- style -%}
+      .featured-release-container{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .featured-release-image-container{
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:left;
+    }
+    .featured-release-image-container img{
+        width:90%;
+    }
+    .featured-release-content{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:10px;
+    }
+    .featured-release-title{
+        font-size:2rem;
+        text-wrap:
+    }
+    .featured-release-excerpt{
+
+    }
+    .featured-release-body{
+        font-size:1.5rem;
+    }
+     @media only screen and (min-width:739px){
+        .featured-release-container{
+            flex-direction:row;
+        }
+        .featured-release-content{
+            width:80%;
+            text-align: center;
+        }
+         .featured-release-title{
+            font-size: 3rem;
+         }
+     }
 .countdown-grid{
   display: grid;
   position: relative;
