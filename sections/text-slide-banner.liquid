@@ -12,7 +12,9 @@
     z-index: 2;
     text-align:left;
 }
-
+.mobile-slide-banner-container{
+display:none;
+}
 @media only screen and (max-width: 900px){
     .text-slide-content{
         display: none;
@@ -85,6 +87,20 @@
     80% {opacity:1;}
     100% {opacity:1;}
 }
+@media screen and (max-width:750px){
+.text-slide-banner-container{
+display:none;
+}
+
+.mobile-slide-banner-container{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    text-align: center;
+    width:100%;
+}
+}
 </style>
 
 {%- style -%}
@@ -98,7 +114,7 @@
 
 <div class= "text-slide-banner-container">
         <a href="{{section.settings.link}}">
-        {{ section.settings.image | image_url: width: 2500 | image_tag:
+        {{ section.settings.desktopImage| image_url: width: 2500 | image_tag:
             width: "100%",
             height: "auto",
             class: image_class,
@@ -117,6 +133,20 @@
                 <p>{{section.settings.subheading}}</p>
             </div>
         </div>
+
+</div>
+<div class="mobile-slide-banner-container">
+        <a href="{{section.settings.link}}">
+        {{ section.settings.mobileImage | image_url: width: 2500 | image_tag:
+            width: "100%",
+            height: "auto",
+            class: image_class,
+            sizes: sizes,
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+            alt: section.settings.image.alt | escape
+        }}
+        </a>
+
 
 </div>
 
@@ -168,7 +198,12 @@
             },
             {
             "type": "image_picker",
-            "id": "image",
+            "id": "desktopImage",
+            "label": "Image"
+            },
+            {
+            "type": "image_picker",
+            "id": "mobileImage",
             "label": "Image"
             },
             {

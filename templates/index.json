@@ -168,7 +168,7 @@
       }
     },
     "double_image_button_WDwbG7": {
-      "type": "double-image-button",
+      "type": "double-button-stack",
       "disabled": true,
       "settings": {
         "image-1-title": "Featured collection",

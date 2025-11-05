@@ -401,13 +401,13 @@
     }
   }
 
-.payment-option{
-  align-content: start;
-  border-style: none !important;
-}
-  .bnpl-option{
+  .payment-option{
+    align-content: start;
+    border-style: none !important;
+  }
+.bnpl-option{
   font-size:1.25rem;
-}
+  }
 .bnpl-tooltip{
   position: relative;
   display: inline-block;
@@ -516,7 +516,7 @@ visibility: visible;
       {% if product.vendor == "NIKE" %}
         <p style="color:red;">*NIKE PRODUCTS ONLY AVAILABLE FOR SHIPPING WITHIN CANADA</p>
       {% endif %}
-      {% if product.tags contains 'RELEASE' or product.tags contains 'final sale' or product.tags contains 'clearance' or product.tags contains '#clearance' %}
+      {% if product.tags contains 'CLEARANCE' or  product.tags contains 'RELEASE' or product.tags contains 'final sale'%}
         <p style="color:red;">*This product is final sale and will not be accepted for any returns or exchanges which includes for store credit.</p>
       {% endif %}
             {% if product.type contains "FOOTWEAR"%}
@@ -585,9 +585,9 @@ visibility: visible;
             </div>
           {%- endcase -%}
       {%-  endfor -%}
-      </div>
-    {% if section.settings.BNPLShow == true %}
-      <div class="bnpl-option"> Or buy now, pay later with 4 payments of {{ product.price | divided_by:4 | money }} <span class="bnpl-tooltip">ⓘ <span class="bnpl-tooltiptext"> Choose Sezzle or Klarna at checkout <br><a href= "{{section.settings.TooltipURL}}">Learn More</a></span></span> </div>
+        </div>
+        {% if section.settings.BNPLShow == true %}
+        <div class="bnpl-option"> or buy now, pay later with 4 payments of {{ product.price | divided_by:4 | money }} <span class="bnpl-tooltip">ⓘ <span class="bnpl-tooltiptext"> Choose Sezzle or Klarna at checkout <br><a href= "{{section.settings.TooltipURL}}">Learn More</a></span></span> </div>
     {% endif %}
       <div class = "buy-button-section">
         <product-form class="product-form" data-cart-type="{{ settings.cart_type }}">
@@ -612,7 +612,6 @@ visibility: visible;
             </div>
           </button>
           </div>
-          <div class="wishlist-engine" style="text-align:center;" data-product_id="{{  product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="true" data-css="true"></div>
         {%- endform -%}
         </product-form>
       </div>
@@ -636,7 +635,7 @@ visibility: visible;
                                   How long will it take for my order to be shipped?
                                   Orders are typically processed within 2-5 day period once the order has been made. We only ship out orders on weekdays; if you place an order after store hours or during the weekend, it will be shipped out the first following business day. </p></div>
         <div><h2>Return Policy</h2><p>
-          {% if product.tags contains 'RELEASE' or product.tags contains 'final sale'%}
+          {% if product.tags contains 'CLEARANCE' or  product.tags contains 'RELEASE' or product.tags contains 'final sale'%}
             <p>*This product is final sale and will not be accepted for any returns or exchanges which includes for store credit.</p>
           {% endif %}
               We want you to be fully satisfied with your purchase. If you are not satisfied with an item you purchased, you may return the item within 30 days of delivery for a full refund of the purchase price in store credit, minus the shipping, handling or other additional charges. The item must be unworn, undamaged and accompanied by the original receipt in order to be eligible for a return. All sale and promotional items are final sale. To conduct a return, please contact us through our contact form or email us at help@nrml.ca with your order number and name of item(s) you wish to return. Please note, NRML does not offer refunds, but upon inspection, will gladly provide you with a store credit or an item exchange. NRML will not accept or assume responsibility for lost or damaged packages being returned, so it is strongly recommended that any returns be made through a reliable courier, with a tracking number or traceable system.
@@ -667,7 +666,7 @@ visibility: visible;
 
 </div>
   
-  
+   
   {%- liquid
     if product.selected_or_first_available_variant.media
       assign seo_media = product.selected_or_first_available_variant.media
@@ -714,7 +713,7 @@ modalRight.onclick = function(){
   }
  
 }
- 
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modalClose")[0];
 
@@ -723,7 +722,6 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-
 
   <script type="application/ld+json">
     {
