@@ -167,18 +167,6 @@
         "headingName": ""
       }
     },
-    "double_image_button_WDwbG7": {
-      "type": "double-button-stack",
-      "disabled": true,
-      "settings": {
-        "image-1-title": "Featured collection",
-        "button1-text": "SHOP NOW",
-        "button_link_one": "",
-        "image-2-title": "Featured collection",
-        "button2-text": "SHOP NOW",
-        "button_link_two": ""
-      }
-    },
     "4_grid_QGBXzd": {
       "type": "4-Grid",
       "blocks": {
