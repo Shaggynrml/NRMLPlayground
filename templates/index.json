@@ -386,9 +386,23 @@
         "body_colour": "white",
         "Body": "Featured collection"
       }
+    },
+    "size_button_6_qcWLnN": {
+      "type": "size-button-6",
+      "name": "Size Table 6 Grid",
+      "settings": {
+        "titleText": "",
+        "sizeURL-1": "",
+        "sizeURL-2": "",
+        "sizeURL-3": "",
+        "sizeURL-4": "",
+        "sizeURL-5": "",
+        "sizeURL-6": ""
+      }
     }
   },
   "order": [
+    "size_button_6_qcWLnN",
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3",
     "featured_countdown_y4LcMA",
     "2be51f6a-4a6f-41f9-960f-d39fd2c76459",
