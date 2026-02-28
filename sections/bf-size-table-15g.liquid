@@ -1,0 +1,228 @@
+{%- style -%}
+.bfsz-parent-container{
+border: 1.5px grey solid;
+border-radius: 10px;
+margin: 1% 3%;
+}
+.bfsz-grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+  row-gap:0.5%;
+  column-gap:0.5%;
+  padding: 1% 3%;
+}
+.bfsz-img{
+ display:block;
+ width: 100%;
+}
+.bfsz-title{
+ text-align:center;
+ margin-left: auto;
+ margin-right: auto;
+font-weight:600;
+padding: 1rem 30%;
+}
+@media screen and (max-width: 800px ){
+.bfsz-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(5, 1fr);
+}
+}
+
+{%- endstyle-%}  
+<div class="bfsz-parent-container">
+<div class="bfsz-title"> <h1> {{ section.settings.titleText }} </h1>
+    <hr>
+</div>
+    <div class="bfsz-grid">
+       <div> <a href="{{ section.setting.sizeURL-1}}"><img src = "{{section.settings.sizeImage-1| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-2}}"><img src = "{{section.settings.sizeImage-2| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-3}}"><img src = "{{section.settings.sizeImage-3| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-4}}"><img src = "{{section.settings.sizeImage-4| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-5}}"><img src = "{{section.settings.sizeImage-5| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-6}}"><img src = "{{section.settings.sizeImage-6| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-7}}"><img src = "{{section.settings.sizeImage-7| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-8}}"><img src = "{{section.settings.sizeImage-8| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-9}}"><img src = "{{section.settings.sizeImage-9| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-10}}"><img src = "{{section.settings.sizeImage-10| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-11}}"><img src = "{{section.settings.sizeImage-11| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-12}}"><img src = "{{section.settings.sizeImage-12| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-13}}"><img src = "{{section.settings.sizeImage-13| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-14}}"><img src = "{{section.settings.sizeImage-14| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-15}}"><img src = "{{section.settings.sizeImage-15| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+    </div>
+</div>
+{% schema %}
+
+{
+    "name": "BF Size Table- 15 Grid",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-1",
+            "label":"Size Image 1"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-1",
+            "label":"Size URL 1"
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-2",
+            "label":"Size Image 2"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-2",
+            "label":"Size URL 2"
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-3",
+            "label":"Size Image 3"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-3",
+            "label":"Size URL 3"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-4",
+            "label":"Size Image 4"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-4",
+            "label":"Size URL 4"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-5",
+            "label":"Size Image 5"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-5",
+            "label":"Size URL 5"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-6",
+            "label":"Size Image 6"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-6",
+            "label":"Size URL 6"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-7",
+            "label":"Size Image 7"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-7",
+            "label":"Size URL 7"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-8",
+            "label":"Size Image 8"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-8",
+            "label":"Size URL 8"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-9",
+            "label":"Size Image 9"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-9",
+            "label":"Size URL 9"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-10",
+            "label":"Size Image 10"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-10",
+            "label":"Size URL 10"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-11",
+            "label":"Size Image 11"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-11",
+            "label":"Size URL 11"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-12",
+            "label":"Size Image 12"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-12",
+            "label":"Size URL 12"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-13",
+            "label":"Size Image 13"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-13",
+            "label":"Size URL 13"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-14",
+            "label":"Size Image 14"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-14",
+            "label":"Size URL 14"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-15",
+            "label":"Size Image 15"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-15",
+            "label":"Size URL 15"
+        }
+        
+ 
+    ],
+    "presets": [
+        {
+        "name": "BF Size Table 15 Grid" 
+        }
+    ]
+}
+{%- endschema -%}

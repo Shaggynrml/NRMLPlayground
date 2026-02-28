@@ -1,0 +1,172 @@
+{%- style -%}
+.bfsz10g-parent-container-{
+border: 1.5px grey solid;
+border-radius: 10px;
+margin: 1% 3%;
+}
+.bfsz10g-grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows:repeat(2, 1fr);
+  row-gap:0.5%;
+  column-gap:0.5%;
+  padding: 1% 3%;
+}
+.bfsz10g-img{
+ display:block;
+ width: 100%;
+}
+.bfsz10g-title{
+ text-align:center;
+ margin-left: auto;
+ margin-right: auto;
+font-weight:600;
+padding: 1rem 30%;
+}
+@media screen and (max-width: 800px ){
+.bfsz10g-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(5, 1fr);
+}
+}
+
+{%- endstyle-%}  
+<div class="bfsz10g-parent-container">
+<div class="bfsz10g-title"> <h1> {{ section.settings.titleText }} </h1>
+    <hr>
+</div>
+    <div class="bfsz10g-grid">
+       <div> <a href="{{ section.setting.sizeURL-1}}"><img src = "{{section.settings.sizeImage-1| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-2}}"><img src = "{{section.settings.sizeImage-2| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-3}}"><img src = "{{section.settings.sizeImage-3| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-4}}"><img src = "{{section.settings.sizeImage-4| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-5}}"><img src = "{{section.settings.sizeImage-5| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-6}}"><img src = "{{section.settings.sizeImage-6| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-7}}"><img src = "{{section.settings.sizeImage-7| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-8}}"><img src = "{{section.settings.sizeImage-8| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-9}}"><img src = "{{section.settings.sizeImage-9| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+       <div> <a href="{{ section.setting.sizeURL-10}}"><img src = "{{section.settings.sizeImage-10| img_url: 'master'}}" class = "bfsz10g-img" alt=""></a></div>
+    </div>
+</div>
+{% schema %}
+
+{
+    "name": "BF Size Table- 10 Grid",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-1",
+            "label":"Size Image 1"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-1",
+            "label":"Size URL 1"
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-2",
+            "label":"Size Image 2"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-2",
+            "label":"Size URL 2"
+        },
+        {
+            "type":"image_picker",
+            "id":"sizeImage-3",
+            "label":"Size Image 3"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-3",
+            "label":"Size URL 3"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-4",
+            "label":"Size Image 4"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-4",
+            "label":"Size URL 4"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-5",
+            "label":"Size Image 5"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-5",
+            "label":"Size URL 5"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-6",
+            "label":"Size Image 6"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-6",
+            "label":"Size URL 6"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-7",
+            "label":"Size Image 7"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-7",
+            "label":"Size URL 7"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-8",
+            "label":"Size Image 8"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-8",
+            "label":"Size URL 8"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-9",
+            "label":"Size Image 9"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-9",
+            "label":"Size URL 9"
+        },
+                {
+            "type":"image_picker",
+            "id":"sizeImage-10",
+            "label":"Size Image 10"
+        },
+        {
+            "type":"url",
+            "id":"sizeURL-10",
+            "label":"Size URL 10"
+        },
+ 
+    ],
+    "presets": [
+        {
+        "name": "BF Size Table 10 Grid" 
+        }
+    ]
+}
+{%- endschema -%}

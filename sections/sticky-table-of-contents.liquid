@@ -1,0 +1,72 @@
+  {% style %}
+  .sticky-glossary{
+    background-color:#E6E6E6;
+    position:fixed;
+    left:0;
+    width: 15%;
+    z-index:1;
+    padding:2rem;
+    margin-top:3%;
+    margin-left:0.5%;
+    border: 3px white double;
+
+  }
+
+  .tableContentHead{
+    font-size:1.5rem;
+font-family:monospace;
+color: black;
+  }
+    .tableContentHead a{
+    font-size:1.5rem;
+font-family:monospace;
+color: black;
+  }
+
+
+@media screen and (max-width: 750px){
+    .sticky-glossary{
+display:none;
+  }
+}
+  {% endstyle %}
+  <div class="sticky-glossary">
+  <ol>
+{% for blocks in section.blocks %}
+<li class="tableContentHead"><a href="#{{ blocks.settings.tagCall }}">{{ blocks.settings.contentTitle }}</a></li>
+<hr style="border: grey 1.5px solid">
+{% endfor %}
+</ol>
+</div>
+  {% schema %}
+  {
+  "name": "Sticky Table of Contents",
+  "tag": "section",
+  "class": "section",
+ "blocks": [
+    {
+      "type": "text",
+      "name": "Contents",
+      "settings": [
+        {
+          "type": "text",
+          "id": "contentTitle",
+          "label": "Section Name",
+          "default": "Section Title"
+        },
+        {
+          "type": "text",
+          "id": "tagCall",
+          "label":"Tag Name",
+          "default":"tagCall"
+        }
+      ]
+    }
+  ],
+  "presets": [
+      {
+      "name": "Sticky Table of Contents" 
+      }
+  ]
+}
+  {%- endschema -%}
