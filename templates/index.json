@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "size_button_6_qcWLnN": {
+      "type": "size-button-6",
+      "name": "Size Table 6 Grid",
+      "settings": {
+        "titleText": "",
+        "sizeURL-1": "",
+        "sizeURL-2": "",
+        "sizeURL-3": "",
+        "sizeURL-4": "",
+        "sizeURL-5": "",
+        "sizeURL-6": ""
+      }
+    },
     "19bd4163-e85f-458e-b36b-bebd37c0a6e3": {
       "type": "menu-panel",
       "disabled": true,
@@ -22,9 +35,9 @@
       "settings": {
         "blog-title": "",
         "cdown-end-text": "OUT NOW",
-        "date_picker": "11\/29\/2025",
+        "date_picker": "11/29/2025",
         "time_picker": "09:59:59",
-        "article": "release-calendar\/jordan-tatum-4-smoke-grey-metallic-silver-november-21st",
+        "article": "release-calendar/jordan-tatum-4-smoke-grey-metallic-silver-november-21st",
         "product_link": ""
       }
     },
@@ -37,7 +50,7 @@
         "text-colour": "#4E3524",
         "subtext-colour": "#4E3524",
         "text-alignment": "top-left",
-        "link": "https:\/\/nrml.ca\/collections\/shop-all-sale"
+        "link": "https://nrml.ca/collections/shop-all-sale"
       }
     },
     "text_slide_banner_8WicBH": {
@@ -48,7 +61,7 @@
         "text-colour": "#252525",
         "subtext-colour": "#252525",
         "text-alignment": "top-left",
-        "link": "shopify:\/\/collections\/staple"
+        "link": "shopify://collections/staple"
       }
     },
     "text_slide_banner_UmPKWh": {
@@ -60,7 +73,7 @@
         "text-colour": "#252525",
         "subtext-colour": "#252525",
         "text-alignment": "top-left",
-        "link": "https:\/\/nrml.ca\/collections\/staple"
+        "link": "https://nrml.ca/collections/staple"
       }
     },
     "button_grid_6N6bXE": {
@@ -71,35 +84,35 @@
           "disabled": true,
           "settings": {
             "gridHeading": "MENS FOOTWEAR",
-            "headingURL": "shopify:\/\/collections\/black-friday-nrml-clearance-sale-nike-jordan",
+            "headingURL": "shopify://collections/black-friday-nrml-clearance-sale-nike-jordan",
             "buttonName1": "4.5 - 6",
-            "buttonURL1": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=4%7C4.5%7C5%7C5.5%7C6&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL1": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=4%7C4.5%7C5%7C5.5%7C6&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName2": "6.5",
-            "buttonURL2": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=6.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL2": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=6.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName3": "7",
-            "buttonURL3": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=7&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL3": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=7&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName4": "7.5",
-            "buttonURL4": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=7.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL4": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=7.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName5": "8",
-            "buttonURL5": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=8&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL5": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=8&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName6": "8.5",
-            "buttonURL6": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=8.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL6": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=8.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName7": "9",
-            "buttonURL7": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=9&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL7": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=9&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName8": "9.5",
-            "buttonURL8": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=9.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL8": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=9.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName9": "10",
-            "buttonURL9": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=10&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL9": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=10&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName10": "10.5",
-            "buttonURL10": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=10.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL10": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=10.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName11": "11",
-            "buttonURL11": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=11&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL11": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=11&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName12": "11.5",
-            "buttonURL12": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=11.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL12": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=11.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName13": "12",
-            "buttonURL13": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=12&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL13": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&rb_snize_facet1=12&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName14": "13 - 14",
-            "buttonURL14": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=13%7C14"
+            "buttonURL14": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Mens&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=13%7C14"
           }
         },
         "text_UBtHrn": {
@@ -107,35 +120,35 @@
           "disabled": true,
           "settings": {
             "gridHeading": "WOMENS + YOUTH FOOTWEAR",
-            "headingURL": "shopify:\/\/collections\/black-friday-nrml-clearance-sale-nike-jordan",
+            "headingURL": "shopify://collections/black-friday-nrml-clearance-sale-nike-jordan",
             "buttonName1": "4.5 - 6",
-            "buttonURL1": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=4%7C4.5%7C5%7C5.5%7C6&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL1": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=4%7C4.5%7C5%7C5.5%7C6&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName2": "6.5",
-            "buttonURL2": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=6.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL2": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=6.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName3": "7",
-            "buttonURL3": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=7&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL3": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_snize_facet1=7&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName4": "7.5",
-            "buttonURL4": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=7.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL4": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=7.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName5": "8",
-            "buttonURL5": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=8&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL5": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=8&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName6": "8.5",
-            "buttonURL6": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=8.5",
+            "buttonURL6": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=8.5",
             "buttonName7": "9",
-            "buttonURL7": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=9&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL7": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=9&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName8": "9.5",
-            "buttonURL8": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=9.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL8": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=9.5&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName9": "10",
-            "buttonURL9": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=10",
+            "buttonURL9": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=10",
             "buttonName10": "10.5",
-            "buttonURL10": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=10.5",
+            "buttonURL10": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu&rb_snize_facet1=10.5",
             "buttonName11": "11 - 13",
-            "buttonURL11": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=11%7C11.5%7C12%7C13&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL11": "https://nrml.ca/collections/shop-all-sale?page=1&rb_filter_metafield_f8cff88e75a00f2e6ff79fd32b5c6c10=Womens&rb_filter_metafield_4d4244b6a239ec95b0443e189366da96=Footwear&rb_snize_facet1=11%7C11.5%7C12%7C13&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName12": "GS",
-            "buttonURL12": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_snize_facet2=3.5Y%7C4Y%7C4.5Y%7C5Y%7C5.5Y%7C6Y%7C6.5Y%7C7Y&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL12": "https://nrml.ca/collections/shop-all-sale?page=1&rb_snize_facet2=3.5Y%7C4Y%7C4.5Y%7C5Y%7C5.5Y%7C6Y%7C6.5Y%7C7Y&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName13": "PS",
-            "buttonURL13": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_snize_facet2=10.5C%7C11.5C%7C11C%7C12C%7C13C%7C1Y%7C2Y%7C3Y&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
+            "buttonURL13": "https://nrml.ca/collections/shop-all-sale?page=1&rb_snize_facet2=10.5C%7C11.5C%7C11C%7C12C%7C13C%7C1Y%7C2Y%7C3Y&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu",
             "buttonName14": "TD",
-            "buttonURL14": "https:\/\/nrml.ca\/collections\/shop-all-sale?page=1&rb_snize_facet2=2C%7C3C%7C5K%7C7K%7C8K%7C10K&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu"
+            "buttonURL14": "https://nrml.ca/collections/shop-all-sale?page=1&rb_snize_facet2=2C%7C3C%7C5K%7C7K%7C8K%7C10K&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=DEC%2024%20%7C%20BOXING%20DAY%20STARTS%20EARLU&_kx=8D1gUb17uJHobgQQbRq21Q.VArXEu"
           }
         },
         "text_6LGmVC": {
@@ -228,7 +241,7 @@
       "type": "product-carousel",
       "settings": {
         "collection": "all",
-        "collection_url": "shopify:\/\/collections\/all",
+        "collection_url": "shopify://collections/all",
         "title": "NEW ARRIVALS",
         "product_limit_desktop": 12
       }
@@ -237,13 +250,13 @@
       "type": "double-image-section",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/PDF_TILE.png",
-        "image-one-mobile": "shopify:\/\/shop_images\/PDF_TILE.png",
-        "button_link_one": "https:\/\/nrml.ca\/collections\/pdf-channel",
+        "image-one": "shopify://shop_images/PDF_TILE.png",
+        "image-one-mobile": "shopify://shop_images/PDF_TILE.png",
+        "button_link_one": "https://nrml.ca/collections/pdf-channel",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/straager_radar_tile.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/straager_radar_tile.png",
-        "button_link_two": "https:\/\/nrml.ca\/blogs\/release-calendar"
+        "image-two": "shopify://shop_images/straager_radar_tile.png",
+        "image-two-mobile": "shopify://shop_images/straager_radar_tile.png",
+        "button_link_two": "https://nrml.ca/blogs/release-calendar"
       }
     },
     "product_carousel_7wjyxM": {
@@ -261,13 +274,13 @@
       "name": "Double Image",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/staple-tile-_shop-app-_-nrml-app.gif",
-        "image-one-mobile": "shopify:\/\/shop_images\/staple-tile-_shop-app-_-nrml-app.gif",
-        "button_link_one": "shopify:\/\/collections\/staple",
+        "image-one": "shopify://shop_images/staple-tile-_shop-app-_-nrml-app.gif",
+        "image-one-mobile": "shopify://shop_images/staple-tile-_shop-app-_-nrml-app.gif",
+        "button_link_one": "shopify://collections/staple",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/GODSPEED_TILE.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/GODSPEED_TILE.png",
-        "button_link_two": "shopify:\/\/collections\/godspeed"
+        "image-two": "shopify://shop_images/GODSPEED_TILE.png",
+        "image-two-mobile": "shopify://shop_images/GODSPEED_TILE.png",
+        "button_link_two": "shopify://collections/godspeed"
       }
     },
     "product_carousel_em3gih": {
@@ -285,13 +298,13 @@
       "name": "Double Image",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/STUSSY_TILE.png",
-        "image-one-mobile": "shopify:\/\/shop_images\/STUSSY_TILE.png",
-        "button_link_one": "shopify:\/\/collections\/icecream",
+        "image-one": "shopify://shop_images/STUSSY_TILE.png",
+        "image-one-mobile": "shopify://shop_images/STUSSY_TILE.png",
+        "button_link_one": "shopify://collections/icecream",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/dime-site-tile.gif",
-        "image-two-mobile": "shopify:\/\/shop_images\/dime-site-tile.gif",
-        "button_link_two": "shopify:\/\/collections\/dime"
+        "image-two": "shopify://shop_images/dime-site-tile.gif",
+        "image-two-mobile": "shopify://shop_images/dime-site-tile.gif",
+        "button_link_two": "shopify://collections/dime"
       }
     },
     "product_carousel_7GkJBW": {
@@ -307,20 +320,20 @@
       "type": "double-image-section",
       "settings": {
         "image-1-title": "",
-        "image-one": "shopify:\/\/shop_images\/purple-tile_07040143-d16c-4cff-aedb-dcea6602c970.gif",
-        "image-one-mobile": "shopify:\/\/shop_images\/purple-tile_07040143-d16c-4cff-aedb-dcea6602c970.gif",
-        "button_link_one": "shopify:\/\/collections\/purple-jeans",
+        "image-one": "shopify://shop_images/purple-tile_07040143-d16c-4cff-aedb-dcea6602c970.gif",
+        "image-one-mobile": "shopify://shop_images/purple-tile_07040143-d16c-4cff-aedb-dcea6602c970.gif",
+        "button_link_one": "shopify://collections/purple-jeans",
         "image-2-title": "",
-        "image-two": "shopify:\/\/shop_images\/ADIDAS_TILE_2_1997dc24-21de-4cbb-b719-f83b26f3823d.png",
-        "image-two-mobile": "shopify:\/\/shop_images\/ADIDAS_TILE_2_1997dc24-21de-4cbb-b719-f83b26f3823d.png",
-        "button_link_two": "shopify:\/\/collections\/adidas"
+        "image-two": "shopify://shop_images/ADIDAS_TILE_2_1997dc24-21de-4cbb-b719-f83b26f3823d.png",
+        "image-two-mobile": "shopify://shop_images/ADIDAS_TILE_2_1997dc24-21de-4cbb-b719-f83b26f3823d.png",
+        "button_link_two": "shopify://collections/adidas"
       }
     },
     "product_carousel_EAbBk9": {
       "type": "product-carousel",
       "settings": {
         "collection": "new-balance",
-        "collection_url": "shopify:\/\/collections\/new-balance",
+        "collection_url": "shopify://collections/new-balance",
         "title": "NEW BALANCE",
         "product_limit_desktop": 6
       }
@@ -355,7 +368,7 @@
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<h3><strong>Be the first to know about new collections and exclusive offers.<\/strong><\/h3>"
+            "text": "<h3><strong>Be the first to know about new collections and exclusive offers.</strong></h3>"
           }
         },
         "template--14321586536514__969e6bfe-64c4-4659-ab49-510f5085c3af-16878839401468b313-2": {
@@ -370,7 +383,7 @@
       ],
       "disabled": true,
       "settings": {
-        "background_img": "shopify:\/\/shop_images\/DOUBLE_0c4692fa-ab0d-49a0-bc20-ba90c9a8fe2c.jpg",
+        "background_img": "shopify://shop_images/DOUBLE_0c4692fa-ab0d-49a0-bc20-ba90c9a8fe2c.jpg",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -381,23 +394,10 @@
       "disabled": true,
       "settings": {
         "title": "Featured collection",
-        "image": "shopify:\/\/shop_images\/RELEASE_EMAIL.png",
+        "image": "shopify://shop_images/RELEASE_EMAIL.png",
         "heading_colour": "white",
         "body_colour": "white",
         "Body": "Featured collection"
-      }
-    },
-    "size_button_6_qcWLnN": {
-      "type": "size-button-6",
-      "name": "Size Table 6 Grid",
-      "settings": {
-        "titleText": "",
-        "sizeURL-1": "",
-        "sizeURL-2": "",
-        "sizeURL-3": "",
-        "sizeURL-4": "",
-        "sizeURL-5": "",
-        "sizeURL-6": ""
       }
     }
   },
