@@ -1,0 +1,77 @@
+{%- style -%}
+.bfsz-parent-container{
+border: 1.5px grey solid;
+border-radius: 10px;
+margin: 1% 3%;
+}
+.bfsz-grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+  row-gap:0.5%;
+  column-gap:0.5%;
+  padding: 1% 3%;
+}
+.bfsz-img{
+ display:block;
+ width: 100%;
+}
+.bfsz-title{
+ text-align:center;
+ margin-left: auto;
+ margin-right: auto;
+font-weight:600;
+padding: 1rem 30%;
+}
+@media screen and (max-width: 800px ){
+.bfsz-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(5, 1fr);
+}
+}
+
+{%- endstyle-%}  
+<div class="bfsz-parent-container">
+<div class="bfsz-title"> <h1> {{ section.settings.titleText }} </h1>
+    <hr>
+</div>
+    <div class="bfsz-grid">
+        {% for blocks in section.blocks %}
+       <div> <a href="{{ section.setting.sizeURL-1}}"><img src = "{{blocks.settings.image| img_url: 'master'}}" class = "bfsz-img" alt=""></a></div>
+       <h1>{{ blocks.settings.text }}</h1>
+        {% endfor %}
+    </div>
+</div>
+{% schema %}
+
+{
+    "name": "Test-2",
+    "tag": "section",
+    "class": "section",
+  "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+        {
+           "type": "text",
+           "id": "text",
+           "label": "Insert Text"
+         }
+       ]
+     }
+  ],
+    "presets": [
+        {
+        "name": "Test 2" 
+        }
+    ]
+}
+{%- endschema -%}
