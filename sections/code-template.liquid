@@ -1,0 +1,59 @@
+{%- style -%}
+.template-image{
+  height: auto;
+  max-width: 18rem;
+}
+@media screen and (max-width:700px){
+.template-image{
+  height: auto;
+  max-width: 15rem;
+}
+}
+{%- endstyle-%}  
+
+    <div>
+        <div><h1>{{ section.settings.titleText }}</h1></div>
+        {% for blocks in section.blocks %}
+       <div> <a href="{{ section.setting.sizeURL-1}}"><img src = "{{blocks.settings.image| img_url: 'master'}}" class = "template-image" alt=""></a></div>
+       <h1>{{ blocks.settings.text }}</h1>
+        {% endfor %}
+    </div>
+{% schema %}
+
+{
+    "name": "Code Template",
+    "tag": "section",
+    "class": "section",
+    "settings":[
+        {   
+            "type":"text",
+            "id":"titleText",
+            "label": "Insert Title",
+        }, 
+    ],
+  "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+        {
+           "type": "text",
+           "id": "text",
+           "label": "Insert Text"
+         }
+       ]
+     }
+  ],
+    "presets": [
+        {
+        "name": "Code Template" 
+        }
+    ]
+}
+{%- endschema -%}
